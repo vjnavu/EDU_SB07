@@ -1,0 +1,169 @@
+@charset "utf-8";
+#wrap.isActiveContainer main section {
+    flex-grow: 1
+}
+
+.isActiveContainer .isActiveTabContainer {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 94%;
+    height: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%);
+    font-family: NotoM;
+    box-sizing: border-box
+}
+
+.isActive_tabs {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-top: 20px
+}
+
+.isActive_tabs>li {
+    position: relative;
+    color: #fff;
+    background: url(../../contents/images/icon/icon_check.svg) 15px center/22px auto no-repeat
+}
+
+.isActive_tabs .questionBtn {
+    background-color: #ffa101
+}
+
+.isActive_tabs .solveBtn {
+    background-color: #f60
+}
+
+.isActive_tabs .answerBtn {
+    background-color: #5e3e18
+}
+
+.isActive_tabs>li.on {
+    background-color: #9d00c5
+}
+
+.isActive_tabs>li.hover {
+    background-color: #b457ca
+}
+
+.isActive_tabs>li:before {
+    display: flex;
+    align-items: center;
+    height: 100%
+}
+
+.isActive_tabs>li:not(:last-of-type) {
+    margin-right: 10px
+}
+
+.isActive_tabs .questionBtn:before {
+    content: "문제";
+    padding-left: 36px
+}
+
+.isActive_tabs .solveBtn:before {
+    content: "문제 해결";
+    padding-left: 14px
+}
+
+.isActive_tabs .answerBtn:before {
+    content: "정답";
+    padding-left: 36px
+}
+
+.isActive_slides {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+.isActive_slides>li {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 50px 20px;
+    border-radius: 40px;
+    background-color: #fff;
+    box-sizing: border-box
+}
+
+.isActive_slides>li.on {
+    display: flex;
+    flex-direction: column
+}
+
+.isActive_slides>li.on[data-slide-container] {
+    display: flex;
+    flex-direction: column
+}
+
+.isActive_slides>li h2 {
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 298px;
+    height: 78px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 78px;
+    font-family: YGJAL;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 0 0 50px 50px;
+    background-color: #b457ca;
+    box-sizing: border-box
+}
+
+.isActive_slides .basicSlider_slides.inner {
+    width: 980px;
+    height: 100%;
+    margin: 0 auto
+}
+
+.isActive_slides .basicSlider_slides.inner>li {
+    display: none;
+    width: 100%;
+    height: 100%
+}
+
+.isActive_slides .basicSlider_slides.inner>li.on {
+    display: block
+}
+
+.isActive_slides .yellowBox {
+    display: inline-block;
+    min-width: 86px;
+    height: 85px;
+    margin-right: 10px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 85px;
+    font-family: NotoM;
+    border: 3px solid #f4d120;
+    border-radius: 15px;
+    background-color: #fff;
+    vertical-align: top
+}
+
+.isActive_slides .yellowBox.red {
+    color: #c23933
+}
+
+.isActive_slides .page_3 .ansContainer {
+    text-align: center;
+    font-size: 110px
+}
+
+.isActive_slides .page_3 .ansContainer.center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

@@ -1,0 +1,182 @@
+@charset "utf-8";.mindMapContents .mindMap_first {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    width: 350px;
+    height: 215px;
+    background: url(../images/life/mindMap/mindMap_center.svg) center/ 100% auto no-repeat;
+    font-size: 42px;
+    text-align: center
+}
+
+.mindMapContents .mindMap_second {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    padding: 35px
+}
+
+.mindMapContents .mindMap_second.red {
+    background-color: #ff7474
+}
+
+.mindMapContents .mindMap_second.pink {
+    background-color: #f7af9d
+}
+
+.mindMapContents .mindMap_second.pink.hover {
+    background-color: #ff6d56
+}
+
+.mindMapContents .mindMap_second.orange {
+    background-color: #ffaf74
+}
+
+.mindMapContents .mindMap_second.orange.hover {
+    background-color: #ff7d1e
+}
+
+.mindMapContents .mindMap_second.yellow_2 {
+    background-color: #ffe174
+}
+
+.mindMapContents .mindMap_second.lightGreen {
+    background-color: #cbece5
+}
+
+.mindMapContents .mindMap_second.green {
+    background-color: #cbece5
+}
+
+.mindMapContents .mindMap_second.green.hover {
+    background-color: #4ac1a8
+}
+
+.mindMapContents .mindMap_second.deepGreen {
+    background-color: #006d77
+}
+
+.mindMapContents .mindMap_second.sky {
+    background-color: #74d2ff
+}
+
+.mindMapContents .mindMap_second.blue {
+    background-color: #749fff
+}
+
+.mindMapContents .mindMap_second.purple {
+    background-color: #e0d2f5
+}
+
+.mindMapLine.left,.mindMapLine.right {
+    position: absolute;
+    min-width: 100px;
+    height: 5px;
+    background-color: #999
+}
+
+.mindMapLine.top,.mindMapLine.bottom {
+    position: absolute;
+    width: 5px;
+    min-height: 100px;
+    background-color: #999
+}
+
+.thinkMindContent {
+    background: white url(../images/life/mindMap/thinkMindMap_bg.png) center 42px/90% auto no-repeat
+}
+
+.thinkMindContent .centerText {
+    position: absolute;
+    top: 397px;
+    left: 389px;
+    width: 385px;
+    font-size: 52px;
+    font-family: NotoB;
+    text-align: center
+}
+
+.thinkMindContent .toggle {
+    position: absolute;
+    font-size: 45px
+}
+
+.thinkMindContent .toggle .answer {
+    padding: 0 10px;
+    border-radius: 20px
+}
+
+.thinkMindContent .toggle {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.thinkMindContent .color_circle.toggle {
+    width: 210px;
+    height: 160px;
+    border-radius: 50%
+}
+
+.thinkMindContent .color_yellow {
+    background-color: #ffdb81
+}
+
+.thinkMindContent .color_purple {
+    background-color: #f6c7ff
+}
+
+.thinkMindContent .color_green {
+    background-color: #8fff9a
+}
+
+.thinkMindContent .color_pink {
+    background-color: #ffbccf
+}
+
+.thinkMindContent .color_brown {
+    background-color: #ffba93
+}
+
+.thinkMindContent .toggle[data-toggle-obj="1"] {
+    top: 310px;
+    left: 65px
+}
+
+.thinkMindContent .toggle[data-toggle-obj="2"] {
+    top: 115px;
+    left: 190px
+}
+
+.thinkMindContent .toggle[data-toggle-obj="3"] {
+    top: 45px;
+    left: 480px
+}
+
+.thinkMindContent .toggle[data-toggle-obj="4"] {
+    top: 115px;
+    left: 760px
+}
+
+.thinkMindContent .toggle[data-toggle-obj="5"] {
+    top: 310px;
+    left: 880px
+}
+
+.thinkMindContent .examViewBtn {
+    right: 50px
+}

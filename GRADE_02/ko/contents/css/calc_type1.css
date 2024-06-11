@@ -1,0 +1,73 @@
+.type-calc-1 .page_1 .colorBox {padding:7px 30px 2px 24px; position:absolute; top:0; right:0; height:170px}
+.type-calc-1 .page_1 .colorBox .math_calc_table{position:relative; top:0 !important; right:0 !important;}
+.type-calc-1 .page_1 .math_calc_table{width:200px; position:absolute; font-size:40px; line-height:1;}
+.type-calc-1 .page_1 .colorBox.n1{top:0; right:0; z-index:3;}
+.type-calc-1 .page_1 .colorBox.n2{top:170px; right:0;z-index:2;}
+.type-calc-1 .page_1 .colorBox.n3{top:340px; right:0;z-index:1;}
+.type-calc-1 .page_1 .colorBox.n1.balloon:after{border-top-color:#fceef4 !important ;}
+.type-calc-1 .page_1 .colorBox.n2.balloon.sky:after{border-top-color:#d4f3f6 !important ;}
+.greenT{color:green}
+
+.type-calc-1 .colorBox.pink,
+.type-calc-1 .colorBox.n1{background-color:#fceef4; border-color:#fceef4 !important;}
+.type-calc-1 .colorBox.n2{border-color:#d4f3f6 !important;}
+.type-calc-1 .colorBox.n3{border-color:#e7f6d4 !important;}
+
+.type-calc-1 .page_2 .math_calc_table{width:200px; position:relative; line-height:1.1;}		
+.type-calc-1 .page_2 .icon_arrow{max-width:70px;}
+.type-calc-1 .page_2 .flex-wrap{align-items:center;}
+.type-calc-1 .page_2 .flex-wrap .flex-item{padding:30px; }
+.type-calc-1 .page_2 .flex-wrap .flex-item.n1{ border-radius:20px;}
+.type-calc-1 .page_2 .flex-wrap .flex-item.n2{ border-radius:20px;}
+.type-calc-1 .page_2 .flex-wrap .flex-item.n3{ border-radius:20px;}
+.type-calc-1 .page_2 .flex-wrap > *{flex:1; }
+
+.math_calc_table.type2 {position:relative}
+.math_calc_table.type2  table {table-layout:fixed}
+.math_calc_table.type2 .toggle {margin:4px 0}
+.math_calc_table.type2 .toggle.small {display:inline-block;width:auto;min-width:38px;text-align:center;padding:6px}
+.math_calc_table.type2 .toggle.small .answer {letter-spacing:0}
+.math_calc_table.type2 .toggle .answer {letter-spacing:24px}
+.math_calc_table.type2 .toggle .dot-point {background-color:#006ee6}
+.math_calc_table.type2 .rowLine {left:0;top:0}
+.math_calc_table.type2 .line-tr td {padding:1px 0}
+.math_calc_table.type2 .line-td {background:url("../images/math/divide.png") no-repeat 0 -1px;background-size:auto 100%}
+.math_calc_table.type2 .dot-point {position:absolute;width:6px;height:6px;border-radius:50%;background-color:#000;bottom:3px;right:-3px;z-index:3}
+.math_calc_table.type2 .dot-point.table-answer {background-color:#006ee6}
+.math_calc_table.type2 .dot-point.gray {background-color:#999}
+.math_calc_table.type2 .up-line {position:absolute;width:3px;background-color:#ff0000;bottom:10px;top:10px;z-index:3;right:-2px}
+.math_calc_table.type2 .up-line:after {content:'';position:absolute;width:0;height:0;right:-7px;top:-20px;border-style:solid;border-width:14px 8px;border-color:transparent transparent #ff0000 transparent}
+.math_calc_table.type2 td.gray {color:#999}
+.math_calc_table.col6,
+.math_calc_table.col6 table {width:250px}
+.math_calc_table.col6 .toggle .dot-point.p2 {left:calc(50% - 5px)}
+.math_calc_table.col6 .line_1 {left:calc(20% + 8px)}
+.math_calc_table.col6 .line_2 {left:calc(40% + 6px)}
+.math_calc_table.col6 .line_3 {left:calc(60% + 4px)}
+.math_calc_table.col6 .line_4 {left:calc(80% + 2px)}
+.math_calc_table.col6 .line_5 {left:100%}
+
+.math_calc_table.col5,
+.math_calc_table.col5 table {width:202px}
+.math_calc_table.col5 .toggle .dot-point.p3 {left:calc(50% - 2px)}
+.math_calc_table.col5 .toggle .dot-point.p2 {left:calc(((100% / 3) * 2) - 4px)}
+.math_calc_table.col5 .toggle .dot-point.p1 {left:calc((100% / 3) - 4px)}
+.math_calc_table.col5 .line_1 {left:calc(25% + 8px)}
+.math_calc_table.col5 .line_2 {left:calc(50% + 5px)}
+.math_calc_table.col5 .line_3 {left:calc(75% + 2px)}
+.math_calc_table.col5 .line_4 {left:100%}
+
+.math_calc_table.col4,
+.math_calc_table.col4 table {width:154px}
+.math_calc_table.col4 .toggle .dot-point.p1 {left:calc(50% - 2px)}
+.math_calc_table.col4 .line_1 {left:calc((100% / 3) + 6px)}
+.math_calc_table.col4 .line_2 {left:calc(((100% / 3) * 2) + 2px)}
+.math_calc_table.col4 .line_3 {left:100%}
+
+.math_calc_table.type2 .table-answer {opacity:0;color:#006ee6;cursor:default;transition: opacity 1s ease-in-out;}
+.answer .math_calc_table.type2 .dot-point,
+.math_calc_table.type2 .table-answer .dot-point {background-color:#006ee6}
+.answer .math_calc_table.type2 .rowLine,
+.math_calc_table.type2 .table-answer .rowLine {background-color:#006ee6}
+.math_calc_table.type2 .table-answer.complete {opacity:1}
+.answer .math_calc_table.type2 .line-td {background-image:url("../images/math/divide_b.png")}

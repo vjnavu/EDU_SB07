@@ -1,0 +1,398 @@
+@charset "utf-8";.bullet {
+    position: relative;
+    flex-shrink: 0;
+    color: #fff;
+    font-family: YGJAL;
+    text-align: center;
+    align-self: flex-start;
+    box-sizing: border-box
+}
+
+.bullet.abs {
+    position: absolute;
+    margin: 0
+}
+
+.bullet.n0 {
+    line-height: 1.1em !important
+}
+
+.bullet.n1 {
+    line-height: 1em !important
+}
+
+.bullet.n2 {
+    line-height: .85em !important
+}
+
+.bullet.n3 {
+    line-height: .8em !important
+}
+
+.bullet.n4 {
+    line-height: .75em !important
+}
+
+.bullet.n5 {
+    line-height: .7em !important
+}
+
+.bullet.white {
+    color: #ffb655;
+    border: 4px solid #ffb655;
+    background-color: #fff
+}
+.suhi .bullet.white {
+    color: #6dbc4b;
+    border: 4px solid #6dbc4b;
+    background-color: #fff
+}
+
+
+.multipleChoiceList.column>li .choice.hover .bullet.white,.bullet.white.hover,.bullet.orange {
+    color: #fff;
+    border: 4px solid #ffb655;
+    background-color: #ff9300
+}
+
+.bullet.green {
+    border: 4px solid #a3d48e;
+    background-color: #6dbc4b
+}
+
+.bullet.square.orange {
+    border-width: 2px
+}
+
+.tableContainer.brown .bullet.number {
+    background-color: #5e3e18
+}
+
+.tableContainer.green .bullet.number {
+    background-color: #4f8172
+}
+
+.bullet.circleDot {
+    width: 15px;
+    height: 15px;
+    border: 4px solid #f60;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: .4em 10px 0 0;
+    box-sizing: border-box
+}
+
+.contentsBox.board .bullet.circleDot {
+    background-color: transparent
+}
+
+.bullet.circleDot.mt {
+    margin-top: 19px
+}
+
+.suhi .bullet.circleDot,.bullet.circleDot.green {
+    border-color: #4f8172
+}
+
+.bullet.circle {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    border-radius: 50%
+}
+/* 학습창 내 분수 텍스트 크기 */
+.verticalFormulaCon {
+    font-size: 40px !important;
+}
+
+/* 학습창 내 텍스트 크기 */
+.playDataList dd {
+    font-size: 40px;
+}
+.bullet.number {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.8em;
+    border-radius: 10px;
+    background-color: #fff
+}
+.bullet.green.number {
+    color: #6dbc4b;
+    border: 2px solid #6dbc4b
+}
+.bullet.orange.number {
+    color: #fe6700;
+    border: 2px solid #fe6700
+}
+
+.bullet.blue.number {
+    color: #0096e0;
+    border: 2px solid #0096e0
+}
+
+.bullet.yellow.number {
+    color: #ffc000;
+    border: 2px solid #ffc000
+}
+
+.bullet.bogi {
+    width: 60px;
+    height: 32px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    border-radius: 30px;
+    background-color: #f87c1a
+}
+
+.bullet.bogi:before {
+    content: '보기'
+}
+
+.bullet.square {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px
+}
+
+/* 콘텐츠 박스 및 테이블  */
+.contentsList {
+    font-size: 45px;
+}
+.contentsList>li .square {
+    margin: 16px 10px 0 0
+}
+
+.bullet.exam {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    padding: 0 15px;
+    margin: .4em .3em 0 0;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 35px;
+    color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #f87c1a;
+    vertical-align: top
+}
+
+.toggle .bullet.exam {
+    margin: 0 8px 0 0;
+    transform: translate(0, 10px);
+
+}
+
+.toggle.text .bullet.exam {
+    margin: .16em .3em 0 0
+}
+
+.toggle .contentsList .bullet.exam {
+    margin-right: 10px
+}
+
+.bullet.qs,.bullet.ans {
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 8px;
+    width: 75px;
+    height: 40px;
+    margin: 4px 14px 0 0;
+    padding: 0 0 0 6px;
+    box-sizing: border-box
+}
+
+.bullet.qs.mt,.bullet.ans.mt {
+    margin-top: 14px
+}
+
+.bullet.qs {
+    background-color: #ae7b65
+}
+
+.bullet.ans {
+    background-color: #f87c1a
+}
+
+.bullet.qs:before,.bullet.ans:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fde101;
+    font-size: 20px;
+    line-height: 40px;
+    width: 22px;
+    text-align: center
+}
+
+.bullet.qs:before {
+    content: '?'
+}
+
+.bullet.ans:before {
+    content: '!'
+}
+
+.contentsList.mt {
+    margin-top: 6px
+}
+
+.contentsList .dot {
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: .5em 10px 0 0;
+    box-sizing: border-box
+}
+
+.contentsList .dot.mt {
+    margin-top: 24px
+}
+
+.contentsList>li .bracket,.contentsList .shrink {
+    flex-shrink: 0;
+    margin-right: 10px
+}
+
+.contentsList .shrink.mt {
+    margin-top: 6px
+}
+
+.contentsList>li .bracket.mt {
+    margin-top: 4px
+}
+
+.contentsList>li {
+    display: flex
+}
+
+.contentsList>li:not(:last-of-type) {
+    margin-bottom: 15px
+}
+
+.contentsList>li .nameBox+* {
+    margin: 6px 0 0 0
+}
+
+.contentsList>li .shrink+*,.contentsList>li .bracket+*,.contentsList>li .bullet+*:not(.bullet),.contentsList>li>ins+*:not(.bullet) {
+    width: 100%;
+    text-align: justify
+}
+
+.contentsList>li>.colorBox.check+* {
+    width: auto;
+}
+
+.contentsList>li .number {
+    margin: 5px 10px 0 0
+}
+
+.contentsList>li .number.mt {
+    margin-top: 11px
+}
+
+.contentsList>li .number.inline {
+    margin-right: 0
+}
+
+.dotList>li {
+    display: flex;
+    text-align: justify
+}
+
+.dotList>li:before {
+    content: "";
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: .55em 10px 0 0;
+    box-sizing: border-box
+}
+
+.dotList>li:not(:last-of-type) {
+    margin-bottom: 15px
+}
+
+.contentsList .dot.orange,.dotList.orange>li:before {
+    background-color: #ff9300
+}
+
+.contentsList .dot.purple,.dotList.purple>li:before {
+    background-color: #6f3ed3
+}
+
+.contentsList .dot.sky,.dotList.sky>li:before {
+    background-color: #07b4ee
+}
+
+.contentsList .dot.green,.dotList.green>li:before {
+    background-color: #93ce12
+}
+
+.contentsList .dot.deepGreen,.dotList.deepGreen>li:before {
+    background-color: #4f8172
+}
+
+.contentsList .dot.brown,.dotList.brown>li:before {
+    background-color: #57350f
+}
+
+.contentsList .dot.yellow,.dotList.yellow>li:before {
+    background-color: #ffc600
+}
+
+.contentsList .dot.gray,.dotList.gray>li:before {
+    background-color: #555
+}
+
+.flexListContainer {
+    display: flex;
+    justify-content: space-between
+}
+
+.flexListContainer.wrap {
+    flex-wrap: wrap
+}
+
+.flexListContainer.jcenter {
+    justify-content: center
+}
+
+.flexListContainer.start {
+    justify-content: flex-start
+}
+
+.flexListContainer.end {
+    justify-content: flex-end
+}
+
+.flexListContainer.column {
+    flex-direction: column
+}
+
+.flexListContainer.center {
+    align-items: center
+}
+
+.flexListContainer.around {
+    justify-content: space-around
+}
+
+.bullet.inline {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0
+}

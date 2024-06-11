@@ -1,0 +1,100 @@
+.quiz-draggable {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.quiz-draggable .drag-item, 
+.quiz-draggable .drag-area {
+	position: absolute;
+}
+.quiz-draggable .drag-item .img,
+.quiz-draggable .drag-area .img {
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.quiz-draggable .drag-item .text, 
+.quiz-draggable .drag-area .text, 
+.quiz-draggable .answer-con .answer-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+}
+.quiz-draggable.ready .drag-item {
+	opacity: 1;
+}
+.quiz-draggable .drag-item {
+	opacity: 0;
+	cursor: pointer;
+	transform-origin: 0% 0%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.quiz-draggable.drag-ruler .drag-item {
+	z-index: 1;
+}
+.quiz-draggable .drag-item.drag {
+	transform-origin: 50% 50%;
+}
+.quiz-draggable .drag-item.drag, 
+.quiz-draggable:not(.drag-ruler) .drag-item.active {
+    pointer-events: none;
+}
+.quiz-draggable.not-live-check .drag-item.active { 
+	pointer-events: all;
+}
+.quiz-draggable .drag-item svg, 
+.quiz-draggable .drag-area svg {
+	width: 100%;
+	height: 100%;
+}
+.quiz-draggable .drag-item .area {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.quiz-draggable .drag-area .area {
+	display: block;
+    width: 100%;
+    height: 100%;
+}
+.quiz-draggable .answer-item {
+	visibility: hidden;
+}
+.quiz-draggable .answer-item.active {
+	visibility: visible;
+}
+.quiz-draggable .answer-item > .item {
+	visibility: hidden;
+}
+.quiz-draggable .answer-item > .item.active {
+	visibility: visible;
+}
+
+/* svgë¡œ ë“œëž˜ê·¸ ì˜ì—­ ì²´í¬í•  ê²½ìš° */
+.quiz-draggable.svg .drag-area {
+    pointer-events: none;
+}
+.quiz-draggable.svg .drag-area svg {
+    pointer-events: none;
+}
+.quiz-draggable.svg .drag-area path {
+    pointer-events: all;   
+}
+
+/* active-hide :: ì •ë‹µ ë¶™ìœ¼ë©´ ë“œëž˜ê·¸ ê°ì²´ ìˆ¨ê¸°ê¸° */
+.quiz-draggable.active-hide .drag-item.active:not(.clone-origin) {
+	visibility: hidden;
+}
+.quiz-draggable.active-hide .drag-item.active.clone-origin {
+	visibility: visible;
+}

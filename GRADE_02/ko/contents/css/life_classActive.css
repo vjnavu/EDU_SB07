@@ -1,0 +1,215 @@
+.classActiveTrainContent {
+    padding: 30px 0 0;
+    background: url(../images/life/train_bg.svg) center /100% auto no-repeat;
+    overflow: hidden
+}
+
+.classActiveTrainContent .study_guide {
+    margin-right: 40px
+}
+
+.classActiveTrainContent .trainBounce {
+    -ms-animation: train-vertical 2.3s cubic-bezier(0.455,0.030,0.515,0.955) both;
+    -webkit-animation: train-vertical 2.3s cubic-bezier(0.455,0.030,0.515,0.955) both;
+    animation: train-vertical 2.3s cubic-bezier(0.455,0.030,0.515,0.955) both
+}
+
+@-webkit-keyframes train-vertical {
+    0%,100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px)
+    }
+}
+
+@-ms-keyframes train-vertical {
+    0%,100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px)
+    }
+}
+
+@keyframes train-vertical {
+    0%,100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px)
+    }
+}
+
+.classActiveTrainContent .train_bg {
+    position: absolute;
+    transform: translateX(840px);
+    animation: fiveTrain 2.4s cubic-bezier(0.390,0.575,0.565,1.000) forwards;
+    -webkit-animation: fiveTrain 2.4s cubic-bezier(0.390,0.575,0.565,1.000) forwards
+}
+
+@keyframes fiveTrain {
+    0% {
+        transform: translateX(840px)
+    }
+
+    100% {
+        transform: translateX(30px)
+    }
+}
+
+@-webkit-keyframes fiveTrain {
+    0% {
+        transform: translateX(840px)
+    }
+
+    100% {
+        transform: translateX(30px)
+    }
+}
+
+.train_bg [class *= 'train_'] {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-position: 0 0;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    text-align: center
+}
+
+.train_bg .train_1 {
+    top: 118px;
+    left: 32px;
+    width: 334px;
+    height: 360px;
+    padding: 206px 28px 95px;
+    background-image: url(../images/life/train_front.svg)
+}
+
+.train_bg .train_1.hover {
+    background-image: url(../images/life/train_front_on.svg)
+}
+
+.train_bg [class *= 'train_']:not(.train_1) {
+    top: 325px;
+    width: 184px;
+    height: 155px;
+    padding: 0 25px 64px 0;
+    background-image: url(../images/life/train_end.svg);
+    background-position: 0 0
+}
+
+.train_bg [class *= 'train_']:not(.train_1)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 142px;
+    height: 134px
+}
+
+.train_bg [class *= 'train_']:not(.train_1).hover {
+    background-image: url(../images/life/train_end_on.svg)
+}
+
+.train_bg .train_2 {
+    left: 360px
+}
+
+.train_bg .train_3 {
+    left: 542px
+}
+
+.train_bg .train_4 {
+    left: 722px
+}
+
+.train_bg .train_5 {
+    left: 902px
+}
+
+.train_bg .train_6 {
+    left: 975px
+}
+
+.popup_pages .popSlider_thumb_tabs>li.hover {
+    border: 4px solid orange
+}
+
+.popup_pages .basicSlider_btn.prev {
+    background-position: 4px center
+}
+
+.popup_pages .basicSlider_btn.next {
+    background-position: 6px center
+}
+
+.thumbnalilSlider_slides .popup_contents {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.thumbnalilSlider_slides .popup_contents img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px
+}
+
+.thumbnalilSlider_slides .titleBox {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -20px 0 20px 0
+}
+
+.thumbnalilSlider_slides .titleBox .title {
+    padding: 0 60px 10px;
+    background-color: orange;
+    border-radius: 0 0 40px 40px
+}
+
+.thumbnalilSlider_slides .bottomText {
+    margin-top: 10px
+}
+
+.thumbnalilSlider_slides .bottomText.t-alignC {
+    text-align: center
+}
+
+.thumbnalilSlider_slides input {
+    width: 100%
+}

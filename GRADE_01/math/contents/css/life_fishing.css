@@ -1,0 +1,563 @@
+@charset "utf-8";#wrap.fishing {
+    background: url(../images/life/fishing/see_bg_right.svg) 900px 478px / auto 190px no-repeat,url(../images/life/fishing/see_bg_left.svg) 10px 534px / auto 190px no-repeat,url(../images/life/fishing/see_bg.svg) center / auto 705px no-repeat
+}
+
+#wrap.fishing header h1 .icon {
+    width: 32px;
+    height: 22px;
+    background-image: url("../images/icon/icon_fish.svg")
+}
+
+#wrap.fishing .contentsBox {
+    background-color: transparent
+}
+
+.fishingContent .charImg_box {
+    position: absolute;
+    right: -23px;
+    top: -75px;
+    width: 660px;
+    height: 448px;
+    overflow: hidden;
+    transform: scale(0.93);
+    -webkit-transform: scale(0.93);
+    -ms-transform: scale(0.93)
+}
+
+.fishingContent .charImg {
+    left: 90px;
+    width: 660px;
+    height: 448px;
+    background: url(../images/life/fishing/fish_child_sheet.png) 0 0/ auto 100% no-repeat;
+    position: relative
+}
+
+.fishingContent .charImg.success {
+    -webkit-animation: cyclist_1 1.2s steps(10) 1;
+    -ms-animation: cyclist_1 1.2s steps(10) 1;
+    animation: cyclist_1 1.2s steps(10) 1
+}
+
+@keyframes cyclist_1 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -6600px 0
+    }
+}
+
+@-webkit-keyframes cyclist_1 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -6600px 0
+    }
+}
+
+@-ms-keyframes cyclist_1 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -6600px 0
+    }
+}
+
+.fishingContent .quizTitle {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    width: 560px;
+    height: 190px;
+    padding: 10px 20px
+}
+
+.fishingContent .cach_fish.complete {
+    color: red
+}
+
+.fishingContent .cach_fish {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 248px;
+    left: 510px;
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    color: transparent
+}
+
+.fishingContent .dragObjBox .dragObj.dragObjComplete {
+    display: none
+}
+
+.fishingContent .dropObjBox .dragObj.dragObjComplete {
+    top: 0;
+    left: 0;
+    color: #006ee6;
+    z-index: 1
+}
+
+.fishingContent .dropObjBox .dragObj_1.dragObjComplete {
+    top: -8px
+}
+
+.fishingContent .dropObjBox .dragObj_2.dragObjComplete {
+    top: -18px
+}
+
+.fishingContent .dropObjBox .dragObj_3.dragObjComplete {
+    top: -31px
+}
+
+.fishingContent .dropObjBox .dragObj_4.dragObjComplete {
+    top: -53px
+}
+
+.fishingContent .dropObjBox .dragObj_5.dragObjComplete {
+    top: -50px
+}
+
+.fishingContent .dragObj.dragAnswer {
+    color: red;
+    left: 520px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -ms-transition: all .5s
+}
+
+.fishingContent .dragObj_1.dragAnswer {
+    top: 237px;
+    left: 500px
+}
+
+.fishingContent .dragObj_2.dragAnswer {
+    top: 247px
+}
+
+.fishingContent .dragObj_3.dragAnswer {
+    top: 212px
+}
+
+.fishingContent .dragObj_4.dragAnswer {
+    top: 196px
+}
+
+.fishingContent .dragObj_5.dragAnswer {
+    top: 200px
+}
+
+.fishingContent .dropObjBox .dragObj.dragObjComplete .fishBox,.fishingContent .dragObj.dragAnswer .fishBox {
+    animation: none
+}
+
+.fishingContent .dropObjBox .dragObj.dragObjComplete>span {
+    margin: 0
+}
+
+.fishingContent span {
+    position: absolute;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.5);
+    pointer-events: none
+}
+
+.fishingContent .dragObj_1 span {
+    top: 55px;
+    left: 45px
+}
+
+.fishingContent .dragObj_2 span {
+    top: 75px;
+    left: 30px
+}
+
+.fishingContent .dragObj_3 span {
+    top: 55px;
+    left: 60px
+}
+
+.fishingContent .dragObj_4 span {
+    top: 105px;
+    left: 42px
+}
+
+.fishingContent .dragObj_5 span {
+    top: 65px;
+    left: 70px
+}
+
+.fishingContent .dragObj {
+    position: absolute
+}
+
+.fishingContent .dragObj_1 {
+    top: 310px;
+    left: 30px;
+    width: 160px;
+    height: 128px
+}
+
+.fishingContent .dragObj_2 {
+    top: 280px;
+    left: 310px;
+    width: 190px;
+    height: 123px
+}
+
+.fishingContent .dragObj_3 {
+    top: 440px;
+    left: 370px;
+    width: 175px;
+    height: 138px
+}
+
+.fishingContent .dragObj_4 {
+    top: 360px;
+    left: 570px;
+    width: 145px;
+    height: 140px
+}
+
+.fishingContent .dragObj_5 {
+    top: 321px;
+    left: 780px;
+    width: 210px;
+    height: 144px
+}
+
+.fishingContent .dragObj_1 .fishBox,.fishingContent .dragObj_3 .fishBox,.fishingContent .dragObj_5 .fishBox {
+    -webkit-animation: fishSwim_box 1.1s steps(4) infinite;
+    -ms-animation: fishSwim_box 1.1s steps(4) infinite;
+    animation: fishSwim_box 1.1s steps(4) infinite
+}
+
+.fishingContent .dragObj_2 .fishBox,.fishingContent .dragObj_4 .fishBox {
+    -webkit-animation: fishSwim_box 1.0s steps(4) infinite;
+    -ms-animation: fishSwim_box 1.0s steps(4) infinite;
+    animation: fishSwim_box 1.0s steps(4) infinite;
+    transform: rotate(0.001deg);
+    -webkit-transform: rotate(0.001deg);
+    -ms-transform: rotate(0.001deg)
+}
+
+@keyframes fishSwim_box {
+    0%,50%,100% {
+        transform: translateY(0)
+    }
+
+    25% {
+        transform: translateY(-5px)
+    }
+
+    75% {
+        transform: translateY(5px)
+    }
+}
+
+.fishingContent .totalAnswer {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 406px;
+    right: 13px;
+    width: 50px;
+    height: auto;
+    padding: 0 5px;
+    border-radius: 5px
+}
+
+.fishingContent .totalAnswer li {
+    width: 36px;
+    height: 18px;
+    background: url(../images/life/fishing/count_fish.svg) 0 0/ 100% auto no-repeat;
+    margin: 3px 0
+}
+
+.fishingContent .basicSlider_btn.next {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 60px;
+    height: 80px;
+    background-image: url(../../contents/images/life/fishing/btn_next.svg);
+    background-color: transparent
+}
+
+.fishingContent .basicSlider_btn.next.hover {
+    transform: translateY(-50%) scale(1.1);
+    -webkit-transform: translateY(-50%) scale(1.1);
+    -ms-transform: translateY(-50%) scale(1.1)
+}
+
+.fishingContent .basicSlider_btn.prev {
+    opacity: 0;
+    visibility: hidden
+}
+
+.fishingContent .warning_btn {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 72px;
+    height: 90px;
+    z-index: 2;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%)
+}
+
+.fishingContent .warning_btn.off,.fishingContent .dapCheckBtn {
+    display: none
+}
+
+.fishingContent .pointNone {
+    pointer-events: none
+}
+
+.fishingContent .fakeBox {
+    position: absolute;
+    width: 1040px;
+    height: 400px;
+    top: 230px;
+    left: 70px;
+    z-index: -1
+}
+
+.fishingContent .fakeBox.on {
+    z-index: 5
+}
+
+.warning_pop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none
+}
+
+.warning_pop.on {
+    opacity: 1
+}
+
+.warning_pop .minPop {
+    background: url(../images/life/fishing/warning.svg) 190px 0/40px auto no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    border: 7px solid #f60;
+    background-color: #fff;
+    color: #f60;
+    box-shadow: 0 0 0 #7e7074;
+    font-size: 40px;
+    font-family: YGJAL
+}
+
+.warning_pop .minPop .warning_icon {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    width: 90px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+    background: #f60 url(../images/life/fishing/warning.svg) center/auto 34px no-repeat
+}
+
+.warning_pop .minPop>.flex {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+.popup_fishQuiz_end {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none
+}
+
+.popup_fishQuiz_end.on {
+    opacity: 1
+}
+
+.popup_fishQuiz_end .flex {
+    background: url(../images/life/fishing/warning.svg) 190px 0/40px auto no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    width: 700px;
+    height: 450px;
+    border-radius: 15px;
+    border: 7px solid #666;
+    background-color: #fff;
+    box-shadow: 0 0 0 #7e7074;
+    font-size: 40px;
+    font-family: YGJAL
+}
+
+.popup_fishQuiz_end .praiseImg {
+    width: 239px;
+    height: 238px;
+    background: url(../images/life/fishing/bear_sheet.png) 0 0/ auto 100% no-repeat;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    position: relative;
+    left: 260px;
+    margin: 60px 0 60px 0
+}
+
+.popup_fishQuiz_end.on .praiseImg {
+    -webkit-animation: cyclist_2 1s steps(10) 5;
+    -ms-animation: cyclist_2 1s steps(10) 5;
+    animation: cyclist_2 1s steps(10) 5
+}
+
+@keyframes cyclist_2 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -2390px 0
+    }
+}
+
+@-webkit-keyframes cyclist_2 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -2390px 0
+    }
+}
+
+@-ms-keyframes cyclist_2 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -2390px 0
+    }
+}
+
+.popup_fishQuiz_end .flex .innerHtml {
+    text-align: center
+}
+
+.popup_pages>.warning_pop .popup_closeBtn {
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 15px;
+    background-size: 15px
+}
+
+.popup_pages>li.popup_fishQuiz_end .popup_closeBtn {
+    top: 156px;
+    right: 232px;
+    border-radius: 0 0 0 15px;
+    background-color: #666;
+    background-size: 15px
+}
+
+.popup_pages>li.popup_fishQuiz_end .popup_closeBtn.hover {
+    background-image: url(../images/button/btn_close_orange.svg)
+}
+
+.basicSlider_num_tabs {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -40px;
+    left: 280px;
+    bottom: auto;
+    border: 1px solid #001890;
+    border-radius: 4px;
+    overflow: hidden
+}
+
+.basicSlider_num_tabs>li {
+    display: flex;
+    -webkit-display: flex;
+    -ms-display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #e5faff;
+    box-sizing: border-box;
+    font-size: 21px;
+    color: #001890;
+    pointer-events: none;
+    cursor: none
+}
+
+.basicSlider_num_tabs>li.on {
+    background-color: #001890;
+    color: white
+}
+
+.basicSlider_num_tabs>li:not(:last-of-type) {
+    border-right: 1px solid #001890
+}
+
+.fishing .homeIcon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: url(../images/life/fishing/homeIcon.svg) center/ 100% auto no-repeat;
+    cursor: pointer;
+    z-index: 6
+}
+
+.fishing .homeIcon.hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1)
+}

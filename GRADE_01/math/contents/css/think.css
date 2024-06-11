@@ -1,0 +1,340 @@
+@charset "utf-8";#wrap.think {
+    font-family: NotoM
+}
+
+.think .mediaContainer {
+    position: relative
+}
+
+.think .imgContainer,.think .zoomContainer {
+    position: relative;
+    background-color: #Fff
+}
+
+.think .zoomArea,.think .zoomImgContainer,.think .imgContainer {
+    width: 100%;
+    height: 100%
+}
+
+.think .zoomContainer .zoom_img {
+    width: 100%;
+    height: 100%;
+    background-size: cover
+}
+
+.think .zoomController {
+    top: 10px
+}
+
+.introTopSlider {
+    height: 458px
+}
+
+.introTopSlider_slides {
+    height: 100%
+}
+
+.introTopSlider_slides>li {
+    position: relative;
+    height: 100%
+}
+
+.introTopSlider_slides>li.on {
+    display: block
+}
+
+.introTopSlider_btn {
+    position: absolute;
+    top: 190px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #a68965;
+    background-size: auto 76%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1
+}
+
+.introTopSlider_btn.next {
+    right: 10px;
+    background-image: url(../../contents/images/button/btn_next_white.svg)
+}
+
+.introTopSlider_btn.prev {
+    left: 10px;
+    background-image: url(../../contents/images/button/btn_prev_white.svg)
+}
+
+/* 다음 시간에는 무엇을 배울까요? */
+.fixOpacity {
+    opacity: 1 !important;
+}
+
+
+.introSlider-wrap{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    min-height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 40px;
+    z-index: 3;
+} 
+.introSlider {
+    position: relative;
+    width: 100%;
+    
+    background-color: #fff;
+    z-index: 1;
+    transition: transform .2s ease;
+    transform: translate(0, 0);
+    box-shadow: inset 3px 3px 0 0 #ececec, inset -3px 0 0 0 #ececec;
+}
+/* .introSlider[data-switch-on="false"] {
+    transform: translate(0, 100px);
+} */
+.mouse-area-close{
+    cursor: pointer;
+    position: absolute;
+    top:0; right:0;
+    width: 20px;
+    height: 20px;
+    z-index: 10;
+    background: url(../../contents/images/button/btn_close_gray.svg) no-repeat 0 0 / cover;
+}
+.mouse.active{
+    opacity: 0;
+    pointer-events: none;
+}
+.mouse {
+  animation: clickInduceMotion 1s 2 ease-in;
+  -webkit-animation: clickInduceMotion 1s 2 ease-in;
+}
+
+.mouse:hover {
+  transform: scale(0.9);
+}
+@keyframes clickInduceMotion {
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1)
+	}
+	20% {
+		-webkit-transform: scale3d(0.9, 0.9, 0.9);
+		transform: scale3d(0.9, 0.9, 0.9)
+	}
+	40% {
+		-webkit-transform: scale3d(1.2, 1.2, 1.2);
+		transform: scale3d(1.2, 1.2, 1.2)
+	}
+	60% {
+		-webkit-transform: scale3d(0.92, 0.92, 0.92);
+		transform: scale3d(0.92, 0.92, 0.92)
+	}
+	80% {
+		-webkit-transform: scale3d(1.08, 1.08, 1.08);
+		transform: scale3d(1.08, 1.08, 1.08)
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1)
+	}
+}
+.introSlider .mouse {
+    display: inline-block;
+    vertical-align: middle;
+    position:relative;
+    top:-6px;
+    margin-bottom:-6px;
+}
+.intro_circle_tabs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 32px;
+    padding: 0 0 0 32px;
+    border-radius: 0 30px 30px 0;
+    vertical-align: top;
+    z-index: 1
+}
+
+.intro_circle_tabs>li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: top;
+    background-color: #eedac2;
+    box-sizing: border-box
+}
+
+.intro_circle_tabs>li:not(:last-of-type) {
+    margin-right: 8px
+}
+.intro_circle_tabs>li.on {
+    pointer-events:none;
+}
+.intro_circle_tabs>li.on,
+.intro_circle_tabs>li.hover {
+    background-color: #5e3e18
+}
+
+.introSlider_slides {
+    font-family: NotoM;
+    color: #000;
+    min-height: 101px;
+    padding: 30px 108px 12px 32px;
+    box-sizing: border-box
+}
+
+.introSlider_slides.off {
+    display: none
+}
+
+.introSlider_slides>li {
+    display: none;
+    font-size: 45px;
+    line-height: 1.3
+}
+
+.introSlider_slides>li.on {
+    display: block
+}
+
+.introSlider_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background-color: #a98b66;
+    background-position: center;
+    background-size: 45%;
+    background-repeat: no-repeat
+}
+
+.introSlider_btn.hover {
+    background-color: #e4d1b8
+}
+
+.introSlider_btn.prev {
+    right: 54px;
+    background-image: url("../../contents/images/button/btn_prev_white.svg")
+}
+
+.introSlider_btn.next {
+    right: 26px;
+    background-image: url("../../contents/images/button/btn_next_white.svg")
+}
+
+.introSlider_btn.off {
+    opacity: 1;
+    background-color: #e4d1b8;
+    pointer-events: none
+}
+
+.introSlider.media .introSlider_btn {
+    top: auto;
+    bottom: 78px;
+    transform: none
+}
+
+.introSlider.one {
+    display: flex;
+    align-items: center;
+    height: 91px
+}
+
+.introSlider.one .intro_circle_tabs {
+    display: none
+}
+
+.introSlider.one .introSlider_slides {
+    padding: 0 32px
+}
+
+.introSlider.one.media {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 140px
+}
+
+.introSlider.one.media .introSlider_slides {
+    height: 92px;
+    display: flex;
+    align-items: center
+}
+
+.thinkopen_btn {
+position: absolute;
+left: 40px;
+top:-40px;
+width: 174px;
+height: 40px;
+border-radius: 12px 12px 0px 0px;
+z-index: 1000;
+background: #5e3e17;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+.thinkopen_btn:hover {
+background: #ae7c65;
+}
+.thinkopen_btn.hide {
+top: -2px;
+}
+
+.thinkopen_btn:before {
+position: absolute;
+top: 11px;
+left: 18px;
+text-align: center;
+font-size: 20px;
+font-family: YGJAL;
+color: #fff;
+}
+
+.thinkopen_btn.show:before {
+content: "발문 가리기";
+}
+
+.thinkopen_btn.hide:before {
+content: "발문 열기";
+left: 28px;
+}
+
+.thinkopen_btn:after {
+position: absolute;
+content: "";
+top: 8px;
+right: 15px;
+width: 27px;
+height: 27px;
+background: url("../../contents/images/btn_think_close.png") center center no-repeat;
+background-size: 27px;
+}
+
+.introSlider[data-switch-on="false"] .thinkopen_btn:after {
+background: url("../../contents/images/btn_think_open.png") center center no-repeat;
+background-size: 27px;
+}
+
+.thinkopen_btn img {
+height: 30px;
+pointer-events: none;
+}

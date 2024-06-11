@@ -1,0 +1,390 @@
+/*
+    *** 레이아웃 작업 0613
+*/
+/* 공통 absolute */
+.cl_absolute {position: absolute;}
+
+.cl_mainContainer {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+
+}
+.cl_mainContainer:before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: -1
+}
+
+/*.checkContainer .gate_container .cl_mainContainer:before {*/
+/*    background: url(../../contents/images/background/bg_check_change.png) center center/cover no-repeat*/
+/*}*/
+
+
+.isActiveContainer .gate_container .cl_mainContainer {
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    height: 500px;
+    border-radius: 30px
+}
+
+.isActiveContainer .gate_container .cl_mainContainer:before {
+    content: none
+}
+
+.cl_mainContainer .gate_title_title {
+    position: absolute;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    color: #5b3c17;
+    opacity: 0;
+    font-size: 47px;
+    font-family: YGJAL
+}
+
+.cl_mainContainer .gate_sub_title {
+    position: absolute;
+    top: 98px;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    color: #ae7c65;
+    font-size: 26.46px;
+    font-family: 'NotoB';
+}
+
+.cl_mainContainer .gate_title_title .orange {
+    color: #ff5d00;
+}
+
+.checkContainer .gate_container .cl_mainContainer .gate_title_title {
+    top: 33px;
+    text-shadow: 4px 0 0 #fff,-4px 0 0 #fff,0 4px 0 #fff,0 -4px 0 #fff,3px 3px #fff,-3px -3px 0 #fff,3px -3px 0 #fff,-3px 3px 0 #fff,3px 3px 5px rgba(0,0,0,0.3)
+}
+
+.checkContainer .gate_container .cl_mainContainer .gate_title_container:before {
+    background: url(../../contents/images/background/bg_check.png) center bottom/contain no-repeat
+}
+
+
+.cl_mainContainer .quizList {
+    display: flex;
+    top: 164px;
+    left: 50%;
+    max-width: 730px;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.cl_mainContainer .quizList button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 206px;
+    cursor:pointer;
+    background: url(../../contents/images/background/bg_quiz_default.png) center bottom/contain no-repeat;
+}
+.cl_mainContainer .quizList button .count {
+    margin-bottom: 25px;
+    color: #7c4500;
+    font-size: 41px;
+    text-align: center;
+    font-family: YGJAL;
+}
+
+.cl_mainContainer .quizList button .checked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 44px;
+    color: #fff;
+    font-size: 20px;
+    background: #7c4500;
+    border-radius: 22px;
+    cursor:pointer;
+}
+
+.cl_mainContainer .quizList button .checked .circle {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+    background-color: #fff;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+/* active붙었을때 */
+.cl_mainContainer .quizList button.active .checked  {
+    background: #f263a1;
+}
+.cl_mainContainer .quizList button.active .checked .circle:before {
+    content: url("../../contents/images/icon/icon_chk.png");
+    width: 31px;
+    height: 27px;
+    position: absolute;
+    top: -25%;
+    left:0;
+}
+.cl_mainContainer .quizList button.active {
+    background: url(../../contents/images/background/bg_quiz_active.png) center bottom/contain no-repeat;
+}
+
+.checkContainer .gate_container .cl_mainContainer .gate_btn {top: 400px;}
+.gate_container .cl_mainContainer .gate_btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 216px;
+    height: 78px;
+    opacity: 0;
+    font-size: 35px;
+    border-radius: 40px;
+    background-color: #f263a1;
+    color: #fff;
+    font-family: YGJAL;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 7px 6px 18px -6px rgba(110,110,110,0.61);
+}
+.gate_container .cl_mainContainer .gate_btn span {margin-right: 45px; cursor:pointer;}
+.gate_container .cl_mainContainer .gate_btn:after {
+    content: url("../../contents/images/icon/startArrow.png");
+    width: 55px;
+    height: 56px;
+}
+
+.checkContainer .gate_container .cl_mainContainer .gate_btn:hover {background-color:#C349C9;}
+.checkContainer .gate_container .cl_mainContainer .gate_btn:hover:after {
+    content: url("../../contents/images/icon/startArrowOver.png");
+    width: 55px;
+    height: 56px;
+}
+
+
+
+
+.gate_container .cl_mainContainer .worksheet {
+    z-index: 1;
+    right: 50%;
+    bottom: 106px;
+    transform:  translateX(50%);
+}
+.gate_container .cl_mainContainer .worksheet button,
+.gate_container .cl_mainContainer .worksheet a {
+    display: inline-block;
+    width: 223px;
+    height: 50px;
+    background-color: #ae7c65;
+    color: #fff;
+    font-size: 20px;
+    font-family: YGJAL;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.gate_container .cl_mainContainer .worksheet .search {
+    background: #ae7c65 url(../../contents/images/icon/icon_search.png) 19px center/22px auto no-repeat;
+}
+.gate_container .cl_mainContainer .worksheet .down {
+    background: #ae7c65 url(../../contents/images/icon/icon_down.svg) 19px center/25px auto no-repeat;
+}
+
+.gate_container .cl_mainContainer .downloadBtn {background: none; box-sizing: border-box;}
+.gate_container .cl_mainContainer .downloadBtn:before {content: none;}
+.gate_container .cl_mainContainer .downloadBtn a:before {
+    content: attr(data-name);
+    padding-left: 14px;
+    display: flex;
+    height: 100%;
+    color: #fff;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* 기존 애니메이션 숨김 */
+.gate_container .gate_ani {display: none;}
+.gate_container .gate_ani_Math {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.gate_container .gate_ani_Math .gate_ani_Math_cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+/* 칭찬스티커 */
+header .cl_sticker {
+    position: absolute;
+    right:109px;
+    top: 0;
+    cursor: pointer;
+}
+
+header .cl_sticker img {
+    display: block;
+    position: absolute;
+}
+
+header .cl_sticker .last {
+    display: none;
+}
+
+header .cl_sticker:hover .last {
+    display: block;
+}
+
+
+
+
+/* 칭찬하기 팝업창 */
+.cl_modalBg {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.cl_modalBg.show {
+    display: block;
+}
+.cl_modalBg .modalInner {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 720px;
+    height: 420px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.cl_modalBg .modalInner .modalTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 32px;
+    background-color: #f77c19;
+    border-radius: 0 0 0 15px;
+}
+.cl_modalBg .modalInner .modalTop .closeBtn {
+    width: 22px;
+    height: 25px;
+    background: url("../../contents/images/icon/icon_closeBtn.png") center/16px no-repeat;
+}
+.cl_modalBg .modalInner .modalBody {
+    position: absolute;
+    top: 43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 632px;
+    height: 300px;
+    background: url("../../contents/images/background/bg_math_board.png") center no-repeat;
+}
+
+.cl_modalBg .modalInner .modalBody .mathBoardInner {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.cl_modalBg .modalInner .modalBody .mathBoardInner .mathTxt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 52px;
+    color: #fff;
+    font-family: YGJAL;
+    text-align: center;
+}
+.cl_modalBg .modalInner .modalBody .mathBoardInner .mathTxt:before {
+    content: '';
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translateY(-100%);
+    width: 78px;
+    height: 85px;
+    background: url("../../contents/images/background/bg_math_flower.png") center no-repeat;
+}
+
+.cl_modalBg .modalInner .modalBody .mathBoardInner .mathTxt span {
+    display: none;
+    padding-left: 0;
+    width: 370px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.cl_modalBg .modalInner .modalBody .mathBoardInner .mathTxt span.on {
+    display: inline-block;
+}
+
+.cl_modalBg .modalInner  .praiseAni {
+    position:absolute;
+    bottom: 28px;
+    right: 46px;
+    width:300px;
+    height:260px;
+    background-image:url("../../contents/images/background/speedQuiz_done_sprite.png"); background-repeat: no-repeat;}
+
+
+
+#wrap.checkContainer header .checkTitle {background-image:none; padding-left:0; left:38px;}
+#wrap.checkContainer main:before {background-image:none;}
+.checkContainer .basicSlider_tabs {right:100px;}
+
+/*
+    *** 0623 추가 작업
+*/
+/* 각문제별 활동지다운로드 버튼 숨김처리 */
+.basicSlider_slides .downloadBtn {display: none;}
+
+#animation_container{
+    overflow: hidden;
+    position:relative;
+}
+#animation_container #canvas {
+    height:auto !important;
+    position:absolute;
+    left:0;
+    bottom:0;
+    pointer-events:none;
+}
+

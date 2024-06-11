@@ -1,0 +1,180 @@
+@charset "utf-8";
+#wrap.partnerContainer header h1 .icon {
+    width: 22px;
+    height: 26px;
+    background-image: url(../images/icon/icon_thumb.png)
+}
+
+.partnerContainer .contentsBox section {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box
+}
+
+/* 
+.partnerContainer .characterImg.circle div:not(.nameBox) {
+    top: 0;
+    transform: translate(-50%) scale(0.83) rotate(0.1deg) !important
+} */
+
+
+.handContainer {
+    height: 100%;
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-around;
+    box-sizing: border-box
+}
+
+.handContainer>li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 560px;
+    height: 450px
+}
+
+.handContainer .characterImg.circle .charSpriteImg.boy_4{
+    transform: translate(-50%) scale(1) rotate(0.1deg) !important;
+    top:-138px !important;
+}
+
+.handContainer .characterImg.circle .charSpriteImg.boy_2{
+    transform: translate(-50%) scale(1) rotate(0.1deg) !important;
+    top:-199px !important;
+}
+
+.handContainer .characterImg.circle {
+    position: relative;
+    flex-shrink: 0;
+    margin: -80px 0 0 0;
+    width: 213px;
+    height: 213px;
+    border-width: 10px;
+    box-sizing: border-box
+}
+
+.math .handContainer .characterImg.circle {
+    cursor: pointer
+}
+
+.handContainer .characterImg.circle.complete {
+    cursor: default;
+    pointer-events: none
+}
+
+.handContainer .colorBox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    word-break: keep-all;
+    padding: 10px 30px;
+    text-align: center;
+    font-family: NotoBK;
+    box-shadow: none
+}
+
+.handContainer>li.complete {
+    pointer-events: none;
+    cursor: default
+}
+
+.handContainer>li [data-toggle-target] {
+    opacity: 0
+}
+
+.handContainer>li [data-toggle-target].on {
+    animation: opacityOne 1s ease-out forwards;
+    -webkit-animation: opacityOne 1s ease-out forwards;
+    -moz-animation: opacityOne 1s ease-out forwards
+}
+.partnerContainer .study_guide {
+    top: -14px;
+    right:0;
+}
+
+.partnerContainer.life .characterImg.circle div.praise_stemp {
+    top: -83px;
+    left: -83px;
+    width: 360px;
+    height: 360px;
+    background: url(../images/life/praise_stemp_sheet.png) 0 0/ auto 100% no-repeat;
+    transform: none !important
+}
+
+.partnerContainer.life .characterImg.complete .praise_stemp {
+    -webkit-animation: cyclist_stemp 1.5s steps(25) forwards;
+    -ms-animation: cyclist_stemp 1.5s steps(25) forwards;
+    animation: cyclist_stemp 1.5s steps(25) forwards
+}
+.partnerContainer.life .contentsBox {padding-top:44px !important}
+.partnerContainer .charSpriteImg.girl_3{
+    background-repeat: no-repeat;
+    background-position: 50% 20px;
+    background-size: 280px;
+}
+.partnerContainer .charSpriteImg.boy_4{
+    background-repeat: no-repeat;
+    background-position: 50% 140px;
+    background-size: 230px;
+}
+.characterImg.boy_4-wrap.circle{
+    border: 9px solid #cee492;background-color: #f3fcd0;
+}
+@keyframes cyclist_stemp {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -9000px 0
+    }
+}
+
+@-webkit-keyframes cyclist_stemp {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -9000px 0
+    }
+}
+
+@-ms-keyframes cyclist_stemp {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -9000px 0
+    }
+}
+
+#wrap.pointContainer.life header h1 .icon {width: 22px;height: 26px;background-image: url(../images/icon/icon_thumb.png);}
+.pointContainer .charSpriteImg.girl_3 {
+    background-repeat: no-repeat;
+    background-position: 50% 20px;
+    background-size: 280px;
+}
+.pointContainer .charSpriteImg.boy_4 {
+    background-repeat: no-repeat;
+    background-position: 50% 140px;
+    background-size: 230px;
+}
+.pointContainer.life .characterImg.complete .praise_stemp {
+    -webkit-animation: cyclist_stemp 1.5s steps(25) forwards;
+    -ms-animation: cyclist_stemp 1.5s steps(25) forwards;
+    animation: cyclist_stemp 1.5s steps(25) forwards;
+}
+.pointContainer.life .characterImg.circle div.praise_stemp {
+    top: -83px;
+    left: -83px;
+    width: 360px;
+    height: 360px;
+    background: url(../images/life/praise_stemp_sheet.png) 0 0/ auto 100% no-repeat;
+    transform: none !important;
+}

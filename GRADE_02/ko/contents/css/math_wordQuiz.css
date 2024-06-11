@@ -1,0 +1,452 @@
+@charset "utf-8";
+#wrap.word header h1 .icon {
+    width: 22px;
+    height: 22px;
+    background-image: url("../images/icon/icon_math_word.png")
+}
+
+.word .contentsBox {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 90px 15px;
+    font-family: YGJAL
+}
+
+.word .wordBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.word .wordBox>li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-family: NotoB;
+    font-size: 60px;
+    line-height: 1;
+    background-color: #f6e7d4;
+    box-shadow: inset 3px 3px 2px 0 rgba(255,255,255,0.8),inset -4px -3px 2px 0 #e3ceb2;
+    cursor: pointer
+}
+
+.word .wordBox>li:hover {
+    color: #fff;
+    background-color: #ae7c65;
+    box-shadow: inset 3px 3px 2px 0 rgba(255,255,255,0.8),inset -4px -3px 2px 0 #825441
+}
+
+.word .wordBox.cell5 {
+    width: 495px;
+    margin: 0 0 0 75px
+}
+
+.word .wordBox.cell5>li {
+    width: 95px;
+    height: 95px
+}
+
+.word .wordBox.cell4 {
+    width: 476px;
+    margin: 0 0 0 86px
+}
+
+.word .wordBox.cell4>li {
+    width: 119px;
+    height: 119px
+}
+
+.word .wordBox>li[data-answer].complete {
+    color: #fff
+}
+
+.word .wordBox.completed>li {
+    cursor: default
+}
+
+.word .wordBox.completed>li[data-answer].complete {
+    color: #fff
+}
+
+.word .wordBox.completed>li[data-answer].complete:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 96%;
+    height: 96%;
+    border-radius: 8px;
+    border: 4px dashed #ffec16;
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat;
+    box-sizing: border-box
+}
+
+.word .wordBox.completed>li[data-answer].complete:before {
+    animation: answerBlink linear 1.2s 2;
+    -webkit-animation: answerBlink linear 1.2s 2;
+    -ms-animation: answerBlink linear 1.2s 2;
+    transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%
+}
+
+@keyframes answerBlink {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes answerBlink {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-ms-keyframes answerBlink {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.word .wordBox>li.complete,.word .wordBox.completed>li.complete {
+    background-color: #fe6700;
+    box-shadow: inset 3px 3px 2px 0 rgba(255,255,255,0.8),inset -4px -3px 2px 0 rgba(219,90,1,1)
+}
+
+.word .wordBox.completed>li,.word .wordBox.completed>li:hover,.word .wordBox.completed>li:focus {
+    background-position: 0 0;
+    cursor: default
+}
+
+.timerContainer {
+    position: absolute;
+    right: 90px;
+    top: 50px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column
+}
+
+.timerContainer .timerBtn {
+    position: relative;
+    width: 179px;
+    height: 179px;
+    padding-left: 54px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: url(../images/quiz/bg_timer_img.png) center/contain no-repeat;
+    font-family: inherit;
+    overflow: hidden
+}
+
+.timerContainer .timerBtn:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    content: '타이머 시작 >';
+    color: #fff;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
+    pointer-events: none
+}
+
+.timerContainer.on .timerBtn {
+    background-image: url(../images/quiz/bg_timer_img_on.png)
+}
+
+.timerContainer.on .timerBtn:after {
+    position: absolute;
+    content: '';
+    top: 28px;
+    left: -34px;
+    width: 200px;
+    height: 160px;
+    background: url(../images/quiz/bg_timer_img_ani.png) no-repeat;
+    transform-origin: 160px 120px;
+    transform: none;
+    animation: timerFlag 1s infinite linear;
+    -webkit-animation: timerFlag 1s infinite linear;
+    -moz-animation: timerFlag 1s infinite linear
+}
+
+.timerContainer .timerBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px
+}
+
+.timerContainer .timerBar:before {
+    content: "";
+    flex-shrink: 0;
+    width: 49px;
+    height: 49px;
+    margin-right: -3px;
+    border-radius: 50%;
+    background: url("../images/quiz/icon_clock.png") center/contain no-repeat;
+    box-sizing: border-box;
+    z-index: 1
+}
+
+.timerContainer.on .timerBar:before {
+    -webkit-animation: clockColor 1s steps(28) infinite;
+    -ms-animation: clockColor 1s steps(28) infinite;
+    animation: clockColor 1s steps(28) infinite;
+    background: url("../images/quiz/icon_clock_on.png") center/contain no-repeat,url("../images/quiz/timerSheet.png") 0 center/auto 48px no-repeat
+}
+
+.timerContainer .timerBar .timerGageBar {
+    position: relative;
+    width: 100%;
+    height: 18px;
+    padding: 3px 5px 3px 0;
+    border: 2px solid #dadada;
+    background-color: #e9e9e9;
+    border-radius: 0 30px 30px 0;
+    box-sizing: border-box
+}
+
+.timerContainer .timerBar .timerGageBar .bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    background-color: #cdcdcd
+}
+
+.timerContainer.on .timerBar .timerGageBar .bar {
+    background-color: #fe6600
+}
+
+.timerContainer .timerText {
+    font-size: 16px;
+    color: #999
+}
+
+.timerContainer.on .timerText {
+    color: #000
+}
+
+.timerContainer.on .timerText .sec {
+    color: #fe6600
+}
+
+.timerContainer .timerText .state {
+    color: #333
+}
+
+.word .btnContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    right: 90px;
+    bottom: 46px;
+    height: 116px;
+    cursor: default
+}
+
+.popup_pages>li.explain {
+    position: absolute;
+    width: 96%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    box-shadow: rgba(0,0,0,0.6) 0 0 0 9999px
+}
+
+.popup_pages>li.explain .popup_closeBtn {
+    top: 13px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    background-size: 30px;
+    background-color: transparent;
+    background-position: center
+}
+
+.popup_pages>li.explain .popup_closeBtn.hover {
+    background-image: url("../images/button/btn_close_gray.svg")
+}
+
+.popup_pages>li.explain .icon_exam {
+    margin: .4em .3em 0 0
+}
+
+.popup_pages>li.explain h2 {
+    width: 100%;
+    color: #fff;
+    font-size: 38px;
+    line-height: 1.2;
+    font-family: YGJAL;
+    padding: 10px 70px 10px 40px;
+    background-color: #f60;
+    border-radius: 30px 30px 0 0;
+    box-sizing: border-box
+}
+
+.popup_pages>li.explain .explainContainer {
+    background-color: #fff;
+    padding: 35px 55px;
+    line-height: 1.3em;
+    border-radius: 0 0 30px 30px
+}
+
+.popup_pages>li.explain .explainContainer .img {
+    text-align: center
+}
+
+.popup_pages>li.explain .explainContainer .img img {
+    vertical-align: top
+}
+
+.popup_pages>li.explain .explainContainer .desc {
+    padding: 40px 55px 0 0;
+    font-size: 40px;
+    line-height: 36px;
+    font-family: NotoR
+}
+
+.popup_pages>li.explain .explainContainer img+.desc {
+    padding-top: 70px
+}
+
+@keyframes clockColor {
+    from {
+        background-position: center,0 0
+    }
+
+    to {
+        background-position: center,-1344px 0
+    }
+}
+
+@-webkit-keyframes clockColor {
+    from {
+        background-position: center,0 0
+    }
+
+    to {
+        background-position: center,-1344px 0
+    }
+}
+
+@-ms-keyframes clockColor {
+    from {
+        background-position: center,0 0
+    }
+
+    to {
+        background-position: center,-1344px 0
+    }
+}
+
+@keyframes timerFlag {
+    0% {
+        transform: rotate(0)
+    }
+    25% {
+        transform: rotate(8deg)
+    }
+    50% {
+        transform: rotate(0)
+    }
+    75% {
+        transform: rotate(-8deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
+
+@-webkit-keyframes timerFlag {
+    0% {
+        transform: rotate(0)
+    }
+
+    25% {
+        transform: rotate(8deg)
+    }
+
+    50% {
+        transform: rotate(0)
+    }
+
+    75% {
+        transform: rotate(-8deg)
+    }
+
+    100% {
+        transform: rotate(0)
+    }
+}
+
+@-moz-keyframes timerFlag {
+    0% {
+        transform: rotate(0)
+    }
+
+    25% {
+        transform: rotate(8deg)
+    }
+
+    50% {
+        transform: rotate(0)
+    }
+
+    75% {
+        transform: rotate(-8deg)
+    }
+
+    100% {
+        transform: rotate(0)
+    }
+}

@@ -1,0 +1,385 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'cafe24';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('../../libs/font/Cafe24Ssurround-v2.0.woff2') format('woff2'),
+        url('../../libs/font/Cafe24Ssurround-v2.0.woff') format('woff');
+}
+.ability-wrap{
+    position: absolute;
+    left:-7px;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.ability-item{
+    position: relative;
+    display: flex;
+    width:50px;
+    height:58px;
+    flex-direction: column;
+
+}
+.ability-item[data-type="정보 처리"]::after{color:#69269b}
+.ability-item[data-type="추론"]:after{color:#0066bb; top:5px}
+.ability-item[data-type="연결"]:after{color:#be0000; }
+.ability-item[data-type="문제 해결"]:after{color:#ff7b20;}
+.ability-item[data-type="의사 소통"]:after{color:#00af4e;}
+
+.ability-item[data-type="정보 처리"]{background: url(../images/proto_km_911_02.png) no-repeat 50% 100% / 100%;}
+.ability-item[data-type="추론"]{background: url(../images/proto_km_911_04.png) no-repeat 50% 100% / 100%;}
+.ability-item[data-type="연결"]{background: url(../images/proto_km_911_06.png) no-repeat 50% 100% / 100%;}
+.ability-item[data-type="문제 해결"]{background: url(../images/proto_km_911_03.png) no-repeat 50% 100% / 100%;}
+.ability-item[data-type="의사 소통"]{background: url(../images/proto_km_911_05.png) no-repeat 50% 100% / 100%;}
+.ability-item::after{
+    content: attr(data-type);
+    top:0;
+    width:auto;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    font-family: 'cafe24';
+    font-weight: 700;
+    font-size: 13px;
+    left:50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+    text-shadow: #fff 2px 0 0,#fff 1.75517px .958851px 0,#fff 1.0806px 1.68294px 0,#fff .141474px 1.99499px 0,#fff -0.832294px 1.81859px 0,#fff -1.60229px 1.19694px 0,#fff -1.97998px .28224px 0,#fff -1.87291px -0.701566px 0,#fff -1.30729px -1.5136px 0,#fff -0.421592px -1.95506px 0,#fff .567324px -1.91785px 0,#fff 1.41734px -1.41108px 0,#fff 1.92034px -0.558831px 0,3px 4px 8px rgba(0,0,0,0.3)
+}
+
+
+
+
+
+#wrap.suhi {
+    background-color: #f0f6d4
+}
+
+#wrap.suhi header {
+    height: 82px
+}
+
+#wrap.suhi header h1 {
+    background-color: transparent;
+    border-radius: 0;
+    height: 100%;
+    padding: 0
+}
+
+.suhi header h1 .suhi_title {
+    position: relative;
+    padding: 0 0 0 37px;
+    height: 100%;
+    margin: 0 10px 0 0;
+    line-height: 82px;
+    background: url(../images/background/bg_math_title_1.png) 0 25px/139px no-repeat
+}
+
+.suhi header h1 .suhi_title:before,.suhi header h1 .suhi_title:after {
+    font-size: 26px;
+    text-shadow: #fff 2px 0 0,#fff 1.75517px .958851px 0,#fff 1.0806px 1.68294px 0,#fff .141474px 1.99499px 0,#fff -0.832294px 1.81859px 0,#fff -1.60229px 1.19694px 0,#fff -1.97998px .28224px 0,#fff -1.87291px -0.701566px 0,#fff -1.30729px -1.5136px 0,#fff -0.421592px -1.95506px 0,#fff .567324px -1.91785px 0,#fff 1.41734px -1.41108px 0,#fff 1.92034px -0.558831px 0,3px 4px 8px rgba(0,0,0,0.3)
+}
+
+.suhi header h1 .suhi_title:before {
+    content: "수학";
+    color: #57bb14;
+    font-size: 34px;
+    padding-right: 8px
+}
+
+.suhi header h1 .suhi_title:after {
+    content: '익힘';
+    color: #75e11a;
+    font-size: 34px;
+}
+
+.suhi header h1 .subInfo {
+    width: 890px;
+    font-family: NotoM
+}
+
+.suhi header h1 .sub-text {
+    color: #333;
+    font-size: 20px;
+    margin: 0 0 0 5px
+}
+
+.suhi header h1 .sub-page {
+    position: relative;
+    align-self: flex-end;
+    margin: 0 0 0 8px;
+    padding: 0 0 0 10px;
+    color: #37A259;
+    font-size: 18px
+}
+
+.suhi header h1 .sub-page:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 18px;
+    background-color: #37A259
+}
+
+#wrap.suhi .basicSlider_tabs>li {
+    background-color: #d7deb8;
+    color: #898E72
+}
+
+#wrap.suhi .basicSlider_tabs>li.hover,#wrap.suhi .basicSlider_tabs>li.on {
+    background-color: #37a259;
+    color: #fff;
+}
+
+.suhi h2 {
+    display: flex;
+    flex-shrink: 0;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 45px;
+}
+.suhi h2 .dot+span {
+    font-size: 45px;
+}
+
+.suhi h2 ins {
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    font-family: YGJAL;
+    vertical-align: top;
+    box-sizing: border-box
+}
+
+.suhi h2 ins.number {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    border-radius: 10px;
+    color: #6dbc4b;
+    border: 2px solid #6dbc4b;
+    background-color: #fff
+}
+.suhi h2 ins.special[data-along]::before{content: "" !important;}
+.suhi h2 ins.special[data-along]::after{content: "" !important;}
+.suhi h2 ins.special[data-along]{
+    padding: 0 0 0 50px !important;
+    margin: 0;
+    line-height: 43px;
+    background: url(../images/icon/title-blt-new-4.png) no-repeat 0 10px / 53px;
+    -webkit-animation: shake-top .8s cubic-bezier(0.455,0.030,0.515,0.955) both;
+    animation: shake-top .8s cubic-bezier(0.455,0.030,0.515,0.955) both;
+    height: 50px;
+}
+.suhi h2 ins.special[data-along="blue"]{background-image: url(../images/icon/title-blt-new-4.png);}
+.suhi h2 ins.special[data-along="orange"]{background-image: url(../images/icon/title-blt-new-5.png);}
+.suhi h2 ins.special[data-along="green"]{background-image: url(../images/icon/title-blt-new-6.png);}
+.suhi h2 ins.special {
+    padding: 0 0 0 30px;
+    margin: 0 10px 0 0;
+    line-height: 42px;
+    background: url(../images/background/bg_math_title_2.png) 0 4px/134px no-repeat;
+    -webkit-animation: shake-top .8s cubic-bezier(0.455,0.030,0.515,0.955) both;
+    animation: shake-top .8s cubic-bezier(0.455,0.030,0.515,0.955) both
+}
+
+.suhi h2 ins.special:before,.suhi h2 ins.special:after {
+    /* font-size: 26px; */
+    font-size: 34px;
+    text-shadow: #fff 2px 0 0,#fff 1.75517px .958851px 0,#fff 1.0806px 1.68294px 0,#fff .141474px 1.99499px 0,#fff -0.832294px 1.81859px 0,#fff -1.60229px 1.19694px 0,#fff -1.97998px .28224px 0,#fff -1.87291px -0.701566px 0,#fff -1.30729px -1.5136px 0,#fff -0.421592px -1.95506px 0,#fff .567324px -1.91785px 0,#fff 1.41734px -1.41108px 0,#fff 1.92034px -0.558831px 0,3px 4px 8px rgba(0,0,0,0.3)
+}
+
+.suhi h2 ins.special:before {
+    content: "깜짝";
+    color: #57bb14
+}
+
+.suhi h2 ins.special:after {
+    content: '문제';
+    color: #75e11a
+}
+
+.suhi h2>ins {
+    flex-shrink: 0
+}
+
+.suhi h2>ins.number {
+    margin: 10px 10px 0 0;
+    width: 40px;
+    height: 40px;
+    line-height: 1.8em;
+}
+.suhi h2>ins.heart{
+    width: 50px;
+    height: 40px;
+}
+.suhi h2>ins.heart:after {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top:8px;
+    width: 60px;
+    height: 40px;
+    background :url(../../contents/images/icon/ico_heart1.png) 16px 4px /auto 30px no-repeat;
+    box-sizing: border-box;
+    animation: zoomOnScaleCenter .1s linear forwards;
+    -webkit-animation: zoomOnScaleCenter .1s linear forwards;
+    -ms-animation: zoomOnScaleCenter .1s linear forwards
+}
+.suhi h2>ins.heart2{
+    width: 50px;
+    height: 40px;
+}
+.suhi h2>ins.heart2:after {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top:8px;
+    width: 60px;
+    height: 40px;
+    background :url(../../contents/images/icon/ico_heart2.png) 0 4px/auto 30px no-repeat;
+    box-sizing: border-box;
+    animation: zoomOnScaleCenter .1s linear forwards;
+    -webkit-animation: zoomOnScaleCenter .1s linear forwards;
+    -ms-animation: zoomOnScaleCenter .1s linear forwards
+}
+
+
+.suhi h2>ins.star:after {
+    content: '';
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 3px solid #ff8636;
+    transform: translate(-50%);
+    background: #f60 url(../../contents/images/icon/icon_star2.svg) center/20px no-repeat;
+    box-sizing: border-box;
+    animation: zoomOnScaleCenter .1s linear forwards;
+    -webkit-animation: zoomOnScaleCenter .1s linear forwards;
+    -ms-animation: zoomOnScaleCenter .1s linear forwards
+}
+
+.suhi h2>.bracket {
+    position: relative;
+    flex-shrink: 0;
+    align-items: center;
+    min-width: 126px;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 10px
+}
+
+.suhi h2>.bracket:before,.suhi h2>.bracket:after {
+    position: relative;
+    top: -2px;
+    line-height: 1
+}
+
+.suhi h2>.bracket:before {
+    content: '['
+}
+
+.suhi h2>.bracket:after {
+    content: ']'
+}
+
+.suhi h2>.bracket ins {
+    margin: 6px 0 0 0
+}
+
+.suhi h2>ins+*,.suhi h2>.bracket+* {
+    width: 100%
+}
+
+.suhi h2 [class*="icon"] {
+    margin: 3px 0 0 0;
+    vertical-align: top
+}
+
+.suhi h2 .icon_x_title,.suhi h2 .icon_tri_title {
+    margin: 7px 0 0 0;
+    position:relative;
+    top:4px;
+}
+
+.zoomBtn:after,.popBtn.zoom {
+    border-color: #a3d48e;
+    background-color: #6dbc4b
+}
+
+.suhi .textBookBtn {
+    top: 42%
+}
+
+.suhi .textBookBtn .btnInner {
+    border-color: #a3d48e;
+    background-color: #6dbc4b
+}
+
+.suhi .textBookBtn.hover .btnInner {
+    background-color: #a3d48e
+}
+
+.suhi .popup_pages .textBookPopup .popupInner:before {
+    content: none
+}
+
+.suhi .popup_pages .textBookPopup .popup_closeBtn.hover {
+    background-color: #6dbc4b
+}
+.suhi h2 ins.special:after{display: inline-block;margin-left:10px;}
+.suhi h2 ins.special.type2:before {content: "개념";}
+.suhi h2 ins.special.type2:after {content: '정리';}
+
+.suhi h2 ins.special.type3:before {content: "쌍둥이";}
+.suhi h2 ins.special.type3:after {content: '문제';}
+
+.suhi h2 ins.special.type4:before {content: "한 번";}
+.suhi h2 ins.special.type4:after {content: '더!'; color:#fff200;}
+
+.suhi h2 ins.special.type5{padding-left: 36px;}
+.suhi h2 ins.special.type5:before {content: "혼자서도";}
+.suhi h2 ins.special.type5:after {content: '잘해요';}
+
+
+.suhi h3 {
+    display: flex;
+    flex-shrink: 0;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 45px;
+}
+h3 .dot {
+    flex-shrink: 0;
+    align-self: flex-start;
+    min-width: 15px;
+    min-height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    border: 4px solid #37a259;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 20px 10px 0 0;
+    box-sizing: border-box
+}
+h3 .dot+span {
+    width: 100%;
+    font-size:45px;
+}
+h3 .dot+span+span {
+    font-size:45px;
+}

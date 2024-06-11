@@ -1,0 +1,638 @@
+@charset "utf-8";
+.colorBox {
+    position: relative;
+    padding: 10px 12px;
+    color: #000;
+    line-height: 1.3em;
+    border-radius: 20px;
+    text-align: justify;
+    font-family: NotoM;
+    background-color: #f7f7f7;
+    box-sizing: border-box
+}
+
+.colorBox.pink {
+    background-color: #ffece2
+}
+
+.colorBox.deeppink {
+    background-color: #f7c1c9
+}
+
+.colorBox.beige {
+    background-color: #f6e7d4
+}
+
+.colorBox.yellow {
+    background-color: #f6f1d4
+}
+
+.colorBox.green {
+    background-color: #e7f6d4
+}
+
+.colorBox.sky {
+    background-color: #d4f3f6
+}
+
+.colorBox.orange {
+    background-color: #fccd89
+}
+
+.colorBox.purple {
+    color: #fff;
+    background-color: #cabfe0
+}
+
+.colorBox.deepPurple {
+    color: #fff;
+    background-color: #b099df
+}
+
+.colorBox.brown {
+    color: #fff;
+    background-color: #ae7c65
+}
+
+.colorBox.deepOrange {
+    color: #fff;
+    background-color: #ff924f
+}
+
+.colorBox.skyBlue {
+    color: #fff;
+    background-color: #5ca2e7
+}
+
+
+.colorBox.lineBox.pink {background-color: #fff9f6}
+.colorBox.lineBox.deeppink {background-color: #fdecef}
+.colorBox.lineBox.beige {background-color: #fcf8f2}
+.colorBox.lineBox.yellow {background-color: #fcfbf2}
+.colorBox.lineBox.green {background-color: #f8f8ed}
+.colorBox.lineBox.sky {background-color: #f2fbfc}
+
+.colorBox.lineBox.orange {background-color: #fef0db}
+.colorBox.lineBox.purple {background-color: #efe8f1}
+.colorBox.lineBox.deepPurple {background-color: #e7e0f5}
+.colorBox.lineBox.brown {background-color: #e7d7d0}
+.colorBox.lineBox.deepOrange {background-color: #ffdeca}
+.colorBox.lineBox.skyBlue {background-color: #cee3f8}
+
+.colorBox.black {
+    color: black
+}
+
+.colorBox.circle {
+    text-align: center;
+    border-radius: 50%
+}
+
+.toggle .colorBox {
+    color: inherit
+}
+
+.colorBox.check {
+    flex-shrink: 0;
+    margin-right: 10px;
+    padding: 10px 18px;
+    font-family: YGJAL;
+    font-size: 24px
+}
+
+.colorBox.check.start {
+    align-self: flex-start;
+    margin-top: 2px
+}
+
+.circleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    color: #fff;
+    font-family: NotoB;
+    font-size: 48px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f59a0b;
+    border: 6px solid #ffc600;
+    box-sizing: border-box
+}
+
+.arrange_line {
+    position: absolute;
+    height: 5px;
+    transform-origin: center;
+    background-color: #ffb61b
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid;
+    transform: translate(-50%,-50%)
+}
+
+.bubble.big {
+    width: 10px;
+    height: 10px
+}
+
+.bubble.middle {
+    width: 8px;
+    height: 8px
+}
+
+.bubble.small {
+    width: 5px;
+    height: 5px
+}
+
+.pink .bubble {
+    border-color: #ffece2
+}
+
+.deeppink .bubble {
+    border-color: #f7c1c9
+}
+
+.beige .bubble {
+    border-color: #efcfa6
+}
+
+.yellow .bubble {
+    border-color: #f4e8bd
+}
+
+.sky .bubble {
+    border-color: #c1e8ec
+}
+
+.orange .bubble {
+    border-color: #fccd89
+}
+
+.purple .bubble {
+    border-color: #cabfe0
+}
+
+.brown .bubble {
+    border-color: #ae7c65
+}
+
+.green .bubble {
+    border-color: #cee492
+}
+
+.characterImg.circle.pink,
+.characterImg.circle.deeppink {
+    border: 9px solid #f7c1c9;
+    background-color: #ffe5e7;
+}
+
+.characterImg.circle.beige {
+    border: 9px solid #efcfa6
+}
+
+.characterImg.circle.yellow {
+    border: 9px solid #f4e8bd
+}
+
+.characterImg.circle.sky {
+    border: 9px solid #c1e8ec;
+}
+
+.characterImg.circle.orange {
+    border: 9px solid #fccd89;
+    background-color: #fff2d1
+}
+
+.characterImg.circle.purple {
+    border: 9px solid #cabfe0;
+    background-color: #ece5ff
+}
+
+.characterImg.circle.brown {
+    border: 9px solid #ae7c65
+}
+
+.characterImg.circle.green {
+    border: 9px solid #cee492;
+    background-color: #f3fcd0
+}
+.girl_1-wrap .characterImg.circle {border: 9px solid #f7c1c9;background-color: #ffe5e7;}
+.girl_2-wrap .characterImg.circle {border: 9px solid #cabfe0;background-color: #ece5ff;}
+.girl_3-wrap .characterImg.circle {border: 9px solid #fcce8b;background-color: #fff1d0;}
+.girl_4-wrap .characterImg.circle {border: 9px solid #cee492;background-color: #f3fcd0;}
+
+.boy_1-wrap .characterImg.circle {border: 9px solid #f7c1c9;background-color: #ffe5e7;}
+.boy_2-wrap .characterImg.circle {border: 9px solid #fcce8b;background-color: #fff1d0;}
+.boy_3-wrap .characterImg.circle {border: 9px solid #cabfe0;background-color: #ece5ff;}
+.boy_4-wrap .characterImg.circle {border: 9px solid #cee492;background-color: #f3fcd0;}
+.rabbit-wrap .characterImg.circle {border: 9px solid #E49E84;background-color: #FFEDD8;}
+
+.girl_1-wrap.circle .charSpriteImg {border:0;}
+.girl_2-wrap.circle .charSpriteImg {border:0;}
+.girl_3-wrap.circle .charSpriteImg {border:0;}
+.girl_4-wrap.circle .charSpriteImg {border:0;}
+.boy_1-wrap.circle .charSpriteImg {border:0;}
+.boy_2-wrap.circle .charSpriteImg {border:0;}
+.boy_3-wrap.circle .charSpriteImg {border:0;}
+.boy_4-wrap.circle .charSpriteImg {border:0;}
+.rabbit-wrap.circle .charSpriteImg {border:0;}
+
+.characterImg.girl_1-wrap.circle {border: 9px solid #f7c1c9;background-color: #ffe5e7;}
+.characterImg.girl_2-wrap.circle {border: 9px solid #cabfe0;background-color: #ece5ff;}
+.characterImg.girl_3-wrap.circle {border: 9px solid #fccd89;background-color: #fff2d1;}
+.characterImg.girl_4-wrap.circle {border: 9px solid #cee492;background-color: #f3fcd0;}
+.characterImg.boy_1-wrap.circle {border: 9px solid #f7c1c9;background-color: #ffe5e7;}
+.characterImg.boy_2-wrap.circle {border: 9px solid #fcce8b;background-color: #fff1d0;}
+.characterImg.boy_3-wrap.circle {border: 9px solid #cabfe0;background-color: #ece5ff;}
+.characterImg.boy_4-wrap.circle {border: 9px solid #cee492;background-color: #f3fcd0;}
+.characterImg.rabbit-wrap.circle {border: 9px solid #E49E84;background-color: #FFEDD8;}
+
+.balloon {
+    position: absolute;
+    line-height: 1.2em;
+    z-index: 1;
+   font-size:40px;
+   text-align: center !important;
+}
+
+.balloon.center {
+    text-align: center
+}
+
+.balloon.keep {
+    word-break: keep-all
+}
+
+.lineBox {
+    line-height: 1.3em
+}
+
+.balloon,.lineBox {
+    padding: 10px 12px;
+    text-align: justify;
+    border-radius: 20px;
+    background-color: #fff;
+    line-height: 1.3em;
+    font-family: NotoM;
+    box-sizing: border-box
+}
+
+.checkContainer .lineBox {
+    padding: 20px 20px
+}
+
+.balloon.pink,.lineBox.pink {
+    border: 5px solid #ffdecc
+}
+
+.balloon.deeppink,.lineBox.deeppink {
+    border: 5px solid #f7c1c9
+}
+
+.balloon.beige,.lineBox.beige {
+    border: 5px solid #efcfa6
+}
+
+.balloon.yellow,.lineBox.yellow {
+    border: 5px solid #f4e8bd
+}
+
+.balloon.sky,.lineBox.sky {
+    border: 5px solid #c1e8ec
+}
+
+.balloon.orange,.lineBox.orange {
+    border: 5px solid #fccd89
+}
+
+.balloon.purple,.lineBox.purple {
+    border: 5px solid #cabfe0
+}
+
+.balloon.brown,.lineBox.brown {
+    border: 5px solid #ae7c65
+}
+
+.balloon.green,.lineBox.green {
+    border: 5px solid #cee492
+}
+.balloon.skyBlue,
+.lineBox.skyBlue
+{border: 5px solid #5ca2e7;}
+.lineBox.hover {
+    border-color: #999
+}
+
+.balloon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent
+}
+
+.balloon.thinkTail:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-style:solid ;
+    border-width: 4px !important;
+    background:#fff;
+    bottom:-38px!important ;
+    left:50%;
+}
+.balloon.thinkTail::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-style:solid ;
+    border-width: 4px !important;
+    background:#fff;
+    bottom:-60px!important ;
+    left:54%;
+}
+
+.balloon.top:after {
+    transform: rotate(180deg);
+    top: -28px
+}
+
+.balloon.bottom:after {
+    bottom: -28px
+}
+
+.balloon.left:after {
+    left: -27px;
+    transform: rotate(90deg)
+}
+
+.balloon.right:after {
+    right: -27px;
+    transform: rotate(-90deg)
+}
+
+.balloon.ctTail.bottom:after {
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.balloon.ctTail.top:after {
+    left: 50%;
+    transform: rotate(180deg) translate(50%)
+}
+
+.balloon.ctTail.left:after {
+    top: 50%;
+    transform: rotate(90deg) translate(-50%)
+}
+
+.balloon.ctTail.right:after {
+    top: 50%;
+    transform: rotate(-90deg) translate(50%)
+}
+
+.balloon.noTail:after {
+    content: none
+}
+
+.balloon.pink:after {
+    border-top: 25px solid #ffdecc
+}
+
+.balloon.deeppink:after {
+    border-top: 25px solid #f7c1c9
+}
+
+.balloon.beige:after {
+    border-top: 25px solid #efcfa6
+}
+
+.balloon.yellow:after {
+    border-top: 25px solid #f4e8bd
+}
+
+.balloon.sky:after {
+    border-top: 25px solid #c1e8ed
+}
+
+.balloon.orange:after {
+    border-top: 25px solid #fccd89
+}
+
+.balloon.purple:after {
+    border-top: 25px solid #cabfe0
+}
+
+.balloon.brown:after {
+    border-top: 25px solid #ae7c65
+}
+
+.balloon.green:after {
+    border-top: 25px solid #cee492
+}
+
+
+
+.balloon.thinkTail.pink:after {
+    border-color:#ffdecc;
+}
+
+.balloon.thinkTail.deeppink:after {
+    border-color:#f7c1c9
+}
+
+.balloon.thinkTail.beige:after {
+    border-color:#efcfa6
+}
+
+.balloon.thinkTail.yellow:after {
+    border-color:#f4e8bd
+}
+
+.balloon.thinkTail.sky:after {
+    border-color:#c1e8ed
+}
+
+.balloon.thinkTail.orange:after {
+    border-color:#fccd89
+}
+
+.balloon.thinkTail.purple:after {
+    border-color:#cabfe0
+}
+
+.balloon.thinkTail.brown:after {
+    border-color:#ae7c65
+}
+
+.balloon.thinkTail.green:after {
+    border-color:#cee492
+}
+.balloon.thinkTail.pink:before {
+    border-color:#ffdecc;
+}
+
+.balloon.thinkTail.deeppink:before {
+    border-color:#f7c1c9
+}
+
+.balloon.thinkTail.beige:before {
+    border-color:#efcfa6
+}
+
+.balloon.thinkTail.yellow:before {
+    border-color:#f4e8bd
+}
+
+.balloon.thinkTail.sky:before {
+    border-color:#c1e8ed
+}
+
+.balloon.thinkTail.orange:before {
+    border-color:#fccd89
+}
+
+.balloon.thinkTail.purple:before {
+    border-color:#cabfe0
+}
+
+.balloon.thinkTail.brown:before {
+    border-color:#ae7c65
+}
+
+.balloon.thinkTail.green:before {
+    border-color:#cee492
+}
+
+
+
+.lineBox.name {
+    padding: 0 12px 0 0
+}
+
+.lineBox .name+p {
+    display: inline-block;
+    max-width: 860px;
+    margin-left: 10px
+}
+
+.nameBox,.lineBox .name {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    padding: 10px;
+    line-height: 1em;
+    border-radius: 20px
+}
+
+.lineBox.name .name {
+    position: relative;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    left: -1px;
+    border-radius: 13px 20px 20px 13px;
+    padding: 25px 20px
+}
+
+.nameBox.pink,.lineBox.pink .name {
+    background-color: #ffece2
+}
+
+.nameBox.deeppink,.lineBox.deeppink .name {
+    background-color: #f7c1c9
+}
+
+.nameBox.beige,.lineBox.beige .name {
+    background-color: #f6e7d4
+}
+
+.nameBox.yellow,.lineBox.yellow .name {
+    background-color: #f6f1d4
+}
+
+.nameBox.sky,.lineBox.sky .name {
+    background-color: #d4f3f6
+}
+
+.nameBox.orange,.lineBox.orange .name {
+    background-color: #fccd89
+}
+
+.nameBox.purple,.lineBox.purple .name {
+    background-color: #cabfe0
+}
+
+.nameBox.brown,.lineBox.brown .name {
+    background-color: #ae7c65
+}
+
+.nameBox.green,.lineBox.green .name {
+    background-color: #cee492
+}
+
+.lineBox.center,.colorBox.center {
+    text-align: center
+}
+/* .characterImg.girl_1.circle .charSpriteImg{top:-100px;}
+.characterImg.girl_2.circle .charSpriteImg{top:-213px;transform: translate(-50%) scale(1) rotate(0.1deg) !important;}
+.characterImg.girl_3.circle .charSpriteImg{top:-90px;}
+.characterImg.girl_4.circle .charSpriteImg{top:-130px;}
+.characterImg.boy_1.circle .charSpriteImg{top:-85px;}
+.characterImg.boy_2.circle .charSpriteImg{top:-249px;transform: translate(-50%) scale(1) rotate(0.1deg) !important;}
+.characterImg.boy_3.circle .charSpriteImg{top:0;}
+.characterImg.boy_4.circle .charSpriteImg{top:-102px;}
+
+.characterImg.girl_1.circle .charSpriteAni{top:-100px;}
+.characterImg.girl_2.circle .charSpriteAni{top:-213px;transform: translate(-50%) scale(1) rotate(0.1deg) !important;}
+.characterImg.girl_3.circle .charSpriteAni{top:-90px;}
+.characterImg.girl_4.circle .charSpriteAni{top:-130px;}
+.characterImg.boy_1.circle .charSpriteAni{top:-85px;}
+.characterImg.boy_2.circle .charSpriteAni{top:-249px;transform: translate(-50%) scale(1) rotate(0.1deg) !important;}
+.characterImg.boy_3.circle .charSpriteAni{top:0;}
+.characterImg.boy_4.circle .charSpriteAni{top:-102px;}
+
+.characterImg.girl_1-wrap.circle .charSpriteImg{top:-100px;}
+.characterImg.girl_2-wrap.circle .charSpriteImg{top:-213px;transform: translate(-50%) scale(1) rotate(0.1deg) !important;}
+.characterImg.girl_3-wrap.circle .charSpriteImg{top:-90px;}
+.characterImg.girl_4-wrap.circle .charSpriteImg{top:-130px;}
+.characterImg.boy_1-wrap.circle .charSpriteImg{top:-85px;}
+.characterImg.boy_2-wrap.circle .charSpriteImg{top:-249px;transform: translate(-50%) scale(1) rotate(0.1deg) !important;}
+.characterImg.boy_3-wrap.circle .charSpriteImg{top:0;}
+.characterImg.boy_4-wrap.circle .charSpriteImg{top:-102px;} */
+
+.math .lineBox,
+.math .colorBox {padding:10px 20px}
+.colorBox.green{background-color: #f5f7e5;}
+.colorBox.yellow{background-color: #fff9e5;}
+.colorBox.sky{background-color: #f1f9fc;}
+.colorBox.purple{background-color: #f6effb;}
+.colorBox.orange{background-color: #fdf3e7;}
+.colorBox.pink{background-color: #ffeef3;}
+
+.colorBox.green strong{color: #07a542; font-weight: 400;}
+.colorBox.yellow strong{color: #ff9800; font-weight: 400;}
+.colorBox.sky strong{color: #006ee6; font-weight: 400;}
+.colorBox.purple strong{color: #8532B8; font-weight: 400;}
+.colorBox.orange strong{color: #ff6600; font-weight: 400;}
+.colorBox.pink strong{color: #ff3175; font-weight: 400;}
+
+.lineBox.green{border-color: #d7dea3;}
+.lineBox.yellow{border-color: #ffe899;}
+.lineBox.sky{border-color: #a8d6f6;}
+.lineBox.purple{border-color: #cabee0;}
+.lineBox.orange{border-color: #ffd89e;}
+.lineBox.pink{border-color: #ffc4c9;}
+

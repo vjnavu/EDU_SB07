@@ -1,0 +1,127 @@
+
+.smVideoController {position:absolute; bottom:0; left:0; display:flex; align-items: center; width:100%; height:48px; padding:0 10px; background-color:#eedac2;}
+
+.smVideoController .controlButtons {display:flex; align-items: center;}
+
+
+/*
+    *** 컨트롤 버튼
+*/
+
+/*재생버튼*/
+.smVideoController .playToggle .btnPlayVideo {width:36px; height:36px; margin:0 12px; background-image:url('../../contents/images/videoPlayer/icon_media_play.svg'); background-size:100%;}
+.smVideoController .playToggle .btnPlayVideo:hover {background-image:url('../../contents/images/videoPlayer/icon_media_play_hover.svg');}
+.smVideoController .playToggle .btnPauseVideo {display:none; width:36px;  height:36px; margin:0 12px; background-image:url('../../contents/images/videoPlayer/icon_media_pause.svg'); background-size:100%;}
+.smVideoController .playToggle .btnPauseVideo:hover {background-image:url('../../contents/images/videoPlayer/icon_media_pause_hover.svg');}
+.smVideoController .playToggle.play .btnPlayVideo {display:none;}
+.smVideoController .playToggle.play .btnPauseVideo {display:block;}
+
+/*정지버튼*/
+.smVideoController .btnStopVideo {width:36px; height:36px; margin:0 12px; background-image:url('../../contents/images/videoPlayer/icon_media_stop.svg'); background-size:100%;}
+.smVideoController .btnStopVideo:hover {background-image:url('../../contents/images/videoPlayer/icon_media_stop_hover.svg');}
+
+/*볼륨버튼*/
+.smVideoController .volumeToggle .btnVolume {width:36px; height:36px; margin:0 12px; background-image:url('../../contents/images/videoPlayer/icon_media_mute.svg'); background-size:100%;}
+.smVideoController .volumeToggle .btnVolume:hover {background-image:url('../../contents/images/videoPlayer/icon_media_mute_hover.svg');}
+.smVideoController .volumeToggle .btnMute {display:none; width:36px; height:36px; margin:0 12px; opacity:0.3; background-image:url('../../contents/images/videoPlayer/icon_media_mute.svg'); background-size:100%;}
+.smVideoController .volumeToggle .btnMute:hover {opacity:0.3; background-image:url('../../contents/images/videoPlayer/icon_media_mute_hover.svg');}
+.smVideoController .volumeToggle.mute .btnVolume {display:none;}
+.smVideoController .volumeToggle.mute .btnMute {display:block;}
+
+/*볼륨게이지*/
+.smVideoController .volumeGauge {display:flex; align-items: center; height:24px; margin-right:20px;}
+.smVideoController .volumeGauge > span {position:relative; width:5px; height:100%; padding-right:2px; box-sizing: content-box; cursor:pointer;}
+.smVideoController .volumeGauge > span:after {content:""; position:absolute; top:0; left:0; width:5px; height:100%; border-radius:3px; background-color:#d6b6a1;}
+.smVideoController .volumeGauge > span.on:after {background-color:#ae7c65;}
+.smVideoController .volumeGauge.mute {opacity:0.5; pointer-events: none;}
+
+
+
+
+/*
+    *** 탐색바
+*/
+.smVideoController .seekArea {flex:1; margin:0 12px;}
+.smVideoController .seekArea .track {position:relative; width:100%; height:10px; border-radius:5px; background-color:#ffffff;}
+.smVideoController .seekArea .track .trace {width:0; height:100%; border-radius:5px; background-color:#ffc808;}
+.smVideoController .seekArea .track .seekBar {position:absolute; top:50%; left:0; transform:translateY(-50%); width:30px; height:18px; margin-left:-15px; border-radius:15px; cursor:pointer; pointer-events: none; background-color:#ffc808;}
+
+/*장면썸네일*/
+.smVideoController .seekArea .track .sceneView {display:none; position:absolute; top:-20px; left:0; transform:translate(-50%, -100%); min-width:69px; padding:2px; background-color:#ae7c65;}
+.smVideoController .seekArea .track .sceneView video {display:block; width:65px;}
+.smVideoController .seekArea .track .sceneView:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top-color: #ae7c65;
+    border-bottom: 0;
+    margin-left: -7px;
+    margin-bottom: -7px;
+}
+.smVideoController .seekArea .track:hover .sceneView {display:block;}
+
+/*진행시간*/
+.smVideoController .timeArea {display:flex; align-items: center; margin:0 12px;}
+.smVideoController .timeArea .currentTime,
+.smVideoController .timeArea .totalTime {font-size:12px; color:#a26757;}
+.smVideoController .timeArea .vBar {height:15px; width:2px; margin:0 16px; background-color:#ddc9b0;}
+
+
+
+
+/*
+    *** 재생속도
+*/
+.smVideoController .playSpeedArea {position:relative; margin:0 12px;}
+.smVideoController .playSpeedArea .currentSpeed {display:flex; align-items: center; justify-content: center; width:73px; height:28px; font-size:15px; color:#ffffff; border-radius:15px; cursor: pointer; background-color:#ae7c65;}
+.smVideoController .playSpeedArea .speedSelector {display:none; position:absolute; top:-3px; left:0; transform:translateY(-100%); width:73px; border-radius:15px; background-color:#ae7c65;}
+.smVideoController .playSpeedArea .speedSelector > li {font-size:15px; color:#ffffff; text-align:center; margin:8px 0; cursor:pointer;}
+.smVideoController .playSpeedArea .speedSelector > li:hover,
+.smVideoController .playSpeedArea .speedSelector > li.on {color:#ff6600;}
+
+.smVideoController .playSpeedArea.on .speedSelector {display:block;}
+
+
+/*
+    *** 스크린모드
+*/
+.smVideoController .screenModeToggle {margin:0 12px; width:30px; height:30px;}
+.smVideoController .screenModeToggle .normalScreen {display:none; width:100%; height:100%; cursor:pointer; background-image:url("../../contents/images/videoPlayer/video_restoreScreen.png"); background-repeat: no-repeat; background-position: center center;}
+.smVideoController .screenModeToggle .fullScreen {width:100%; height:100%; cursor:pointer; background-image:url("../../contents/images/videoPlayer/video_fullscreen.png");}
+.smVideoController .screenModeToggle.full .normalScreen {display:block;}
+.smVideoController .screenModeToggle.full .fullScreen {display:none;}
+
+
+
+
+
+/*
+    *** 종료버튼
+*/
+.smPlayerCloseBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 58px;
+    height: 58px;
+    display: none;
+    border-radius: 0 0 0 50px;
+    background: #a5826c url(../../contents/images/button/btn_close_white.svg) 22px 10px/25px no-repeat;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,276 @@
+@charset "utf-8";.aniContainer .video {
+    width: 100%;
+    height: 692px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    z-index:10;
+}
+
+.mediaContainer.video .controller {
+    visibility: hidden
+}
+
+.mediaContainer.video.started .controller {
+    visibility: visible
+}
+
+.mediaContainer.video video {
+    position: relative;
+    top: -38px;
+    width: 1365px;
+    height: 768px;
+    max-width: none;
+    max-height: none
+}
+
+.mediaContainer.video.started video {
+    top: 0;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.aniContainer .video .animationTitle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.aniContainer .video.started .animationTitle {
+    display: none
+}
+
+.aniContainer .video .animationTitle h1 {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+    font-family: NotoM;
+    line-height: 1.3em;
+    letter-spacing: -2px;
+    padding: 0 20px 0 58px;
+    box-sizing: border-box
+}
+
+.aniContainer .video .animationTitle h1:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 18px;
+    width: 32px;
+    height: 36px;
+    background: url(../images/icon/icon_pencil.svg) center/contain no-repeat
+}
+
+.aniContainer .mediaSubContainer {
+    position: relative;
+    min-width: 660px;
+    max-width: 1060px;
+    margin: -50px 0 0 0;
+    padding: 30px 30px;
+    background-color: #f6e7d4;
+    border: 16px solid #ecd8bf;
+    box-sizing: border-box;
+    animation: topToBottom 1s cubic-bezier(0.250,0.460,0.450,0.940) forwards;
+    -webkit-animation: topToBottom 1s cubic-bezier(0.250,0.460,0.450,0.940) forwards
+}
+
+.aniContainer .mediaSubContainer:before {
+    content: '';
+    position: absolute;
+    top: -107px;
+    left: 0;
+    width: 100%;
+    height: 99px;
+    background: url(../images/background/bg_video_title.png) center/524px no-repeat
+}
+
+.aniContainer .videoTitle {display: flex; justify-content: space-around;}
+.aniContainer .mediaSubContainer h2 {
+    color: #5e3e18;
+    font-size: 58px;
+    text-align: center;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    font-family: YGJAL
+}
+
+.aniContainer .mediaSubContainer h2 .orange {
+    display: inline-block;
+    color: #f60
+}
+
+.aniContainer .video .screenPlayBtn {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: #f60 url(../images/icon/icon_play.svg) 28px center/27px no-repeat;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 2
+}
+
+.aniContainer .video .screenPlayBtn.hover {
+    background-color: #fff;
+    background-image: url(../images/icon/icon_play_hover.svg)
+}
+
+#wrap.tVideoContainer {
+    background: #fdd000 url("../images/background/bg_movie.png") 613px 150px/615px no-repeat
+}
+
+#wrap.tVideoContainer main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.tVideoContainer h1 {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    color: #5e3e18;
+    font-size: 25px;
+    text-align: justify;
+    font-family: NotoM;
+    line-height: 1.3em;
+    letter-spacing: -2px;
+    padding: 0 20px 0 58px;
+    box-sizing: border-box
+}
+
+.tVideoContainer h1:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 18px;
+    width: 32px;
+    height: 36px;
+    background: url(../images/icon/icon_pencil.svg) center/contain no-repeat
+}
+
+.tVideoContainer .videoTitle {
+    position: relative;
+    min-width: 650px;
+    max-width: 1060px;
+    margin: -50px 0 0 0;
+    padding: 30px 30px;
+    background-color: #f6e7d4;
+    box-shadow: 0 0 0 16px #ecd8bf;
+    box-sizing: border-box;
+    animation: topToBottom 1s cubic-bezier(0.250,0.460,0.450,0.940) forwards;
+    -webkit-animation: topToBottom 1s cubic-bezier(0.250,0.460,0.450,0.940) forwards
+}
+
+.tVideoContainer .videoTitle:before {
+    content: '';
+    position: absolute;
+    top: -107px;
+    left: 0;
+    width: 100%;
+    height: 99px;
+    background: url(../images/background/bg_video_title.png) center/524px no-repeat
+}
+
+.tVideoContainer .videoTitle h2 {
+    display: block;
+    color: #5e3e18;
+    font-size: 70px;
+    text-align: center;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    font-family: YGJAL
+}
+
+.tVideoContainer .videoTitle h2 .orange {
+    color: #f60
+}
+
+.videoPlayBtn {
+    position: absolute;
+    bottom: -46px;
+    left: 50%;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: #f60 url(../images/icon/icon_play.svg) 28px center/27px no-repeat;
+    transform: translate(-50%);
+    box-shadow: 0 3px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 2
+}
+
+.videoPlayBtn.hover {
+    background-color: #fff;
+    background-image: url(../images/icon/icon_play_hover.svg)
+}
+
+.videoSubPlayBtn {
+    position: absolute;
+    display: inline-flex;
+    height: 36px;
+    align-items: center;
+    line-height: 1.4;
+    letter-spacing: 0;
+    padding: 0 16px 0 34px;
+    color: #fff;
+    font-size: 20px;
+    font-family: YGJAL;
+    text-align: center;
+    border-radius: 45px;
+    box-sizing: border-box;
+    background: #5e3e18 url(../../contents/images/icon/icon_lowQ.png) 14px center/15px no-repeat
+}
+
+
+.videoSubPlayBtn.hover {
+    background-color: #666
+}
+
+.tVideoContainer .videoSubPlayBtn {
+    bottom: -64px;
+    left: -16px
+}
+
+.tVideoContainer .videoSubPlayBtn:after {
+    content: '일반 화질'
+}
+
+.videoSubPlayBtn.inline {
+    vertical-align: top;
+    margin: 2px 0 0 0
+}
+
+.title .videoSubPlayBtn.inline {
+    vertical-align: top;
+    margin: 9px 0 0 0
+}
+
+.contentsBox .tVideoContainer {
+    position: absolute;
+    top: -30px;
+    left: -56px;
+    right: -56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    background: #fdd000 url(../images/background/bg_movie.png) 613px 20px/615px no-repeat
+}
+
+.contentsBox .tVideoContainer .videoTitle {
+    margin: 0
+}

@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import "math_suhi_layOut.css";
+.suhi h2 .bunsuContainer {
+    margin: -5px 0 0 0
+}
+
+.suhi h2 .bunsuContainer .bunsu {
+    margin: -11px 2px 0
+}
+
+.suhi h2 .bunsuContainer .symbol {
+    margin: -13px 4px 0
+}
+
+.suhi h2+section {
+    padding:0 0 0 50px;
+}
+
+.suhi h2+section.full {
+    padding-left: 0
+}
+
+.suhi h2+section .study_guide {
+    top: -50px;
+    right: 0
+}
+
+.suhi h2 .toggleBlank {
+    width: 40px;
+    height: 40px;
+    margin: 8px 0 0;
+}
+
+.suhi h2 .blankBox {
+    margin: 8px 0 0 0;
+    width: 40px;
+    height: 40px;
+    min-width:40px;
+    min-height:40px;
+    padding:0;
+    top:-2px;
+}
+.suhi h2 .icon_bogi {
+    margin-top:10px;
+}
+.suhi h2 .icon_o_title {
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.suhi textarea,.suhi input {
+    color: #24914d
+}
+.suhi h2 ins.number.big {
+    width:40px;
+    height:40px;
+    line-height:1.8em;
+}

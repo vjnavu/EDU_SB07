@@ -1,0 +1,72 @@
+.selfPromise .whiteBox::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    width: 97%;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px dashed gray
+}
+
+.selfPromise .whiteBox {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 155px;
+    padding: 10px;
+    margin: 20px 0 35px 0;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px #c3a798
+}
+
+.selfPromise .whiteBox .openAnswer {
+    display: none
+}
+
+.selfPromise .whiteBox .openAnswer.on {
+    display: block;
+    color: #006ee6
+}
+
+.selfPromise .clickBox {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    justify-content: center
+}
+
+.selfPromise .clickBox.column {
+    flex-direction: column
+}
+
+.selfPromise .clickText {
+    display: flex;
+    -ms-display: flex;
+    -webkit-display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 140px;
+    margin: 0 30px;
+    background-color: #ffeaa0;
+    padding: 0 10px 10px;
+    border: #dcb423 2px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #fff,-5px -5px 10px #fff,inset -7px -7px #ffd74b,inset 7px 0 #ffd74b;
+    box-sizing: border-box;
+    cursor: pointer
+}
+
+.selfPromise .clickBox.column .clickText {
+    margin: 20px 0
+}
+
+.selfPromise .clickText.complete {
+    opacity: 0;
+    visibility: hidden
+}

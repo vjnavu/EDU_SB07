@@ -1,0 +1,138 @@
+.cardflipContainer .flex-box {
+    margin: 30px 0;
+    justify-content: space-between
+}
+
+.cardflipContainer .cardContainer {
+    height: 204px;
+    width: 247px;
+    box-sizing: border-box
+}
+
+.cardflipContainer .cardContainer div {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 80px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -o-transition: all 1.5s
+}
+
+.cardflipContainer .cardContainer .front_card {
+    position: relative;
+    top: -200px;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg)
+}
+
+.cardflipContainer .cardContainer .back_card {
+    position: relative;
+    background: url(../images/life/cardBack_bg.png) center/ 100% auto no-repeat
+}
+
+.cardflipContainer .cardContainer .back_card:after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #fe6700;
+    border: 2px solid #fe6700;
+    font-family: YGJAL;
+    text-align: center;
+    align-self: flex-start;
+    box-sizing: border-box
+}
+
+.cardContainer[data-toggle-obj="1"] .back_card:after {
+    content: '1'
+}
+
+.cardContainer[data-toggle-obj="2"] .back_card:after {
+    content: '2'
+}
+
+.cardContainer[data-toggle-obj="3"] .back_card:after {
+    content: '3'
+}
+
+.cardContainer[data-toggle-obj="4"] .back_card:after {
+    content: '4'
+}
+
+.cardContainer[data-toggle-obj="5"] .back_card:after {
+    content: '5'
+}
+
+.cardContainer[data-toggle-obj="6"] .back_card:after {
+    content: '6'
+}
+
+.cardContainer[data-toggle-obj="7"] .back_card:after {
+    content: '7'
+}
+
+.cardContainer[data-toggle-obj="8"] .back_card:after {
+    content: '8'
+}
+
+.cardflipContainer .cardContainer.complete .back_card {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg)
+}
+
+.cardflipContainer .cardContainer.complete .front_card {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -o-transform: rotateY(0)
+}
+
+.cardflipContainer .cardContainer.complete,.cardflipContainer .cardContainer.complete .front_card {
+    pointer-events: none
+}
+
+.cardflipContainer .cardContainer.complete .front_card:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 0 15px 0 5px;
+    background: #fff url(../images/button/btn_close_orange_deep.svg) center/15px no-repeat;
+    cursor: pointer;
+    pointer-events: auto;
+    cursor: pointer
+}
+
+.cardflipContainer .cardContainer.complete .front_card.hover:after {
+    background: #f60 url(../images/button/btn_close_white.svg) center/15px no-repeat
+}
+
+.dapCheckBtn.cardCheck:before {
+    content: "카드 뒤집기";
+    padding-left: 10px
+}
+
+.dapCheckBtn.cardCheck.reset:before {
+    padding-left: 28px;
+    content: "초기화"
+}

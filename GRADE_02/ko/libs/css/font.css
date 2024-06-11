@@ -1,0 +1,184 @@
+@charset "utf-8";
+@font-face {
+    font-family: NotoT;
+    src: url("../font/NotoSansCJKkr-Thin.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoDL;
+    src: url("../font/NotoSansCJKkr-DemiLight.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoL;
+    src: url("../font/NotoSansCJKkr-Light.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoR;
+    src: url("../font/NotoSansCJKkr-Regular.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoM;
+    src: url("../font/NotoSansCJKkr-Medium.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoB;
+    src: url("../font/NotoSansCJKkr-Bold.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoBK;
+    src: url("../font/NotoSansCJKkr-Black.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoKRB;
+    src: url("../font/NotoSansKR-Black.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoMR;
+    src: url("../font/NotoSansMonoCJKkr-Regular.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoMB;
+    src: url("../font/NotoSansMonoCJKkr-Bold.woff");
+    font-display: swap
+}
+
+.NotoT {
+    font-family: NotoT
+}
+
+.NotoDL {
+    font-family: NotoDL
+}
+
+.NotoL {
+    font-family: NotoL
+}
+
+.NotoR {
+    font-family: NotoR
+}
+
+.NotoM {
+    font-family: NotoM
+}
+
+.NotoB {
+    font-family: NotoB
+}
+
+.NotoBK {
+    font-family: NotoBK
+}
+
+.NotoKRB {
+    font-family: NotoKRB
+}
+
+.NotoMR {
+    font-family: NotoMR
+}
+
+.NotoMB {
+    font-family: NotoMB
+}
+
+@font-face {
+    font-family: YGJAL;
+    src: url("../font/ygotjalnanfont.woff");
+    font-display: swap
+}
+
+.YGJAL {
+    font-family: YGJAL;
+}
+
+@font-face {
+    font-family: GamjaFR;
+    src: url("../font/GamjaFlower-Regular.woff");
+    font-display: swap
+}
+
+.GamjaFR {
+    font-family: GamjaFR
+}
+
+
+/*serif*/
+@font-face {
+    font-family: NotoS_SB;
+    src: url("../font/NotoSerifKR-SemiBold.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoS_R;
+    src: url("../font/NotoSerifKR-Regular.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoS_M;
+    src: url("../font/NotoSerifKR-Medium.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoS_L;
+    src: url("../font/NotoSerifKR-Light.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoS_EL;
+    src: url("../font/NotoSerifKR-ExtraLight.woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: NotoS_B;
+    src: url("../font/NotoSerifKR-Bold.woff");
+    font-display: swap
+}
+@font-face {
+    font-family: NotoS_Blk;
+    src: url("../font/NotoSerifKR-Black.woff");
+    font-display: swap
+}
+.NotoS_SB {
+    font-family: NotoS_SB !important;
+}
+.NotoS_R {
+    font-family: NotoS_R !important;
+}
+.NotoS_M {
+    font-family: NotoS_M !important;
+}
+.NotoS_L {
+    font-family: NotoS_L !important;
+}
+.NotoS_EL {
+    font-family: NotoS_EL !important;
+}
+.NotoS_B {
+    font-family: NotoS_B !important;
+}
+.NotoS_Blk {
+    font-family: NotoS_Blk !important;
+}

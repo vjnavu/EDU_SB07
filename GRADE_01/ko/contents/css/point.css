@@ -1,0 +1,83 @@
+@charset "utf-8";#wrap.pointContainer header {
+    height: 67px
+}
+
+#wrap.pointContainer header h1 .icon {
+    width: 28px;
+    height: 22px;
+    background-image: url("../images/icon/icon_haksim.svg")
+}
+.partnerContainer h1,
+.pointContainer h1{font-size: 20px;}
+.pointContainer main {
+    padding: 0 38px
+}
+
+.pointContainer .contentsBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+    padding:30px 30px 0 !important;
+    margin: 0 auto;
+    font-family: NotoB;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.pointContainer .contentsBox .basicSlider_slides.inner {
+    padding: 0
+}
+
+.pointContainer .contentsBox h2 {
+    display: block;
+    text-align: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    justify-content: center;
+    font-family: YGJAL;
+    color: #ff6501
+}
+
+.pointContainer .contentsBox h2:before,.pointContainer .contentsBox h2:after {
+    color: #e4caa7
+}
+
+.pointContainer .contentsBox h2:before {
+    content: '[';
+    padding-right: 12px
+}
+
+.pointContainer .contentsBox h2:after {
+    content: ']';
+    padding-left: 12px
+}
+
+.pointContainer .contentsBox section {
+    padding: 0
+}
+
+.pointContainer .contentsList>li:not(:last-of-type) {
+    margin-bottom: 30px
+}
+
+.pointContainer .dapCheckBtn {
+    right: 0
+}
+
+#wrap.pointContainer.math .basicSlider_tabs>li,
+#wrap.pointContainer.life .basicSlider_tabs>li,
+#wrap.pointContainer .basicSlider_tabs>li {
+    background-color: #b1a493;
+    color:#fff;
+}
+
+#wrap.pointContainer.math .basicSlider_tabs>li.hover,#wrap.pointContainer.math .basicSlider_tabs>li.on,#wrap.pointContainer.life .basicSlider_tabs>li.hover,#wrap.pointContainer.life .basicSlider_tabs>li.on,#wrap.pointContainer .basicSlider_tabs>li.hover,#wrap.pointContainer .basicSlider_tabs>li.on {
+    background-color: #f87c1a;
+}

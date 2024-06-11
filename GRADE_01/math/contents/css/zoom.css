@@ -1,0 +1,150 @@
+@charset "utf-8";.zoomController {
+    position: absolute;
+    display: flex;
+    top: 10px
+}
+
+.zoomMinus,.zoomPlus,.zoomOut {
+    position: relative;
+    background-color: #f87c1a;
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.zoomMinus:hover,.zoomPlus:hover,.zoomOut:hover {
+    background-color: #ae7c65
+}
+
+.zoomMinus {
+    background-image: url(../../contents/images/zoomAct/minus.svg)
+}
+
+.zoomPlus {
+    background-image: url(../../contents/images/zoomAct/plus.svg)
+}
+
+.zoomOut {
+    border-radius: 6px;
+    background-size: 86%;
+    background-image: url(../../contents/images/zoomAct/zoomout.svg)
+}
+
+.zoomBar {
+    position: relative;
+    background-color: rgba(0,0,0,.5)
+}
+
+.zoomBar:after {
+    content: '';
+    position: absolute;
+    border-radius: 8px;
+    background-color: #f87c1a
+}
+
+.zoomSpin {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #ffb400;
+    cursor: pointer;
+    z-index: 1
+}
+
+.zoomArea {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.zoomContainer{
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.zoomContainer.horizon .zoomController {
+    left: 15px;
+    height: 24px
+}
+
+.zoomContainer.horizon .zoomMinus,.zoomContainer.horizon .zoomOut,.zoomContainer.horizon .zoomPlus {
+    width: 24px;
+    height: 100%
+}
+
+.zoomContainer.horizon .zoomMinus {
+    border-radius: 6px 0 0 6px
+}
+
+.zoomContainer.horizon .zoomPlus {
+    border-radius: 0 6px 6px 0
+}
+
+.zoomContainer.horizon .zoomBar {
+    width: 148px;
+    height: 100%
+}
+
+.zoomContainer.horizon .zoomBar:after {
+    top: 9px;
+    left: 12px;
+    width: 124px;
+    height: 7px
+}
+
+.zoomContainer.horizon .zoomOut {
+    left: 4px
+}
+
+.zoomContainer.horizon .zoomSpin {
+    top: 6px;
+    left: 9px
+}
+
+.zoomContainer.vertical .zoomController {
+    right: 15px;
+    width: 26px;
+    flex-direction: column
+}
+
+.zoomContainer.vertical .zoomMinus,.zoomContainer.vertical .zoomOut,.zoomContainer.vertical .zoomPlus {
+    width: 100%;
+    height: 24px
+}
+
+.zoomContainer.vertical .zoomPlus {
+    border-radius: 6px 6px 0 0
+}
+
+.zoomContainer.vertical .zoomMinus {
+    border-radius: 0 0 6px 6px
+}
+
+.zoomContainer.vertical .zoomBar {
+    width: 100%;
+    height: 148px;
+    transform: rotate(180deg)
+}
+
+.zoomContainer.vertical .zoomBar:after {
+    top: 12px;
+    left: 9px;
+    width: 7px;
+    height: 124px
+}
+
+.zoomContainer.vertical .zoomOut {
+    margin-top: 4px
+}
+
+.zoomContainer.vertical .zoomSpin {
+    left: 6px;
+    top: 9px
+}
+
+.zoomContainer .zoomImgContainer {
+    width: 100%
+}
+.zoomContainer .zoomImgContainer.pointerOff {pointer-events: inherit !important;}
