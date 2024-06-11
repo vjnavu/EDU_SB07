@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="../ko/contents/css/math.css">
+
+    <!-- 가이드 전용 -->
+    <style>
+        .contentsBox {
+            padding: 0;
+        }
+
+        .tab-content-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .group-speech-01 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+        }
+
+        .basicSlider_slides>li:not(.page_3) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .character-item {
+            position: absolute;
+        }
+
+
+
+        .ani-background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .praise-box {
+            z-index: 100;
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 602px;
+            width: 1368px;
+        }
+
+        .praise-box .praiseAni {
+            z-index: 3;
+        }
+
+        /* PAGE 3 */
+        .char-box-01 .balloon {
+            top: -185px;
+            left: -120px;
+            background-color: #ffeef3;
+        }
+
+        .char-box-02 .balloon {
+            top: -185px;
+            left: -170px;
+            background-color: #fdf3e7;
+        }
+
+        .char-box-02 .balloon::after,
+        .char-box-01 .balloon::after {
+            left: 50%;
+        }
+
+        .group-speech .char-box-01 {
+            top: 250px;
+            left: 450px;
+        }
+
+        .group-speech .char-box-02 {
+            top: 250px;
+            left: 750px;
+        }
+
+        .characterWrap.speech.right.pointerOff:before {
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title none" contenteditable="true">
+                <div class="bullet num orange inline">1.</div>
+                캐릭터 확인
+                <!--            <div class="popBtn dodbogi" data-hover="" data-popup-btn="1" data-popup-parent="hidden">그림 보기</div>-->
+            </div>
+        </header>
+        <main>
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="">남아</li>
+                    <li data-hover="">여아</li>
+                    <li data-hover="">원형</li>
+                    <li data-hover="">칭찬</li>
+                </ul>
+
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div id="boy_1" class="character-item"></div>
+                        <div id="boy_2" class="character-item"></div>
+                        <div id="boy_3" class="character-item"></div>
+                        <div id="boy_4" class="character-item"></div>
+
+
+                    </li>
+                    <li class="page_2">
+                        <div class="page-inner">
+                            <div class="character-flex">
+                                <div id="girl_1" class="character-item"></div>
+                                <div id="girl_2" class="character-item"></div>
+                                <div id="girl_3" class="character-item"></div>
+                                <div id="girl_4" class="character-item"></div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div id="girl_1_c" class="character-item"></div>
+                        <div id="girl_2_c" class="character-item"></div>
+                        <div id="girl_3_c" class="character-item"></div>
+                        <div id="girl_4_c" class="character-item"></div>
+
+                        <div class="praise-box" data-type="0" data-totalCut="63"
+                            data-praiseAudio="../ko/contents/media/clap.mp3">
+                            <div class="praise-button"></div>
+                            <div class="praiseAni"></div>
+                        </div>
+                    </li>
+                    <li class="page_4">
+                        <div class="praise-box" data-type="1" data-totalCut="63"
+                            data-praiseAudio="../ko/contents/media/clap.mp3">
+                            <div class="praise-button"></div>
+                            <div class="praiseAni"></div>
+                        </div>
+
+                        <!-- <div class="praise-box" data-type="0" data-totalCut="63"
+                            data-praiseAudio="../ko/contents/media/clap.mp3">
+                            <div class="praise-button"></div>
+                            <div class="praiseAni"></div>
+                        </div> -->
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $prite.boy1({
+                id: '#boy_1',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 100,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.boy2({
+                id: '#boy_2',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 400,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.boy3({
+                id: '#boy_3',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 700,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.boy4({
+                id: '#boy_4',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 1000,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+
+
+            $prite.girl1({
+                id: '#girl_1',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 100,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.girl2({
+                id: '#girl_2',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 400,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.girl3({
+                id: '#girl_3',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 700,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.girl4({
+                id: '#girl_4',
+                speech: 'right',
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 250,
+                left: 1000,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+
+
+
+            $prite.girl1({
+                id: '#girl_1_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 300,
+                left: 100,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.girl2({
+                id: '#girl_2_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 300,
+                left: 400,
+                ballon_top: -120,
+                ballon_left: -35,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.girl3({
+                id: '#girl_3_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 300,
+                left: 700,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.girl4({
+                id: '#girl_4_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/checkSound.mp3',
+                text: '말풍선 확인',
+                class: 'b1 bottom',
+                top: 300,
+                left: 1000,
+                ballon_top: -120,
+                ballon_left: -20,
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); }
+            });
+
+
+        }, false);
+
+        $(document).on('click', '.praise-button', function () {
+            $prite.allStopSound();
+            $prite.allresetSprite();
+            $('#wrap').css('pointer-events', 'none');
+            $('.praise-button').css('pointer-events', 'none');
+            $('.characterWrap.speech.right').addClass('pointerOff');
+            $(this).parent('.praise-box').append('<div class="ani-background"></div>');
+
+            setTimeout(() => {
+                $('.ani-background').remove();
+                $('#wrap').css('pointer-events', 'auto');
+                $('.praise-button').css('pointer-events', 'auto');
+                $('.characterWrap.speech.right').removeClass('pointerOff');
+            }, 2500);
+        })
+        $(document).on('click', '.basicSlider_tabs li', function () {
+            $('.ani-background').remove();
+            $('#wrap').css('pointer-events', 'auto');
+            $('.praise-button').css('pointer-events', 'auto');
+            $('.praiseAni').css('opacity', '0');
+            $('.characterWrap.speech.right').removeClass('pointerOff');
+        })
+    </script>
+</body>
+
+</html>

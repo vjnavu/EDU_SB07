@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .page_1 .character-item {
+            position: absolute;
+        }
+
+        #girl_1_c {
+            bottom: 50px;
+            right: 70px;
+        }
+
+        #boy_4_c {
+            top: 50px;
+            left: 70px;
+        }
+
+        .page_1 .balloon {
+            height: 150px;
+        }
+
+        #girl_1_c .balloon {
+            top: 10px !important;
+            left: -800px !important;
+            width: 750px;
+        }
+
+        #boy_4_c .balloon {
+            top: 10px !important;
+            left: 220px !important;
+            width: 750px;
+        }
+
+        .page_1 .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .page_1 .balloon>span>img {
+            width: 170px;
+        }
+
+        #girl_1_c .balloon::after {
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            right: -39px;
+            left: unset;
+            border-right: 25px solid #ffc4c9;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            transform: rotate(180deg);
+        }
+
+        #boy_4_c .balloon::after {
+            bottom: 0;
+            top: 0;
+            left: unset;
+            margin: auto;
+            left: -39px;
+            right: unset;
+            border-left: 25px solid #d7dea3;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            transform: rotate(180deg);
+        }
+
+        .popup_pages .zoomContainer.horizon .zoomController {
+            left: 35px !important;
+        }
+
+        /* ///////// */
+        .zoomController {
+            top: 20px;
+        }
+
+        .zoomImgContainer {
+            width: 1365px;
+            height: 636px;
+        }
+
+        .page_zoom {
+            height: 100%;
+        }
+
+        .zoomContainer {
+            height: 100%;
+        }
+
+        .zoomImg {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .imgWrap {
+            width: 400px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+            margin-top: -10px;
+        }
+
+        .page_2 .character-item {
+            margin-top: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                다양한 마음에 대해 생각해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="다양한 마음에 대해 생각해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="교과서의 글과 그림을 보고 이야기해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div id="girl_1_c" class="character-item"></div>
+                        <div id="boy_4_c" class="character-item"></div>
+                    </li>
+                    <li class="page_2">
+                        <div class="flex">
+                            <div id="boy_3" class="character-item"></div>
+                            <span class="imgWrap popBtn line" data-popup-btn="1">
+                                <img src="./images/ton_0102_0102_0011_202/img_01.jpg" alt="">
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                            <div id="girl_3" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="whole image fullLine" data-popup-page="1">
+                    <div class="full_content">
+                        <div class="page_zoom zoom_img">
+                            <div class="zoomContainer horizon pointerOff">
+                                <div class="zoomArea">
+                                    <div class="zoomImgContainer pointerOff">
+                                        <div class="zoomImg">
+                                            <img src="./images/ton_0102_0102_0011_202/img_01.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.girl1({
+                id: '#girl_1_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0102_0102_0011_202/ton_0102_0102_0011_202_01.mp3',
+                text: `슬프고 짜증나고 화가 나는 것은 나쁜 마음일까요?`,
+                class: 'b1 bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                }
+            });
+            $prite.boy4({
+                id: '#boy_4_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/ton_0102_0102_0011_202/ton_0102_0102_0011_202_02.mp3',
+                text: `기쁘고 신나는 마음은 좋은 마음일까요?`,
+                class: 'b1 bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                }
+            });
+
+            // page 2
+            $prite.boy3({
+                id: '#boy_3',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0011_202/ton_0102_0102_0011_202_03.mp3',
+                text: '우리 마음의 퍼즐이<br>하나라도 없으면<br>완전한 마음이<br>될 수 없어요.',
+                class: 'b1 bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }, balloon_top: -270,
+                balloon_left: -90,
+            });
+            $prite.girl3({
+                id: '#girl_3',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0011_202/ton_0102_0102_0011_202_04.mp3',
+                text: '우리가 느끼는<br>모든 마음이 전부<br>나를 이루고 있어요.',
+                class: 'b1 bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }, balloon_top: -230,
+                balloon_left: -90,
+            });
+        });
+    </script>
+</body>
+
+</html>

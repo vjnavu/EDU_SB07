@@ -1,0 +1,337 @@
+.bgImg {
+    height: 100%;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    pointer-events: auto;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 5px;
+    border-radius: 8px;
+}
+
+
+.popbox.mini .navControl {
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+    color: #fff;
+    font-family: 'YGJAL';
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.popbox.mini .navControl .navItem.purple {
+    background: #7E6BAA;
+}
+
+.popbox.mini .navControl .navItem.blue {
+    background: #4D90CB;
+}
+
+.popbox.mini .navControl .navItem.red {
+    background: #D73731;
+}
+
+.popbox.mini .navControl .navItem.orange {
+    background: #E9943F;
+}
+
+.popbox.mini .navControl .navItem {
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'YGJAL';
+    line-height: 1;
+}
+
+.popbox.mini .navControl .navItem.off {
+    background: #ccc;
+}
+
+.learning-list>li {
+    display: none;
+    position: relative;
+}
+
+.learning-list>li.on {
+    display: block;
+}
+
+.learning-list>li .learning-item {
+    display: grid;
+    grid-template: 2fr/ 1fr 1fr;
+    overflow: hidden;
+    height: auto;
+    width: 480px;
+    gap: 30px 20px;
+    margin: 40px auto 20px;
+}
+
+.learning-list>li .learning-item>li {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 220px;
+    height: 130px;
+    font-size: 22px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.learning-list>li .learning-item>li[data-color="purple"],
+.popbox .popLearning[data-color="purple"] {
+    background-color: #e8e2ef;
+}
+
+.learning-list>li .learning-item>li[data-color="blue"],
+.popbox .popLearning[data-color="blue"] {
+    background-color: #d0dbec;
+}
+
+.learning-list>li .learning-item>li[data-color="red"],
+.popbox .popLearning[data-color="red"] {
+    background-color: #f4d0c6;
+}
+
+.learning-list>li .learning-item>li[data-color="yellow"],
+.popbox .popLearning[data-color="yellow"] {
+    background-color: #f2e6ab;
+}
+
+
+.learning-list>li .learning-item>li.off {
+    pointer-events: none;
+}
+
+.slideBtn {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.slideBtn.prev {
+    left: 40px;
+}
+
+.slideBtn.next {
+    right: 40px;
+}
+
+.slideBtn.off {
+    pointer-events: none;
+    opacity: .2;
+}
+
+.popbox.mini {
+    border-radius: 32px;
+    overflow: unset;
+    cursor: move;
+}
+
+.popbox.mini .popCloseBtn {
+    background: #a4826c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 0 30px 0 50px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.popbox.mini .popCloseBtn::after {
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn:hover {
+    background: #f60;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.popbox .popLearning {
+    width: 123px;
+    height: 96px;
+    pointer-events: auto;
+    /* outline: solid 1.5px #a5b1bb; */
+    outline: solid 1.5px red;
+    border-radius: 6px;
+}
+
+.popbox .popLearning:hover {
+    background-color: #ddd;
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.popbox .popLearning.pop1 {
+    top: 74px;
+    left: 453px;
+}
+
+.popbox .popLearning.pop2 {
+    top: 74px;
+    left: 589px;
+}
+
+.popbox .popLearning.pop3 {
+    top: 74px;
+    left: 726px;
+}
+
+.popbox .popLearning.pop4 {
+    top: 74px;
+    left: 862px;
+}
+
+.popbox .popLearning.pop5 {
+    top: 74px;
+    left: 1156px;
+}
+
+.popbox .popLearning.pop6 {
+    top: 242px;
+    left: 453px;
+}
+
+.popbox .popLearning.pop7 {
+    top: 242px;
+    left: 589px;
+}
+
+.popbox .popLearning.pop8 {
+    top: 242px;
+    left: 726px;
+}
+
+.popbox .popLearning.pop9 {
+    top: 242px;
+    left: 862px;
+}
+
+.popbox .popLearning.pop10 {
+    top: 242px;
+    left: 1156px;
+}
+
+.popbox .popLearning.pop11 {
+    top: 410px;
+    left: 453px;
+}
+
+.popbox .popLearning.pop12 {
+    top: 410px;
+    left: 589px;
+}
+
+.popbox .popLearning.pop13 {
+    top: 410px;
+    left: 726px;
+}
+
+.popbox .popLearning.pop14 {
+    top: 410px;
+    left: 862px;
+}
+
+.popbox .popLearning.pop15 {
+    top: 410px;
+    left: 1156px;
+}
+
+.popbox .popLearning.pop16 {
+    top: 577px;
+    left: 453px;
+}
+
+.popbox .popLearning.pop17 {
+    top: 577px;
+    left: 589px;
+}
+
+.popbox .popLearning.pop18 {
+    top: 577px;
+    left: 726px;
+}
+
+.popbox .popLearning.pop19 {
+    top: 577px;
+    left: 862px;
+}
+
+.popbox .popLearning.pop20 {
+    top: 577px;
+    left: 1156px;
+}
+
+.popbox .popLearning.pop21 {
+    top: 362px;
+    left: 337px;
+}
+
+.popbox .popLearning.pop22 {
+    top: 501px;
+    left: 346px;
+}

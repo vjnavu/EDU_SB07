@@ -1,0 +1,195 @@
+.topText {
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+.boxClickContainer {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxClickContainer .boxChar {
+    width: 300px;
+    height: 300px;
+    order: 2;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.boxClickContainer .boxChar.boxChar_pink_boy {
+    background-image: url('../images/character/boy_1.png');
+}
+
+.boxClickContainer .boxChar.boxChar_pink_girl {
+    background-image: url('../images/character/girl_1.png');
+}
+
+.boxClickContainer .boxChar.boxChar_orange_boy {
+    background-image: url('../images/character/boy_2.png');
+}
+
+.boxClickContainer .boxChar.boxChar_orange_girl {
+    background-image: url('../images/character/girl_3.png');
+}
+
+.boxClickContainer .boxChar.boxChar_purple_boy {
+    background-image: url('../images/character/boy_3.png');
+}
+
+.boxClickContainer .boxChar.boxChar_purple_girl {
+    background-image: url('../images/character/girl_2.png');
+}
+
+.boxClickContainer .boxChar.boxChar_green_boy {
+    background-image: url('../images/character/boy_4.png');
+}
+
+.boxClickContainer .boxChar.boxChar_green_girl {
+    background-image: url('../images/character/girl_4.png');
+}
+
+.boxClickContainer .boxAction {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boxClickContainer .boxAction .boxAns {
+    width: 100%;
+    height: 160px;
+    margin: 25px 0;
+    border-radius: 20px;
+    background: #ffe5e7;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NotoB';
+    font-size: 45px;
+    color: #006ee6;
+    border: solid 4px #f7c1c9;
+    box-sizing: border-box;
+}
+
+.boxClickContainer .boxAction .boxAns::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 50px solid #f7c1c9;
+    position: absolute;
+    top: 55%;
+    right: -53px;
+}
+
+.boxClickContainer .boxAction .boxClick {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.boxClickContainer .boxAction .boxClick .clickText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    height: 160px;
+    width: 100%;
+    border-radius: 22px;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    border: solid 4px #f7c1c9;
+    box-sizing: border-box;
+}
+
+.boxClickContainer .boxAction .boxClick .clickText.complete {
+    pointer-events: none;
+}
+
+.boxClickContainer .boxAction .boxClick .clickText.active {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.boxClickContainer .boxAction .boxClick .clickText:hover {
+    background: #ffc65f;
+    border: solid 4px #e5b04f;
+}
+
+.boxClickContainer .boxAction .boxClick .clickText.fail {
+    background: #ff6600;
+}
+
+
+/* color template */
+
+
+/* pink */
+
+.boxClickContainer.pink .boxAction .boxAns {
+    background-color: #FFEEF3;
+    border-color: #FFC4C9;
+}
+
+.boxClickContainer.pink .boxAction .boxClick .clickText {
+    border-color: #FFC4C9;
+}
+
+.boxClickContainer.pink .boxAction .boxAns::after {
+    border-left-color: #FFC4C9;
+}
+
+
+/* purple */
+
+.boxClickContainer.purple .boxAction .boxAns {
+    background-color: #F6EFFB;
+    border-color: #CABEE0;
+}
+
+.boxClickContainer.purple .boxAction .boxClick .clickText {
+    border-color: #CABEE0;
+}
+
+.boxClickContainer.purple .boxAction .boxAns::after {
+    border-left-color: #CABEE0;
+}
+
+
+/* orange */
+
+.boxClickContainer.orange .boxAction .boxAns {
+    background-color: #FDF3E7;
+    border-color: #FFD89E;
+}
+
+.boxClickContainer.orange .boxAction .boxClick .clickText {
+    border-color: #FFD89E;
+}
+
+.boxClickContainer.orange .boxAction .boxAns::after {
+    border-left-color: #FFD89E;
+}
+
+
+/* green */
+
+.boxClickContainer.green .boxAction .boxAns {
+    background-color: #F5F7E5;
+    border-color: #D7DEA3;
+}
+
+.boxClickContainer.green .boxAction .boxClick .clickText {
+    border-color: #D7DEA3;
+}
+
+.boxClickContainer.green .boxAction .boxAns::after {
+    border-left-color: #D7DEA3;
+}

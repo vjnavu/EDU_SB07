@@ -1,0 +1,394 @@
+/* common */
+#frameContainer,
+#frameContainer:before,
+#frameContainer:after {
+    width: 1365px;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-center-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.title-main {
+    font-family: 'YGJAL';
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.contentsBox.fullScreen {
+    height: 100%;
+}
+
+.contentsBox.fullScreen .innerBox {
+    padding: 0;
+}
+
+/* alert_popup */
+.alert_popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    z-index: 2001;
+    display: none;
+}
+
+.alert_popup .characterAni {
+    display: none;
+}
+
+.alert_popup .characterImg {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.alert_popup .charSpriteAni {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-position: 0 0;
+    pointer-events: none;
+}
+
+/* btn css */
+.btn-common {
+    background: #009944;
+    border: 3px solid #036d32;
+    border-radius: 40px;
+    font-family: 'YGJAL';
+    padding: 20px 40px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.btn-common:hover {
+    background: #c65736;
+    border-color: #9f472c;
+}
+
+.popbox.mini.introSlide .popupContents .btn-intro-close {
+    color: #fff;
+    position: absolute;
+    bottom: 47px;
+    right: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.popbox.mini.introSlide .popupContents .btn-intro-close.active {
+    background: #C65736;
+    border-color: #9f472c;
+}
+
+.popbox.mini.introSlide .popupContents .btn-intro-close:hover {
+    background: #0b7b3d;
+    border-color: #036d32;
+}
+
+.btn-start {
+    min-width: 200px;
+}
+
+.boxMain {
+    display: none;
+}
+
+/* popbox mini intro */
+.popbox.introSlide {
+    width: 900px;
+    padding: 20px;
+    border: 7px solid #F5C143;
+    border-radius: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+}
+
+.popbox.introSlide .bulletBox {
+    text-align: center;
+}
+
+.popbox.introSlide .bulletBox p {
+    font-size: 40px;
+    font-family: 'YGJAL';
+    line-height: inherit;
+}
+
+.popbox.introSlide .popupContents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #00000080;
+    z-index: 2001;
+    display: none;
+}
+
+/* setting btn */
+.setting-container {
+    position: fixed;
+    top: 38px;
+    right: -33px;
+    z-index: 1;
+}
+
+.setting-container .setting-btn {
+    position: absolute;
+    top: 0px;
+    right: 75px;
+    width: 75px;
+    height: 65px;
+    background-color: #0075c1;
+    box-shadow: 0px 8px 0px #004986;
+    border-radius: 0px 0px 34px 34px;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.setting-container .setting-btn::after {
+    content: '';
+    background-image: url('../images/proto_ton_common/icon-setting.png');
+    background-size: 33px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition: all .5s;
+    border: 14px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.setting-container .setting-btn.close::after {
+    background: url('../images/proto_ton_common/icon-setting-close.png') no-repeat center / 100% 100%;
+}
+
+.setting-container .setting-btn:hover {
+    background: #da31e7;
+    box-shadow: 0 9px 0 #920783;
+}
+
+/* setting contents */
+.setting-container .setting-contents {
+    transition: right 1s;
+    background: #ffc5c5;
+    border: 6px solid #ffebd8;
+    position: fixed;
+    right: -530px;
+    top: calc(38px + 38px);
+    z-index: 1;
+    min-width: 400px;
+    min-height: 163px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 40px 50px;
+}
+
+.setting-container.active .setting-contents {
+    right: -10px;
+}
+
+/* setting */
+/* volume control */
+.volume-control {
+    background: #61a3ba;
+    border-radius: 60px;
+    padding: 5px 5px 5px 75px;
+    border: 3px solid #7eb3c6;
+    width: fit-content;
+    position: relative;
+}
+
+.volume-control::after {
+    content: '';
+    width: 33px;
+    height: 30px;
+    background: url('../images/proto_ton_common/icon_sound_on.png') no-repeat center / 100%;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    margin: auto;
+    bottom: 0;
+}
+
+.volume-control>ul {
+    margin: auto;
+    background: #fff;
+    text-align: center;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.volume-control .check-text {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-control .check-text .check-box {
+    height: 28px;
+    width: 28px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-control .check-text>span {
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.volume-control .check-box .red-check {
+    width: 17px;
+    height: 12px;
+    background: url('../images/proto_ton_common/blackCheck.png') no-repeat center top/contain;
+}
+
+.setting-container .btn-home {
+    width: 53px;
+    height: 53px;
+    background: #eb6877;
+    border-radius: 50%;
+    border: 4px solid #e48a94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: unset;
+    right: unset;
+}
+
+.setting-container .btn-home:hover {
+    background: #ec6941;
+    border-color: #f59c81;
+}
+
+.setting-container .btn-home .icon-home {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url('../images/proto_ton_common/icon-home.png') no-repeat center / contain;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+/* btn save */
+.btnSave {
+    background-image: url('../images/proto_ton_common/btn_save.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    font-family: 'YGJAL';
+    font-size: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    color: #fff;
+}
+
+.btnSave:hover {
+    background-image: url('../images/proto_ton_common/btn_save_hover.png');
+}
+
+.btnSave:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btnSave::after {
+    content: '저장하기';
+    letter-spacing: 0px;
+}
+
+/* tooltip */
+.btnSave .tooltip {
+    opacity: 0;
+    visibility: hidden;
+    background: url('../images/proto_ton_common/balloon-tooltip.png') no-repeat center / 100%;
+    position: absolute;
+    font-family: 'NotoM';
+    width: 587px;
+    height: 216px;
+    padding: 40px 50px;
+    border-radius: 40px;
+    right: -10px;
+    bottom: 60px;
+    transition: .2s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.btnSave .tooltip>h1 {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'YGJAL';
+    color: #fff;
+    line-height: 1.3;
+}
+
+.btnSave .tooltip>h1>em {
+    color: #fee24f;
+}
+
+.btnSave .tooltip>p {
+    font-size: 18px;
+    color: #fee24f;
+    margin-left: 60px;
+    margin-top: 10px;
+    line-height: 1.2;
+}
