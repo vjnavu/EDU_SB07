@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .icon-char {
+            left: 200px;
+            top: 85px;
+        }
+
+        .icon-char.orange {
+            left: 300px;
+            top: 85px;
+        }
+
+        .popBtn.more {
+            top: 105px;
+            right: 700px;
+        }
+
+        .min[data-popup-page="4"] {
+            top: 350px;
+        }
+
+        .min[data-popup-page="5"] {
+            top: 350px;
+        }
+
+        .min[data-popup-page="6"] {
+            width: 490px;
+            top: 250px;
+            left: 300px;
+        }
+
+        .linkBtn {
+            top: 200px;
+            left: 0px;
+        }
+
+        .docDownBtn {
+            top: 200px;
+            left: 150px;
+        }
+
+        .previewBtn {
+            top: 200px;
+            left: 300px;
+        }
+
+        .dodbogi {
+            top: 200px;
+            left: 450px;
+        }
+
+        .popBtn.word {
+            width: fit-content;
+            top: 200px;
+        }
+
+        .popBtn.mouse {
+            top: 150px;
+            left: 250px;
+        }
+
+        .popBtn.voca {
+            width: fit-content;
+            top: 88px;
+            left: 350px;
+        }
+
+        .click-finger-Btn {
+            top: 290px;
+            left: 600px;
+        }
+
+        .colorBox {
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .colorBox:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+
+        .character-flex {
+            width: 400px;
+        }
+
+        .page_1 .page-inner {
+            width: 100%;
+        }
+
+        .page_1 .colorBox {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .study_guide {
+            z-index: 1;
+        }
+
+        .noteText {
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title">
+                title
+            </div>
+        </header>
+        <main>
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="">Tab 1</li>
+                    <li data-hover="">Popup</li>
+                    <li data-hover="">Tab in Tab</li>
+                    <li data-hover="">Table</li>
+                    <li data-hover="">Textarea</li>
+                </ul>
+
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-pageType="checkWithEx">
+                        <div class="study_guide"><em>helpText을</em> 이용하세요.</div>
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <h2>
+                                        <ins class="dot"></ins>
+                                        <span>
+                                            H2 without class "dot"
+                                        </span>
+                                    </h2>
+                                    <div class="page-inner" data-type="answer-list">
+                                        <div class="flex-center">
+                                            <div class="toggle box" data-toggle-obj="1">
+                                                <div class="answer" data-toggle-target="1">
+                                                    <div class="exam bullet">예</div>
+                                                    <div>Class box == width 100%</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="toggle" data-toggle-obj="2">
+                                                <div class="answer" data-toggle-target="2">
+                                                    <div class="exam bullet">예</div>
+                                                    <div class="ls-1h">data-toggle-obj = 2, data-toggle-target="2"</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="dot">
+                                        <ins class="dot"></ins>
+                                        <span>
+                                            H2 with class "dot"
+                                        </span>
+                                    </h2>
+                                    <div class="page-inner" data-type="answer-list">
+                                        <div class="flex-center">
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="3">
+                                                    <div class="answer" data-toggle-target="3">
+                                                        <div class="ls-2h">Class box == width 100%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="cho">
+                                                <div class="choWrap">
+                                                    항구, 도로 등
+                                                    <div class="choBox">
+                                                        <span class="dir-rect" data-cho="ㄱ" data-letter="그"></span>
+                                                        <span class="dir-rect" data-cho="ㅌ" data-letter="트"></span>
+                                                    </div>시설이 발달하여
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="dapCheckBtn" data-answer-btn=""></button>
+                                </li>
+                                <li class="innerTab_2">
+                                    <h2 class="dot">
+                                        <ins class="dot"></ins>
+                                        <span>
+                                            H2 with class "dot"
+                                        </span>
+                                    </h2>
+
+                                    <div class="videoSubPlayBtn large" style="top: 100px;"
+                                        data-video-link="M202112997_800K.mp4">800K VIDEO</div>
+
+                                    <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="4"></div>
+                                    <div class="icon-char orange blinkOpacity" data-hover="" data-popup-btn="5"></div>
+
+                                    <div class="icon-char orange blinkOpacity" data-hover="" data-popup-btn="8"></div>
+
+                                    <div class="popBtn more" data-hover="" data-popup-btn="6"><span>고령 사회</span></div>
+
+
+                                    <a class="linkBtn" href=" https://ele.tsherpa.co.kr/"
+                                        target="_blank"><span>링크연결</span></a>
+                                    <a class="docDownBtn" href="./images/proto_km_232/proto_km_232.zip" target="_blank"
+                                        data-hover="">다운로드</a>
+                                    <a class="previewBtn"
+                                        data-file="/Tsherpa2021/element/콘텐츠/교과학습/01_nkor/201010/11/3_4학년군_국어3-1_연간지도계획.pdf"
+                                        data-hover="">미리보기</a>
+                                    <div class="dodbogi" data-hover="" data-popup-btn="7" data-popup-parent="hidden">그림
+                                        보기
+                                    </div>
+
+
+                                    <div class="popBtn word" data-hover="" data-popup-btn="5"
+                                        data-popup-parent="hidden">텍스트 음영</div>
+
+                                    <div class="popBtn mouse" data-hover="" data-popup-btn="7"
+                                        data-popup-parent="hidden"></div>
+
+                                    <div class="popBtn voca" data-hover="" data-popup-btn="6"
+                                        data-popup-parent="hidden">어휘팝업</div>
+
+                                    <span class="click-finger-Btn blinkOn blinkOpacity" data-popup-btn="7"
+                                        data-hover=""></span>
+
+                                    <br /><br />
+
+                                    <p>800K video player frame: ton_0101_0102_0002_203.html</p>
+
+
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="flex-wrap align-center innerBox line-box">
+                                        <div class="page-inner">
+                                            <div class="flex-wrap">
+                                                <div class="colorBox pinkB borderBox">
+                                                    라인 음영 박스 1
+                                                </div>
+                                                <div class="colorBox greenB borderBox">
+                                                    라인 음영 박스 4
+                                                </div>
+                                            </div>
+                                            <div class="flex-wrap">
+                                                <div class="colorBox orangeB borderBox">
+                                                    라인 음영 박스 2
+                                                </div>
+                                                <div class="colorBox blueB borderBox">
+                                                    라인 음영 박스 5
+                                                </div>
+                                            </div>
+                                            <div class="flex-wrap">
+                                                <div class="colorBox purpleB borderBox">
+                                                    라인 음영 박스 3
+                                                </div>
+                                                <div class="colorBox yellowB borderBox">
+                                                    라인 음영 박스 6
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_4" data-quiz="toggle">
+                                    <div class="flex-wrap align-center innerBox line-box">
+                                        <div class="page-inner">
+                                            <div class="flex-wrap">
+                                                <div class="colorBox green">
+                                                    탭입탭, 색상 박스, 라인 박스 확인을 위한 화면입니다
+                                                    <strong>강조</strong>
+                                                </div>
+                                                <div class="colorBox yellow">
+                                                    yellow
+                                                    <strong>강조</strong>
+                                                </div>
+                                            </div>
+                                            <div class="flex-wrap">
+                                                <div class="colorBox sky">
+                                                    sky
+                                                    <strong>강조</strong>
+                                                </div>
+                                                <div class="colorBox purple">
+                                                    purple
+                                                    <strong>강조</strong>
+                                                </div>
+                                            </div>
+                                            <div class="flex-wrap">
+                                                <div class="colorBox orange">
+                                                    orange
+                                                    <strong>강조</strong>
+                                                </div>
+                                                <div class="colorBox pink">
+                                                    pink
+                                                    <strong>강조</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_5" data-quiz="toggle">
+                                    <p>li class="page_1" data-pageType="checkWithEx"</p><br />
+
+                                    <div class="check_list">
+                                        <div class="flex-wrap">
+                                            <div>
+                                                <div class="check_view">
+                                                    <div class="check_box check_ans">
+                                                    </div>
+                                                    <span>내용 1</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="check_view">
+                                                    <div class="check_box">
+                                                    </div>
+                                                    <span>내용 2</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-wrap">
+                                            <div>
+                                                <div class="check_view">
+                                                    <div class="check_box">
+                                                    </div>
+                                                    <span>내용 3</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="check_view">
+                                                    <div class="check_box">
+                                                    </div>
+                                                    <span>내용 4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="buttonContainer">
+                                        <button class="examViewBtn" data-answer-btn=""></button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="page_2">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1">
+                                    <div class="flex-wrap">
+                                        <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="1">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                        <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="2">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="flex-wrap">
+                                        <span class="imgWrap line popBtn" data-popup-btn="2" data-targetSlideNum="1">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                        <span class="imgWrap line popBtn" data-popup-btn="2" data-targetSlideNum="2">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="flex-wrap">
+                                        <span class="imgWrap line popBtn" data-targetSlideNum="1" data-popup-btn="3">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                        <span class="imgWrap line popBtn" data-targetSlideNum="2" data-popup-btn="3">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                        <span class="popBtn line imgWrap" data-targetSlideNum="3" data-popup-btn="3">
+                                            <img src="./images/proto_km_235_03.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="page_3">
+                        <h2 class="with-tab-in-tab dot">
+                            <ins class="dot"></ins>
+                            <span>
+                                어떻게 구할 수 있을지 이야기해 보세요.
+                            </span>
+                        </h2>
+                        <div class="page-inner">
+                            <div class="basicSlider contentsBox" data-slide-container="">
+                                <div class="tab-in-tab" data-slide-btn-container="">
+                                    <ul class="tab-in-tab-list" data-tabs="">
+                                        <li class="tab-in-tab-item">1</li>
+                                        <li class="tab-in-tab-item">2</li>
+                                    </ul>
+                                </div>
+                                <ul class="basicSlider_slides tab-in-tab-content" data-slides="">
+                                    <li class="innerTab_1">
+                                        탭 1
+                                    </li>
+                                    <li class="innerTab_2">
+                                        탭 2
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_4" data-quiz="toggle">
+                        <div class="sideLeftSlider contentsBox doItContent" data-slide-container="">
+                            <div class="sideLeftButtonContainer" data-slide-btn-container="">
+                                <ul class="sideLeftSlider_tabs" data-tabs="">
+                                    <li data-hover="">ㅏ ~ ㅕ</li>
+                                    <li data-hover="">ㅗ ~ ㅠ</li>
+                                    <li data-hover="">ㅡ ~ ㅣ</li>
+                                </ul>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab innerTab_1">
+                                    내용1
+                                </li>
+                                <li class="innerTab innerTab_2">
+                                    내용2
+                                </li>
+                                <li class="innerTab innerTab_3">
+                                    내용3
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="page_5">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <section>
+                                        <div class="memoIcon blue">
+                                            <div class="icon">
+                                                <div class="iconImg"></div>
+                                            </div>
+                                            <div class="memoTxt">이렇게 해요</div>
+                                        </div>
+                                        <div class="noteText blue">
+                                            <div class="textareaWrap">
+                                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                                    data-input-obj="" data-answer=" " onfocus=""
+                                                    onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                            </div>
+
+                                            <div class="text-exam flex-wrap">
+                                                <!-- <div class="bullet exam">예</div> -->
+                                                <div class="blueT">
+                                                    <p><ins class="dot"></ins>
+                                                        분리 배출을 열심히 하겠습니다. <br> 플러그는
+                                                        필요할 때만 사용하겠습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buttonContainer">
+                                            <button class="writeBtn" data-answer-btn=""></button>
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <section>
+                                        <div class="memoIconWrap">
+                                            <div class="memoIcon green" style="margin-right: 10px;">
+                                                <div class="icon">
+                                                    <div class="iconImg"></div>
+                                                </div>
+                                                <div class="memoTxt">이렇게 해요</div>
+                                            </div>
+                                            <div class="memoIcon green border">
+                                                <div class="icon">
+                                                    <div class="iconImg"></div>
+                                                </div>
+                                                <div class="memoTxt">스스로 확인해요</div>
+                                            </div>
+                                        </div>
+                                        <div class="noteText noLine green">
+                                            <!--                                <div class="txt">곰이와 펭이를 위해 나는</div>-->
+                                            <div class="textareaWrap">
+                                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                                    data-input-obj="" data-answer=" " onfocus="placeholder=''"
+                                                    onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                            </div>
+
+                                            <div class="text-exam flex-wrap">
+                                                <div class="bullet exam">예</div>
+                                                <div class="blueT">
+                                                    분리 배출을 열심히 하겠습니다. <br> 플러그는 필요할 때만 사용하겠습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="whole image" data-popup-page="1">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <img src="./images/sample/img_01.jpg" />
+                            </li>
+                            <li class="innerTab_2">
+                                <img src="./images/sample/img_03.jpg" />
+                            </li>
+                        </ul>
+
+                        <div class="moveButtonContainer" data-slide-btn-container="">
+                            <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                            <ul class="basicSlider_circle_tabs" data-tabs="">
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                            </ul>
+                            <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="whole row pop_page_1" data-popup-page="2">
+                    <div class="basicSlider contentsBox doItContent nonPd" data-slide-container="popup">
+                        <div class="moveButtonContainer" data-slide-btn-container="">
+                            <div class="basicSlider_btn prev off" data-btn-prev="" data-hover=""></div>
+                            <ul class="basicSlider_circle_tabs" data-tabs="">
+                                <li data-hover="" class=""></li>
+                                <li data-hover="" class=""></li>
+                            </ul>
+                            <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                        </div>
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <img src="./images/sample/img_01.jpg" />
+                            </li>
+                            <li class="innerTab_2">
+                                <img src="./images/sample/img_03.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="whole column pop_page_3" data-popup-page="3">
+                    <div class="basicSlider contentsBox doItContentnonPd nonPd" data-slide-container="popup">
+                        <div class="moveButtonContainer" data-slide-btn-container="">
+                            <div class="basicSlider_btn prev off" data-btn-prev="" data-hover=""></div>
+                            <ul class="basicSlider_circle_tabs" data-tabs="">
+                                <li data-hover="" class=""></li>
+                                <li data-hover="" class=""></li>
+                                <li data-hover="" class=""></li>
+                            </ul>
+                            <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                        </div>
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <img src="./images/sample/img_02.jpg" />
+                            </li>
+                            <li class="innerTab_2">
+                                <img src="./images/sample/img_02.jpg" />
+                            </li>
+                            <li class="innerTab_3">
+                                <img src="./images/sample/img_02.jpg" />
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="min" data-popup-page="4" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            옆면끼리 만나서 생긴 모서리의 길이로<br> 높이를 알 수 있어요.
+                        </p>
+                    </div>
+                </li>
+                <li class="min" data-popup-page="5" data-drag>
+                    <h2 class="orange">주의!</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            옆면끼리 만나서 생긴 모서리의 길이로<br> 높이를 알 수 있어요.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="min word" data-popup-page="6" data-drag>
+                    <h2>톡톡 도움말</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            블릿 없는 <span class="pink"> 강조색</span>
+                        </p>
+                        <p><ins class="dot gray"></ins>블릿 있음</p>
+                    </div>
+                </li>
+
+                <li class="fullLine whole image" data-popup-page="7">
+                    <div class="full_content">
+                        <div class="text">
+                            풀팝업 확인용 텍스트
+                        </div>
+                    </div>
+                </li>
+
+                <li class="min pop_page_2" data-popup-page="8" data-drag>
+                    <h2 class="orange">주의!</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            옆면끼리 만나서 생긴 모서리의 길이로<br> 높이를 알 수 있어요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script src="./common/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '.videoPlayBtn', function () {
+            efSound('./media/click.mp3');
+            $(this).parent('.videoTitle').addClass('hide');
+            $("#iframe")[0].src += "?autoplay=1";
+        })
+
+        function efSound(src) {
+            var efAudio = new Audio();
+            var efPlay = function () {
+                efAudio.removeEventListener('loadeddata', efPlay);
+                efAudio.play();
+                audioObj.playingObj = efAudio;
+            };
+            efAudio.src = src;
+            efAudio.addEventListener('loadeddata', efPlay);
+            efAudio.load();
+        }
+    </script>
+</body>
+
+</html>

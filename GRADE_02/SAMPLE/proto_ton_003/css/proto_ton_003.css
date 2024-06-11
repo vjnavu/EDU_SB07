@@ -1,0 +1,995 @@
+@charset "utf-8";
+
+/* 공통 */
+.hide {
+    display: none;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+/* // 공통 */
+
+/* 프레임(비율) */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20px 40px 40px;
+    font-size: 40px;
+    line-height: initial;
+}
+
+/* // 프레임(비율) */
+
+/* 악보 */
+.sheets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 90%;
+}
+
+.sheet-head {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sheet-head>h1 {
+    font-family: "YGJAL";
+    font-size: 45px;
+    text-align: center;
+}
+
+.sheet-head>h2 {
+    font-family: "YGJAL";
+    font-size: 22px;
+    text-align: right;
+}
+
+.sheet-body {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    background-image: url("../images/sheet.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.view>.measure-num {
+    color: #fff;
+    background-color: #ff6600;
+}
+
+.measure-num {
+    font-family: "YGJAL";
+    position: absolute;
+    left: -67px;
+    top: 12px;
+    font-size: 25px;
+    color: #ff6600;
+    border: 2px solid #ff6600;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.measure {
+    display: none;
+    position: absolute;
+}
+
+.measure.view {
+    display: flex;
+}
+
+.measure.active {
+    display: flex;
+}
+
+.measure>ul {
+    display: inline-flex;
+}
+
+.measure>ul>li.mute {
+    display: none;
+}
+
+.sheet-body.showPoint.line1>.measure.view>ul>li.active {
+    color: #ff6600;
+    font-family: "NotoB";
+}
+
+.sheet-body.showPoint .sheet-group.on .measure.view>ul>li.active {
+    color: #ff6600;
+    font-family: "NotoB";
+}
+
+.sheet-body>.sheet-group {
+    display: none;
+}
+
+.sheet-body>.sheet-group.on {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sheet-group .measure {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.measure>ul>li {
+    font-family: "NotoM";
+    font-size: 45px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    line-height: 1.4;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.measure>ul>li>input[type="text"].active {
+    color: #01a1ff;
+}
+
+.measure>ul>li>input[type="text"] {
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.measure>ul:first-of-type {
+    left: 0px;
+    top: 0px;
+}
+
+.measure>ul:last-of-type {
+    left: 0px;
+    top: 45px;
+}
+
+.sheet-body.line1>.measure {
+    left: 198px;
+    top: 172px;
+}
+
+.sheet-body.line2>.sheet-group>.measure:first-child {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line2>.sheet-group>.measure:last-child {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line3>.sheet-group>.measure:nth-child(1) {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line3>.sheet-group>.measure:nth-child(2) {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line3>.sheet-group>.measure:nth-child(3) {
+    left: 198px;
+    top: 273px;
+}
+
+.sheet-body.line4>.sheet-group>.measure:nth-child(1) {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line4>.sheet-group>.measure:nth-child(2) {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line4>.sheet-group>.measure:nth-child(3) {
+    left: 198px;
+    top: 273px;
+}
+
+.sheet-body.line4>.sheet-group>.measure:nth-child(4) {
+    left: 198px;
+    top: 336px;
+}
+
+/* LINE5 */
+
+.sheet-body.line5>.sheet-group>.measure:nth-child(1) {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line5>.sheet-group>.measure:nth-child(2) {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line5>.sheet-group>.measure:nth-child(3) {
+    left: 198px;
+    top: 273px;
+}
+
+.sheet-body.line5>.sheet-group>.measure:nth-child(4) {
+    left: 198px;
+    top: 336px;
+}
+
+.sheet-body.line5>.sheet-group>.measure:nth-child(5) {
+    left: 198px;
+    top: 336px;
+}
+
+/* // 악보 */
+
+/* 노래 따라 부르기 */
+.sheet-body>.sheet-viewer {
+    display: none;
+}
+
+.sheet-body>.sheet-viewer.on {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sheet-viewer>.sheet-group {
+    position: absolute;
+}
+
+.sheet-body.line1>.sheet-group>.measure {
+    left: 198px;
+    top: 172px;
+}
+
+.sheet-body.line2>.sheet-viewer>.sheet-group:first-child {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line2>.sheet-viewer>.sheet-group:last-child {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line3>.sheet-viewer>.sheet-group:nth-child(1) {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line3>.sheet-viewer>.sheet-group:nth-child(2) {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line3>.sheet-viewer>.sheet-group:nth-child(3) {
+    left: 198px;
+    top: 273px;
+}
+
+.sheet-body.line4>.sheet-viewer>.sheet-group:nth-child(1) {
+    left: 198px;
+    top: 142px;
+}
+
+.sheet-body.line4>.sheet-viewer>.sheet-group:nth-child(2) {
+    left: 198px;
+    top: 209px;
+}
+
+.sheet-body.line4>.sheet-viewer>.sheet-group:nth-child(3) {
+    left: 198px;
+    top: 273px;
+}
+
+.sheet-body.line4>.sheet-viewer>.sheet-group:nth-child(4) {
+    left: 198px;
+    top: 337px;
+}
+
+.sheet-body.line1[data-measure-line="2"]>.sheet-group.on>.measure:not(.view) {
+    opacity: 0;
+}
+
+.sheet-body.line1[data-measure-line="2"]>.sheet-group.on>.measure.active:not(.view) {
+    opacity: 1;
+}
+
+.sheet-body.line2[data-measure-line="4"]>.sheet-viewer.on>.sheet-group.on>.measure:not(.view) {
+    opacity: 0;
+}
+
+.sheet-body.line2[data-measure-line="4"]>.sheet-viewer.on>.sheet-group.on>.measure.active:not(.view) {
+    opacity: 1;
+}
+
+.sheet-body.line3[data-measure-line="6"]>.sheet-viewer.on>.sheet-group.on>.measure:not(.view) {
+    opacity: 0;
+}
+
+.sheet-body.line3[data-measure-line="6"]>.sheet-viewer.on>.sheet-group.on>.measure.active:not(.view) {
+    opacity: 1;
+}
+
+.sheet-body.line4[data-measure-line="8"]>.sheet-viewer.on>.sheet-group.on>.measure:not(.view) {
+    opacity: 0;
+}
+
+.sheet-body.line4[data-measure-line="8"]>.sheet-viewer.on>.sheet-group.on>.measure.active:not(.view) {
+    opacity: 1;
+}
+
+/* // 노래 따라 부르기 */
+
+/* 뮤직 컨트롤 바 */
+.music-controller {
+    width: max-content;
+    font-family: "NotoB";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 35px 35px 0px 0px;
+    background-color: #ffd88f;
+    font-size: 20px;
+    padding: 0px 5px;
+}
+
+.music-controller>div {
+    position: relative;
+    min-height: 40px;
+    padding: 4px 25px 4px 25px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-controller>div:not(:first-child)::before {
+    content: "";
+    width: 2px;
+    height: 21px;
+    background-color: #96a7af;
+    position: absolute;
+    left: 0px;
+}
+
+.music-controller>div:first-child {
+    border-radius: 25px 0px 0px 0px;
+}
+
+.music-controller>div:last-child {
+    border-radius: 0px 25px 0px 0px;
+}
+
+.music-controller-controls {
+    max-width: 300px;
+}
+
+.dropDown-soundMethod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 38px;
+    padding: 0px 8px 0px 15px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    transition: border .1s;
+}
+
+.dropDown-soundMethod>.label {
+    line-height: 1;
+}
+
+.dropDown-speedControls {
+    width: 115px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: #fff;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 0px 8px 0px 15px;
+    transition: border .1s;
+    border: 3px solid transparent;
+}
+
+.dropDown-speedControls>.label {
+    line-height: 1;
+}
+
+.dropdown {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown:hover {
+    border: 3px solid #7c4500;
+    background-color: #7c4500;
+    color: #fff;
+    transition: all .1s;
+}
+
+.dropdown:hover .btn-dropdown {
+    background-image: url("../images/arrow-dropbox-hover.png");
+}
+
+.dropdown.on>ul {
+    display: block;
+}
+
+.dropdown>ul>li:not(:first-child) {
+    border-top: 1px solid #fff;
+}
+
+.dropdown>ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-bottom: 32px;
+    background-color: #fd9f3e;
+    border-radius: 15px 15px 30px 30px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.dropdown>ul button {
+    font-family: "NotoM";
+    background-color: #fd9f3e;
+    color: #fff;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.dropdown>ul button:hover {
+    color: #7c4500;
+    transition: all .1s;
+}
+
+.measure-info {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    height: 32px;
+    line-height: 1;
+}
+
+.btn-musicProgressbar {
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin: 0px;
+    overflow: visible;
+}
+
+.btn-musicProgressbar {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown.on .btn-dropdown {
+    margin-top: 5px;
+    transform: rotate(0deg);
+}
+
+.btn-dropdown {
+    transform: rotate(-180deg);
+    width: 18px;
+    height: 14px;
+    font-size: 0px;
+    text-indent: -9999px;
+    background-image: url("../images/arrow-dropbox.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.music-controller>div>button {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    position: relative;
+    border-radius: 50%;
+    background-color: #fd9f3e;
+    transition: border .1s;
+}
+
+.music-controller>div>button:hover {
+    transition: all .1s;
+}
+
+.music-controller>div>button:hover .musicBtn-tooltip {
+    bottom: 55px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.musicBtn-tooltip {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, bottom 0.3s, opacity 0.3s linear;
+    position: absolute;
+    left: 50%;
+    bottom: 80px;
+    transform: translate(-50%, 0);
+    font-size: 19px;
+    font-family: 'NotoM';
+    color: #fff;
+    background-color: #7c4500;
+    width: max-content;
+    height: auto;
+    line-height: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.musicBtn-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #7c4500 transparent transparent transparent;
+}
+
+.music-controller>div>button.active:not(.btn-music-play) {
+    background-color: #c27321;
+}
+
+.music-controller>.music-sub-controls>button {
+    border: none;
+}
+
+.btn-measureNext.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.btn-measurePrev.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+
+.btn-music-play.active::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-image: url("../images/icon-pause.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-music-play::before {
+    content: "";
+    width: 13px;
+    height: 14px;
+    background-image: url("../images/icon-play.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 57%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-music-reset::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-image: url("../images/icon-reset.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-measurePrev::before {
+    content: "";
+    width: 16px;
+    height: 14px;
+    background-image: url("../images/icon-prev.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-measureNext::before {
+    content: "";
+    width: 16px;
+    height: 14px;
+    background-image: url("../images/icon-next.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-musicInfinite::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    background-image: url("../images/icon-repeat.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 52%;
+    top: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-removePoint.active::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-image: url("../images/icon-point-no.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-removePoint::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-image: url("../images/icon-point.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-pitchUp::before {
+    content: "";
+    width: 21px;
+    height: 19px;
+    background-image: url("../images/icon-soundUp.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 55%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-pitchDown::before {
+    content: "";
+    width: 21px;
+    height: 19px;
+    background-image: url("../images/icon-soundDown.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 55%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-music-play.active:hover::before {
+    background-image: url("../images/icon-pause-hover.png");
+}
+
+.btn-music-play:hover::before {
+    background-image: url("../images/icon-play-hover.png");
+}
+
+.btn-music-reset:hover::before {
+    background-image: url("../images/icon-reset-hover.png");
+}
+
+.btn-measurePrev:hover::before {
+    background-image: url("../images/icon-prev-hover.png");
+}
+
+.btn-measureNext:hover::before {
+    background-image: url("../images/icon-next-hover.png");
+}
+
+.btn-musicInfinite:hover::before {
+    background-image: url("../images/icon-repeat-hover.png");
+}
+
+.btn-removePoint:hover::before {
+    background-image: url("../images/icon-point-hover.png");
+}
+
+.btn-pitchUp:hover::before {
+    background-image: url("../images/icon-soundUp-hover.png");
+}
+
+.btn-pitchDown:hover::before {
+    background-image: url("../images/icon-soundDown-hover.png");
+}
+
+.btn-removePoint.active:hover::before {
+    background-image: url("../images/icon-point-no-active-hover.png");
+}
+
+.btn-musicInfinite.active:hover::before {
+    background-image: url("../images/icon-repeat-active-hover.png");
+}
+
+.btn-pitchUp.active:hover::before {
+    background-image: url("../images/icon-soundUp-active-hover.png");
+}
+
+.btn-pitchDown.active:hover::before {
+    background-image: url("../images/icon-soundDown-active-hover.png");
+}
+
+.music-progressbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Removes default focus */
+.btn-musicProgressbar:focus {
+    outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+.btn-musicProgressbar::-webkit-slider-runnable-track {
+    background-color: #ad9361;
+    border-radius: 0.5rem;
+    height: 13px;
+}
+
+/* slider thumb */
+.btn-musicProgressbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -4.5px;
+    /* Centers thumb on the track */
+
+    /*custom styles*/
+    border: 3px solid #fd9f3e;
+    background-color: #fff;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    transition: border .1s;
+}
+
+.btn-musicProgressbar::-webkit-slider-thumb:hover {
+    border: 3px solid #7c4500;
+}
+
+.btn-musicProgressbar:focus::-webkit-slider-thumb {
+    border: 3px solid #7c4500;
+    /* border: 1px solid #053a5f;
+    outline: 3px solid #053a5f; */
+    outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+.btn-musicProgressbar::-moz-range-track {
+    background-color: #ad9361;
+    border-radius: 0.5rem;
+    height: 13px;
+}
+
+/* slider thumb */
+.btn-musicProgressbar::-moz-range-thumb {
+    /* border: none; */
+    /*Removes extra border that FF applies*/
+    border-radius: 0;
+    /*Removes default border-radius that FF applies*/
+
+    /*custom styles*/
+    border: 3px solid #fd9f3e;
+    background-color: #fff;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.btn-musicProgressbar:focus::-moz-range-thumb {
+    border: 3px solid #7c4500;
+    /* outline: 3px solid #053a5f; */
+    outline-offset: 0.125rem;
+}
+
+#countDown {
+    width: 120px;
+    height: 135px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#countDown[data-count-down="6"] {
+    display: none;
+}
+
+#countDown[data-count-down="5"] {
+    display: none;
+    background-image: url("../images/five.png");
+}
+
+#countDown[data-count-down="4"] {
+    display: none;
+    background-image: url("../images/four.png");
+}
+
+#countDown[data-count-down="3"] {
+    display: block;
+    background-image: url("../images/three.png");
+}
+
+#countDown[data-count-down="2"] {
+    display: block;
+    background-image: url("../images/two.png");
+}
+
+#countDown[data-count-down="1"] {
+    display: block;
+    background-image: url("../images/one.png");
+}
+
+#countDown[data-count-down="0"] {
+    display: none;
+}
+
+.music-progressbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.music-progressbar:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 13px;
+    z-index: 2;
+}
+
+/* //뮤직 컨트롤 바 */
+/* 뮤직 컨트롤 바 색상1 */
+.color-1 .dropdown>ul {
+    background-color: #fc9bb7;
+}
+
+.color-1 .dropdown>ul button {
+    background-color: #fc9bb7;
+}
+
+.color-1.music-controller {
+    background-color: #feebf1;
+}
+
+.color-1.music-controller>div>button {
+    background-color: #fc9bb7;
+}
+
+.color-1 .btn-musicProgressbar::-webkit-slider-thumb {
+    border: 3px solid #fc9bb7;
+}
+
+.color-1 .btn-musicProgressbar::-webkit-slider-thumb:hover {
+    border: 3px solid #fc9bb7;
+}
+
+.color-1 .btn-musicProgressbar:focus::-webkit-slider-thumb {
+    border: 3px solid #fc9bb7;
+}
+
+.color-1 .btn-musicProgressbar::-webkit-slider-runnable-track {
+    background-color: #d6c5cb;
+}
+
+.color-1 .btn-musicProgressbar::-moz-range-track {
+    background-color: #d6c5cb;
+}
+
+.color-1 .btn-musicProgressbar::-moz-range-thumb {
+    border: 3px solid #fc9bb7;
+}
+
+.color-1 .btn-musicProgressbar:focus::-moz-range-thumb {
+    border: 3px solid #fc9bb7;
+}
+
+.color-1.music-controller>div:not(:first-child)::before {
+    background-color: #c7b7bc;
+}
+
+/* // 뮤직 컨트롤 바 색상1 */

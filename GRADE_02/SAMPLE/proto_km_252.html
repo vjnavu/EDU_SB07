@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="../ko/contents/css/math.css">
+
+    <!-- 가이드 전용 -->
+    <style>
+        .contentsBox {
+            padding: 0;
+        }
+
+        .tab-content-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .group-speech-01 {
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .basicSlider_slides>li:not(.page_3) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .character-item {
+            position: absolute;
+        }
+
+
+
+        .ani-background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .praise-box {
+            z-index: 100;
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 602px;
+            width: 1368px;
+        }
+
+        .praise-box .praiseAni {
+            z-index: 3;
+        }
+
+        /* PAGE 3 */
+        .char-box-01 .balloon {
+            top: -185px;
+            left: -120px;
+            background-color: #ffeef3;
+        }
+
+        .char-box-02 .balloon {
+            top: -185px;
+            left: -170px;
+            background-color: #fdf3e7;
+        }
+
+        .char-box-02 .balloon::after,
+        .char-box-01 .balloon::after {
+            left: 50%;
+        }
+
+        .group-speech .char-box-01 {
+            top: unset;
+            bottom: 40px;
+            left: 450px;
+        }
+
+        .group-speech .char-box-02 {
+            top: unset;
+            bottom: 40px;
+            left: 750px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title none" contenteditable="true">
+                캐릭터 확인
+            </div>
+        </header>
+        <main>
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="캐릭터 확인">1줄</li>
+                    <li data-hover="" data-text="캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터">
+                        2줄</li>
+                    <li data-hover="" data-text="캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터" data-gap="true">
+                        탭겹치 1줄</li>
+                    <li data-hover=""
+                        data-text="캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 확인 캐릭터 캐릭터 확인 캐릭터 확인 캐릭터 캐릭터 확인 캐릭터 확인 캐릭터"
+                        data-gap="true">
+                        탭겹치 2줄</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-01" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon textAlignC pink  bottom">
+                                        <span>
+                                            여름에는 수영장이나<br>
+                                            계곡으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-02" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange  bottom">
+                                        <span>
+                                            겨울에는 스키장이나<br>
+                                            썰매장으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-01" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon textAlignC pink  bottom">
+                                        <span>
+                                            여름에는 수영장이나<br>
+                                            계곡으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-02" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange  bottom">
+                                        <span>
+                                            겨울에는 스키장이나<br>
+                                            썰매장으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-01" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon textAlignC pink  bottom">
+                                        <span>
+                                            여름에는 수영장이나<br>
+                                            계곡으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-02" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange  bottom">
+                                        <span>
+                                            겨울에는 스키장이나<br>
+                                            썰매장으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_4">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-01" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon textAlignC pink  bottom">
+                                        <span>
+                                            여름에는 수영장이나<br>
+                                            계곡으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-02" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange  bottom">
+                                        <span>
+                                            겨울에는 스키장이나<br>
+                                            썰매장으로 여행을 가요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '.basicSlider_tabs li', function () {
+            if ($(this).data('text')) {
+                $('header .title').text($(this).data('text'));
+            }
+            if ($(this).attr('data-gap') == 'true') {
+                $('header .title').addClass('gap');
+            } else {
+                $('header .title').removeClass('gap');
+            }
+        });
+    </script>
+</body>
+
+</html>

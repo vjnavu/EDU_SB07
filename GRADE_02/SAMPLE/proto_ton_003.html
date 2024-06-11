@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <style>
+        .zoomController {
+            top: 20px;
+        }
+
+        .zoomImgContainer {
+            width: 1365px;
+            height: 636px;
+        }
+
+        .page_zoom {
+            height: 100%;
+        }
+
+        .zoomContainer {
+            height: 100%;
+        }
+
+        .zoomImg {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .zoomImg h2 {
+            font-size: 30px;
+            font-family: 'YGJAL';
+            margin-bottom: 20px;
+        }
+
+        .zoomImg img {
+            width: 450px;
+        }
+
+        .zoomArea {
+            height: 636px;
+        }
+
+        ul.tab-sheet>li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        ul.tab-sheet>li:not(:first-child)::before {
+            content: "";
+            width: 2px;
+            height: 20px;
+            background-color: #d2b796;
+            left: -20px;
+            position: absolute;
+        }
+
+        .tab-sheet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 5px 0px;
+        }
+
+        .tab-sheet button {
+            font-size: 20px;
+            font-family: "YGJAL";
+            cursor: pointer;
+            color: #7c4500;
+            box-sizing: border-box;
+            padding: 4px 15px;
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        .tab-sheet button:hover {
+            color: #f87c1a;
+            transition: all .1s;
+        }
+
+        .tab-sheet button.active {
+            pointer-events: none;
+            color: #fff;
+            background-color: #f87c1a;
+            border-radius: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sheetArea.hide {
+            display: none;
+        }
+
+        .sheetArea {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #fff;
+        }
+
+        .docDownBtn {
+            position: absolute;
+            display: inline-block;
+            height: 39px;
+            padding: 0 16px 0 42px;
+            color: #fff !important;
+            font-size: 20px;
+            font-family: YGJAL;
+            line-height: 39px;
+            border-radius: 30px;
+            background: #ff6600 url("proto_ton_003/images/icon_down.svg") 13px center/20px auto no-repeat;
+            box-sizing: border-box;
+            margin: 3px 6px;
+            right: 37px;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .docDownBtn:hover {
+            background-color: #ff8800;
+            transition: all .1s;
+        }
+
+        .zoomSpin {
+            left: 35px;
+            top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <div class="contentsTitle">
+                <ul class="tab-sheet">
+                    <li>
+                        <button class="active" type="button" data-src="./proto_ton_003/ar.html">노래 듣기</button>
+                    </li>
+                    <li>
+                        <button type="button" data-src="./proto_ton_003/armr.html">노래 따라 부르기</button>
+                    </li>
+                    <li>
+                        <button type="button" data-src="./proto_ton_003/mr.html">반주 듣기</button>
+                    </li>
+                    <li>
+                        <button class="btn-viewSheet" type="button">악보 보기</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Content -->
+            <div class="contentsBox">
+
+                <iframe src="./proto_ton_003/ar.html"></iframe>
+
+                <div class="sheetArea hide">
+                    <a class="docDownBtn" href="./data/sample.pdf" download data-hover="">악보 다운로드</a>
+                    <div class="page_zoom">
+                        <div class="zoomContainer">
+                            <div class="zoomArea">
+                                <div class="zoomImgContainer pointerOff">
+                                    <div class="zoomImg">
+                                        <h2>우리 동네 한 바퀴</h2>
+                                        <div class="bgImg">
+                                            <img src="./proto_ton_003/images/sheetPaper.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Common Script -->
+        <script src="./common/js/jquery.js"></script>
+        <script src="./common/js/base.js"></script>
+        <script src="./common/js/common.js"></script>
+        <script src="./common/js/contents.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tabBtns = document.querySelectorAll(".tab-sheet button");
+                const iframe = document.querySelector("iframe");
+                const sheetArea = document.querySelector(".sheetArea");
+
+                tabBtns.forEach(el => {
+                    el.addEventListener("click", () => {
+                        efSound("./media/click.mp3");
+
+                        tabBtns.forEach(btn => {
+                            btn.classList.remove("active");
+                        });
+                        el.classList.add("active");
+
+                        if (el.classList.contains("btn-viewSheet")) {
+                            iframe.src = "";
+                            sheetArea.classList.remove("hide");
+                        } else {
+                            iframe.src = el.dataset.src;
+                            sheetArea.classList.add("hide");
+                        }
+                    });
+                });
+            });
+            $(function () {
+                $(document).on("click", ".btn-viewSheet", function () {
+                    zoomInstance.resetZoom();
+                    $(document).find(".zoomController").remove();
+
+                    loadScriptFile('common/js/zoomImage.js', function () {
+                        zoomInstance = new ZoomImage(
+                            QS('.sheetArea')
+                        );
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

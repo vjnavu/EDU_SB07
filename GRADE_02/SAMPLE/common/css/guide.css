@@ -1,0 +1,315 @@
+#wrap header .title {
+    position: relative;
+    padding: 0 0 0 42px;
+    margin: 5px 0px 20px 0;
+    font-size: 45px;
+    line-height: 1.3;
+    color: #000;
+    font-family: NotoM;
+    pointer-events: none;
+    outline: 0;
+    text-align: justify;
+}
+
+#wrap header .title::before {
+    background-color: #37b53b;
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-image: none;
+    top: 22px;
+    left: 0px;
+}
+
+#wrap header .title.orange:before {
+    background: #f89021;
+}
+
+#wrap header .title.purple:before {
+    background: #816aae;
+}
+
+#wrap header .title.pink:before {
+    background: #f2678e;
+}
+
+#wrap header .title.red:before {
+    background: #e71c22;
+}
+
+#wrap header .title.blue:before {
+    background: #2F92D0;
+}
+
+#wrap header .title.green:before {
+    background: #37b53b;
+}
+
+h2.icon span:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -42px;
+    width: 34px;
+    height: 34px;
+    background: url(../../../ko/contents/images/icon/bullet_01.png) center/contain no-repeat;
+}
+
+h2.dot span:before {
+    background: unset;
+}
+
+.tab-in-tab {
+    border-bottom: 5px solid #f7f7f7;
+    padding: 0 12px
+}
+
+.tab-in-tab-list {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    position: relative;
+    bottom: -5px
+}
+
+.tab-in-tab-item {
+    border-radius: 9px 9px 0 0;
+    padding: 6px 13px 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'YGJAL', 'sans-serif';
+    font-size: 18px;
+    color: #fff;
+    background-color: #d1d1d1
+}
+
+.tab-in-tab-item.on {
+    background-color: #999
+}
+
+.with-tab-in-tab {
+    margin-bottom: -20px !important;
+    z-index: 2
+}
+
+.tab-in-tab-content>li {
+    padding-top: 20px
+}
+
+
+/* POPBTN img wrap*/
+.imgWrap {
+    display: flex;
+    border-radius: 15px;
+}
+
+.imgWrap img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.popBtn {
+    position: relative;
+}
+
+.flex-wrap {
+    height: 100%;
+}
+
+.zoomContainer {
+    flex: 1;
+}
+
+.flexBox img {
+    width: 100%;
+}
+
+/*비디오타이틀*/
+.videoBackground {
+    width: 100%;
+    height: 100%;
+    background: url(../images/background_video_n.png) no-repeat;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.innerVideoTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 473px;
+    height: auto;
+    padding: 30px 70px;
+    background: #f6e7d4;
+    border: 15px solid #ecd8bf;
+    text-align: center;
+    box-sizing: border-box;
+    animation: videoTitleIn 1.0s ease;
+    -webkit-animation: videoTitleIn 1.0s ease;
+    -moz-animation: videoTitleIn 1.0s ease;
+    cursor: pointer;
+}
+
+.innerVideoTitle:before {
+    content: '';
+    position: absolute;
+    top: -99px;
+    left: 0;
+    width: 100%;
+    height: 99px;
+    background: url(../images/bg_video_title.png) center/440px no-repeat;
+}
+
+.innerVideoTitle p {
+    display: inline-block;
+    color: #5e3e18;
+    font-family: YGJAL;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.innerVideoTitle p em {
+    color: #f60;
+    ;
+}
+
+.innerVideoWrap {
+    text-align: center;
+    height: 100%;
+}
+
+.innerVideoWrap .videoFrameWrap {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    font-size: 0;
+}
+
+.how-to-box {
+    margin-top: 60px;
+}
+
+.howtoBox .bullet {
+    z-index: 1;
+}
+
+.howtoBox .pic-box .imageWrap {
+    position: relative;
+    width: 100%;
+    height: 295px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+}
+
+.howtoBox .pic-box .imageWrap>img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.howtoBox .pic-box .imageWrap .imgInputBox {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 200px;
+    height: 116px;
+    top: 113px;
+    text-align: center;
+}
+
+.howtoBox .pic-box .imageWrap .imgInputBox>input {
+    border-bottom: 1px solid #000;
+    width: 49%;
+    text-align: center;
+}
+
+/* YOUTUBE */
+.innerYoutubeWrap {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.innerYoutubeWrap .youtubeFrameWrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    font-size: 0;
+}
+
+.innerYoutubeWrap .youtubeFrameWrap img {
+    width: 100%;
+    height: 530px;
+    filter: brightness(0.5);
+}
+
+.videoTitle:before {
+    position: absolute;
+    left: 0px;
+    top: -94px;
+    width: 100%;
+    height: 99px;
+    background: url(../images/bg_video_title.png) center center no-repeat;
+    background-size: 400px auto;
+    content: "";
+}
+
+.videoTitle {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    min-width: 762px;
+    height: auto;
+    padding: 25px;
+    background: #f6e7d4;
+    border: 15px solid #ecd8bf;
+    text-align: center;
+    box-sizing: border-box;
+    animation: videoTitleIn 1s ease;
+    -webkit-animation: videoTitleIn 1s ease;
+    -moz-animation: videoTitleIn 1s ease;
+    z-index: 2;
+}
+
+.videoTitle p {
+    display: inline-block;
+    color: #5e3e18;
+    font-family: YGJAL;
+    font-size: 50px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.videoTitle p em {
+    color: #ff6600;
+}
+
+.examViewBtn {
+    background-color: #00A0FF;
+}
+
+.examViewBtn:hover {
+    background-color: #216CBE;
+}
+
+.examViewBtn.reset {
+    background-color: #216CBE;
+}
+
+.examViewBtn.reset:hover {
+    background-color: #00A0FF;
+}
