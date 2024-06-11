@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ar</title>
+    <link rel="stylesheet" type="text/css" href="../common/css/master.css" />
+    <link rel="stylesheet" href="../proto_ton_003/css/proto_ton_003.css">
+    <style>
+        /* .sheet-body {
+            background-image: none;
+        } */
+
+        .manuscriptWrap {
+            position: absolute;
+            top: 170px;
+            left: 225px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .manuscript {
+            display: flex;
+            align-items: center;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+
+        .manuscript>.cell {
+            border-left: 3px solid black;
+            width: 80px;
+            height: 80px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .manuscript>.cell.dash {
+            border-left: 3px dashed black;
+        }
+
+        .manuscript>.cell:last-of-type {
+            border-right: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="frame">
+        <div class="sheets">
+            <audio src="../proto_ton_003/media/ar.mp3" id="music" preload="auto"></audio>
+
+            <div class="sheet-head">
+                <h1>우리 동네 한바퀴</h1>
+                <h2>박문희&middot;안복진 작사, 안복진 작곡</h2>
+            </div>
+            <!-- .line1 , data-measure-line="1" : 1소절씩 보여줌 -->
+            <!-- .line2 , data-measure-line="2" : 2소절씩 보여줌 -->
+            <!-- .line3 , data-measure-line="3" : 3소절씩 보여줌 -->
+            <!-- .line4 , data-measure-line="4" : 4소절씩 보여줌 -->
+            <div class="sheet-body showPoint line2" data-measure-line="2">
+                <div id="countDown"></div>
+                <div class="measure">
+                    <span class="measure-num">1</span>
+                    <ul>
+                        <li class="mute">반주</li>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li>한</li>
+                        <li>바</li>
+                        <li class="mr10">퀴</li>
+                        <li>돌</li>
+                        <li>아</li>
+                        <li>볼</li>
+                        <li class="mr10">까</li>
+                    </ul>
+                    <ul>
+                        <li class="mr10">이</li>
+                        <li>골</li>
+                        <li>목</li>
+                        <li class="mr10">엔</li>
+                        <li>뭐</li>
+                        <li class="mr10">가</li>
+                        <li>있</li>
+                        <li>을</li>
+                        <li>까</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">2</span>
+                    <ul>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li class="mr10">한</li>
+                        <li>바</li>
+                        <li class="mr10">퀴</li>
+                        <li>돌</li>
+                        <li>아</li>
+                        <li>볼</li>
+                        <li class="mr10">까</li>
+                    </ul>
+                    <ul>
+                        <li class="mr10">한</li>
+                        <li>바</li>
+                        <li class="mr10">퀴</li>
+                        <li>돌</li>
+                        <li>아</li>
+                        <li>볼</li>
+                        <li>까</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">3</span>
+                    <ul>
+                        <li>뽀</li>
+                        <li>글</li>
+                        <li>뽀</li>
+                        <li class="mr10">글</li>
+                        <li>머</li>
+                        <li>리</li>
+                        <li>하</li>
+                        <li class="mr10">는</li>
+                        <li>미</li>
+                        <li>용</li>
+                        <li class="mr10">실</li>
+                    </ul>
+                    <ul>
+                        <li>심</li>
+                        <li>부</li>
+                        <li class="mr10">름</li>
+                        <li>하</li>
+                        <li>러</li>
+                        <li>가</li>
+                        <li class="mr10">는</li>
+                        <li>슈</li>
+                        <li>퍼</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">4</span>
+                    <ul>
+                        <li>달</li>
+                        <li>콤</li>
+                        <li class="mr10">한</li>
+                        <li>냄</li>
+                        <li>새</li>
+                        <li>가</li>
+                        <li class="mr10">득</li>
+                        <li>빵</li>
+                        <li class="mr10">집</li>
+                    </ul>
+                    <ul>
+                        <li>이</li>
+                        <li>골</li>
+                        <li>목</li>
+                        <li class="mr10">엔</li>
+                        <li>뭐</li>
+                        <li class="mr10">가</li>
+                        <li>있</li>
+                        <li>을</li>
+                        <li>까</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">5</span>
+                    <ul>
+                        <li>기</li>
+                        <li class="mr10">쁜</li>
+                        <li>소</li>
+                        <li class="mr10">식</li>
+                        <li>전</li>
+                        <li>해</li>
+                        <li>주</li>
+                        <li class="mr10">는</li>
+                        <li>우</li>
+                        <li>체</li>
+                        <li class="mr10">국</li>
+                    </ul>
+                    <ul>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li>지</li>
+                        <li>켜</li>
+                        <li>주</li>
+                        <li class="mr10">는</li>
+                        <li>경</li>
+                        <li>찰</li>
+                        <li>서</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">6</span>
+                    <ul>
+                        <li>내</li>
+                        <li class="mr10">가</li>
+                        <li>가</li>
+                        <li class="mr10">는</li>
+                        <li>즐</li>
+                        <li>거</li>
+                        <li class="mr10">운</li>
+                        <li>학</li>
+                        <li class="mr10">교</li>
+                    </ul>
+                    <ul>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li>사</li>
+                        <li>람</li>
+                        <li class="mr10">들</li>
+                        <li>만</li>
+                        <li>나</li>
+                        <li>요</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">7</span>
+                    <ul>
+                        <li class="mute">반주</li>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li class="mr10">한</li>
+                        <li>바</li>
+                        <li class="mr10">퀴</li>
+                        <li>돌</li>
+                        <li>아</li>
+                        <li>볼</li>
+                        <li class="mr10">까</li>
+                    </ul>
+                    <ul>
+                        <li class="mr10">이</li>
+                        <li>골</li>
+                        <li>목</li>
+                        <li class="mr10">엔</li>
+                        <li>뭐</li>
+                        <li class="mr10">가</li>
+                        <li>있</li>
+                        <li>을</li>
+                        <li>까</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">8</span>
+                    <ul>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li class="mr10">한</li>
+                        <li>바</li>
+                        <li class="mr10">퀴</li>
+                        <li>돌</li>
+                        <li>아</li>
+                        <li>볼</li>
+                        <li class="mr10">까</li>
+                    </ul>
+                    <ul>
+                        <li>행</li>
+                        <li>복</li>
+                        <li class="mr10">한</li>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li>좋</li>
+                        <li>아</li>
+                        <li>요</li>
+                    </ul>
+                </div>
+                <!-- <div class="measure">
+                    <span class="measure-num">9</span>
+                    <ul>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li class="mr10">한</li>
+                        <li>바</li>
+                        <li class="mr10">퀴</li>
+                        <li>돌</li>
+                        <li>아</li>
+                        <li>볼</li>
+                        <li class="mr10">까</li>
+                    </ul>
+                    <ul>
+                        <li>행</li>
+                        <li>복</li>
+                        <li class="mr10">한</li>
+                        <li>우</li>
+                        <li>리</li>
+                        <li>동</li>
+                        <li class="mr10">네</li>
+                        <li>좋</li>
+                        <li>아</li>
+                        <li>요</li>
+                    </ul>
+                </div> -->
+            </div>
+            <!-- 악보 -->
+            <!-- <div class="manuscriptWrap">
+                <ul class="manuscript">
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                </ul>
+                <ul class="manuscript">
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                </ul>
+                <ul class="manuscript">
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                </ul>
+                <ul class="manuscript">
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell"></li>
+                    <li class="cell dash"></li>
+                    <li class="cell dash"></li>
+                </ul>
+            </div> -->
+            <!-- 기본 = 오렌지 , .color-1 : 핑크 -->
+            <div class="music-controller">
+                <div class="music-controller-soundMethod">
+                    <div class="dropdown dropDown-soundMethod">
+                        <span class="label SoundMethod-label">전체 듣기</span><button class="btn-dropdown"
+                            type="button">전체/소절 듣기</button>
+                        <ul>
+                            <li>
+                                <button class="btn-playAll" type="button">전체 듣기</button>
+                            </li>
+                            <li>
+                                <button class="btn-playMeasure" type="button">소절 듣기</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="music-controller-controls">
+                    <button class="btn-music-play" type="button">
+                        <div class="musicBtn-tooltip">재생</div>
+                    </button>
+                    <div class="music-progressbar">
+                        <input class="btn-musicProgressbar" type="range" min="0" max="100" step="1" value="0">
+                    </div>
+                    <button class="btn-music-reset" type="button">
+                        <div class="musicBtn-tooltip">정지</div>
+                    </button>
+                </div>
+                <div class="measure-controls">
+                    <button class="btn-measurePrev" type="button">
+                        <div class="musicBtn-tooltip">이전 소절</div>
+                    </button>
+                    <div class="measure-info">
+                        <span class="measure-currentIdx"></span>
+                        <span>/</span>
+                        <span class="measure-total"></span>
+                    </div>
+                    <button class="btn-measureNext" type="button">
+                        <div class="musicBtn-tooltip">다음 소절</div>
+                    </button>
+                </div>
+                <div class="music-sub-controls">
+                    <button class="btn-musicInfinite" type="button">
+                        <div class="musicBtn-tooltip">반복 재생 켜기</div>
+                    </button>
+                    <button class="btn-removePoint" type="button">
+                        <div class="musicBtn-tooltip">하이라이트 기능 끄기</div>
+                    </button>
+                    <button class="btn-pitchUp" type="button">
+                        <div class="musicBtn-tooltip">반음 올리기</div>
+                    </button>
+                    <button class="btn-pitchDown" type="button">
+                        <div class="musicBtn-tooltip">반음 내리기</div>
+                    </button>
+                    <div class="dropdown dropDown-speedControls">
+                        <span class="label speedControl-picked">X 1.0</span><button class="btn-dropdown" type="button">X
+                            1.0</button>
+                        <ul>
+                            <li>
+                                <button class="btn-speedFast" type="button">빠르게</button>
+                            </li>
+                            <li>
+                                <button class="btn-speedDefault" type="button">X 1.0</button>
+                            </li>
+                            <li>
+                                <button class="btn-speedSlow" type="button">느리게</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../common/js/jquery.js"></script>
+
+    <script src="../proto_ton_003/js/ar.js"></script>
+</body>
+
+</html>

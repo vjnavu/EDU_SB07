@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue">
+                준비 운동을 해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-quiz="toggle">
+                        <h2>
+                            <ins class="dot trans"></ins>
+                            <span>
+                                어떤 일에 대해 마음을 전했나요?
+                            </span>
+                        </h2>
+                        <div class="page-inner" data-type="answer-list">
+                            <div class="flex-center">
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <!--										<div class="exam bullet">예</div>-->
+                                            <div class="ls-1h">친구가 숙제를 도와준 일에 대해 마음을 전했습니다.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>
+                            <ins class="dot trans"></ins>
+                            <span>
+                                어떤 마음을 전했나요?
+                            </span>
+                        </h2>
+                        <div class="page-inner" data-type="answer-list">
+                            <div class="flex-center">
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <!--										<div class="exam bullet">예</div>-->
+                                            <div class="ls-2h">고마운 마음을 전했습니다.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>
+                            <ins class="dot trans"></ins>
+                            <span>
+                                무엇이라고 표현했나요?
+                            </span>
+                        </h2>
+                        <div class="page-inner" data-type="answer-list">
+                            <div class="flex-center">
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            <!--										<div class="exam bullet">예</div>-->
+                                            <div class="ls-2h">“정말 고마워, 넌 참 착한 친구야.”라고 표현했습니다.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="examViewBtn" data-answer-btn=""></button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '.page_1 .toggle', function () {
+            if ($('.page_1 .toggle').length == $('.page_1 .toggle.complete').length) {
+                $('.page_1 .examViewBtn').addClass('reset');
+            } else {
+                $('.page_1 .examViewBtn').removeClass('reset');
+            }
+        })
+
+        $(document).on('click', '.page_1 .examViewBtn', function () {
+            if (!$('.page_1 .examViewBtn').hasClass('reset')) {
+                $('.page_1 .toggle').parent().removeAttr('data-active');
+            } else {
+                $('.page_1 .toggle').parent().attr('data-active', 'on');
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,755 @@
+/* zoom button */
+.zoomButtonContainer {
+    background: #e95c6c;
+    border-radius: 32px;
+    border: 3px solid #e95c6c;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.zoomButtonContainer .zoomButtonTitle {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px 0;
+}
+
+.zoomButtonContainer .zoomButton {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    cursor: pointer;
+}
+
+.zoomButtonContainer .zoomButton.block {
+    pointer-events: none;
+}
+
+.zoomButton .icon-zoom {
+    display: inline-block;
+    background: url('../images/proto_ton_013/icon-zoom.png') no-repeat center / 100% 100%;
+    width: 70px;
+    height: 70px;
+}
+
+.zoomButton .icon-zoom:hover {
+    background: url('../images/proto_ton_013/icon-zoom-hover.png') no-repeat center / 100% 100%;
+}
+
+.zoomButton.active .icon-zoom {
+    background: url('../images/proto_ton_013/icon-find.png') no-repeat center / 100% 100%;
+    height: 69px;
+    width: 64px;
+}
+
+/* zoom image */
+.zoomContainer {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoomContainer>img {
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+}
+
+.hover-image {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+/* setting */
+/* volume control */
+.volume-control {
+    background: #61a3ba;
+    border-radius: 26px;
+    padding: 5px 5px 5px 60px;
+    border: 3px solid #7eb3c6;
+    width: fit-content;
+    position: relative;
+}
+
+.volume-control::after {
+    content: '';
+    width: 33px;
+    height: 30px;
+    background: url('../images/proto_ton_013/icon_sound_on.png') no-repeat center / 100%;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    margin: auto;
+    bottom: 0;
+}
+
+.volume-control>ul {
+    margin: auto;
+    background: #fff;
+    text-align: center;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.volume-control .check-text {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-control .check-text .check-box {
+    height: 28px;
+    width: 28px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-control .check-text>span {
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.volume-control .check-box .red-check {
+    width: 17px;
+    height: 12px;
+    background: url('../images/proto_ton_013/blackCheck.png') no-repeat center top/contain;
+}
+
+/* btn home */
+.btn-home {
+    width: 53px;
+    height: 53px;
+    background: #eb6877;
+    border-radius: 50%;
+    border: 4px solid #e48a94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-home.hide {
+    display: none;
+}
+
+.btn-home:hover {
+    background: #ec6941;
+    border-color: #f59c81;
+}
+
+.btn-home .icon-home {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url('../images/proto_ton_013/icon-home.png') no-repeat center / contain;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+/* btn start */
+.btn-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+    width: 180px;
+    height: 65px;
+    color: #fff;
+    font-family: 'YGJAL';
+    font-size: 30px;
+    background: #e5004f;
+    border-radius: 40px;
+    border: 5px solid #b00a44;
+    position: absolute;
+    bottom: 98px;
+    left: 591px;
+}
+
+.btn-start:hover {
+    background-color: #920783;
+    border: 5px solid #da31e7;
+
+}
+
+/* layout main */
+.bg {
+    background-image: url('../images/proto_ton_013/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-top: 55px;
+    background-color: #f3d5dd;
+}
+
+.bg .title {
+    font-family: 'YGJAL';
+    font-size: 58px;
+    color: #e95c6c;
+    text-align: center;
+    text-shadow: 4px 0 #fff, -4px 0 #fff, 0 4px #fff, 0 -4px #fff, 4px 4px #fff, -4px -4px #fff, 4px -4px #fff, -4px 4px #fff;
+}
+
+.bg .title span {
+    color: #e5004f;
+}
+
+.bg .title em {
+    position: relative;
+}
+
+.bg .title em::after {
+    content: '';
+    background: url('../images/proto_ton_013/title-emphasize.png') no-repeat center / 100% 100%;
+    position: absolute;
+    width: 150%;
+    height: 200%;
+    top: -40px;
+    left: -20px;
+}
+
+.bg .subTitle {
+    text-align: center;
+    font-family: 'YGJAL';
+    font-size: 30px;
+    line-height: 40px;
+    position: absolute;
+    top: 170px;
+    left: 230px;
+}
+
+.icon-find {
+    background: url('../images/proto_ton_013/icon-find.png') no-repeat center / 100% 100%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.requestTitle {
+    background: #5f52a0;
+    text-align: center;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 30px;
+    position: absolute;
+    top: 345px;
+    left: 280px;
+    font-family: 'YGJAL';
+    padding: 10px 30px;
+}
+
+.requestImg {
+    position: absolute;
+    top: 460px;
+    left: 270px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f3d5dd;
+}
+
+.flex .left-sub,
+.flex .right-sub {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+.top-sub,
+.bottom-sub {
+    width: 100%;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-sub.zoom {
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.flex .main {
+    height: 100%;
+    flex: 1;
+}
+
+.bottom-sub .btn-sub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'YGJAL';
+    font-size: 32px;
+    line-height: 1.2;
+    background: #5f52a0;
+    color: #fff;
+    border-radius: 32px;
+    border: 3px solid #2c1d76;
+    width: 100%;
+    padding: 17px 0;
+}
+
+.bottom-sub .btn-sub:hover {
+    background-color: #e4007f;
+    border: 3px solid #ea68a2;
+}
+
+.bottom-sub .btn-sub.brown {
+    background: #e5004f;
+    border-color: #b00a44;
+}
+
+.bottom-sub .btn-sub.brown:hover {
+    background-color: #920783;
+    border: 3px solid #da31e7;
+}
+
+/* lives container */
+.lives-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 60px;
+    padding: 40px 0;
+    gap: 20px;
+    position: relative;
+    bottom: -355px;
+}
+
+.lives-container .live {
+    background-image: url('../images/proto_ton_013/icon_bee_good_on.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 77px;
+    height: 59px;
+    display: block;
+}
+
+.lives-container .live.off {
+    background-image: url('../images/proto_ton_013/icon_bee_good.png');
+}
+
+.lives-container .live:nth-child(2) {
+    background-image: url('../images/proto_ton_013/icon_bee_soso_on.png');
+}
+
+.lives-container .live.off:nth-child(2) {
+    background-image: url('../images/proto_ton_013/icon_bee_soso.png');
+}
+
+.lives-container .live:nth-child(3) {
+    background-image: url('../images/proto_ton_013/icon_bee_bad_on.png');
+}
+
+.lives-container .live.off:nth-child(3) {
+    background-image: url('../images/proto_ton_013/icon_bee_bad.png');
+}
+
+.magnify .errors {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.magnify .errors.block {
+    pointer-events: none;
+}
+
+
+.magnify .errors.disable {
+    pointer-events: none;
+}
+
+/* 
+.solves {
+    position: relative;
+} */
+
+
+.errors div,
+.solves div {
+    position: absolute;
+    width: 118px;
+    height: 123px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out 0ms;
+    border-radius: 59px;
+}
+
+.solves div {
+    background-image: url('../images/game/quiz-o.svg');
+}
+
+.errors div {
+    background-image: url('../images/game/quiz-x.svg');
+}
+
+.errors div.active,
+.solves div.active {
+    opacity: 1;
+}
+
+.gameOver.hiddenPictures {
+    position: absolute;
+    top: calc(50% - 255px) !important;
+    width: 725px;
+}
+
+.modal {
+    display: none;
+    left: 0;
+    right: 0;
+    padding: 0;
+    max-height: 70%;
+    margin: auto;
+    will-change: top, opacity;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+    z-index: 1;
+}
+
+.modal-overlay {
+    position: fixed;
+    z-index: 999;
+    top: -25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: block;
+    will-change: opacity;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.modal .modal-content {
+    position: relative;
+    padding: 0;
+    z-index: 3;
+}
+
+.hiddenPictures i.icon-char03 {
+    left: calc(50% - 95px);
+    top: 85px;
+    width: 201px;
+    height: 348px;
+    background: url('../images/game/char_01_03.png') 0 0 / 201px 348px no-repeat;
+    position: absolute;
+}
+
+.hiddenPictures .modal-content .text {
+    position: absolute;
+    left: 470px;
+    top: 80px;
+    width: 230px;
+    height: 160px;
+    font-family: NotoM;
+    font-size: 35px;
+    line-height: calc(100% + 10px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameOver.hiddenPictures .modal-backImg {
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    height: 725px;
+    background-image: url('../images/game/gameOver.svg');
+    pointer-events: none;
+}
+
+.hiddenPictures button[class*="btn-hiddenPictures-"] {
+    position: absolute;
+    left: 45%;
+    top: 500px;
+    transform: translate3d(-50%, 0, 0);
+    width: 110px;
+    height: 56px;
+    background-color: #0537AD;
+    border-radius: 20px;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    z-index: 3;
+}
+
+.hiddenPictures button[class*="btn-hiddenPictures-"]:before {
+    padding-right: 20px;
+    padding-left: 50px;
+    padding-top: 4px;
+    background-color: #2561EE;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: YGJAL;
+    font-size: 24px;
+    width: 100%;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.hiddenPictures .btn-hiddenPictures-retry::before {
+    content: '다시 하기';
+}
+
+.hiddenPictures button[class*="btn-hiddenPictures-"] i {
+    position: absolute;
+    right: auto;
+    left: 10px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.hiddenPictures .btn-hiddenPictures-retry i {
+    background-image: url('../images/game/icon_retry.svg');
+}
+
+.alert_popup2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    z-index: 2001;
+    display: none;
+}
+
+.characterAni button {
+    position: absolute;
+    left: 49%;
+    top: 590px;
+    transform: translate3d(-50%, 0, 0);
+    width: 200px;
+    height: 66px;
+    background-color: #e5004f;
+    border-radius: 40px;
+    padding: 0;
+    display: inline-flex;
+    cursor: pointer;
+    border: solid 3px #b00a44;
+}
+
+.characterAni button:hover {
+    background-color: #920783;
+    border: solid 3px #da31e7;
+
+}
+
+
+.characterAni button:before {
+    padding-right: 20px;
+    padding-left: 50px;
+    color: #ffffff;
+    font-family: YGJAL;
+    font-size: 24px;
+    width: 100%;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    content: '다시 하기';
+}
+
+.characterAni button i {
+    position: absolute;
+    right: auto;
+    left: 20px;
+    top: 14px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/game/icon_retry.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.popbox.hint {
+    width: 55% !important;
+    padding: 30px;
+    overflow: unset;
+    z-index: 2002;
+    border: 4px solid #e95c6c;
+    border-radius: 32px;
+}
+
+.popbox.hint .popCloseBtn {
+    /* background: #e95c6c; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 28px 0 30px;
+    top: -15px;
+    right: -15px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/proto_ton_013/popBtn-close.png);
+    background-size: 100% 100%;
+}
+
+.popbox.hint .popCloseBtn:hover {
+    background-image: url(../images/proto_ton_013/popBtn-close-hover.png);
+    background-size: 100% 100%;
+}
+
+/* .popbox.hint .popCloseBtn::after {
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+}
+
+.popbox.hint .popCloseBtn::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+} */
+
+.popbox.hint::after {
+    content: '';
+    position: absolute;
+    background: url('../images/proto_ton_013/pophint-char.png') no-repeat center / contain;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: -126px;
+    width: 122px;
+    height: 174px;
+}
+
+.popbox.hint .popupContents .popupTitle {
+    width: fit-content;
+    background: #5f52a0;
+    text-align: center;
+    padding: 10px 30px;
+    line-height: 1;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'YGJAL';
+    border-radius: 28px;
+    margin: 0 auto 45px;
+}
+
+.popbox.hint .popupContents .contentsImg {
+    padding: 30px 80px;
+    border-radius: 32px;
+}
+
+.popbox.hint .popupContents .contentsImg img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.characterImg {
+    transform: scale(1.2);
+}
+
+.magnify {
+    width: 1045px;
+    height: 100%;
+    background: #fff;
+    border-radius: 32px;
+}
+
+.magnifyBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    width: 1045px;
+    height: 652px;
+    border-radius: 32px;
+}
+
+.magnifyBox>img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.magnifyBox>img.show {
+    display: block;
+}
+
+.zoomBtn {
+    top: 0px;
+    left: 630px;
+    cursor: pointer;
+}
+
+.magnifier {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85), 0 0 3px 3px rgba(0, 0, 0, 0.25);
+    display: none;
+    background-color: #fff !important;
+}
