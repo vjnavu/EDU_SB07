@@ -1,0 +1,425 @@
+/* btn save */
+.btnSave {
+    background-image: url('../images/proto_ton_common/btn_save.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+    font-family: 'YGJAL';
+    font-size: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    color: #fff;
+    z-index: 1;
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.btnSave:hover {
+    background-image: url('../images/proto_ton_common/btn_save_hover.png');
+}
+
+.btnSave:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btnSave::after {
+    content: '저장하기';
+    letter-spacing: 0px;
+}
+
+/* tooltip */
+.btnSave .tooltip {
+    opacity: 0;
+    visibility: hidden;
+    background: url('../images/proto_ton_common/balloon-tooltip.png') no-repeat center / 100%;
+    position: absolute;
+    font-family: 'NotoM';
+    width: 587px;
+    height: 216px;
+    padding: 40px 50px;
+    border-radius: 40px;
+    right: -10px;
+    bottom: 60px;
+    transition: .2s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.btnSave .tooltip>h1 {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'YGJAL';
+    color: #fff;
+    line-height: 1.3;
+}
+
+.btnSave .tooltip>h1>em {
+    color: #fee24f;
+}
+
+.btnSave .tooltip>p {
+    font-size: 18px;
+    color: #fee24f;
+    margin-left: 60px;
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+.bgImg {
+    height: 100%;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.zoomController {
+    top: 20px;
+    right: 20px;
+}
+
+.page_zoom,
+.zoomContainer,
+.zoomArea,
+.zoomImgContainer,
+.zoomImg,
+.bgImg,
+.bgImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.study_guide {
+    right: 28px;
+    top: 20px;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 60px;
+    height: 50px;
+    pointer-events: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.popLearning:hover {
+    background-color: #FFDBEA;
+}
+
+.popLearning.active {
+    background-color: #FEADD3;
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 5px;
+    border-radius: 8px;
+}
+
+.learning-list>li .learning-item>li:hover,
+.learning-list>li .learning-item>li.off,
+.popLearning.complete:hover {
+    background-color: #FFDBEA;
+}
+
+.page-image>img {
+    top: -8px;
+}
+
+.popLearning.pop1 {
+    top: 228px;
+    left: 509px;
+    transform: rotate(4deg);
+}
+
+.popLearning.pop2 {
+    top: 226px;
+    left: 615px;
+    transform: rotate(-3deg);
+}
+
+.popLearning.pop3 {
+    top: 217px;
+    left: 723px;
+    transform: rotate(-8deg);
+}
+
+.popLearning.pop4 {
+    top: 212px;
+    right: 481px;
+    transform: rotate(-1deg);
+}
+
+.popLearning.pop5 {
+    top: 213px;
+    right: 378px;
+    transform: rotate(7deg);
+}
+
+.popLearning.pop6 {
+    top: 241px;
+    right: 271px;
+    transform: rotate(30deg);
+}
+
+.popLearning.pop7 {
+    top: 322px;
+    right: 276px;
+    transform: rotate(4deg);
+}
+
+.popLearning.pop8 {
+    top: 353px;
+    left: 935px;
+    transform: rotate(-4deg);
+}
+
+.popLearning.pop9 {
+    top: 359px;
+    left: 835px;
+    transform: rotate(-2deg);
+}
+
+.popLearning.pop10 {
+    top: 355px;
+    left: 737px;
+    transform: rotate(1deg);
+}
+
+.popLearning.pop11 {
+    top: 339px;
+    left: 641px;
+    transform: rotate(4deg);
+}
+
+.popLearning.pop12 {
+    top: 333px;
+    left: 545px;
+    transform: rotate(2deg);
+}
+
+.popLearning.pop13 {
+    top: 332px;
+    right: 861px;
+    transform: rotate(1deg);
+}
+
+.popLearning.pop14 {
+    top: 333px;
+    right: 961px;
+    transform: rotate(0deg);
+}
+
+.popLearning.pop15 {
+    top: 341px;
+    right: 1055px;
+    transform: rotate(-8deg);
+}
+
+.popLearning.pop16 {
+    top: 364px;
+    left: 161px;
+    transform: rotate(-10deg);
+}
+
+.popLearning.pop17 {
+    top: 443px;
+    left: 197px;
+    transform: rotate(3deg);
+}
+
+.popLearning.pop18 {
+    top: 463px;
+    left: 292px;
+    transform: rotate(7deg);
+}
+
+.popLearning.pop19 {
+    top: 466px;
+    left: 398px;
+    transform: rotate(0deg);
+}
+
+.popLearning.pop20 {
+    top: 462px;
+    left: 506px;
+    transform: rotate(-4deg);
+}
+
+.popLearning.pop21 {
+    top: 456px;
+    left: 608px;
+    transform: rotate(-4deg);
+}
+
+.popLearning.pop22 {
+    top: 453px;
+    right: 593px;
+    transform: rotate(3deg);
+}
+
+.popLearning.pop23 {
+    top: 458px;
+    right: 488px;
+    transform: rotate(5deg);
+}
+
+.popLearning.pop24 {
+    top: 467px;
+    right: 391px;
+    transform: rotate(16deg);
+}
+
+.popLearning.pop25 {
+    top: 494px;
+    right: 294px;
+    transform: rotate(36deg);
+}
+
+.popLearning.pop26 {
+    top: 97px;
+    left: 987px;
+    transform: rotate(-7deg);
+}
+
+.popLearning.pop27 {
+    top: 116px;
+    left: 892px;
+    transform: rotate(-8deg);
+}
+
+.popLearning.pop28 {
+    top: 125px;
+    left: 780px;
+    transform: rotate(5deg);
+}
+
+.popLearning.pop29 {
+    top: 109px;
+    left: 676px;
+    transform: rotate(14deg);
+}
+
+.popLearning.pop30 {
+    top: 92px;
+    left: 571px;
+    transform: rotate(19deg);
+}
+
+.popLearning.pop31 {
+    top: 76px;
+    left: 471px;
+    transform: rotate(6deg);
+}
+
+.popLearning.pop32 {
+    top: 73px;
+    left: 365px;
+    transform: rotate(1deg);
+}
+
+.popLearning.pop33 {
+    top: 78px;
+    left: 262px;
+    transform: rotate(-10deg);
+}
+
+.popLearning.pop34 {
+    top: 109px;
+    left: 161px;
+    transform: rotate(-34deg);
+}
+
+.popLearning.pop35 {
+    top: 196px;
+    left: 227px;
+    transform: rotate(-3deg);
+}
+
+.popLearning.pop36 {
+    top: 207px;
+    left: 334px;
+    transform: rotate(2deg);
+}
+
+.popLearning.pop37 {
+    top: 213px;
+    left: 449px;
+    transform: rotate(-3deg);
+}
+
+.popLearning.pop38 {
+    top: 210px;
+    left: 559px;
+    transform: rotate(-3deg);
+}
+
+.popLearning.pop39 {
+    top: 278px;
+    left: 654px;
+    transform: rotate(4deg);
+}
+
+.popLearning.pop40 {
+    top: 287px;
+    left: 750px;
+    transform: rotate(9deg);
+}
+
+.popLearning.pop41 {
+    top: 298px;
+    left: 853px;
+    transform: rotate(6deg);
+}
+
+.popLearning.pop42 {
+    top: 310px;
+    left: 948px;
+    transform: rotate(16deg);
+}

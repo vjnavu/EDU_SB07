@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* page 1 */
+        .imgWrap {
+            width: 550px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            height: 100%;
+            gap: 170px;
+        }
+
+        .flex .items:first-child {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .flex .items .itemTitle {
+            margin-top: 10px;
+            width: 530px;
+        }
+
+        #girl_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_2.png') !important;
+        }
+
+        #boy_4_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_4.png') !important;
+        }
+
+        .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1.png') no-repeat center / contain;
+        }
+
+        .character-item:hover .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png') no-repeat center / contain;
+        }
+
+        .icon-char {
+            top: 20px;
+            right: 28px;
+        }
+
+        [data-popup-page="1"] {
+            width: 690px;
+            top: 150px;
+            left: 570px;
+        }
+
+        /* page 2 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_2) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .tab-content-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .group-speech-01 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+        }
+
+        .char-box-11 .balloon {
+            top: -240px;
+            left: -130px;
+            background: #fdf3e7;
+        }
+
+        .char-box-03 .balloon {
+            top: -240px;
+            left: -170px;
+            background: #f5f7e5;
+        }
+
+        .char-box-10 .balloon {
+            top: -290px;
+            left: -70px;
+            background: #F6EFFB;
+            transform: rotateY(-180deg);
+        }
+
+        .group-speech .char-box-03 {
+            top: 250px;
+            left: 570px;
+        }
+
+        .group-speech .char-box-11 {
+            top: 290px;
+            left: 285px;
+        }
+
+        .group-speech .char-box-10 {
+            top: 290px;
+            left: 898px;
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                식단표에서 계절 상차림에 어울리는 음식을 찾아볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="식단표에서 계절 상차림에 어울리는 음식을 찾아볼까요?">물음 1</li>
+                    <li data-hover="" data-text="계절 상차림 활동을 한 소감을 이야기해 볼까요?" data-ani-show="true">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
+                        <div class="flex">
+                            <div class="items">
+                                <span class="imgWrap">
+                                    <img src="./images/ton_0202_0102_0011_301/img_01.png">
+                                </span>
+                            </div>
+                            <div class="items flex" style="gap: 100px; margin-top: 220px;">
+                                <div id="girl_2_c" class="character-item"></div>
+                                <div id="boy_4_c" class="character-item"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-11" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange b1 bottom">
+                                        <span>급식 식단표에서 계절<br>
+                                            상차림을 찾는<br> 활동이 재밌었어요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-03" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC green b1 bottom">
+                                        <span>내가 만든 페트병<br> 화분에서 상추가 무럭무럭<br> 자랐으면 좋겠어요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-10" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC purple b1 bottom">
+                                        <span>흙이 마르지 않게<br> 물도 주고 이름도<br> ‘추추’라고 붙여<br> 주었어요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <div class="praise-box hide" data-type="0" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="1" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents">
+                        <p>
+                            학교 누리집에 있는 지난 급식 식단표를 살펴보며 계절 상차림에 해당하는 음식을 함께 찾아보아요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
+            });
+
+            $prite.girl2({
+                id: '#girl_2_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `호박죽과 고등어구이는<br> 가을 상차림에<br> 어울리는 음식이에요.`,
+                class: 'bottom',
+                balloon_top: -240,
+                balloon_left: -140,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                speech: 'right',
+                circle: true,
+                sound: '',
+                text: `대추차와 감말랭이는<br> 가을 식재료를 이용한<br> 후식이에요.`,
+                class: 'bottom',
+                balloon_top: -240,
+                balloon_left: -125,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+
+            $(document).on('click', '.character-item', function () {
+                $('.balloon').removeClass('fff')
+            });
+        });
+    </script>
+</body>
+
+</html>

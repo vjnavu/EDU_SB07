@@ -37,14 +37,16 @@
             width: 530px;
         }
 
-        .balloon:after {
-            transform: rotate(0deg) !important;
-            left: 47% !important;
-            bottom: -25px !important;
-        }
-
         .popup_pages .zoomContainer.horizon .zoomController {
             left: 35px !important;
+        }
+
+        #boy_1_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_1.png') !important;
+        }
+
+        #girl_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_2.png') !important;
         }
 
         /* ///////// */
@@ -74,11 +76,11 @@
         }
 
         .characterWrap.speech.right:before {
-            background: url(../../GRADE_01/ko/contents/images/button/btn_speech_balloon_left1.png) no-repeat center / contain;
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1.png') no-repeat center / contain;
         }
 
         .character-item:hover .characterWrap.speech.right:before {
-            background: url(../../GRADE_01/ko/contents/images/button/btn_speech_balloon_left1_hover.png) no-repeat center / contain;
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png') no-repeat center / contain;
         }
     </style>
 </head>
@@ -99,18 +101,17 @@
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1">
                         <a class="videoSubPlayBtn large youtube" data-youtube-id="y3z_HGmNOjw&t" target="_blank">네 기분은
-                            어떤
-                            색깔이니?</a>
+                            어떤 색깔이니?</a>
                         <div class="flex">
                             <div class="items">
                                 <span class="imgWrap popBtn line" data-popup-btn="1">
-                                    <img src="./images/ton_0102_0102_0011_201/img_01.jpg" alt="">
+                                    <img src="./images/ton_0102_0102_0011_201/img_01.jpg">
                                     <button class="popBtn zoomBtn" data-hover=""></button>
                                 </span>
                                 <div class="itemTitle"><span style="margin: 0 -20px;">『네 기분은 어떤 색깔이니?』</span><br> 최숙희
                                     글·그림, 책읽는곰</div>
                             </div>
-                            <div class="items flex" style="gap: 100px; margin-top: 120px;">
+                            <div class="items flex" style="gap: 100px; margin-top: 220px;">
                                 <div id="boy_1_c" class="character-item"></div>
                                 <div id="girl_2_c" class="character-item"></div>
                             </div>
@@ -130,7 +131,7 @@
                                 <div class="zoomArea">
                                     <div class="zoomImgContainer pointerOff">
                                         <div class="zoomImg">
-                                            <img src="./images/ton_0102_0102_0011_201/img_01.jpg" alt="">
+                                            <img src="./images/ton_0102_0102_0011_201/img_01.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +179,7 @@
                 sound: '',
                 speech: 'right',
                 text: `노란색은<br>설레고<br>즐거워요.`,
-                class: 'b1 left',
+                class: 'bottom',
                 balloon_top: -250,
                 balloon_left: -25,
                 callback_start: () => { KmAudioPlayer.buttonClick(); },
@@ -191,11 +192,15 @@
                 circle: true,
                 sound: '',
                 text: `남색은 외롭고<br>쓸쓸하기도 해요.`,
-                class: 'b1 right',
+                class: 'bottom',
                 balloon_top: -190,
                 balloon_left: -85,
                 callback_start: () => { KmAudioPlayer.buttonClick(); },
                 callback_end: () => { console.log('end'); }
+            });
+
+            $(document).on('click', '.character-item', function () {
+                $('.balloon').removeClass('fff')
             });
         });
     </script>

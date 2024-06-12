@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .character-item {
+            position: absolute;
+        }
+
+        #boy_1_c {
+            top: 50px;
+            left: 70px;
+        }
+
+        #girl_2_c {
+            bottom: 50px;
+            right: 70px;
+        }
+
+        #boy_2_c {
+            top: 50px;
+            left: 70px;
+        }
+
+        #girl_4_c {
+            bottom: 50px;
+            right: 70px;
+        }
+
+        .balloon {
+            height: 150px;
+            width: 750px;
+        }
+
+        .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .balloon>span>img {
+            height: 100%;
+        }
+
+        /* page 3 */
+        .flex {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex .items {
+            flex: 1;
+        }
+
+        .flex .items img {
+            width: 100%;
+            height: 300px;
+            border: 4px solid #F3E7D6;
+            border-radius: 20px;
+        }
+
+        .flex .items .toggle.box {
+            margin-top: 10px;
+            display: block;
+            height: 120px;
+            cursor: pointer;
+            pointer-events: all;
+        }
+
+        .flex .items .toggle .answer {
+            height: 100%;
+            text-align: center;
+        }
+
+        .flex .items.popBtn {
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                여름 하면 생각나는 간식을 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="여름 하면 생각나는 간식을 이야기해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="겨울 하면 생각나는 간식을 이야기해 볼까요?">물음 2</li>
+                    <li data-hover="" data-text="각 계절에 어울리는 비빔밥을 생각해 볼까요?">물음 3</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div id="boy_1_c" class="character-item"></div>
+                        <div id="girl_2_c" class="character-item"></div>
+                    </li>
+                    <li class="page_2">
+                        <div id="boy_2_c" class="character-item"></div>
+                        <div id="girl_4_c" class="character-item"></div>
+                    </li>
+                    <li class="page_3">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="items popBtn" data-type="toggleButton">
+                                            <div class="popBtnTitle">봄</div>
+                                            <img src="./images/ton_0202_0102_0011_102/img_05.jpg">
+                                            <div class="toggle examBtn box" data-toggle-obj="1">
+                                                <div class="answer" data-toggle-target="1">
+                                                    <div>봄에는 냉이, 도라지 등을 넣어<br>
+                                                        나물 비빔밥을 만들어요.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="items popBtn" data-type="toggleButton">
+                                            <div class="popBtnTitle">여름</div>
+                                            <img src="./images/ton_0202_0102_0011_102/img_06.jpg">
+                                            <div class="toggle examBtn box" data-toggle-obj="2">
+                                                <div class="answer" data-toggle-target="2">
+                                                    <div>여름에는 열무김치로<br>
+                                                        열무 비빔밥을 만들어요.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="items popBtn" data-type="toggleButton">
+                                            <div class="popBtnTitle">가을</div>
+                                            <img src="./images/ton_0202_0102_0011_102/img_07.png">
+                                            <div class="toggle examBtn box" data-toggle-obj="3">
+                                                <div class="answer" data-toggle-target="3">
+                                                    <div>가을에는 여러 가지 버섯을 넣어<br>
+                                                        버섯 비빔밥을 만들어요.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="items popBtn" data-type="toggleButton">
+                                            <div class="popBtnTitle">겨울</div>
+                                            <img src="./images/ton_0202_0102_0011_102/img_08.png">
+                                            <div class="toggle examBtn box" data-toggle-obj="4">
+                                                <div class="answer" data-toggle-target="4">
+                                                    <div>겨울에는 김치를 잘게 썰어 넣어<br>
+                                                        김치 비빔밥을 만들어요.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.boy1({
+                id: '#boy_1_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0202_0102_0011_102/ton_0202_0102_0011_102_01.mp3',
+                text: `시원한 팥빙수가 생각나요. <img src="./images/ton_0202_0102_0011_102/img_01.png" />`,
+                class: 'middle left',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: 10,
+                balloon_left: 220
+            });
+
+            $prite.girl2({
+                id: '#girl_2_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/ton_0202_0102_0011_102/ton_0202_0102_0011_102_02.mp3',
+                text: `과일 화채가 떠올라요. <img src="./images/ton_0202_0102_0011_102/img_02.png" />`,
+                class: 'middle right',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: 10,
+                balloon_left: -800
+            });
+
+            $prite.boy2({
+                id: '#boy_2_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0202_0102_0011_102/ton_0202_0102_0011_102_03.mp3',
+                text: `달콤한 팥이 가득 들어 있는<br> 붕어빵이 생각나요. <img src="./images/ton_0202_0102_0011_102/img_03.png" />`,
+                class: 'middle left',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: 10,
+                balloon_left: 220
+            });
+
+            $prite.girl4({
+                id: '#girl_4_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/ton_0202_0102_0011_102/ton_0202_0102_0011_102_04.mp3',
+                text: `호호 불어 먹는 군고구마가 떠올라요. <img src="./images/ton_0202_0102_0011_102/img_04.png" />`,
+                class: 'middle right',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: 10,
+                balloon_left: -800
+            });
+        });
+    </script>
+</body>
+
+</html>
