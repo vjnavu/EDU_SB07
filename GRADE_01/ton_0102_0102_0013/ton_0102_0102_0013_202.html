@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* Page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .tab-content-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .group-speech-01 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+        }
+
+        .char-box-11 .balloon {
+            top: -180px;
+            left: -115px;
+            background: #fdf3e7;
+        }
+
+        .char-box-03 .balloon {
+            top: -180px;
+            left: -158px;
+            background: #f5f7e5;
+        }
+
+        .char-box-10 .balloon {
+            top: -180px;
+            left: -126px;
+            background: #F6EFFB;
+            transform: rotateY(-180deg);
+        }
+
+        .group-speech .char-box-03 {
+            top: 250px;
+            left: 570px;
+        }
+
+        .group-speech .char-box-11 {
+            top: 290px;
+            left: 285px;
+        }
+
+        .group-speech .char-box-10 {
+            top: 290px;
+            left: 898px;
+            transform: scaleX(-1);
+        }
+
+        /* Page 2 */
+        .wrap-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap-item img {
+            height: 565px;
+        }
+
+        .character-item {
+            position: absolute;
+        }
+
+        #girl_1_c {
+            left: 100px;
+            top: 80px;
+        }
+
+        #boy_4_c {
+            left: 100px;
+            bottom: 80px;
+        }
+
+        #boy_3_c {
+            right: 100px;
+            top: 80px;
+        }
+
+        #girl_3_c {
+            right: 100px;
+            bottom: 80px;
+        }
+
+        .page_2 .balloon:after {
+            top: 50%;
+            bottom: auto;
+        }
+
+        #girl_1_c .balloon:after,
+        #boy_4_c .balloon:after {
+            transform: rotate(90deg) translateX(-50%) !important;
+            left: -26px;
+        }
+
+
+        #boy_3_c .balloon:after,
+        #girl_3_c .balloon:after {
+            transform: rotate(-90deg) translateX(50%) !important;
+            left: auto;
+            right: -26px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple gap">
+                일상생활에서 잠이 부족할 때 생기는 문제에 대해 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="일상생활에서 잠이 부족할 때 생기는 문제에 대해 이야기해 볼까요?" data-gap="true">물음 1</li>
+                    <li data-hover="" data-text="깊은 잠은 왜 필요할까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-11" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange b1 bottom">
+                                        <span>낮 시간에 멍할 때가<br>
+                                            있고 졸음이 와요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-03" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC green b1 bottom">
+                                        <span>몸이 피곤하고<br>
+                                            쉽게 짜증이 나기도 해요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-10" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC purple b1 bottom">
+                                        <span>공부할 때 집중이<br>
+                                            잘 되지 않고 잠이 와요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <a class="videoSubPlayBtn large youtube" data-youtube-id="p292h4u0C2c" target="_blank">잠은 왜 자야
+                            할까?</a>
+                        <div class="wrap-item">
+                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetslidenum="1">
+                                <img src="./images/ton_0102_0102_0013_202/img_01.png" />
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                            <div id="girl_1_c" class="character-item"></div>
+                            <div id="boy_4_c" class="character-item"></div>
+                            <div id="boy_3_c" class="character-item"></div>
+                            <div id="girl_3_c" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="fullLine whole image" data-popup-page="1">
+                    <div class="full_content">
+                        <div class="page_zoom zoom_img">
+                            <div class="zoomContainer horizon pointerOff">
+                                <div class="zoomArea">
+                                    <div class="zoomImgContainer pointerOff">
+                                        <div class="zoomImg">
+                                            <img src="./images/ton_0102_0102_0013_202/img_01.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.girl1({
+                id: '#girl_1_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0102_0102_0013_202/ton_0102_0102_0013_202_01.mp3',
+                text: '지친 몸을 쉬게 할 수 있어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 38,
+                balloon_left: 210,
+            });
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0102_0102_0013_202/ton_0102_0102_0013_202_02.mp3',
+                text: '우리가 잠을 잘 때<br>뇌도 쉴 수 있어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 10,
+                balloon_left: 210,
+            });
+
+            $prite.boy3({
+                id: '#boy_3_c',
+                circle: true,
+                speech: 'left',
+                sound: './media/ton_0102_0102_0013_202/ton_0102_0102_0013_202_03.mp3',
+                text: '낮 동안 쌓인 피로를<br>회복시켜 주어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 10,
+                balloon_left: -430,
+            });
+
+            $prite.girl3({
+                id: '#girl_3_c',
+                circle: true,
+                speech: 'left',
+                sound: './media/ton_0102_0102_0013_202/ton_0102_0102_0013_202_04.mp3',
+                text: '깊이 잠들 때 성장 호르몬이<br>많이 나와서 키가 클 수 있어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 8,
+                balloon_left: -617,
+            });
+        });
+    </script>
+</body>
+
+</html>

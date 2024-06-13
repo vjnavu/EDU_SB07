@@ -1,0 +1,775 @@
+@charset "utf-8";
+
+/* ********************************************************** */
+/* 조각퍼즐 & 자음모음 퀴즈 공통 */
+.qzPuzz {
+	position: relative;
+	margin-top: 15px;
+	width: 720px;
+	background: #f6e7d4;
+	border: 10px solid #f6e7d4;
+	border-radius: 30px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.qzPuzz.min {
+	margin-top: 80px;
+}
+
+.qzPuzz .que. {
+	display: block;
+}
+
+.qzPuzz .que img {
+	width: 700px;
+	height: 460px;
+	border-radius: 24px;
+	border: 1px solid #f6e7d4;
+	vertical-align: top;
+	opacity: 1;
+	box-sizing: border-box;
+}
+
+.qzPuzz.min .que img {
+	width: 700px;
+	height: 340px;
+}
+
+.qzPuzz .que img.show {
+	opacity: 1
+}
+
+/* 조각 퍼즐 - 피스 */
+.qzPuzz .split {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%
+}
+
+.qzPuzz .split .piece {
+	position: absolute;
+	width: 33.33%;
+	height: 50%;
+	z-index: 1;
+	box-sizing: border-box
+}
+
+.qzPuzz .split .pieWrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%
+}
+
+.qzPuzz .split button.piece {
+	cursor: pointer
+}
+
+.qzPuzz .que.answer .ans.show {
+	opacity: 1;
+	z-index: 2
+}
+
+.qzPuzz .split .piece .pieWrap span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%
+}
+
+.qzPuzz .split .piece .front {
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	z-index: 2;
+	opacity: 1;
+	box-sizing: border-box;
+}
+
+.qzPuzz .split .piece.sel .pieWrap .front,
+.qzPuzz .split div.piece .pieWrap .front,
+.qzPuzz .answer .split .piece .pieWrap .front {
+	opacity: 0;
+	-webkit-transform: scale3d(0.1, 0.1, 0.1);
+	transform: scale3d(0.1, 0.1, 0.1);
+	animation: puzzPieceOut 0.3s ease;
+	-webkit-animation: puzzPieceOut 0.3s ease;
+	-moz-animation: puzzPieceOut 0.3s ease;
+	animation-fill-mode: forwards;
+
+}
+
+.qzPuzz .split .piece:nth-child(1) {
+	left: 0;
+	top: 0
+}
+
+.qzPuzz .split .piece:nth-child(2) {
+	left: 220px;
+	top: 0;
+	width: 246px;
+	height: 313px;
+}
+
+.qzPuzz .split .piece:nth-child(3) {
+	right: 0;
+	top: 0;
+	width: 312px;
+	height: 240px;
+}
+
+.qzPuzz .split .piece:nth-child(4) {
+	left: 0;
+	bottom: 0;
+	width: 224px;
+	height: 298px;
+}
+
+.qzPuzz .split .piece:nth-child(5) {
+	left: 147px;
+	bottom: 0;
+	width: 394px;
+	height: 225px;
+}
+
+.qzPuzz .split .piece:nth-child(6) {
+	right: 0;
+	bottom: 0;
+	width: 238px;
+	height: 298px;
+}
+
+.qzPuzz.min .split .piece:nth-child(1) {
+	left: 0;
+	top: 0
+}
+
+.qzPuzz.min .split .piece:nth-child(2) {
+	left: 226px;
+	top: 0;
+	width: 246px;
+	height: 245px;
+}
+
+.qzPuzz.min .split .piece:nth-child(3) {
+	right: 0;
+	top: 0;
+	width: 306px;
+	height: 173px;
+}
+
+.qzPuzz.min .split .piece:nth-child(4) {
+	left: 0;
+	bottom: 0;
+	width: 231px;
+	height: 246px;
+}
+
+.qzPuzz.min .split .piece:nth-child(5) {
+	left: 152px;
+	bottom: 0;
+	width: 394px;
+	height: 173px;
+}
+
+.qzPuzz.min .split .piece:nth-child(6) {
+	right: 0;
+	bottom: 0;
+	width: 233px;
+	height: 246px;
+}
+
+.qzPuzz .split .piece:nth-child(2) .front {
+	background: url('../../common/images/puzz/puzz_front_01.png');
+}
+
+.qzPuzz .split .piece:nth-child(3) .front {
+	background: url('../../common/images/puzz/puzz_front_02.png');
+}
+
+.qzPuzz .split .piece:nth-child(4) .front {
+	background: url('../../common/images/puzz/puzz_front_03.png');
+}
+
+.qzPuzz .split .piece:nth-child(5) .front {
+	background: url('../../common/images/puzz/puzz_front_04.png');
+}
+
+.qzPuzz .split .piece:nth-child(6) .front {
+	background: url('../../common/images/puzz/puzz_front_05.png');
+}
+
+.qzPuzz .split .piece:nth-child(2) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_01_over.png');
+}
+
+.qzPuzz .split .piece:nth-child(3) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_02_over.png');
+}
+
+.qzPuzz .split .piece:nth-child(4) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_03_over.png');
+}
+
+.qzPuzz .split .piece:nth-child(5) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_04_over.png');
+}
+
+.qzPuzz .split .piece:nth-child(6) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_05_over.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(2) .front {
+	background: url('../../common/images/puzz/puzz_front_min_01.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(3) .front {
+	background: url('../../common/images/puzz/puzz_front_min_02.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(4) .front {
+	background: url('../../common/images/puzz/puzz_front_min_03.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(5) .front {
+	background: url('../../common/images/puzz/puzz_front_min_04.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(6) .front {
+	background: url('../../common/images/puzz/puzz_front_min_05.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(2) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_min_01_over.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(3) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_min_02_over.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(4) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_min_03_over.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(5) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_min_04_over.png');
+}
+
+.qzPuzz.min .split .piece:nth-child(6) .front:hover {
+	background: url('../../common/images/puzz/puzz_front_min_05_over.png');
+}
+
+.qzPuzz .split .piece .pointer {
+	position: absolute;
+}
+
+.qzPuzz.min .split .piece:nth-child(2) .pointer {
+	left: 0;
+	top: 0;
+	width: 245px;
+	height: 167px;
+}
+
+.qzPuzz.min .split .piece:nth-child(3) .pointer {
+	left: 77px;
+	top: 0;
+	width: 235px;
+	height: 167px;
+}
+
+.qzPuzz.min .split .piece:nth-child(4) .pointer {
+	left: 0;
+	top: 72px;
+	width: 231px;
+	height: 181px;
+}
+
+.qzPuzz.min .split .piece:nth-child(5) .pointer {
+	left: 76px;
+	top: 0;
+	width: 236px;
+	height: 176px;
+}
+
+.qzPuzz.min .split .piece:nth-child(6) .pointer {
+	left: 0;
+	top: 72px;
+	width: 235px;
+	height: 176px;
+}
+
+.qzPuzz .que.answer button,
+.qzPuzz .split .piece.sel {
+	cursor: default
+}
+
+/* ********************************************************** */
+/* 조각퍼즐 - 정답 */
+.qzPuzz .que .ans {
+	position: absolute;
+	left: 1px;
+	bottom: 0;
+	width: calc(100% - 2px);
+	height: 115px;
+	line-height: 105px;
+	font-family: NotoKRB;
+	font-size: 50px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .7);
+	color: #fff;
+	opacity: 0;
+}
+
+/* ********************************************************** */
+/* 조각퍼즐 - 모션 */
+.qzPuzz .split .piece .front,
+.qzPuzz .que .ans {
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: 0.25s;
+	-moz-transition-duration: 0.25s;
+	-ms-transition-duration: 0.25s;
+	-o-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+	-webkit-transition-timing-function: ease-in-out;
+	-moz-transition-timing-function: ease-in-out;
+	-ms-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+
+.qzPuzz .split .piece .front {
+	-webkit-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-o-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.qzPuzz .split .piece.flip .front {
+	-webkit-animation-name: flip;
+	-moz-animation-name: flip;
+	-ms-animation-name: flip;
+	-o-animation-name: flip;
+	animation-name: flip;
+}
+
+@keyframes flip {
+	0% {
+		opacity: 1
+	}
+
+	33% {
+		opacity: 0
+	}
+
+	66% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-moz-keyframes flip {
+	0% {
+		opacity: 1
+	}
+
+	33% {
+		opacity: 0
+	}
+
+	66% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-webkit-keyframes flip {
+	0% {
+		opacity: 1
+	}
+
+	33% {
+		opacity: 0
+	}
+
+	66% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-o-keyframes flip {
+	0% {
+		opacity: 1
+	}
+
+	33% {
+		opacity: 0
+	}
+
+	66% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@-ms-keyframes flip {
+	0% {
+		opacity: 1
+	}
+
+	33% {
+		opacity: 0
+	}
+
+	66% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+/* ********************************************************** */
+/* 조각퍼즐 타이머 */
+.qzTimer {
+	position: absolute;
+	left: 880px;
+	top: 40px;
+	width: 182px;
+	height: 182px;
+}
+
+.qzTimer .qzBtnTimer {
+	width: 182px;
+	height: 182px;
+	cursor: pointer;
+}
+
+.qzTimer.off .qzBtnTimer {
+	background: url('../../common/images/puzz/puzz_timer.png') no-repeat;
+}
+
+.qzTimer.go .qzBtnTimer {
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	background: url('../../common/images/puzz/puzz_timer_on.png') no-repeat;
+}
+
+.qzTimer.go .qzBtnTimer:after {
+	position: absolute;
+	content: '';
+	top: 28px;
+	left: -34px;
+	width: 200px;
+	height: 160px;
+	background: url('../../common/images/puzz/puzz_timer_on_ani.png') no-repeat;
+	transform-origin: 160px 120px;
+}
+
+.qzTimer.go .qzBtnTimer.active:after {
+	animation: timerFlag 1s infinite linear;
+	-webkit-animation: timerFlag 1s infinite linear;
+	-moz-animation: timerFlag 1s infinite linear;
+}
+
+.qzTimer .bar {
+	position: absolute;
+	top: 210px;
+	left: 20px;
+	width: 170px;
+	height: 15px;
+	padding: 3px;
+	line-height: 0;
+	font-size: 0;
+	background: #e9e9e9;
+	border: 1px solid #dadada;
+	border-radius: 16px;
+	box-sizing: border-box;
+}
+
+.qzTimer .bar span {
+	display: inline-block;
+	width: 100%;
+	height: 7px;
+	background: #ff6600;
+	border-radius: 50px;
+	box-sizing: border-box;
+	opacity: 0;
+}
+
+.qzTimer .qzBtnTimer.active+.bar span {
+	animation: puzzBarWidth 30.0s linear;
+	-webkit-animation: puzzBarWidth 30.0s linear;
+	-moz-animation: puzzBarWidth 30.0s linear;
+	opacity: 1;
+}
+.qzTimer .bar:before {
+	position: absolute;
+	content: '';
+	left: -41px;
+	top: -17px;
+	width: 47px;
+	height: 47px;
+	border-radius:50%;
+	background-color:#fff;
+}
+.qzTimer .bar:after {
+	position: absolute;
+	content: '';
+	left: -42px;
+	top: -18px;
+	width: 49px;
+	height: 49px;
+	border-radius:50%;
+}
+
+.qzTimer.go .bar:after {
+	-webkit-animation: clockColor 1s steps(28) infinite;
+    -ms-animation: clockColor 1s steps(28) infinite;
+    animation: clockColor 1s steps(28) infinite;
+	background-image:url('../../common/images/puzz/icon_clock_on.svg'), url('../../common/images/puzz/timerSheet.png');
+	background-position:center, 0 center;
+	background-repeat:no-repeat, no-repeat;
+	background-size:contain, auto 48px;
+}
+
+.qzTimer.off .bar:after {
+	background:#fff url('../../common/images/puzz/icon_clock.svg') center/contain no-repeat;
+}
+.qzTimer .count {
+	position: absolute;
+	top: 234px;
+	left: 30px;
+	font-family: YGJAL;
+	font-size: 15px;
+	color: #999;
+}
+
+.qzTimer .count span span {
+	color: #000;
+}
+
+.qzTimer.go .count span {
+	color: #000;
+}
+
+.qzTimer.go .count span.num {
+	color: #ff6600;
+}
+
+
+@keyframes clockColor {
+	from {
+		background-position: center, 0 0
+	}
+
+	to {
+		background-position: center, -1344px 0
+	}
+}
+
+@-webkit-keyframes clockColor {
+	from {
+		background-position: center, 0 0
+	}
+
+	to {
+		background-position: center, -1344px 0
+	}
+}
+
+@-ms-keyframes clockColor {
+	from {
+		background-position: center, 0 0
+	}
+
+	to {
+		background-position: center, -1344px 0
+	}
+}
+
+/* ********************************************************** */
+/* 조각퍼즐 버튼 */
+.qzFunc {
+	position: absolute;
+	bottom: 64px;
+	right: 90px;
+	width: 221px;
+}
+
+.qzFunc button {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 221px;
+	height: 55px;
+	margin-bottom: 10px;
+	text-indent: -9999px;
+}
+
+.qzFunc button:first-of-type {
+	margin-left: 0
+}
+
+.qzFunc .solveCheckBtn {
+	background: url('../../common/images/puzz/btn_puzz_hint.png') center/cover no-repeat;
+	pointer-events: auto;
+}
+
+.qzFunc .ansCheckBtn {
+	background: url('../../common/images/puzz/btn_puzz_view.png') center/cover no-repeat;
+}
+
+.qzFunc .ansCheckBtn.hide {
+	background: url('../../common/images/puzz/btn_puzz_hide.png') center/cover no-repeat;
+}
+
+.qzFunc .solveCheckBtn:hover {
+	background: url('../../common/images/puzz/btn_puzz_hint_over.png') center/cover no-repeat;
+}
+
+.qzFunc .ansCheckBtn:hover {
+	background: url('../../common/images/puzz/btn_puzz_view_over.png') center/cover no-repeat;
+}
+
+.qzFunc .ansCheckBtn.hide:hover {
+	background: url('../../common/images/puzz/btn_puzz_hide_over.png') center/cover no-repeat;
+}
+
+.qzFunc .solveCheckBtn.active {
+	background: url('../../common/images/puzz/btn_puzz_hint_over.png') center/cover no-repeat;
+	pointer-events: auto;
+}
+
+.qzFunc .solveCheckBtn.active:hover {
+	background: url('../../common/images/puzz/btn_puzz_hint.png') center/cover no-repeat;
+}
+
+.qzFunc .solveCheckBtn.hide {
+	opacity: 0;
+	animation: fadeOut 1s;
+	pointer-events: none;
+}
+
+.qzFunc .solveCheckBtn.show {
+	animation: fadeIn 1s;
+}
+
+/* ********************************************************** */
+/* 자음모음 퀴즈 */
+.qzContent .cvQuiz {
+	position: relative;
+	width: 720px;
+	height: 353px;
+	border: 10px solid #f6e7d4;
+	border-radius: 30px;
+	box-sizing: border-box;
+}
+
+.cvQuiz .que {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 333px;
+}
+
+.cvQuiz .que span {
+	font-size: 90px;
+	font-family: NotoKRB;
+	margin: 0 4px;
+}
+
+/* ********************************************************** */
+/* 자음모음 퀴즈 - 모션 */
+.cvQuiz,
+.cvQuiz .hint,
+.cvQuiz .ans {
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.qzFunc .solveCheckBtn.opa0 {
+	opacity: 0;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+}
+
+.cvQuiz .hint,
+.cvQuiz .ans {
+	position: absolute;
+	width: 100%;
+	bottom: -125px;
+	text-align: center;
+	opacity: 0
+}
+
+.cvQuiz strong {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 50px;
+	font-size: 90px;
+	line-height: 90px;
+	font-family: NotoKRB;
+	color: #00a0ff;
+}
+
+.cvQuiz .ans strong {
+	color: #00a0ff;
+}
+
+.cvQuiz .hide {
+	left: -100%
+}
+
+.cvQuiz.opa1,
+.cvQuiz .opa1 {
+	opacity: 1
+}

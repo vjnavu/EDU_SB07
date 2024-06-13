@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* VIDEO ------------ Animation */
+.aniContainer .video {
+	width: 100%;
+	height: 100%;
+}
+.mediaContainer.video .controller,
+.mediaContainer.video video {
+	visibility: hidden;
+}
+.mediaContainer.video.started .controller,
+.mediaContainer.video.started video {
+	visibility: visible;
+}
+/* video Title*/
+.aniContainer .video .animationTitle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #F6E7D4;
+	z-index: 1;
+}
+.aniContainer .video.started .animationTitle {
+	display: none;
+}
+.aniContainer .video .animationTitle h1 {
+	color: #fff;
+	font-size: 58px;
+	text-align: justify;
+	font-family: NotoM;
+	line-height: 1.3em;
+	letter-spacing: -2px;
+	padding: 0 1.5%;
+}
+.aniContainer .mediaSubContainer {
+	position: absolute;
+	top: 230px;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 730px;
+	/* min-height: 170px; */
+	padding: 30px 30px;
+	transform: translate(-50%);
+	box-shadow: 0 0 0 16px #ECD8BF;
+	box-sizing: border-box;
+}
+.aniContainer .mediaSubContainer:before {
+	content: '';
+	position: absolute;
+	top: -82px;
+	left: 0;
+	width: 100%;
+	height: 74px;
+	background: url(../images/background/bg_video_title.png) center/400px no-repeat;
+}
+.aniContainer .mediaSubContainer h2 {
+	color: #5E3E18;
+	font-size: 70px;
+	text-align: center;
+	line-height: 1.3em;
+	letter-spacing: 0;
+	opacity: 0;
+	font-family: YGJAL;
+	-webkit-animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+	-moz-animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+	-o-animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+	animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+}
+.aniContainer .mediaSubContainer h2 .orange {
+	color: #FF6600;
+}
+/* screenPlayBtn */
+.aniContainer .video .screenPlayBtn {
+	position: absolute;
+	bottom: -46px;
+	left: 50%;
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+	background: #FF6600 url(../common/images/media/icon_play.svg) 28px center/27px no-repeat;
+	transform: translate(-50%);
+	box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+	cursor: pointer;
+	z-index: 2;
+}
+.aniContainer .video .screenPlayBtn.hover {
+	background-color: #fff;
+	background-image: url(../common/images/media/icon_play_hover.svg);
+}
+
+/* VIDEO ------------ not Animation */
+/*
+.tVideoContainer h1 {
+	color: #fff;
+	font-size: 58px;
+	text-align: justify;
+	font-family: NotoM;
+	line-height: 1.3em;
+	letter-spacing: -2px;
+	padding: 0 1.5%;
+}
+.tVideoContainer .videoTitle {
+	position: absolute;
+	top: 230px;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 730px;
+	min-height: 170px;
+	padding: 20px 30px;
+	transform: translate(-50%);
+	background-color: #F6E7D4;
+	box-shadow: 0 0 0 16px #ECD8BF;
+	box-sizing: border-box;
+}
+.tVideoContainer .videoTitle:before {
+	content: '';
+	position: absolute;
+	top: -82px;
+	left: 0;
+	width: 100%;
+	height: 74px;
+	background: url(../images/background/bg_video_title.png) center/400px no-repeat;
+}
+.tVideoContainer .videoTitle h2 {
+	display: block;
+	color: #5E3E18;
+	font-size: 70px;
+	text-align: center;
+	line-height: 1.3em;
+	letter-spacing: 0;
+	opacity: 0;
+	font-family: YGJAL;
+	-webkit-animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+	-moz-animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+	-o-animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+	animation: opacityOne 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s forwards;
+}
+.tVideoContainer .videoTitle h2 .orange {
+	color: #FF6600;
+}
+
+.videoPlayBtn {
+	position: absolute;
+	bottom: -46px;
+	left: 50%;
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
+	background: #FF6600 url(../common/images/media/icon_play.svg) 28px center/27px no-repeat;
+	transform: translate(-50%);
+	box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+	cursor: pointer;
+	z-index: 2;
+}
+.videoPlayBtn.hover {
+	background-color: #fff;
+	background-image: url(../common/images/media/icon_play_hover.svg);
+}
+*/
+
+/* 저화질 */
+/*
+.videoSubPlayBtn{
+	position: absolute;
+	display: inline-flex;
+	align-items: center;
+	line-height: 1.1em;
+	letter-spacing: 0px;
+	padding: 9px 52px 9px 13px;
+	color: #fff;
+	font-size: 20px;
+	font-family: YGJAL;
+	text-align: center;
+	border-radius: 45px;
+	box-sizing: border-box;
+	background-color: #F87C1A;
+}
+.videoSubPlayBtn:before {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 100%;
+	right: 10px;
+	background: url(../common/images/media/icon_lowQ.png) center/contain no-repeat;
+}
+.videoSubPlayBtn.hover {
+	color: #F87C1A;
+	background-color: #fff;
+	box-shadow: 0 0 0 2px #F87C1A;
+}
+.videoSubPlayBtn.hover:before {
+	background-image: url("../common/images/media/icon_lowQ_hover.png");
+}
+.tVideoContainer .videoSubPlayBtn {
+	bottom: -30px;
+	right: 10px;
+}
+.tVideoContainer .videoSubPlayBtn:after {
+	content: '일반 화질';
+}
+*/
+
+/* 페이지 내의 tVideoContainer  추후 과목별로 변경 */
+.basicSlider_slides .tVideoContainer { }
+.basicSlider_slides .tVideoContainer .videoTitle {
+	top: 120px;
+}

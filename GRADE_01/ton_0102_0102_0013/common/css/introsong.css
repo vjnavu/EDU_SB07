@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* ********************************************************** */
+/* 진진가 퀴즈 공통 */
+.contentsBox .innerBox {
+    padding: 0;
+}
+
+.qzTrue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* height: 604px; */
+    background: #FFF;
+}
+.characterText {
+    display: block !important;
+    position: absolute;
+    /* height: 317px; */
+    font-family: NotoB;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: left;
+    opacity: 1;
+    text-align: center;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.quizContainer {
+    font-family: NotoM
+}
+.characterText > span {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+.charSpriteImg {
+    position: absolute
+}
+.characterImg.circle {
+    width: 204px;
+    height: 204px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+    box-sizing: border-box;
+}
+.characterImg.circle div {
+    left: 50%;
+    top: -10px;
+    -webkit-transform: translateX(-50%) rotate(0.1deg) !important;
+    -ms-transform: translateX(-50%) rotate(0.1deg) !important;
+    -o-transform: translateX(-50%) rotate(0.1deg) !important;
+    transform: translateX(-50%) rotate(0.1deg) !important
+}
+.charSpriteAni {
+    opacity: 0
+}
+.characterImg {
+    position: absolute
+}
+.characterImg.true .charSpriteImg {
+    opacity: 1 !important
+}
+.characterImg.true .charSpriteAni {
+    /* background-position: 0 0 !important;
+    opacity: 0 !important */
+}
+.characterImg,
+.characterText,
+.characterImg.true + .characterText:before,
+.characterImg.true + .characterText span {
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+.characterImg.true + .characterText:before {
+    -webkit-transition-property: border;
+    -o-transition-property: border;
+    transition-property: border;
+}
+.characterImg.true + .characterText {
+    border: 0
+}
+.characterImg.true + .characterText:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    box-sizing: border-box;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-color:transparent;
+    border-style: solid;
+    opacity: 0;
+    border-width: 10px;
+    border-radius: 30px
+}
+
+.characterImg.true + .characterText span {
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+}
+.characterImg.true + .characterText .wrong,
+.qzTrue.complete .true + .characterText .answer,
+.qzTrue.complete .true.characterImg,
+.qzTrue.complete .true + .characterText {
+    opacity: 1
+}
+.qzTrue.complete .true + .characterText:before {
+    opacity: 1
+}
+.qzTrue.complete .characterImg,
+.qzTrue.complete .characterText {
+    opacity: 1
+}
+.characterImg.true + .characterText .answer,
+.qzTrue.complete .true + .characterText .wrong {
+    opacity: 0
+}
+.qzTrue.complete .charSpriteAni {
+    display: none;
+}
+.qzTrue.complete .true .charSpriteAni {
+    display: block;
+}
+.qzTrue.complete .characterImg {
+    cursor: default;
+    -webkit-transition-property: background-color, opacity;
+    -o-transition-property: background-color, opacity;
+    transition-property: background-color, opacity;
+}
+.qzTrue.complete .characterImg.true {
+    background-color: #ea1e1e;
+    border-color: #ea1e1e;
+}
+.qzTrue.complete .characterImg.true + .characterText:before {
+    background: #fff;
+    border-color: #ea1e1e;
+    border-width: 10px
+}
+.red_text {
+    color: #ea1e1e;
+}
+
+
+/* 진진가 - 케릭터 위치 1번 */
+.characterImg.circle[data-index="0"] {
+    top: 336px;
+    left: 130px;
+}
+.characterImg.circle[data-index="0"] + .characterText{
+	top: 82px;
+	left: 87px;
+	width: 297px;
+	height: 317px;
+}
+
+/* 진진가 - 케릭터 위치 2번 */
+.characterImg.circle[data-index="1"] {
+	top: 336px;
+	left: 480px;
+}
+.characterImg.circle[data-index="1"] + .characterText{
+    top: 82px;
+    left: 436px;
+    width: 297px;
+    height: 317px;
+}
+
+/* 진진가 - 케릭터 위치 3번 */
+.characterImg.circle[data-index="2"] {
+    top: 336px;
+    left: 828px;
+}
+.characterImg.circle[data-index="2"] + .characterText{
+	top: 82px;
+    left: 785px;
+    width: 297px;
+    height: 317px;
+}

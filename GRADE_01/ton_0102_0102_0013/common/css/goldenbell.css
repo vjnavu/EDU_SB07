@@ -1,0 +1,321 @@
+@charset "utf-8";
+/* common */
+.hide {display:none !important;}
+
+/* gate_container */
+.gate_container {position:absolute; top:38px; bottom:38px; left:0; right:0; z-index:5; background:#f7f1da;}
+.gate_container.off {display:none !important;}
+.gate_container .gate_ani {position:absolute; width:100%; height:100%; top:0;}
+.gate_container .gate_ani .gate_ani_cover {position:absolute; left:0px; top:0px; width:100%; height:100%;}
+
+/* 골든벨 - 인트로 제목 */
+.gate_container .gate_topbox {position:relative; top:0; width:100%; height:100%; z-index:2;}
+.gate_container .introTitleText {position:absolute; top:152px; width:100%; color:#000; font-size:62px; line-height:100%; text-align:center; font-family:'YGJAL'; }
+.gate_container .introTitleText span{color:#fff4ac;}
+
+.gate_container .introStartBtn {position:absolute; top:438px; left:477px; display:inline-block; width:216px; height:52px; line-height:52px; font-size:23px; text-align:center; border-radius:8px; font-family:'YGJAL'; background:#ffe100; cursor:pointer;}
+.gate_container .introStartBtn:after {content:'>'; position:absolute; top:0; right:18px; font-size:18px;}
+.gate_container .introStartBtn:hover {color:#fff; background:#593f1f; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+.gate_container .gate_txt {position:absolute; top:586px; width:100%; color:#000; font-size:24px; line-height:36px; text-align:center; font-family:'NotoB';}
+
+.gate_container.goldenbell .gate_topbox {background: url('../images/gate_bg/gate_container_goldenbell_img1.png') no-repeat center top/contain;}
+
+/* 인트로 - 애니메이션 */
+.goldenbell .aniFrameContainer{opacity:0; -webkit-transition-property:opacity; -o-transition-property:opacity; transition-property:opacity; -webkit-transition-duration:.5s; -o-transition-duration:.5s; transition-duration:.5s;}
+.goldenbell .aniFrameContainer{position:absolute; top:0px; left:0px; width:100%; height:100%; opacity:1;}
+.goldenbell .aniFrameContainer.hide{opacity:0;}
+
+/* 인트로 - 문항 버튼 */
+.goldenbell .wrapSet{position:absolute; top:520px; left:50%; margin-left:-332px;}
+.goldenbell .wrapSet.show{opacity:1;}
+.goldenbell .wrapSet .contSet{float:left; display:table; width:320px; height:125px; background-color:#e7c599; border-radius:30px;}
+.goldenbell .wrapSet .contSet:after{content:''; display:block; clear:both;}
+.goldenbell .wrapSet .contSet + .contSet{margin-left:10px;}
+
+.goldenbell .wrapSet .contSet > div {display:table-cell; vertical-align:middle; text-align:center; font-family:'YGJAL';}
+.goldenbell .wrapSet .contSet .set_title{width:90px; height:100%; color:#5e3e18; font-size:18px; text-align:center; line-height:22px; word-break:keep-all;}
+.goldenbell .wrapSet .contSet .set_title span{display:inline-block; padding:0 10px;}
+.goldenbell .wrapSet .contSet button{float:left; display:inline-block; width:66px; height:87px; background:url('../images/goldenbell/gb_intro_btn.png') no-repeat; background-size:auto 180px; cursor:pointer;}
+.goldenbell .wrapSet .contSet button + button{margin-left:6px;}
+.goldenbell .wrapSet .contSet button span{font-size:0;}
+
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(1){background-position:0 0;}
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(2){background-position:-142px 0}
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(3){background-position:-284px 0;}
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(1){background-position:0 -94px;}
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(2){background-position:-142px -94px;}
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(3){background-position:-284px -94px;}
+
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(1).sel,
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(1):hover,
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(1):focus{background-position:-71px 0;}
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(2).sel,
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(2):hover,
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(2):focus{background-position:-213px 0;}
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(3).sel,
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(3):hover,
+.goldenbell .wrapSet .contSet:nth-child(1) button:nth-child(3):focus{background-position:-355px 0;}
+
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(1).sel,
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(1):hover,
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(1):focus{background-position:-71px -94px;}
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(2).sel,
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(2):hover,
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(2):focus{background-position:-213px -94px;}
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(3).sel,
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(3):hover,
+.goldenbell .wrapSet .contSet:nth-child(2) button:nth-child(3):focus{background-position:-355px -94px;}
+
+@media screen and (-ms-high-contrast: active), all and (-ms-high-contrast: none) {
+	.goldenbell .wrapSet .contSet:nth-last-child(1) dt{padding-top:4px;}
+	.goldenbell .wrapSet .contSet:nth-last-child(2) dt{padding-top:7px;}
+}
+
+/* 인트로 - 문항 미리보기 */
+.goldenbell .wrapLayer{position:absolute; top:550px; right:40px;}
+.goldenbell .wrapLayer > button{position:relative; display:flex; align-items:center; width:198px; height:43px; padding-left:40px; border-radius:20px; color:#fff; font-family:'YGJAL'; font-size:18px; text-align:left; box-sizing:border-box; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+
+.goldenbell .wrapLayer .btnView{margin-bottom:10px; background-color:#d6a96e;}
+.goldenbell .wrapLayer .btnView:hover{color:#fff; background-color:#6f2184;}
+.goldenbell .wrapLayer .btnView:before{content:''; position:absolute; top:50%; left:17px; display:inline-block; width:15px; height:16px; background:url('../images/speedquiz/sp_intro_img03.png') no-repeat; background-size:100% auto; transform: translateY(-50%);}
+.goldenbell .wrapLayer .btnView:after {content:">"; position:absolute; top:50%; right:16px; transform:translateY(-50%);}
+
+/* 골든벨 - 인트로 - 활동 방법 */
+.goldenbell .wrapLayer .btnLayer{background-color:#5e3e18;}
+.goldenbell .wrapLayer .btnLayer:hover{color:#fff; background-color:#9d00c5;}
+.goldenbell .wrapLayer .btnLayer:before{content:''; position:absolute; top:50%; left:17px; display:inline-block; width:13px; height:16px; background:url('../images/speedquiz/sp_intro_img04.png') no-repeat; background-size:100% auto;     transform: translateY(-50%);}
+.goldenbell .wrapLayer .btnLayer:after {content:">"; position:absolute; top:50%; right:16px; transform:translateY(-50%);}
+
+.goldenbell .btnView.show{opacity:1;}
+.goldenbell .btnLayer.show{opacity:1;}
+
+/* 활동 방법 팝업 */
+.goldenbell .popbox{left:0; top:0; width:100%; height:100%; padding:0 36px; background:transparent; box-sizing:border-box;}
+.goldenbell .popbox.full:before{position:absolute; top:0; left:0; width:100%; height:100%; background-color:#000000; opacity:0.5; content:''; z-index:-1;}
+
+.goldenbell .popbox.full .popupContents{position:relative; top:0; left:0; width:100%; height:auto; padding:0; margin-top:38px; border-bottom-left-radius:30px; border-bottom-right-radius:30px; background-color:#fff; }
+
+.goldenbell .popbox.full .popup_title{position:relative; display:flex; align-items:center; height:80px; padding-left:40px; border-bottom-left-radius:30px; border-bottom-right-radius:30px; background-color:#ff6600; font-family:'YGJAL'; box-sizing:border-box;}
+.goldenbell .popbox.full .popup_title p{position:relative; color:#fff; font-size:39px;}
+
+.goldenbell .popbox .inner_wrap{display:flex; justify-content:center; height:calc(100% - 80px); box-sizing:border-box; text-align:center;}
+.goldenbell .popbox .bulletBox{position:relative; margin-bottom:15px; text-align:justify;}
+
+.goldenbell .popbox.full .popCloseBtn{position:absolute; top:65px; right:80px; width:29px; height:29px; background:url('../images/goldenbell/gb_how_close.png') no-repeat; background-size:100% auto;}
+.goldenbell .popbox.full .popCloseBtn:hover{ background:url('../images/goldenbell/gb_how_close_hover.png') no-repeat; background-size:100% auto; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+
+.goldenbell .popbox .how .popup_title p:before{content:''; display:inline-block; width:28px; height:34px; margin-right:10px; background:url('../images/goldenbell/gb_how_bullet.png') no-repeat; background-size:28px auto;}
+.goldenbell .popbox .how .bulletTextBox{width:100%; padding:45px 80px;}
+
+/* 문항 미리보기 - 팝업 */
+.goldenbell .popbox .view .popup_title p:before{content:''; display:inline-block; width:30px; height:37px; margin-right:10px; background:url('../images/speedquiz/sp_intro_img03.png') 0 7px no-repeat; background-size:30px auto;}
+.goldenbell .popbox .view .inner_wrap {height:570px; padding:45px 0;}
+
+.goldenbell .popbox .view .inner_wrap .pop_title{display:inline-block; width:940px}
+.goldenbell .popbox .view .inner_wrap .pop_title:after{content:''; display:block; clear:both;}
+.goldenbell .popbox .view .inner_wrap .pop_title > div{float:left; display:flex; justify-content:center; align-items:center; height:60px; border-radius:10px; color:#000; font-size:35px; font-family:'NotoB'; text-align:center;}
+.goldenbell .popbox .view .inner_wrap .pop_title > div:nth-child(1){width:calc(100% - 150px); margin-right:10px; background-color:#f6e7d4;}
+.goldenbell .popbox .view .inner_wrap .pop_title > div:nth-child(2){width:140px; background-color:#d4f3f6;}
+
+.goldenbell .popbox .view .tableContainer{width:940px;}
+.goldenbell .popbox .view .table_view{width:100%;}
+.goldenbell .popbox .view .table_view tr td:nth-child(1){width: calc(100% - 150px); padding:10px 20px 10px 0px; text-align:justify;}
+.goldenbell .popbox .view .table_view tr td:nth-child(2){width:140px; padding:10px 10px; text-align:center; font-family:'NotoB'; color:#00a0fe; vertical-align:top; letter-spacing:-0.03em;}
+.goldenbell .popbox .view .table_view .bulletBox > p{font-family:'NotoB'; letter-spacing:-0.03em;}
+
+.goldenbell .popbox .view .table_view .queRbox{border-color:#000; color:#000;}
+
+
+/* 문항 다운로드 */
+.btnDownload{position:absolute; top:25px; right:132px; display:flex; align-items:center; width:170px; height:38px; padding-left:50px; border-radius:20px; background:#ffe100 url('../images/speedquiz/sp_icon_down.png') 21px 11px no-repeat; background-size:21px 15px; color:#000; font-family:'YGJAL'; font-size:16px; text-align:left; box-sizing:border-box; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+.btnDownload:hover{background-color:#5e3e18; color:#fff;}
+
+/* 골든벨 퀴즈 시작 */
+.goldenbell .gbContents{position:relative; width:100%; height:calc(100% - 76px); margin:38px 0; padding:0 38px; box-sizing:border-box;}
+
+/* 골든벨 - 타이틀 */
+.goldenbell .gb_title{position:relative; width:100%; margin-bottom:20px; box-sizing:border-box;}
+.goldenbell .gb_title h1{display:inline-block; position:absolute; top:15px; left:15px; width:307px; height:93px; background:url('../images/goldenbell/gb_title_txt.png') no-repeat; background-size:100% auto; font-size:0; text-indent:-9999px;}
+
+/* 단원명 */
+.pageInfo{position:absolute; right:40px; top:75px; font-family:'YGJAL'; font-size:20px; color:#ae7c65;}
+
+/* 골든벨 퀴즈 - 문제번호 */
+.gb_progress{position:absolute; top:68px; right:38px;}
+.gb_progress ul:after{content:''; display:block; clear:both;}
+.gb_progress ul > li{float:left; display:inline-block; width:28px; height:28px; border:1px solid #e9d0b0; background-color:#f6e7d4; text-align:center; font-family:'YGJAL'; color:#ae7c65; font-size:10px; line-height:26px; box-sizing:border-box;}
+.gb_progress ul > li + li{border-left:none;}
+.gb_progress ul > li.done,
+.gb_progress ul > li.sel{background-color:#ae7c65; color:#fff;}
+
+@media screen and (-ms-high-contrast: active), all and (-ms-high-contrast: none) {
+	.gb_progress ul > li{line-height:26px;}
+}
+
+/* 퀴즈 상세 */
+.goldenbell .contentsBox{width:100%; height:600px; min-height:600px;  }
+
+.goldenbell .innerBox{padding:0 38px; box-sizing:border-box; background-color:transparent;}
+
+/* 퀴즈 상세 */
+#gbContentWrap{height:100%;}
+#gbContentWrap > div{height:100%;}
+#gbContentWrap .gbContent{width:100%; height:100%; padding:40px 50px 0 50px; background-color:#fff; border-top-left-radius:30px; border-top-right-radius:30px; box-sizing:border-box;}
+#gbContentWrap .gbContent:before{content:''; display:inline-block; position:absolute; top:-39px; left:331px; width:67px; height:44px; background:url('../images/goldenbell/gd_images05.png') no-repeat; background-size:100% auto;}
+
+
+/* 퀴즈 지시문 */
+.gb_title{position:relative; text-align:center; padding:0 130px;}
+.gb_title p{font-family:'NotoBK'; font-size:36px; line-height:48px;}
+/* 퀴즈 박스 */
+.gbContent.hide{display:none}
+
+/* 초성 퀴즈 */
+.queRbox{display:inline-block; width:45px; height:45px; margin:-5px 2px 0 2px; border-radius:10px; border:4px solid #ae7c65; background-color:#fff; color:#ae7c65; font-family:'NotoBK'; font-size:30px; line-height:45px; text-align:center; vertical-align:middle;}
+.queRbox:first-child{margin:-5px 2px 0 0;}
+.queRbox:last-child{margin:-5px 0 0 2px;}
+
+.gbContent .qIconBox{z-index:2;}
+.gbContent .qIconBox .qIcon{width:100px; height:100px; border:6px solid #3bb5fe;}
+.gbContent .qBox:hover .qIcon{ border:6px solid #cdcbcb;}
+.gbContent .qIconBox .qIcon:after{line-height:88px; font-size:50px;}
+.gbContent .qBox{width:705px; height:275px; left:50%; -webkit-transform:translateX(-50%); -ms-transform:translateX(-50%); -o-transform:translateX(-50%); transform:translateX(-50%); z-index:1; margin:0 auto; background-color:#f8f6f1; border-radius:30px; border:10px solid #f6e7d4;}
+.gbContent .qBoxBg{position:absolute; display:table; width:100%; height:100%; padding:0; background:#fff; border-radius:20px; border:0; box-sizing:border-box;}
+.gbContent .qText{display:table-cell; top:0; width:100%; height:100%; font-size:90px; font-family:'NotoBK'; color:#00a0ff; vertical-align:middle; letter-spacing:0.2em; text-align:center;}
+
+.gbContent .qBox:hover .qBoxBg{background:#fff; border:0;}
+
+/* OX 퀴즈 */
+.goldenbell .boxOX{position:absolute; left:0; bottom:0; width:100%; height:385px; text-align:center; box-sizing:border-box;}
+.goldenbell .boxOX:before{content:''; position:absolute; left: 0; bottom:0px; width:100%; height:100%; background:url('../images/goldenbell/bg_ox_bg.png') center bottom no-repeat; background-size:100% auto;}
+
+.goldenbell .boxOX > button{position:relative; width:290px; height:250px; box-sizing:border-box; overflow:visible;}
+.goldenbell .boxOX > button::after{content:''; display:inline-block; position:absolute; bottom:20px; left:20px; width:230px; height:49px; background:url('../images/goldenbell/bg_ox_shadow.png') no-repeat; background-size:100% auto;}
+
+.goldenbell .boxOX > button.sel{pointer-events:none;}
+
+.goldenbell .boxOX > button > span{position:absolute; top:0; left:0; width:100%; height:100%; background: url('../images/goldenbell/gb_ox_images.png') no-repeat; background-size:595px auto; box-sizing:border-box; font-size:0; z-index:2;}
+.goldenbell .boxOX .btnO > span{background-position:0px 8px;}
+.goldenbell .boxOX .btnX > span{background-position:-295px 8px;}
+.goldenbell .boxOX .btnO:hover > span{background-position:0px -273px;}
+.goldenbell .boxOX .btnX:hover > span{background-position:-295px -273px;}
+
+.goldenbell .boxOX .btnO.sel > span{top:-45px; background-position:0px -562px;}
+.goldenbell .boxOX .btnX.sel > span{top:-55px; background-position:-295px -552px;}
+
+.goldenbell .boxOX > button.select{opacity:1; pointer-events:none;}
+.goldenbell .boxOX > button.clicked{cursor:default; pointer-events: none;}
+
+/* ox 해설 */
+.goldenbell .desc{position:relative; display:none; margin-top:-20px; padding:0 140px;}
+.goldenbell .desc:after{content:''; display:block; clear:both;}
+.goldenbell .boxOX .desc.show{display:block;}
+
+.goldenbell .desc .desc_icon{display:inline-block; padding:0 10px 0 31px; background:#f87c1a url('../images/icon_check.png') 9px center no-repeat; background-size:17px auto; border-radius:10px; font-family:'YGJAL'; color:#fff; font-size:15px; vertical-align:top;}
+.goldenbell .desc p{position:relative; font-family:'NotoB'; font-size:30px; line-height:35px; vertical-align:middle; box-sizing:border-box;}
+
+
+/* 버튼 모음 */
+.side_button{position:absolute; top:205px; right:63px;}
+.side_button > .inner{position:relative; width:65px; height:auto; border:5px solid #53beed; border-radius:30px; box-shadow:6px 10px 10px rgba(0, 0, 0, 0.2); box-sizing:border-box;}
+.side_button button{box-sizing:border-box;}
+
+/* 타이머 */
+.qzBtnTimer{overflow:visible; position:relative; width:100%; height:240px; background-color:#30ade4; border-top-left-radius:25px; border-top-right-radius:25px;}
+.qzBtnTimer .time_bar{position:relative; display:block; width:16px; height:150px; margin:0 auto; border-bottom-left-radius:30px; border-bottom-right-radius:30px; background-color:#e9e9e9; box-sizing:border-box; text-align:center; overflow:visible;}
+.qzBtnTimer .time_bar .back:before{content:''; display:inline-block; position:absolute; top:-46px; left:-16px; width:47px; height:47px; border-radius: 50%; background-color:#fff;}
+.qzBtnTimer.off .time_bar .back:after {
+	background:#fff url('../../common/images/puzz/icon_clock.svg') center/contain no-repeat;
+}
+.qzBtnTimer .time_bar .back:after {
+	position: absolute;
+	content: '';
+	left: -17px;
+	top: -47px;
+	width: 49px;
+	height: 49px;
+	border-radius:50%;
+}
+.qzBtnTimer.go .time_bar .back:after {
+	-webkit-animation: clockColor 1s steps(28) infinite;
+    -ms-animation: clockColor 1s steps(28) infinite;
+    animation: clockColor 1s steps(28) infinite;
+	background-image:url('../../common/images/puzz/icon_clock_on.svg'), url('../../common/images/puzz/timerSheet.png');
+	background-position:center, 0 center;
+	background-repeat:no-repeat, no-repeat;
+	background-size:contain, auto 48px;
+}
+.qzBtnTimer .time_bar .back.off:before{ background:url('../images/goldenbell/gb_timer_off.png') no-repeat; }
+.qzBtnTimer .time_bar .back{position:relative; display:inline-block; width:100%; height:145px; }
+.qzBtnTimer .time_bar .back .current{
+	display:inline-block;
+	width:7px;
+	height:100%;
+	background:#ff6600;
+    background:-moz-linear-gradient(top, #ff6600 39%, #ff6600 40%, #ff6600 100%);
+    background:-webkit-linear-gradient(top, #ff6600 39%, #ff6600 40%, #ff6600 100%);
+    background:-o-linear-gradient(top, #ff6600 39%, #ff6600 40%, #ff6600 100%);
+    background:-ms-linear-gradient(top, #ff6600 39%, #ff6600 40%, #ff6600 100%);
+    background:linear-gradient(top, #ff6600 39%, #ff6600 40%, #ff6600 100%);
+	line-height:0;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+}
+.qzBtnTimer.go .time_bar .back .current  {
+	animation: goldenbellTimerGuage 30.0s linear;
+	-webkit-animation: goldenbellTimerGuage 30.0s linear;
+	-moz-animation: goldenbellTimerGuage 30.0s linear;
+	opacity: 1;
+}
+
+.qzBtnTimer.off .time_bar .back .current{background:#cdcdcd;}
+
+.qzBtnTimer:after{content:'ON'; display:block; width:40px; padding:0 8px; margin:0 auto; margin-top:2px; background-color:#fdd000; border-radius:20px; text-align:center; color:#000000; font-size:12px; line-height:18px; font-family:'YGJAL'; box-sizing: border-box;}
+.qzBtnTimer.off:after{content:'OFF'; background-color:#333333; color:#fff;}
+.qzBtnTimer.off .count{display:none;}
+
+.qzBtnTimer .count_wrap{display:inline-block; font-family:'YGJAL'; color:#fff; font-size:14px;}
+
+/* 홈 */
+.qzBtnHome{position:relative; width:100%; height:80px; background-color:#1c3844;}
+.qzBtnHome span{display:block; color:#fff; font-family:'YGJAL'; line-height:20px;}
+.qzBtnHome:hover{background-color:#fff;}
+.qzBtnHome:hover span{color:#000;}
+
+/* 전원 탈락, 골든벨 성공 */
+.gbBtnOut{position:relative; width:100%; height:100px; background-color:#0f5574; border-bottom-left-radius:25px; border-bottom-right-radius:25px;}
+.gbBtnOut > span{display:block; color:#fff; font-family:'YGJAL'; line-height:20px;}
+
+.gbBtnOut:hover{background-color:#fff;}
+.gbBtnOut:hover span{color:#000;}
+
+.qzFunc .gbBtnSuss.hide{display:none}
+
+@media screen and (-ms-high-contrast: active), all and (-ms-high-contrast: none) {
+	.qzBtnTimer:after{padding-top:2px;}
+	.qzBtnTimer .count_wrap{padding-top:10px;}
+
+	.qzBtnHome{padding-top:8px;}
+	.gbBtnOut{padding-top:8px;}
+}
+
+/* 이동 버튼 */
+.goldenbell .innerPrevBtn{position:absolute; top:426px; left:-1px; width:61px; height:89px; background:url('../images/goldenbell/btn_prev_next.png') no-repeat; background-size:190px auto; background-position:0 0; display:block; border-radius:0;}
+.goldenbell  .innerNextBtn{position:absolute; top:426px; right:-2px; width:61px; height:89px; background:url('../images/goldenbell/btn_prev_next.png') no-repeat; background-size:190px auto; background-position:-130px 0; border-radius:0;}
+
+.goldenbell .innerPrevBtn:hover{background:url('../images/goldenbell/btn_prev_next.png') no-repeat; background-size:190px auto; background-position:0 -129px;}
+.goldenbell .innerNextBtn:hover{background:url('../images/goldenbell/btn_prev_next.png') no-repeat; background-size:190px auto; background-position:-130px -129px;}
+
+.goldenbell .innerPrevBtn:hover:before{content:''; display: inline-block; position:absolute; top:-37px; left:10px; width:71px; height:62px; background:url('../images/goldenbell/btn_gb_prev_icon.png') no-repeat; background-size:100% auto;}
+.goldenbell .innerNextBtn:hover:before{content:''; display: inline-block; position:absolute; top:-38px; left:-21px; width:71px; height:62px; background:url('../images/goldenbell/btn_gb_next_icon.png') no-repeat; background-size:100% auto;}
+
+.goldenbell .innerPrevBtn.active{background-position:0 -129px;}
+.goldenbell .innerNextBtn.active{background-position:-130px -129px;}
+
+/* alert_popup */
+.alert_popup{position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); text-align: center; z-index:5; display:none;}
+.characterAni {display:none;}
+.characterImg {position:relative; display:inline-block; cursor:pointer;}
+.charSpriteAni {position:absolute; top:0; left:0; opacity:1; background-position:0 0;}
+
+#gbContentWrap > .hide{display:none;}
