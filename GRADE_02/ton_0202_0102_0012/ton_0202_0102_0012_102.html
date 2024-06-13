@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .tab-content-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .group-speech-01 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+        }
+
+        .char-box-11 .balloon {
+            top: -180px;
+            left: -120px;
+            background: #fdf3e7;
+        }
+
+        .char-box-03 .balloon {
+            top: -180px;
+            left: -50px;
+            background: #f5f7e5;
+        }
+
+        .char-box-10 .balloon {
+            top: -120px;
+            left: -30px;
+            background: #F6EFFB;
+            transform: rotateY(-180deg);
+        }
+
+        .group-speech .char-box-03 {
+            top: 250px;
+            left: 570px;
+        }
+
+        .group-speech .char-box-11 {
+            top: 290px;
+            left: 285px;
+        }
+
+        .group-speech .char-box-10 {
+            top: 290px;
+            left: 898px;
+            transform: scaleX(-1);
+        }
+
+        /* page 2 */
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                가을을 대표하는 열매를 알아볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="가을을 대표하는 열매를 알아볼까요?">물음 1</li>
+                    <li data-hover="" data-text="또 다른 계절별 대표 열매를 알아볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-11" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC orange b1 bottom">
+                                        <span>새콤하면서<br> 단맛을 가진 사과요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-03" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC green b1 bottom">
+                                        <span>크기가 크고<br> 달콤한 배요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-10" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC purple b1 bottom">
+                                        <span>감과 밤이요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="character-flex">
+                            <div id="boy_1" class="character-item"></div>
+                            <div id="girl_2" class="character-item"></div>
+                            <div id="boy_4" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.boy1({
+                id: '#boy_1',
+                speech: 'right',
+                sound: './media/ton_0202_0102_0012_102/ton_0202_0102_0012_102_01.mp3',
+                text: '봄을 대표하는 열매는<br> 딸기, 체리, 매실이에요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -120,
+            });
+
+            $prite.girl2({
+                id: '#girl_2',
+                speech: 'right',
+                sound: './media/ton_0202_0102_0012_102/ton_0202_0102_0012_102_02.mp3',
+                text: '여름을 대표하는 열매는<br> 수박, 복숭아, 자두예요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -130,
+            });
+
+            $prite.boy4({
+                id: '#boy_4',
+                speech: 'right',
+                sound: './media/ton_0202_0102_0012_102/ton_0202_0102_0012_102_03.mp3',
+                text: '겨울을 대표하는 열매는<br> 귤, 키위, 오렌지예요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -125,
+            });
+        });
+    </script>
+</body>
+
+</html>

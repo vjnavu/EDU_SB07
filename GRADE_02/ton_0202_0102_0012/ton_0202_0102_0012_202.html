@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* page 1 */
+        .page_1 .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .page_1 .flex img {
+            height: 200px;
+        }
+
+        .page_1 .character-flex {
+            margin-top: 180px;
+        }
+
+        .page_1 .characterWrap.speech.right:before {
+            position: absolute;
+            content: '';
+            background: url(../ko/contents/images/button/btn_speech_balloon_left1.png);
+            width: 64px;
+            height: 64px;
+        }
+
+        .characterWrap.right.speech.circle::before {
+            top: -10px !important;
+            right: -50px !important;
+        }
+
+        #boy_1_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_1.png') !important;
+        }
+
+        #girl_4_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_4.png') !important;
+        }
+
+        #boy_3_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_3.png') !important;
+        }
+
+        /* page 2 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_2) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .tab-content-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        .group-speech-04 {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+        }
+
+        .char-box-10 .balloon {
+            top: -180px;
+            left: -120px;
+            background: #f6effb;
+        }
+
+        .char-box-11 .balloon {
+            top: -180px;
+            left: -100px;
+            background: #fdf3e7;
+        }
+
+        .char-box-12 .balloon {
+            top: -180px;
+            left: -150px;
+            background: #f5f7e5;
+        }
+
+        .char-box-13 .balloon {
+            top: -240px;
+            left: -200px;
+            background: #f6effb;
+        }
+
+        .group-speech .char-box-10 {
+            top: 280px;
+            left: 285px;
+        }
+
+        .group-speech .char-box-11 {
+            top: 280px;
+            left: 515px;
+        }
+
+        .group-speech .char-box-12 {
+            top: 280px;
+            left: 720px;
+        }
+
+        .group-speech .char-box-13 {
+            top: 280px;
+            left: 955px;
+        }
+
+        /* page 3 */
+        .page_3 .flex {
+            display: flex;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .page_3 .flex .howtoBox {
+            width: 100%;
+        }
+
+        .page_3 .flex .howtoBox .pic-box {
+            background: #fff;
+            padding: 20px;
+        }
+
+        .page_3 .flex .howtoBox .pic-box .text-box {
+            height: auto;
+            padding: 10px 25px;
+            border-radius: 15px;
+        }
+
+        .toggle.box {
+            width: 300px;
+            height: 100%;
+        }
+
+        .page_3 .flex .items {
+            height: 100%;
+            flex: 1;
+            position: relative;
+        }
+
+        .page_3 .pic-box .flex .items:first-child::after {
+            content: '';
+            background: url('./common/images/arrow_right.png') no-repeat center / 100%;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: -50px;
+        }
+
+        .page_3 .pic-box .flex {
+            gap: 60px;
+        }
+
+        .page_3 .flex img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .page_3 .flex .items>img {
+            height: 285px;
+        }
+
+        .page_3 .character-flex {
+            margin-top: 230px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                교과서 사진 속 열매의 이름과 겉모습을 살펴볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="교과서 사진 속 열매의 이름과 겉모습을 살펴볼까요?">활동 1</li>
+                    <li data-hover="" data-text="오감을 생각하며 열매의 속 모습을 추측해 볼까요?">활동 2</li>
+                    <li data-hover="" data-text="종이 덮개를 열어 열매의 속 모습을 확인해 볼까요?">활동 3</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="flex">
+                            <img src="./images/ton_0202_0102_0012_202/img_01.png">
+                            <img src="./images/ton_0202_0102_0012_202/img_02.jpg">
+                            <img src="./images/ton_0202_0102_0012_202/img_03.png">
+                            <img src="./images/ton_0202_0102_0012_202/img_04.jpg">
+                        </div>
+                        <div class="character-flex">
+                            <div id="boy_1_c" class="character-item"></div>
+                            <div id="girl_4_c" class="character-item"></div>
+                            <div id="boy_3_c" class="character-item"></div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-04">
+                                <div class="char-box char-box-10" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon textAlignC purple b1 bottom">
+                                        <span>딸기의 속은<br>
+                                            빨간색일 것 같아요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-11" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon textAlignC orange b1 bottom">
+                                        <span>오이의 속은<br>
+                                            흰색일 것 같아요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-12" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC green b1 bottom">
+                                        <span>오이의 속은 촉촉하고<br>
+                                            물기가 느껴질 것 같아요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-13" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon textAlignC purple b1 bottom">
+                                        <span>석류의 속은 빨간색, 감의<br> 속은 주황색으로 겉모습과 속<br> 모습의 색깔이 같을 것 같아요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="flex">
+                                                    <div class="items">
+                                                        <img src="./images/ton_0202_0102_0012_202/img_01.png">
+                                                        <div class="text-box">딸기</div>
+                                                    </div>
+                                                    <div class="items" data-type="toggleButton">
+                                                        <div class="toggle box" data-toggle-obj="1">
+                                                            <div class="answer" data-toggle-target="1">
+                                                                <img
+                                                                    src="./images/ton_0202_0102_0012_202/img_01_01.jpeg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="flex">
+                                                    <div class="items">
+                                                        <img src="./images/ton_0202_0102_0012_202/img_02.jpg">
+                                                        <div class="text-box">오이</div>
+                                                    </div>
+                                                    <div class="items" data-type="toggleButton">
+                                                        <div class="toggle box" data-toggle-obj="2">
+                                                            <div class="answer" data-toggle-target="2">
+                                                                <img
+                                                                    src="./images/ton_0202_0102_0012_202/img_02_02.jpeg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="flex">
+                                                    <div class="items">
+                                                        <img src="./images/ton_0202_0102_0012_202/img_03.png">
+                                                        <div class="text-box">감</div>
+                                                    </div>
+                                                    <div class="items" data-type="toggleButton">
+                                                        <div class="toggle box" data-toggle-obj="3">
+                                                            <div class="answer" data-toggle-target="3">
+                                                                <img
+                                                                    src="./images/ton_0202_0102_0012_202/img_03_03.jpeg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="flex">
+                                                    <div class="items">
+                                                        <img src="./images/ton_0202_0102_0012_202/img_04.jpg">
+                                                        <div class="text-box">석류</div>
+                                                    </div>
+                                                    <div class="items" data-type="toggleButton">
+                                                        <div class="toggle box" data-toggle-obj="4">
+                                                            <div class="answer" data-toggle-target="4">
+                                                                <img
+                                                                    src="./images/ton_0202_0102_0012_202/img_04_04.jpeg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="character-flex">
+                                        <div id="girl_1" class="character-item"></div>
+                                        <div id="boy_2" class="character-item"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $(document).on('click', '.close-speech-button', function () {
+                $(this).parent().hide();
+            });
+
+            $(document).on('click', '.page_1 .character-item', function () {
+                $('.balloon').removeClass('fff');
+            });
+
+            $prite.boy1({
+                id: '#boy_1_c',
+                circle: true,
+                speech: 'right',
+                text: '딸기는 빨갛고<br> 표면이 오돌토돌해요.',
+                sound: '',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -190,
+                balloon_left: -125,
+            });
+
+            $prite.girl4({
+                id: '#girl_4_c',
+                circle: true,
+                speech: 'right',
+                text: '오이는 길쭉한<br> 모양이에요.',
+                sound: '',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -190,
+                balloon_left: -55,
+            });
+
+            $prite.boy3({
+                id: '#boy_3_c',
+                circle: true,
+                speech: 'right',
+                text: '석류와 감은 둥근 모양이지만<br> 석류는 빨간색, 감은<br> 주황색으로 색깔이 달라요.',
+                sound: '',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -240,
+                balloon_left: -185,
+            });
+
+            $prite.girl1({
+                id: '#girl_1',
+                speech: 'right',
+                text: '딸기와 오이는 자른<br> 방향에 따라 속 모습도 달라요.',
+                sound: './media/ton_0202_0102_0012_202/ton_0202_0102_0012_202_01.mp3',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -170,
+            });
+            $prite.boy2({
+                id: '#boy_2',
+                speech: 'right',
+                text: '석류와 감의 씨는<br> 모양도 색깔도 달라요.',
+                sound: './media/ton_0202_0102_0012_202/ton_0202_0102_0012_202_02.mp3',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -115,
+            });
+        });
+    </script>
+</body>
+
+</html>
