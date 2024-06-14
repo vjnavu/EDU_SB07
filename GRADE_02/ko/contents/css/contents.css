@@ -4496,9 +4496,19 @@ tr.ta-c td {
 
 /***그룹스피치***/
 .group-speech {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     margin: 0 auto;
-    top: 40px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+
+.tab-content-box {
+    width: 100%;
+    height: 100%;
 }
 
 .group-speech .char-box {
@@ -4506,31 +4516,19 @@ tr.ta-c td {
 }
 
 .group-speech-01 {
-    width: 1100px;
-    height: 500px;
-    background: url("../../../ko/contents/images/groupSpeech/group_speech_bg_01.png")no-repeat;
-    background-size: contain;
+    background-image: url("../../../ko/contents/images/groupSpeech/group_speech_bg_01.png");
 }
 
 .group-speech-02 {
-    width: 1100px;
-    height: 500px;
-    background: url("../../../ko/contents/images/groupSpeech/group_speech_bg_03.png")no-repeat;
-    background-size: contain;
+    background-image: url("../../../ko/contents/images/groupSpeech/group_speech_bg_03.png");
 }
 
 .group-speech-03 {
-    width: 1100px;
-    height: 500px;
-    background: url("../../../ko/contents/images/groupSpeech/group_speech_bg_04.png")no-repeat;
-    background-size: contain;
+    background-image: url("../../../ko/contents/images/groupSpeech/group_speech_bg_04.png");
 }
 
 .group-speech-04 {
-    width: 1100px;
-    height: 500px;
-    background: url("../../../ko/contents/images/groupSpeech/group_speech_bg_02.png")no-repeat;
-    background-size: contain;
+    background-image: url("../../../ko/contents/images/groupSpeech/group_speech_bg_02.png");
 }
 
 .group-speech .char-image {
@@ -4631,6 +4629,15 @@ tr.ta-c td {
     background-size: contain;
 }
 
+.group-speech .char-box-03 .char-image:before {
+    left: -10px;
+}
+
+.group-speech .char-box-03_1 .char-image:before {
+    right: 15px;
+    left: auto;
+}
+
 .group-speech .char-box-04 .char-image {
     width: 210px;
     height: 320px;
@@ -4644,6 +4651,19 @@ tr.ta-c td {
     height: 320px;
     background: url("../../../ko/contents/images/groupSpeech/char_08_over.png")no-repeat;
     background-size: contain;
+}
+
+.group-speech .char-box-04 .char-image:before {
+    top: -20px;
+    right: -20px;
+}
+
+.group-speech .char-box-04_1 .char-image {
+    width: 210px;
+    height: 320px;
+    background: url("../../../ko/contents/images/character/char_08.png")no-repeat;
+    background-size: contain;
+    cursor: pointer;
 }
 
 .group-speech .char-box-05 .char-image {
@@ -4661,20 +4681,9 @@ tr.ta-c td {
     background-size: contain;
 }
 
-.group-speech .char-box-03_1 .char-image {
-    width: 210px;
-    height: 320px;
-    background: url("../../../ko/contents/images/character/char_05.png")no-repeat;
-    background-size: contain;
-    cursor: pointer;
-}
-
-.group-speech .char-box-04_1 .char-image {
-    width: 210px;
-    height: 320px;
-    background: url("../../../ko/contents/images/character/char_08.png")no-repeat;
-    background-size: contain;
-    cursor: pointer;
+.group-speech .char-box-05 .char-image:before {
+    top: -20px;
+    right: -40px;
 }
 
 .group-speech .char-box-05_1 .char-image {
@@ -4715,12 +4724,18 @@ tr.ta-c td {
     background-size: contain;
 }
 
+.group-speech .char-box-07 .char-image:before {
+    top: -30px;
+    left: -30px;
+}
+
 .group-speech .char-box-08 .char-image {
     width: 200px;
     height: 320px;
     background: url("../../../ko/contents/images/groupSpeech/char_12.png")no-repeat;
     background-size: contain;
     cursor: pointer;
+    transform: scaleX(-1);
 }
 
 .group-speech .char-box-08 .char-image:hover {
@@ -4728,6 +4743,17 @@ tr.ta-c td {
     height: 320px;
     background: url("../../../ko/contents/images/groupSpeech/char_12_over.png")no-repeat;
     background-size: contain;
+}
+
+.group-speech .char-box-08 .char-image:before {
+    top: -20px;
+    left: -10px;
+}
+
+.group-speech .char-box-08_1 .char-image:before {
+    top: -30px;
+    right: -10px;
+    left: auto;
 }
 
 .group-speech .char-box-09 .char-image {
@@ -4745,12 +4771,27 @@ tr.ta-c td {
     background-size: contain;
 }
 
+.group-speech .char-box-09 .char-image:before {
+    top: -20px;
+    right: -40px;
+}
+
+.group-speech .char-box-09_1 .char-image:before {
+    top: -30px;
+    right: -30px;
+}
+
 .group-speech .char-box-10 .char-image {
     width: 180px;
     height: 300px;
     background: url("../../../ko/contents/images/groupSpeech/char_03.png")no-repeat;
     background-size: contain;
     cursor: pointer;
+    transform: scaleX(-1);
+}
+
+.group-speech .char-box-10_1 .char-image {
+    transform: scale(1);
 }
 
 .group-speech .char-box-10 .char-image:hover {
@@ -4758,6 +4799,11 @@ tr.ta-c td {
     height: 300px;
     background: url("../../../ko/contents/images/groupSpeech/char_03_over.png")no-repeat;
     background-size: contain;
+}
+
+.group-speech .char-box-10 .char-image:before {
+    top: -20px;
+    right: -30px;
 }
 
 .group-speech .char-box-11 .char-image {
@@ -4775,6 +4821,10 @@ tr.ta-c td {
     background-size: contain;
 }
 
+.group-speech .char-box-11 .char-image:before {
+    right: -40px;
+}
+
 .group-speech .char-box-12 .char-image {
     width: 200px;
     height: 320px;
@@ -4788,6 +4838,10 @@ tr.ta-c td {
     height: 320px;
     background: url("../../../ko/contents/images/groupSpeech/char_05_over.png")no-repeat;
     background-size: contain;
+}
+
+.group-speech .char-box-12 .char-image:before {
+    right: -20px;
 }
 
 .group-speech .char-box-13 .char-image {
@@ -4805,15 +4859,19 @@ tr.ta-c td {
     background-size: contain;
 }
 
+.group-speech .char-box-13 .char-image:before {
+    right: -20px;
+}
+
 /*캐릭터위치*/
 .group-speech .char-box-01 {
-    top: 150px;
-    left: 330px;
+    bottom: 40px;
+    left: 450px;
 }
 
 .group-speech .char-box-02 {
-    top: 150px;
-    left: 560px;
+    bottom: 40px;
+    left: 750px;
 }
 
 .group-speech .char-box-01_1 {
@@ -4827,23 +4885,23 @@ tr.ta-c td {
 }
 
 .group-speech .char-box-03 {
-    top: 120px;
-    left: 270px;
+    bottom: 40px;
+    left: 350px;
 }
 
 .group-speech .char-box-04 {
-    top: 100px;
-    left: 450px;
+    bottom: 40px;
+    left: 600px;
 }
 
 .group-speech .char-box-05 {
-    top: 180px;
-    left: 750px;
+    bottom: 0;
+    left: 950px;
 }
 
 .group-speech .char-box-03_1 {
-    top: 150px;
-    left: 170px;
+    bottom: 20px;
+    left: 660px;
 }
 
 .group-speech .char-box-04_1 {
@@ -4856,46 +4914,89 @@ tr.ta-c td {
     left: 750px;
 }
 
-
-
 .group-speech .char-box-06 {
-    top: 115px;
-    left: 170px;
+    bottom: 70px;
+    left: 220px;
 }
 
 .group-speech .char-box-07 {
-    top: 80px;
-    left: 340px;
+    bottom: 105px;
+    left: 470px;
+}
+
+.twoLine.group-speech .char-box-07 {
+    bottom: 60px;
+    left: 470px;
 }
 
 .group-speech .char-box-08 {
-    top: 90px;
-    left: 530px;
+    bottom: 80px;
+    left: 450px;
+}
+
+.group-speech .char-box-08_1 {
+    bottom: 75px;
+    left: 700px;
+}
+
+.twoLine.group-speech .char-box-08 {
+    bottom: 40px;
+    left: 450px;
+}
+
+.twoLine.group-speech .char-box-08_1 {
+    bottom: 49px;
+    left: 720px;
 }
 
 .group-speech .char-box-09 {
-    top: 100px;
-    left: 740px;
+    bottom: 100px;
+    left: 750px;
+}
+
+.group-speech .char-box-09_1 {
+    bottom: 105px;
+    left: 960px;
+}
+
+.twoLine.group-speech .char-box-09 {
+    bottom: 70px;
+    left: 800px;
+}
+
+.twoLine.group-speech .char-box-09_1 {
+    bottom: 69px;
+    left: 990px;
 }
 
 .group-speech .char-box-10 {
-    top: 185px;
-    left: 185px;
+    bottom: 20px;
+    left: 960px;
+}
+
+.group-speech .char-box-10_1 {
+    bottom: 40px;
+    left: 260px;
 }
 
 .group-speech .char-box-11 {
-    top: 160px;
+    bottom: 20px;
     left: 365px;
 }
 
+.group-speech .char-box-11_1 {
+    bottom: 40px;
+    left: 500px;
+}
+
 .group-speech .char-box-12 {
-    top: 170px;
-    left: 550px;
+    bottom: 20px;
+    left: 720px;
 }
 
 .group-speech .char-box-13 {
-    top: 190px;
-    left: 755px;
+    bottom: 40px;
+    left: 970px;
 }
 
 /*말풍선*/

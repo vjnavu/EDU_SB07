@@ -1,0 +1,194 @@
+@charset "utf-8";
+.tableContainer {
+    position: relative;
+    margin: 0 auto;
+    font-family: NotoM;
+    box-sizing: border-box;
+}
+.tableContainer table {
+    font-size: inherit;
+    table-layout: auto;
+    border-collapse: separate;
+}
+.tableContainer.fix table {
+    table-layout: fixed;
+}
+.tableContainer.collapse table {
+    border-collapse: collapse;
+}
+.tableContainer table td,
+.tableContainer table th {
+    text-align: center;
+    padding: 2px 4px 4px;
+}
+.tableContainer table tr:first-of-type > :first-child {
+    border-radius: 10px 0 0 0;
+}
+.tableContainer table tr:first-of-type > :last-child {
+    border-radius: 0 10px 0 0;
+}
+.tableContainer table tr:last-of-type > :first-child {
+    border-radius: 0 0 0 10px;
+}
+.tableContainer table tr:last-of-type > :last-child {
+    border-radius: 0 0 10px 0;
+}
+.tableContainer table td > img {
+    vertical-align: top;
+}
+.tableContainer.brown table th {
+    color: #333;
+    background-color: #c7a08c;
+}
+.tableContainer.brown table tr:first-of-type th:not(:last-of-type) {
+    border-right: 2px solid #efe8e0;
+}
+.tableContainer.brown table tr th:first-child,
+.tableContainer.brown table tr th:not(:last-of-type) {
+    border-right: 2px solid #efe8e0;
+}
+.tableContainer.brown table tr:not(:last-of-type) th {
+    border-bottom: 2px solid #efe8e0;
+}
+.tableContainer.brown table tr td {
+    background-color: #fffbf5;
+    border-right: 2px solid #efe8e0;
+    border-bottom: 2px solid #efe8e0;
+}
+.tableContainer.brown table tr:first-of-type td {
+    border-top: 2px solid #efe8e0;
+}
+.tableContainer.brown table tr td:first-child {
+    border-left: 2px solid #efe8e0;
+}
+.tableContainer.brown table th.lightBrown {
+    padding: 10px;
+    line-height: 1.2;
+    background-color: #ddc9b1;
+}
+.tableContainer.green table tr th {
+    background-color: #93bfb2;
+}
+.tableContainer.green table tr th:first-child,
+.tableContainer.green table tr th:not(:last-of-type) {
+    border-right: 2px solid #fff;
+}
+.tableContainer.green table tr:not(:last-of-type) th {
+    border-bottom: 2px solid #fff;
+}
+.tableContainer.green table tr:first-of-type th:not(:last-of-type) {
+    border-right: 2px solid #fff;
+}
+.tableContainer.green table tr td {
+    border-bottom: 2px solid #93bfb2;
+    border-right: 2px solid #93bfb2;
+    background-color: #fff;
+}
+.tableContainer.green table tr:first-of-type td {
+    border-top: 2px solid #93bfb2;
+}
+.tableContainer.green table tr td:first-child {
+    border-left: 2px solid #93bfb2;
+}
+.tableContainer.green table th.lightGreen {
+    background-color: #ccded8;
+}
+.tableContainer.noBorder table,
+.tableContainer.noBorder table th,
+.tableContainer.noBorder table td {
+    border: 0;
+    background-color: transparent;
+}
+.tableContainer tr.blackLine {
+    border-top: 2px solid #000;
+}
+.tableContainer.thRound table tr:first-of-type th {
+    border-right: 0;
+    border-radius: 10px 10px 0 0;
+}
+.tableContainer.bothRound table tr:first-of-type > * {
+    border-radius: 10px 10px 0 0;
+}
+.tableContainer.bothRound table tr:last-of-type > * {
+    border-radius: 0 0 10px 10px;
+}
+.tableContainer.bothRound.brown table tr th:first-child,
+.tableContainer.bothRound.brown table tr th:not(:last-of-type),
+.tableContainer.bothRound.green table tr th:first-child,
+.tableContainer.bothRound.green table tr th:not(:last-of-type) {
+    border-right: 0;
+}
+.tableContainer caption {
+    display: table-caption;
+    margin: 0 0 10px 0;
+}
+.tableContainer.center table tr td,
+.tableContainer td.center {
+    text-align: center;
+}
+.tableContainer.justify table tr td,
+.tableContainer td.justify {
+    text-align: justify;
+}
+.tableContainer.left table tr td,
+.tableContainer td.left {
+    text-align: left;
+}
+.tableContainer.center .toggle .answer {
+    text-align: center;
+}
+.tableContainer.justify .toggle .answer {
+    text-align: justify;
+}
+.tableContainer.left .toggle .answer {
+    text-align: left;
+}
+.tableContainer .crossLine {
+    position: relative;
+}
+.tableContainer .crossLine span {
+    position: absolute;
+    font-size: 0.5em;
+    letter-spacing: -2px;
+}
+.tableContainer.brown .crossLine.top {
+    background-image: linear-gradient(to top right, #c7a08c 49%, #efe8e0, #c7a08c 51%);
+}
+.tableContainer.brown .crossLine.bottom {
+    background-image: linear-gradient(to bottom right, #c7a08c 49%, #efe8e0, #c7a08c 51%);
+}
+.tableContainer.green .crossLine.top {
+    background-image: linear-gradient(to top right, #93bfb2 49%, #fff, #93bfb2 51%);
+}
+.tableContainer.green .crossLine.bottom {
+    background-image: linear-gradient(to bottom right, #93bfb2 49%, #fff, #93bfb2 51%);
+}
+.popup_pages .scroll_container .tableContainer {
+    margin: inherit;
+}
+.tableContainer[data-self-check] table tr th {
+    text-align: justify;
+}
+.faceIcon {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.faceIcon_good {
+    background: url(../images/icon/icon_fave_good.png) center/auto 100px no-repeat;
+}
+.faceIcon_good.on {
+    background: url(../images/icon/icon_fave_good_on.png) center/auto 100px no-repeat;
+}
+.faceIcon_soso {
+    background: url(../images/icon/icon_fave_soso.png) center/auto 100px no-repeat;
+}
+.faceIcon_soso.on {
+    background: url(../images/icon/icon_fave_soso_on.png) center/auto 100px no-repeat;
+}
+.faceIcon_bad {
+    background: url(../images/icon/icon_fave_bad.png) center/auto 100px no-repeat;
+}
+.faceIcon_bad.on {
+    background: url(../images/icon/icon_fave_bad_on.png) center/auto 100px no-repeat;
+}
