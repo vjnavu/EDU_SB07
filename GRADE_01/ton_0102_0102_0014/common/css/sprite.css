@@ -1,0 +1,754 @@
+.characterImg {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    cursor: pointer;
+}
+
+/*.charSpriteImg {
+    width: 250px;
+    height: 310px;
+}*/
+
+.charSpriteImg {
+    width: 280px;
+    height: 365px;
+}
+.charSpriteImg > img {
+    width: 100%;
+}
+.charSpriteAni {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 310px;
+    opacity: 1;
+    background-position: 0 0;
+}
+
+.charSpriteAni.noEvent {
+    cursor: auto;
+}
+
+.characterText.paleYellow {
+	background:#f6f0d4;
+}
+.characterText.palePink {
+	background:#ffe5e7;
+}
+.characterText.paleBlue {
+	background:#d4f3f6;
+}
+.characterText.paleGreen {
+	background:#f3fcd0;
+}
+.characterText.palePurple {
+	background:#ece5ff;
+}
+
+/* 캐릭터 말풍선 색상 수정 */
+.characterText.paleYellow.line,
+.characterText.palePink.line,
+.characterText.paleBlue.line,
+.characterText.paleGreen.line,
+.characterText.palePurple.line {
+	background:#fff;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.characterText.paleYellow.line {
+	border:4px solid #fccd89;
+}
+.characterText.palePink.line {
+	border:4px solid #f7c1c9;
+}
+.characterText.paleBlue.line {
+	border:4px solid #c1e8ec;
+}
+.characterText.paleGreen.line {
+	border:4px solid #cde38f;
+}
+.characterText.palePurple.line {
+	border:4px solid #cabfe0;
+}
+.characterText.paleYellow .bubbleArrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #f6f0d4;
+    margin-top: -10px;
+}
+.characterText.palePink .bubbleArrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #ffe5e7;
+    margin-top: -10px;
+}
+.characterText.paleBlue .bubbleArrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #d4f3f6;
+    margin-top: -10px;
+}
+.characterText.paleGreen .bubbleArrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #f3fcd0;
+    margin-top: -10px;
+}
+.characterText.palePurple .bubbleArrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #ece5ff;
+    margin-top: -10px;
+}
+
+.playSequenceButton {
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    pointer-events: auto;
+
+}
+.arrowImg {
+    position: absolute;
+}
+
+.characterImg:not(.quiz_type) > div {
+	width: 210px;
+    height: 260px;
+    background-size: 139%;
+}
+.characterImg.circle {
+    position: relative;
+}
+.characterImg.circle:not(.quiz_type) > div {
+    position: absolute;
+    top: -16px;
+    left: -18px;
+    width: 210px;
+    height: 210px;
+    background-size: 100%;
+}
+.characterImg.circle:not(.quiz_type) > div.charSpriteImg,
+.characterImg.circle:not(.quiz_type) > div.charSpriteAni {    
+    background-size: 100%;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+.characterImg:not(.quiz_type) > div.charSpriteImg,
+.characterImg:not(.quiz_type) > div.charSpriteAni {
+    background-repeat: no-repeat !important;
+    background-position: bottom center !important;
+}
+.characterImg:not(.circle):not(.quiz_type) > div.charSpriteAni {
+    background-position: bottom center !important;
+}
+
+.spriteAniBox .characterImg.circle {
+    position: absolute;
+}
+.spriteAniBox .characterImg:not(.quiz_type) > div.charSpriteImg,
+.spriteAniBox .characterImg:not(.quiz_type) > div.charSpriteAni {
+    margin-bottom: 200px;
+}
+.spriteAniBox .characterImg.circle:not(.quiz_type) > div.charSpriteAni,
+.spriteAniBox .characterImg.circle:not(.quiz_type) > div.charSpriteImgCir {
+    position: absolute;
+    top: -16px;
+    left: -18px;
+    width: 210px;
+    height: 210px;
+    background-size: 100%;
+}
+.spriteAniBox .characterImg.circle:not(.quiz_type) > div.charSpriteImgCir {
+    background-position: center !important;
+}
+
+.charSpriteImg.ch_boni {
+    background-image: url('../../common/images/character/new/ch_boni.png');
+}
+.charSpriteImg.ch_dinggu {
+    background-image: url('../../common/images/character/new/ch_dinggu.png');
+}
+.charSpriteImg.ch_ken {
+    background-image: url('../../common/images/character/new/ch_ken.png');
+}
+.charSpriteImg.ch_lee {
+    background-image: url('../../common/images/character/new/ch_lee.png');
+}
+.charSpriteImg.ch_lron {
+    background-image: url('../../common/images/character/new/ch_lron.png');
+}
+.charSpriteImg.ch_mimi {
+    background-image: url('../../common/images/character/new/ch_mimi.png');
+}
+.charSpriteImg.ch_oku {
+    background-image: url('../../common/images/character/new/ch_oku.png');
+}
+.charSpriteImg.ch_ron {
+    background-image: url('../../common/images/character/new/ch_ron.png');
+}
+.highLightShow .charSpriteImg {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 210px; 
+    height: 260px; 
+    background-size: 139%; 
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, 0);
+}
+.characterImg.ch_boni div.charSpriteAni {
+    background-size: 146%;
+}
+.characterImg.ch_ken div.charSpriteAni {
+    background-size: 162%;
+}
+.characterImg.ch_lee div.charSpriteAni {
+    background-size: 140%;
+}
+.characterImg.ch_mimi div.charSpriteAni {
+    background-size: 148%;
+}
+.characterImg.ch_ron div.charSpriteAni {
+    background-size: 152%;
+}
+
+.characterImg.ch_boni + .characterText:before {    
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: -12px;
+    left: 50%;
+    margin: 0;
+    border-width: 20px 20px 0 0;
+    border-color: #f7c1c9 transparent transparent transparent;
+    transform: translate(-50%, 0) rotate(-135deg);
+}
+.characterImg.ch_ken + .characterText:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: -12px;
+    left: 50%;
+    margin: 0;
+    border-width: 20px 20px 0 0;
+    border-color: #c1e8ec transparent transparent transparent;
+    transform: translate(-50%, 0) rotate(-135deg);
+}
+.characterImg.ch_lee + .characterText:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: -12px;
+    left: 50%;
+    margin: 0;
+    border-width: 20px 20px 0 0;
+    border-color: #cde38f transparent transparent transparent;
+    transform: translate(-50%, 0) rotate(-135deg);
+}
+.characterImg.ch_mimi + .characterText:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: -12px;
+    left: 50%;
+    margin: 0;
+    border-width: 20px 20px 0 0;
+    border-color: #cabfe0 transparent transparent transparent;
+    transform: translate(-50%, 0) rotate(-135deg);
+}
+.characterImg.ch_ron + .characterText:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    bottom: -12px;
+    left: 50%;
+    margin-left: 0;
+    border-width: 20px 20px 0 0;
+    border-color: #fccd89 transparent transparent transparent;
+    transform: translate(-50%, 0) rotate(-135deg);
+}
+/* ********************************************************** */
+.bg_cartoon_01, .bg_cartoon_02, .bg_cartoon_03, .bg_cartoon_04 {
+	width: 1170px;
+	/*height: 654px;*/
+	height: 616px;
+}
+.bg_cartoon_01 {
+	background:url('../../common/images/background_cartoon_01.png') center no-repeat;
+	background-size: auto 100%;
+}
+.bg_cartoon_02 {
+	background:url('../../common/images/background_cartoon_02.png') center no-repeat;
+	background-size: auto 100%;
+}
+.bg_cartoon_03 {
+	background:url('../../common/images/background_cartoon_03.png') center no-repeat;
+	background-size: auto 100%;
+}
+.bg_cartoon_04 {
+	background:url('../../common/images/background_cartoon_04.png') center no-repeat;
+	background-size: auto 100%;
+}
+
+.bg_cartoon_01 .charSpriteImg.boy_1{
+    background-image: url('../../common/images/character/cartoon_01_boy_1.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_2{
+    background-image: url('../../common/images/character/cartoon_01_boy_2.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_3{
+    background-image: url('../../common/images/character/cartoon_01_boy_3.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_4{
+    background-image: url('../../common/images/character/cartoon_01_boy_4.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_1{
+    background-image: url('../../common/images/character/cartoon_01_girl_1.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_2{
+    background-image: url('../../common/images/character/cartoon_01_girl_2.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_3{
+    background-image: url('../../common/images/character/cartoon_01_girl_3.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_4{
+    background-image: url('../../common/images/character/cartoon_01_girl_4.png');
+}
+
+.bg_cartoon_01 .charSpriteImg.boy_1.charHover{
+    background-image: url('../../common/images/character/cartoon_01_boy_1_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_2.charHover{
+    background-image: url('../../common/images/character/cartoon_01_boy_2_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_3.charHover{
+    background-image: url('../../common/images/character/cartoon_01_boy_3_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_4.charHover{
+    background-image: url('../../common/images/character/cartoon_01_boy_4_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_1.charHover{
+    background-image: url('../../common/images/character/cartoon_01_girl_1_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_2.charHover{
+    background-image: url('../../common/images/character/cartoon_01_girl_2_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_3.charHover{
+    background-image: url('../../common/images/character/cartoon_01_girl_3_on.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_4.charHover{
+    background-image: url('../../common/images/character/cartoon_01_girl_4_on.png');
+}
+
+.bg_cartoon_01 .charSpriteImg.boy_1.charHover:hover, .bg_cartoon_01 .charSpriteImg.boy_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_boy_1_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_2.charHover:hover, .bg_cartoon_01 .charSpriteImg.boy_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_boy_2_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_3.charHover:hover, .bg_cartoon_01 .charSpriteImg.boy_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_boy_3_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.boy_4.charHover:hover, .bg_cartoon_01 .charSpriteImg.boy_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_boy_4_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_1.charHover:hover, .bg_cartoon_01 .charSpriteImg.girl_1.charHover.acitve{
+    background-image: url('../../common/images/character/cartoon_01_girl_1_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_2.charHover:hover, .bg_cartoon_01 .charSpriteImg.girl_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_girl_2_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_3.charHover:hover, .bg_cartoon_01 .charSpriteImg.girl_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_girl_3_hover.png');
+}
+.bg_cartoon_01 .charSpriteImg.girl_4.charHover:hover, .bg_cartoon_01 .charSpriteImg.girl_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_01_girl_4_hover.png');
+}
+
+.bg_cartoon_02 .charSpriteImg.boy_1{
+    background-image: url('../../common/images/character/cartoon_02_boy_1.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_2{
+    background-image: url('../../common/images/character/cartoon_02_boy_2.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_3{
+    background-image: url('../../common/images/character/cartoon_02_boy_3.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_4{
+    background-image: url('../../common/images/character/cartoon_02_boy_4.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_1{
+    background-image: url('../../common/images/character/cartoon_02_girl_1.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_2{
+    background-image: url('../../common/images/character/cartoon_02_girl_2.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_3{
+    background-image: url('../../common/images/character/cartoon_02_girl_3.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_4{
+    background-image: url('../../common/images/character/cartoon_02_girl_4.png');
+}
+
+.bg_cartoon_02 .charSpriteImg.boy_1.charHover{
+    background-image: url('../../common/images/character/cartoon_02_boy_1_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_2.charHover{
+    background-image: url('../../common/images/character/cartoon_02_boy_2_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_3.charHover{
+    background-image: url('../../common/images/character/cartoon_02_boy_3_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_4.charHover{
+    background-image: url('../../common/images/character/cartoon_02_boy_4_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_1.charHover{
+    background-image: url('../../common/images/character/cartoon_02_girl_1_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_2.charHover{
+    background-image: url('../../common/images/character/cartoon_02_girl_2_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_3.charHover{
+    background-image: url('../../common/images/character/cartoon_02_girl_3_on.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_4.charHover{
+    background-image: url('../../common/images/character/cartoon_02_girl_4_on.png');
+}
+
+.bg_cartoon_02 .charSpriteImg.boy_1.charHover:hover, .bg_cartoon_02 .charSpriteImg.boy_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_boy_1_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_2.charHover:hover, .bg_cartoon_02 .charSpriteImg.boy_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_boy_2_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_3.charHover:hover, .bg_cartoon_02 .charSpriteImg.boy_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_boy_3_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.boy_4.charHover:hover, .bg_cartoon_02 .charSpriteImg.boy_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_boy_4_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_1.charHover:hover, .bg_cartoon_02 .charSpriteImg.girl_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_girl_1_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_2.charHover:hover, .bg_cartoon_02 .charSpriteImg.girl_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_girl_2_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_3.charHover:hover, .bg_cartoon_02 .charSpriteImg.girl_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_girl_3_hover.png');
+}
+.bg_cartoon_02 .charSpriteImg.girl_4.charHover:hover, .bg_cartoon_02 .charSpriteImg.girl_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_02_girl_4_hover.png');
+}
+
+
+.bg_cartoon_03 .charSpriteImg.boy_1{
+    background-image: url('../../common/images/character/cartoon_03_boy_1.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_2{
+    background-image: url('../../common/images/character/cartoon_03_boy_2.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_3{
+    background-image: url('../../common/images/character/cartoon_03_boy_3.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_4{
+    background-image: url('../../common/images/character/cartoon_03_boy_4.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_1{
+    background-image: url('../../common/images/character/cartoon_03_girl_1.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_2{
+    background-image: url('../../common/images/character/cartoon_03_girl_2.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_3{
+    background-image: url('../../common/images/character/cartoon_03_girl_3.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_4{
+    background-image: url('../../common/images/character/cartoon_03_girl_4.png');
+}
+
+.bg_cartoon_03 .charSpriteImg.boy_1.charHover{
+    background-image: url('../../common/images/character/cartoon_03_boy_1_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_2.charHover{
+    background-image: url('../../common/images/character/cartoon_03_boy_2_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_3.charHover{
+    background-image: url('../../common/images/character/cartoon_03_boy_3_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_4.charHover{
+    background-image: url('../../common/images/character/cartoon_03_boy_4_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_1.charHover{
+    background-image: url('../../common/images/character/cartoon_03_girl_1_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_2.charHover{
+    background-image: url('../../common/images/character/cartoon_03_girl_2_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_3.charHover{
+    background-image: url('../../common/images/character/cartoon_03_girl_3_on.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_4.charHover{
+    background-image: url('../../common/images/character/cartoon_03_girl_4_on.png');
+}
+
+.bg_cartoon_03 .charSpriteImg.boy_1.charHover:hover, .bg_cartoon_03 .charSpriteImg.boy_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_boy_1_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_2.charHover:hover, .bg_cartoon_03 .charSpriteImg.boy_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_boy_2_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_3.charHover:hover, .bg_cartoon_03 .charSpriteImg.boy_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_boy_3_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.boy_4.charHover:hover, .bg_cartoon_03 .charSpriteImg.boy_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_boy_4_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_1.charHover:hover, .bg_cartoon_03 .charSpriteImg.girl_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_girl_1_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_2.charHover:hover, .bg_cartoon_03 .charSpriteImg.girl_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_girl_2_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_3.charHover:hover, .bg_cartoon_03 .charSpriteImg.girl_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_girl_3_hover.png');
+}
+.bg_cartoon_03 .charSpriteImg.girl_4.charHover:hover, .bg_cartoon_03 .charSpriteImg.girl_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_03_girl_4_hover.png');
+}
+
+
+.bg_cartoon_04 .charSpriteImg.boy_1{
+    background-image: url('../../common/images/character/cartoon_04_boy_1.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_2{
+    background-image: url('../../common/images/character/cartoon_04_boy_2.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_3{
+    background-image: url('../../common/images/character/cartoon_04_boy_3.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_4{
+    background-image: url('../../common/images/character/cartoon_04_boy_4.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_1{
+    background-image: url('../../common/images/character/cartoon_04_girl_1.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_2{
+    background-image: url('../../common/images/character/cartoon_04_girl_2.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_3{
+    background-image: url('../../common/images/character/cartoon_04_girl_3.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_4{
+    background-image: url('../../common/images/character/cartoon_04_girl_4.png');
+}
+
+.bg_cartoon_04 .charSpriteImg.boy_1.charHover{
+    background-image: url('../../common/images/character/cartoon_04_boy_1_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_2.charHover{
+    background-image: url('../../common/images/character/cartoon_04_boy_2_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_3.charHover{
+    background-image: url('../../common/images/character/cartoon_04_boy_3_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_4.charHover{
+    background-image: url('../../common/images/character/cartoon_04_boy_4_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_1.charHover{
+    background-image: url('../../common/images/character/cartoon_04_girl_1_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_2.charHover{
+    background-image: url('../../common/images/character/cartoon_04_girl_2_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_3.charHover{
+    background-image: url('../../common/images/character/cartoon_04_girl_3_on.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_4.charHover{
+    background-image: url('../../common/images/character/cartoon_04_girl_4_on.png');
+}
+
+.bg_cartoon_04 .charSpriteImg.boy_1.charHover:hover, .bg_cartoon_04 .charSpriteImg.boy_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_boy_1_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_2.charHover:hover, .bg_cartoon_04 .charSpriteImg.boy_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_boy_2_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_3.charHover:hover, .bg_cartoon_04 .charSpriteImg.boy_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_boy_3_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.boy_4.charHover:hover, .bg_cartoon_04 .charSpriteImg.boy_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_boy_4_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_1.charHover:hover, .bg_cartoon_04 .charSpriteImg.girl_1.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_girl_1_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_2.charHover:hover, .bg_cartoon_04 .charSpriteImg.girl_2.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_girl_2_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_3.charHover:hover, .bg_cartoon_04 .charSpriteImg.girl_3.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_girl_3_hover.png');
+}
+.bg_cartoon_04 .charSpriteImg.girl_4.charHover:hover, .bg_cartoon_04 .charSpriteImg.girl_4.charHover.active{
+    background-image: url('../../common/images/character/cartoon_04_girl_4_hover.png');
+}
+
+
+.bg_cartoon_01 .characterSet,
+.bg_cartoon_02 .characterSet,
+.bg_cartoon_03 .characterSet,
+.bg_cartoon_04 .characterSet {
+	position:absolute;
+}
+
+.bg_cartoon_01 .charSpriteImg.charHover,
+.bg_cartoon_02 .charSpriteImg.charHover,
+.bg_cartoon_03 .charSpriteImg.charHover,
+.bg_cartoon_04 .charSpriteImg.charHover {
+	cursor:pointer;
+}
+
+.bg_cartoon_01 .characterText,
+.bg_cartoon_02 .characterText,
+.bg_cartoon_03 .characterText,
+.bg_cartoon_04 .characterText {
+	position:absolute;
+}
+
+
+.bg_cartoon_01 .characterSet:nth-of-type(1) {
+    top: 224px;
+    left: 328px;
+	-ms-transform: scale(1.14);
+    -webkit-transform: scale(1.14);
+    transform: scale(1.14);
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+}
+.bg_cartoon_01 .characterSet:nth-of-type(1) ~ .characterSet {
+    top: 218px;
+    left: 573px;
+	-ms-transform: scale(1.14);
+    -webkit-transform: scale(1.14);
+    transform: scale(1.14);
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+}
+
+.bg_cartoon_02 .characterSet:nth-of-type(1) {
+    top: 192px;
+    left: 314px;
+}
+.bg_cartoon_02 .characterSet:nth-of-type(1) ~ .characterSet {
+    top: 192px;
+    left: 565px;
+}
+.bg_cartoon_02 .characterSet:nth-of-type(1) ~ .characterSet ~ .characterSet {
+    top: 245px;
+    left: 564px;
+}
+.bg_cartoon_02 .characterSet:nth-of-type(1) ~ .characterSet ~ .characterSet ~ .characterSet {
+    top: 267px;
+    left: 731px;
+}
+
+.bg_cartoon_03 .characterSet:nth-of-type(1) {
+    top: 152px;
+    left: 124px;
+}
+.bg_cartoon_03 .characterSet:nth-of-type(1) ~ .characterSet {
+	top: 118px;
+    left: 329px;
+}
+.bg_cartoon_03 .characterSet:nth-of-type(1) ~ .characterSet ~ .characterSet {
+    top: 111px;
+    left: 547px;
+}
+.bg_cartoon_03 .characterSet:nth-of-type(1) ~ .characterSet ~ .characterSet ~ .characterSet {
+    top: 152px;
+    left: 742px;
+}
+
+.bg_cartoon_04 .characterSet:nth-of-type(1) {
+    top: 200px;
+    left: 302px;
+}
+.bg_cartoon_04 .characterSet:nth-of-type(1) ~ .characterSet {
+    top: 187px;
+    left: 464px;
+}
+.bg_cartoon_04 .characterSet:nth-of-type(1) ~ .characterSet ~ .characterSet {
+	top: 235px;
+    left: 764px;
+}
+
+
+/* ********************************************************** */
+.bubbleBox .bubbleClose {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 18px;
+	height: 18px;
+	background: url('../../common/images/balloonCloseBtn.png') center center no-repeat;
+	background-size: 18px 18px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.bubbleBox .bubbleClose:hover {
+	background: url('../../common/images/balloonCloseBtn_over.png') center center no-repeat;
+	background-size: 18px 18px;
+}
+.characterText .bubbleClose {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 18px;
+	height: 18px;
+	background: url('../../common/images/balloonCloseBtn.png') center center no-repeat;
+	background-size: 18px 18px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.characterText .bubbleClose:hover {
+	background: url('../../common/images/balloonCloseBtn_over.png') center center no-repeat;
+	background-size: 18px 18px;
+}

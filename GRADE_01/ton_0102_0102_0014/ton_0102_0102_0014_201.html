@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .page_1 .character-item {
+            position: absolute;
+        }
+
+        #boy_4_c {
+            top: 50px;
+            left: 70px;
+        }
+
+        #girl_1_c {
+            bottom: 50px;
+            right: 70px;
+        }
+
+        .page_1 .balloon {
+            height: 150px;
+            width: 750px;
+        }
+
+        .page_1 .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .page_1 .balloon>span>img {
+            height: 100%;
+        }
+
+        /* Page 2 */
+        .noteText {
+            margin-top: 80px;
+        }
+
+        [data-popup-page="1"] {
+            top: 222px;
+            left: 628px;
+            width: 710px;
+        }
+
+        .dodbogi {
+            left: auto;
+            right: 80px;
+            top: 15px;
+        }
+
+        /* Popup Pages */
+        .group_text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 700px;
+        }
+
+        .group_text .top-text {
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                내가 알고 있는 자장가에 대해 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="내가 알고 있는 자장가에 대해 이야기해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="내가 알고 있는 자장가를 소개해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div id="boy_4_c" class="character-item"></div>
+                        <div id="girl_1_c" class="character-item"></div>
+                    </li>
+                    <li class="page_2" data-quiz="toggle">
+                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
+                        <div class="dodbogi" data-hover="" data-popup-btn="2" data-popup-parent="hidden">다양한 자장가 알아보기
+                        </div>
+                        <div class="noteText noteLine purple">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+
+                            <div class="text-exam flex-wrap">
+                                <!-- <div class="bullet exam">예</div> -->
+                                <div class="blueT">
+                                    <p><ins class="dot"></ins>
+                                        나는 ‘나무야’ 자장가를 알아요.
+                                    </p>
+                                    <p><ins class="dot"></ins>
+                                        나는 ‘섬집 아기’ 자장가를 좋아해요.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="writeBtn" data-answer-btn=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="1" data-drag="">
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            내가 알고 있는 자장가를 허밍 또는 가사로 불러보아요. 또 자장가를 누가, 언제, 왜 불러 주었는지 이야기해 보아요.
+                        </p>
+                    </div>
+                </li>
+                <li class="fullLine whole image" data-popup-page="2">
+                    <div class="full_content">
+                        <div class="basicSlider contentsBox doItContentnonPd nonPd" data-slide-container="popup">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev off" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover="" class=""></li>
+                                    <li data-hover="" class=""></li>
+                                    <li data-hover="" class=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1">
+                                    <a class="videoSubPlayBtn large youtube" data-youtube-id="_w6kKGpKDx0"
+                                        target="_blank">나무야
+                                    </a>
+                                    <div class="group_text">
+                                        <div class="top-text">나무야</div>
+                                        <div class="content">
+                                            나무야 나무야 서서 자는 나무야.<br>
+                                            나무야 나무야 다리 아프지.<br>
+                                            나무야 나무야 누워서 자거라.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2">
+                                    <a class="videoSubPlayBtn large youtube" data-youtube-id="zJv_IgY6DNs"
+                                        target="_blank">섬집 아기</a>
+                                    <div class="group_text">
+                                        <div class="top-text">나무야</div>
+                                        <div class="content">
+                                            엄마가 섬 그늘에 굴 따러 가면,<br>
+                                            아가가 혼자 남아 집을 보다가<br>
+                                            바다가 불러 주는 자장 노래에<br>
+                                            팔 베고 스르르르 잠이 듭니다.
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3">
+                                    <a class="videoSubPlayBtn large youtube" data-youtube-id="nJV_M2oe1fk"
+                                        target="_blank">자장자장 우리 아기</a>
+                                    <div class="group_text">
+                                        <div class="top-text">나무야</div>
+                                        <div class="content">
+                                            자장자장 우리 아기, 자장자장 우리 아기,<br>
+                                            꼬고 닭아 우지 마라, 우리 아기 잠을 깰라.<br>
+                                            멍멍 개야 짖지 마라, 우리 아기 잠을 깰라.<br>
+                                            자장자장 우리 아기, 자장자장 잘도 잔다.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0102_0102_0014_201/ton_0102_0102_0014_201_01.mp3',
+                text: `제목은 잘 모르겠어요.`,
+                class: 'middle left',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 10,
+                balloon_left: 220
+            });
+
+            $prite.girl1({
+                id: '#girl_1_c',
+                speech: 'right',
+                circle: true,
+                sound: './media/ton_0102_0102_0014_201/ton_0102_0102_0014_201_02.mp3',
+                text: `자장자장~ 이렇게 하는 거요.`,
+                class: 'middle right',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 10,
+                balloon_left: -800
+            });
+        });
+    </script>
+</body>
+
+</html>

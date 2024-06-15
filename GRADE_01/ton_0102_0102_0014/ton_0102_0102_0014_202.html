@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* Page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .img_bg {
+            background-image: url('./images/ton_0102_0102_0014_202/img_01.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        .character-flex {
+            margin-top: 400px;
+            gap: 290px;
+        }
+
+        .popBtn {
+            position: absolute;
+        }
+
+        .finger1 {
+            top: 90px;
+            left: 310px;
+        }
+
+        .finger2 {
+            top: 390px;
+            left: 500px;
+        }
+
+        .finger3 {
+            top: 140px;
+            left: 920px;
+        }
+
+        .popup_pages [data-popup-page="1"] h2 {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .popup_pages img {
+            height: 550px;
+            margin-top: 55px;
+        }
+
+        /* Page 2, 3, 4 */
+        .page_2 .videoBackground {
+            background: url('./images/ton_0102_0102_0014_202/img_05.jpg') no-repeat center / 100% 100%;
+        }
+
+        .page_3 .videoBackground {
+            background: url('./images/ton_0102_0102_0014_202/img_06.jpg') no-repeat center / 100% 100%;
+        }
+
+        .page_4 .videoBackground {
+            background: url('./images/ton_0102_0102_0014_202/img_07.png') no-repeat center / 100% 100%;
+        }
+
+        .youtubeTitleWrap .mediaSubContainer .screenPlayBtn:hover {
+            background: #d04511 url('../ko/contents/images/icon/icon_play.svg') 28px center/27px no-repeat;
+        }
+
+        .popBtn.voca {
+            top: -77px;
+            left: 280px;
+        }
+
+        [data-popup-page="2"] {
+            top: 135px;
+            left: 281px;
+            width: 707px;
+        }
+
+        /* Page 5 */
+
+        .char-box-03 .balloon {
+            top: -130px;
+            left: -67px;
+        }
+
+        .char-box-04 .balloon {
+            top: -130px;
+            left: -86px;
+        }
+
+        .char-box-05 .balloon {
+            top: -175px;
+            left: -101px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="aniContainer">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                노랫말을 보고 노래에 대해 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="노랫말을 보고 노래에 대해 이야기해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="노래를 듣고 허밍으로 따라 불러 볼까요?">영상 1</li>
+                    <li data-hover="" data-text="노래를 듣고 허밍으로 따라 불러 볼까요?">영상 2</li>
+                    <li data-hover="" data-text="노래를 듣고 허밍으로 따라 불러 볼까요?">영상 3</li>
+                    <li data-hover="" data-text="자장가 곡의 느낌을 이야기해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="img_bg"></div>
+                        <div class="character-flex">
+                            <div id="girl_1_c" class="character-item"></div>
+                            <div id="boy_2_c" class="character-item"></div>
+                            <div id="girl_2_c" class="character-item"></div>
+                        </div>
+                        <span class="click-finger-Btn blinkOn blinkOpacity finger1 popBtn" data-popup-btn="1"
+                            data-targetSlideNum="1"></span>
+                        <span class="click-finger-Btn blinkOn blinkOpacity finger2 popBtn" data-hover=""
+                            data-popup-btn="1" data-targetSlideNum="2"></span>
+                        <span class="click-finger-Btn blinkOn blinkOpacity finger3 popBtn" data-hover=""
+                            data-popup-btn="1" data-targetSlideNum="3"></span>
+                    </li>
+                    <li class="page_2">
+                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허</span>
+                        <div class="videoBackground youtubeTitleWrap">
+                            <div class="animationTitle">
+                                <div class="mediaSubContainer">
+                                    <h2>
+                                        둥개둥개 둥개야
+                                    </h2>
+                                    <button class="screenPlayBtn" title="재생" data-youtube-id="q8iKi45QZbQ"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허</span>
+                        <div class="videoBackground youtubeTitleWrap">
+                            <div class="animationTitle">
+                                <div class="mediaSubContainer">
+                                    <h2>
+                                        브람스 자장가
+                                    </h2>
+                                    <button class="screenPlayBtn" title="재생" data-youtube-id="f2muvo4o1ig"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_4">
+                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허</span>
+                        <div class="videoBackground youtubeTitleWrap">
+                            <div class="animationTitle">
+                                <div class="mediaSubContainer">
+                                    <h2>
+                                        모차르트 자장가
+                                    </h2>
+                                    <button class="screenPlayBtn" title="재생" data-youtube-id="eM6bF4mXOAo"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-02">
+                                <div class="char-box char-box-03" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon green bottom">
+                                        <span>모두 잔잔해요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-04" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon yellow bottom">
+                                        <span>들으니까 졸려요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-05" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+
+                                    <div class="balloon pink bottom">
+                                        <span>조용조용 말하는 것<br>
+                                            같아요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="whole image" data-popup-page="1">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>둥개둥개 둥개야</h2>
+                                <div class="wrap_img">
+                                    <img src="./images/ton_0102_0102_0014_202/img_02.png" />
+                                </div>
+                            </li>
+                            <li class="innerTab_2">
+                                <h2>브람스 자장가</h2>
+                                <img src="./images/ton_0102_0102_0014_202/img_03.png" />
+                            </li>
+                            <li class="innerTab_3">
+                                <h2>모차르트 자장가</h2>
+                                <img src="./images/ton_0102_0102_0014_202/img_04.png" />
+                            </li>
+                        </ul>
+
+                        <div class="moveButtonContainer" data-slide-btn-container="">
+                            <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                            <ul class="basicSlider_circle_tabs" data-tabs="">
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                            </ul>
+                            <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="min word" data-popup-page="2" data-drag>
+                    <h2>낱말 익히기</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            <span class="pink">허밍</span>
+                        </p>
+                        <p>입을 닫고 코로 소리를 내어 노래를 부르는 창법</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.girl1({
+                id: '#girl_1_c',
+                circle: true,
+                speech: 'right',
+                text: '‘둥개둥개 둥개야’는<br>처음 들어봤어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -110,
+            });
+
+            $prite.boy2({
+                id: '#boy_2_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/sample.mp3',
+                text: '‘브람스 자장가’는<br>엄마가 불러 주셨어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -130,
+            });
+
+            $prite.girl2({
+                id: '#girl_2_c',
+                circle: true,
+                speech: 'right',
+                text: '‘모차르트 자장가’는<br>피아노 학원에서<br>배웠어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -240,
+                balloon_left: -113,
+            });
+        });
+    </script>
+</body>
+
+</html>
