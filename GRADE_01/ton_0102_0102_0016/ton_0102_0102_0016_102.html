@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* Page 1 */
+        .wrap-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 565px;
+        }
+
+        .wrap-item img {
+            height: 550px;
+        }
+
+        .item1 {
+            top: 90px;
+            left: 630px;
+        }
+
+        .item2 {
+            top: 160px;
+            left: 770px;
+        }
+
+        .item3 {
+            top: 400px;
+            left: 750px;
+        }
+
+        .item4 {
+            top: 460px;
+            left: 630px;
+        }
+
+        .item5 {
+            top: 440px;
+            left: 530px;
+        }
+
+        .item6 {
+            top: 370px;
+            left: 460px;
+        }
+
+        .item7 {
+            top: 240px;
+            left: 450px;
+        }
+
+        .popupItem {
+            border: 4px solid #ffc4c9;
+            background: #ffeef3;
+            position: absolute;
+            opacity: 0;
+            padding: 10px 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .popupItem:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ffc4c9;
+            position: absolute;
+        }
+
+        .popupItem::after {
+            content: "";
+            transform: rotate(0deg);
+            height: 4px;
+            background-color: #ffc4c9;
+            position: absolute;
+        }
+
+        .popupItem1 {
+            top: 0;
+            left: 870px;
+        }
+
+        .popupItem1:before {
+            top: 90px;
+            left: -230px;
+        }
+
+        .popupItem1:after {
+            top: 64px;
+            left: -228px;
+            width: 230px;
+            transform: rotate(-16deg);
+        }
+
+        .popupItem2 {
+            top: 140px;
+            left: 950px;
+        }
+
+        .popupItem2:before {
+            top: 30px;
+            left: -184px;
+        }
+
+        .popupItem2:after {
+            top: 36px;
+            left: -170px;
+            width: 170px;
+            transform: rotate(0deg);
+        }
+
+        .popupItem3 {
+            top: 320px;
+            left: 950px;
+        }
+
+        .popupItem3:before {
+            top: 80px;
+            left: -200px;
+        }
+
+        .popupItem3:after {
+            top: 63px;
+            left: -197px;
+            width: 200px;
+            transform: rotate(-13deg);
+        }
+
+        .popupItem4 {
+            top: 460px;
+            left: 910px;
+        }
+
+        .popupItem4:before {
+            top: 0;
+            left: -275px;
+        }
+
+        .popupItem4:after {
+            top: 21px;
+            left: -271px;
+            width: 269px;
+            transform: rotate(6deg);
+        }
+
+        .popupItem5 {
+            top: 140px;
+            left: 0;
+        }
+
+        .popupItem5:before {
+            top: 99px;
+            left: 462px;
+        }
+
+        .popupItem5:after {
+            top: 70px;
+            left: 269px;
+            width: 210px;
+            transform: rotate(20deg);
+        }
+
+        .popupItem6 {
+            top: 250px;
+            left: 50px;
+        }
+
+        .popupItem6:before {
+            top: 120px;
+            left: 414px;
+        }
+
+        .popupItem6:after {
+            top: 96px;
+            left: 258px;
+            width: 170px;
+            transform: rotate(20deg);
+        }
+
+        .popupItem7 {
+            top: 420px;
+            left: 110px;
+        }
+
+        .popupItem7:before {
+            top: 20px;
+            left: 430px;
+        }
+
+        .popupItem7:after {
+            top: 44px;
+            left: 260px;
+            width: 187px;
+            transform: rotate(-12deg);
+        }
+
+        /* Page 2 */
+        .page_2 .flex {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .page_2 .flex img {
+            height: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                그림을 보고 친구가 무엇을 하고 있는지 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="그림을 보고 친구가 무엇을 하고 있는지 이야기해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="그림에 금메달이 그려져 있는 까닭은 무엇인가요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="wrap-item">
+                            <img src="./images/ton_0102_0102_0016_102/img_01.png" />
+                            <span class="click-finger-Btn blinkOn blinkOpacity item1" data-hover=""
+                                data-popup="1"></span>
+                            <span class="click-finger-Btn blinkOn blinkOpacity item2" data-hover=""
+                                data-popup="2"></span>
+                            <span class="click-finger-Btn blinkOn blinkOpacity item3" data-hover=""
+                                data-popup="3"></span>
+                            <span class="click-finger-Btn blinkOn blinkOpacity item4" data-hover=""
+                                data-popup="4"></span>
+                            <span class="click-finger-Btn blinkOn blinkOpacity item5" data-hover=""
+                                data-popup="5"></span>
+                            <span class="click-finger-Btn blinkOn blinkOpacity item6" data-hover=""
+                                data-popup="6"></span>
+                            <span class="click-finger-Btn blinkOn blinkOpacity item7" data-hover=""
+                                data-popup="7"></span>
+                            <div class="popupItem popupItem1" data-show="1">잠을 자요.</div>
+                            <div class="popupItem popupItem2" data-show="2">화장실에 가요.</div>
+                            <div class="popupItem popupItem3" data-show="3">학교에 가요.</div>
+                            <div class="popupItem popupItem4" data-show="4">공부를 해요.</div>
+                            <div class="popupItem popupItem7" data-show="5">운동을 하고<br>있어요.</div>
+                            <div class="popupItem popupItem6" data-show="6">목욕을 하고<br>있어요.</div>
+                            <div class="popupItem popupItem5" data-show="7">밥을 먹어요.</div>
+
+
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="flex">
+                            <div id="boy_1_c" class="character-item"></div>
+                            <img src="./images/ton_0102_0102_0016_102/img_01.png" />
+                            <div id="girl_4_c" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+
+            $(document).on('click', '.click-finger-Btn', function () {
+                var $data_popup = $(this).attr('data-popup');
+                $('.popupItem[data-show="' + $data_popup + '"]').css('opacity', '1');
+                $(this).hide();
+            });
+
+            $prite.boy1({
+                id: '#boy_1_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0102_0102_0016_102/ton_0102_0102_0016_102_01.mp3',
+                text: '친구가 하루를 잘<br>보내서 상을 받았어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -130,
+            });
+
+            $prite.girl4({
+                id: '#girl_4_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0102_0102_0016_102/ton_0102_0102_0016_102_02.mp3',
+                text: '우리가 보내는 하루가<br>금처럼 비싸고 소중해요. ',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -155,
+            });
+        });
+    </script>
+</body>
+
+</html>
