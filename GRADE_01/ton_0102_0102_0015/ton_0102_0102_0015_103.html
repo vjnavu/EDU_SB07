@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+    />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css" />
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css" />
+
+    <style>
+      .flex {
+        display: flex;
+        gap: 20px;
+        margin-top: 60px;
+      }
+
+      .flex .items {
+        flex: 1;
+      }
+
+      .flex .items img {
+        width: 100%;
+        height: 300px;
+        border: 4px solid #f3e7d6;
+        border-radius: 20px;
+      }
+
+      .flex .items .toggle.box {
+        margin-top: 10px;
+        display: block;
+        height: 120px;
+      }
+
+      .flex .items .toggle .answer {
+        height: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap" class="math">
+      <header>
+        <!-- 탭과 겹치는 경우 : gap 추가 -->
+        <div class="title purple">
+          학교에 오는 길에 보았던 다양한 사람들은 무엇을 하고 있었나요?
+        </div>
+      </header>
+      <main>
+        <!-- FRAME OF PAGE -->
+        <div class="basicSlider contentsBox" data-slide-container="main">
+          <ul class="basicSlider_tabs" data-tabs="">
+            <li
+              data-hover=""
+              data-text="학교에 오는 길에 보았던 다양한 사람들은 무엇을 하고 있었나요?"
+            >
+              물음 1
+            </li>
+            <li
+              data-hover=""
+              data-text="우리가 학교에서 공부하는 동안 가족들은 무엇을 하고 있을까요?"
+            >
+              물음 2
+            </li>
+          </ul>
+          <ul class="basicSlider_slides" data-slides="">
+            <li class="page_1" data-quiz="toggle">
+              <div class="flex">
+                <div class="items">
+                  <img src="./images/ton_0102_0102_0015_103/img_01.jpg" />
+                  <div class="toggle examBtn box" data-toggle-obj="1">
+                    <div class="answer" data-toggle-target="1">
+                      <div class="ls-2h">
+                        ‌‌‌‌빵집 아저씨가<br />빵을 팔 준비를 해요.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="items">
+                  <img src="./images/ton_0102_0102_0015_103/img_02.jpg" />
+                  <div class="toggle examBtn box" data-toggle-obj="2">
+                    <div class="answer" data-toggle-target="2">
+                      <div class="ls-2h">
+                        문구점 사장님이<br />학용품을 팔아요.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="items">
+                  <img src="./images/ton_0102_0102_0015_103/img_03.jpg" />
+                  <div class="toggle examBtn box" data-toggle-obj="4">
+                    <div class="answer" data-toggle-target="4">
+                      <div class="ls-2h">
+                        아주머니가 길<br />건너는 것을 도와줘요.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="examViewBtn"
+                type="button"
+                data-answer-btn=""
+              ></button>
+            </li>
+            <li class="page_2">
+              <div class="character-flex">
+                <div id="boy_1" class="character-item"></div>
+                <div id="boy_3" class="character-item"></div>
+                <div id="girl_4" class="character-item"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+
+      <section class="popup_container" data-popup-container="">
+        <ul class="popup_pages"></ul>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script
+      type="text/javascript"
+      src="../ko/contents/js/quiz/quiz.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../ko/contents/js/pageManager.js"
+    ></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        $(document).on("click", ".basicSlider_tabs li", function () {
+          if ($(this).data("text")) {
+            $("header .title").text($(this).data("text"));
+          }
+          if ($(this).attr("data-gap") == "true") {
+            $("header .title").addClass("gap");
+          } else {
+            $("header .title").removeClass("gap");
+          }
+        });
+
+        $prite.boy1({
+          id: "#boy_1",
+          speech: "right",
+          sound: "./media/ton_0102_0102_0015_103/ton_0102_0102_0015_103_01.mp3",
+          text: "할머니는 미용실에서<br>사람들 머리를 예쁘게 만들어<br>주시고 계실 거예요.",
+          class: "bottom",
+          callback_start: () => {
+            KmAudioPlayer.buttonClick();
+          },
+          callback_end: () => {
+            console.log("end");
+          },
+          balloon_top: -230,
+          balloon_left: -170,
+        });
+        $prite.boy3({
+          id: "#boy_3",
+          speech: "right",
+          sound: "./media/ton_0102_0102_0015_103/ton_0102_0102_0015_103_02.mp3",
+          text: "동생은 유치원에서<br>친구들과 즐겁게<br>놀고 있을 거예요.",
+          class: "bottom",
+          callback_start: () => {
+            KmAudioPlayer.buttonClick();
+          },
+          callback_end: () => {
+            console.log("end");
+          },
+          balloon_top: -230,
+          balloon_left: -80,
+        });
+        $prite.girl4({
+          id: "#girl_4",
+          speech: "right",
+          sound: "./media/ton_0102_0102_0015_103/ton_0102_0102_0015_103_03.mp3",
+          text: "엄마와 아빠는<br>회사에서 일하고<br>계실 거예요.",
+          class: "bottom",
+          callback_start: () => {
+            KmAudioPlayer.buttonClick();
+          },
+          callback_end: () => {
+            console.log("end");
+          },
+          balloon_top: -230,
+          balloon_left: -60,
+        });
+      });
+    </script>
+  </body>
+</html>
