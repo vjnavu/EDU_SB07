@@ -104,6 +104,72 @@
             left: 705px;
         }
 
+        .checkBox {
+            position: absolute;
+            width: 53px;
+            height: 54px;
+            border-radius: 4px;
+            border: 4px solid #DDD;
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+        .checkBox::before {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-image: url(./images/ton_0102_0102_0019_202/icon-x.png);
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: contain;
+            opacity: 0;
+        }
+        .checkBox.ans::before{
+            opacity: 1;
+        }
+        .checkBox1 {
+            top: 141px;
+            left: 552px;
+        }
+
+        .checkBox2 {
+            top: 224px;
+            left: 552px;
+        }
+
+        .checkBox3 {
+            top: 304px;
+            left: 552px;
+        }
+
+        .checkBox4 {
+            top: 386px;
+            left: 553px;
+        }
+
+        .checkBox5 {
+            top: 141px;
+            left: 985px;
+        }
+
+        .checkBox6 {
+            top: 224px;
+            left: 985px;
+        }
+
+        .checkBox7 {
+            top: 304px;
+            left: 986px;
+        }
+
+        .checkBox8 {
+            top: 386px;
+            left: 986px;
+        }
+
         /* .page_3 */
         .page_3 .flex {
             display: flex;
@@ -270,6 +336,16 @@
                         <div class="buttonContainer">
                             <button class="writeBtn" data-answer-btn=""></button>
                         </div>
+                        <div class="checkBoxGroup">
+                            <div class="checkBox checkBox1"></div>
+                            <div class="checkBox checkBox2"></div>
+                            <div class="checkBox checkBox3"></div>
+                            <div class="checkBox checkBox4"></div>
+                            <div class="checkBox checkBox5"></div>
+                            <div class="checkBox checkBox6"></div>
+                            <div class="checkBox checkBox7"></div>
+                            <div class="checkBox checkBox8"></div>
+                        </div>
                     </li>
                     <li class="page_3">
                         <div class="basicSlider contentsBox doItContent" data-slide-container="">
@@ -397,6 +473,13 @@
                     $('header .title').addClass('gap');
                 } else {
                     $('header .title').removeClass('gap');
+                }
+            });
+            $(document).on('click', '.checkBox', function () {
+                if ($(this).hasClass('ans')) {
+                    $(this).removeClass('ans');
+                } else {
+                    $(this).addClass('ans');
                 }
             });
         });
