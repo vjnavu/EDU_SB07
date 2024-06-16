@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* ///////// */
+        .zoomController {
+            top: 20px;
+        }
+
+        .zoomImgContainer {
+            width: 1365px;
+            height: 636px;
+        }
+
+        .page_zoom {
+            height: 100%;
+        }
+
+        .zoomContainer {
+            height: 100%;
+        }
+
+        .zoomImg {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .colorBox {
+            position: absolute;
+            z-index: 1;
+            border: 4px solid #ffc4c9;
+            background: #ffeef3;
+            display: none;
+            width: max-content;
+        }
+
+        .colorBox:before {
+            content: "";
+            background-color: #ffc4c9;
+            position: absolute;
+            width: 130px;
+            height: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .colorBox::after {
+            content: "";
+            background-color: #ffc4c9;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .click-finger-Btn {
+            z-index: 1;
+        }
+
+        [data-finger="1"] {
+            left: 708px;
+            top: 160px;
+        }
+
+        [data-finger="2"] {
+            top: 215px;
+            left: 810px;
+        }
+
+        [data-finger="3"] {
+            top: 315px;
+            left: 845px;
+        }
+
+        [data-finger="4"] {
+            top: 395px;
+            left: 805px;
+        }
+
+        [data-finger="5"] {
+            top: 435px;
+            left: 745px;
+        }
+
+        [data-finger="6"] {
+            top: 455px;
+            left: 625px
+        }
+
+        [data-finger="7"] {
+            top: 415px;
+            left: 515px;
+        }
+
+        [data-finger="8"] {
+            top: 335px;
+            left: 465px;
+        }
+
+        [data-finger="9"] {
+            top: 255px;
+            left: 455px;
+        }
+
+        [data-finger="10"] {
+            top: 155px;
+            left: 560px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .box-1 {
+            top: 0;
+            left: 900px;
+        }
+
+        .box-2 {
+            top: 150px;
+            left: 882px;
+        }
+
+        .box-3 {
+            top: 300px;
+            left: 964px;
+        }
+
+        .box-4 {
+            top: 430px;
+            left: 924px;
+        }
+
+        .box-5 {
+            top: 480px;
+            left: 850px;
+        }
+
+        .box-6 {
+            top: 430px;
+            left: 874px;
+        }
+
+        .box-7 {
+            top: 370px;
+            left: 0;
+        }
+
+        .box-8 {
+            top: 290px;
+            left: 50px;
+        }
+
+        .box-9 {
+            top: 200px;
+            left: 30px;
+        }
+
+        .box-10 {
+            top: 100px;
+            left: 30px;
+        }
+
+        .box-1:before {
+            left: -160px;
+            top: 140px;
+            transform: rotate(-15deg);
+            width: 160px;
+        }
+
+        .box-1::after {
+            right: 450px;
+            top: 162px;
+        }
+
+        .box-2:before {
+            left: -100px;
+            top: 100px;
+            transform: rotate(-15deg);
+            width: 100px;
+        }
+
+        .box-2::after {
+            right: 480px;
+            top: 112px;
+        }
+
+        .box-3:before {
+            left: -120px;
+            top: 30px;
+            transform: rotate(0deg);
+            width: 120px;
+        }
+
+        .box-3::after {
+            right: 414px;
+            top: 32px
+        }
+
+        .box-4:before {
+            left: -105px;
+            top: 10px;
+            transform: rotate(25deg);
+            width: 110px;
+        }
+
+        .box-4::after {
+            right: 435px;
+            top: -12px;
+        }
+
+        .box-5:before {
+            left: -105px;
+            top: -10px;
+            transform: rotate(25deg);
+            width: 110px;
+        }
+
+        .box-5::after {
+            right: 355px;
+            top: -32px;
+        }
+
+        .box-6:before {
+            left: -230px;
+            top: 40px;
+            transform: rotate(5deg);
+            width: 230px;
+        }
+
+        .box-6::after {
+            right: 518px;
+            top: 32px;
+        }
+
+        .box-7:before {
+            left: 395px;
+            top: 60px;
+            transform: rotate(0deg);
+            width: 130px;
+        }
+
+        .box-7::after {
+            right: -145px;
+            top: 60px;
+        }
+
+        .box-8:before {
+            left: 295px;
+            top: 60px;
+            transform: rotate(0deg);
+            width: 130px;
+        }
+
+        .box-8::after {
+            right: -145px;
+            top: 60px;
+        }
+
+        .box-9:before {
+            left: 344px;
+            top: 60px;
+            transform: rotate(20deg);
+            width: 100px;
+        }
+
+        .box-9::after {
+            right: -107px;
+            top: 78px;
+        }
+
+        .box-10:before {
+            left: 354px;
+            top: 50px;
+            transform: rotate(6deg);
+            width: 190px;
+        }
+
+        .box-10::after {
+            right: -200px;
+            top: 63px;
+        }
+
+
+        .close-speech-btn {
+            cursor: pointer;
+            pointer-events: all;
+            position: absolute;
+            right: -28px;
+            top: 2px;
+            width: 23px;
+            height: 23px;
+            background: url("./images/ton_0102_0102_0019_102/close_speech_button.png") no-repeat;
+            background-size: contain;
+        }
+
+        /* page 2 */
+        .noteText .dot {
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .noteText p.dot:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            border-radius: 50%;
+            background: #006ee6;
+        }
+
+        .table-box {
+            margin-top: 65px;
+        }
+
+        .noteText {
+            box-shadow: none;
+            height: 140px;
+            padding: 0;
+        }
+
+        .noteText .textareaWrap {
+            height: 130px;
+            padding: 0;
+        }
+
+        .noteText .text-exam.flex-wrap {
+            padding: 0;
+        }
+
+        .table-box {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .table-box table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-box td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .table-box td[colspan="2"] {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table-box tr {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-box td:first-child {
+            width: 30%;
+            flex-grow: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .table-box td:last-child {
+            width: 70%;
+            flex-grow: 7;
+        }
+        .table-box td{
+            padding: 2px 25px;   
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                교과서 54쪽 그림을 보면서 대희의 하루를 살펴볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="교과서 54쪽 그림을 보면서 대희의 하루를 살펴볼까요?">물음 1</li>
+                    <li data-hover="" data-text="대희와 나의 하루 생활을 비교해 보고 같은 점과 다른 점은 무엇인지 이야기해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="full_content">
+                            <div class="page_zoom zoom_img">
+                                <div class="zoomContainer horizon pointerOff">
+                                    <div class="zoomArea">
+                                        <div class="zoomImgContainer pointerOff">
+                                            <div class="zoomImg">
+                                                <img src="./images/ton_0102_0102_0019_102/img_01.png">
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="1"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="2"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="3"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="4"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="5"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="6"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="7"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="8"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="9"
+                                                    data-hover=""></span>
+                                                <span class="click-finger-Btn blinkOn blinkOpacity" data-finger="10"
+                                                    data-hover=""></span>
+                                                <div class="colorBox text-box has-cusor box-1">
+                                                    아침에<br>
+                                                    일찍 일어나요.
+                                                    <div class="close-speech-btn" data-close="1"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-2">
+                                                    가장 먼저 아침에<br>일어나 세수를 해요.
+                                                    <div class="close-speech-btn" data-close="2"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-3">
+                                                    아침밥을<br>
+                                                    골고루 먹어요.
+                                                    <div class="close-speech-btn" data-close="3"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-4">
+                                                    아침을 먹고<br>
+                                                    옷을 갈아입어요.
+                                                    <div class="close-speech-btn" data-close="4"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-5">
+                                                    학교에 가요.
+                                                    <div class="close-speech-btn" data-close="5"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-6">
+                                                    학교에서<br>
+                                                    수업을 들어요.
+                                                    <div class="close-speech-btn" data-close="6"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-7">
+                                                    수업이 끝나고<br>
+                                                    친구와 축구를 해요.
+                                                    <div class="close-speech-btn" data-close="7"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-8">
+                                                    해야할 숙제를<br>
+                                                    끝내요.
+                                                    <div class="close-speech-btn" data-close="8"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-9">
+                                                    저녁밥을 먹어요.
+                                                    <div class="close-speech-btn" data-close="9"></div>
+                                                </div>
+                                                <div class="colorBox text-box has-cusor box-10">
+                                                    일찍 잠에 들어요.
+                                                    <div class="close-speech-btn" data-close="10"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2" data-quiz>
+                        <div class="dodbogi" data-hover="" data-popup-btn="1" data-popup-parent="hidden">대희의 하루 생활 보기
+                        </div>
+
+                        <div class="table-box color-03 column purple">
+                            <table>
+                                <td colspan="2">대희와 나의 하루 생활</td>
+                                <tr style="height: 130px;">
+                                    <td>
+                                        <p>같은 점</p>
+                                    </td>
+                                    <td>
+                                        <div class="table-textWrap">
+                                            <div class="noteText noLine">
+                                                <div class="textareaWrap">
+                                                    <textarea class="textLine afterDisplay" type="text"
+                                                        placeholder="직접 쓰기" data-input-obj="" data-answer=" " onfocus=""
+                                                        onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                                </div>
+                                                <div class="text-exam flex-wrap">
+                                                    <div class="blueT">
+                                                        <p class="dot">아침에 일어나서 세수하고 아침밥을 먹어요.</p>
+                                                        <p class="dot">아침을 먹고 옷을 갈아입어요.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr style="height: 200px;">
+                                    <td>
+                                        <p>다른 점</p>
+                                    </td>
+                                    <td>
+                                        <div class="table-textWrap">
+                                            <div class="noteText noLine">
+                                                <div class="textareaWrap" style="height: 180px;">
+                                                    <textarea class="textLine afterDisplay" type="text"
+                                                        placeholder="직접 쓰기" data-input-obj="" data-answer=" " onfocus=""
+                                                        onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                                </div>
+                                                <div class="text-exam flex-wrap">
+                                                    <div class="blueT">
+                                                        <p class="dot">대희는 수업이 끝나고 친구와 축구를 하지만, 저는 친구와 놀이터에서 놀아요.</p>
+                                                        <p class="dot">저는 옷을 갈아입고 아침밥을 먹어요.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="writeBtn" data-answer-btn=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="whole image" data-popup-page="1">
+                    <img src="./images/ton_0102_0102_0019_102/img_01.png" alt="">
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $(document).on("click", ".click-finger-Btn", function () {
+                let finger = $(this).data("finger");
+                $(this).addClass("complete");
+                $(".box-" + finger).addClass("active");
+            });
+            $(document).on("click", ".close-speech-btn", function () {
+                let data_close = $(this).attr("data-close");
+                KmAudioPlayer.buttonClick();
+                $(this).parent().removeClass("active");
+                $(".click-finger-Btn")
+                    .filter('[data-finger="' + data_close + '"]')
+                    .removeClass("complete");
+            });
+            $(document).on("click", ".popup_closeBtn", function () {
+                $(".click-finger-Btn").removeClass("complete");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* 핵심 용어 */
+.sciWordUl {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    width: 1170px;
+    height: 616px;
+    padding: 80px 64px 50px 64px;
+    box-sizing: border-box;
+}
+.sciWordUl.two .sciWordBox {
+    width: 482px;
+    height: 294px;
+    margin: 10px 18px;
+	padding-bottom : 14px;
+}
+.sciWordUl:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.sciWordBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 183px;
+    margin: 10px 18px;
+	padding-bottom : 8px;
+    background-color: #fdd000;
+    border-radius: 16px;
+    box-sizing: border-box;
+	background: url('../../common/images/wordcard_01.png') no-repeat;
+    background-repeat: no-repeat;
+    background-position: 0px -1px;
+	background-size:auto 100%;
+}
+.sciWordBox:hover {
+	background: url('../../common/images/wordcard_01_over.png') no-repeat;
+    background-repeat: no-repeat;
+    background-position: 0px -1px;
+	background-size:auto 100%;
+}
+.sciWordBox .innerBg {
+    font-family: NotoB;
+    font-size: 35px;
+}
+.sciWordBox:hover {
+/*     background-color: #efcfa6; */
+}
+.sciWordBox.none {
+    pointer-events: none;
+}
+
+/* 용어 팝업 */
+.popbox.wordPopup .popupContents{
+	padding: 100px 87px 0px 87px;
+}
+
+.popbox.wordPopup .popupContents .leftContents{
+    width: 456px;
+    height: 480px;
+    float: left;
+	line-height:0;
+	margin-top:-10px;
+    box-sizing: border-box;
+}
+.popbox.wordPopup .popupContents .rightContents{
+    width: 494px;
+    height: 480px;
+	margin-left:45px;
+	padding-top:54px;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* 용어 팝업 - 슬라이드 */
+.popbox.wordPopup .sliderContainer{
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+	-webkit-justify-content:center;
+	justify-content:center;
+	-webkit-align-items:center;
+	align-items:center;
+	box-sizing:border-box;
+	bottom:100px;
+}
+.popbox.wordPopup .sliderDotBox{
+    height: 54px;
+	padding:7px 40px;
+	background:#f7f7f7;
+    border-radius: 0px;
+	margin:0px;
+    z-index: 0;
+    text-align: center;
+	box-sizing:border-box;
+}
+
+.popbox.wordPopup .sliderDotBox li{
+   display:inline-block;
+   width:300px;
+   height:40px;
+   margin:-1px 30px 0px 30px;
+   font-family: NotoB;
+   font-size:35px;
+   line-height:38px;
+   text-align:center;
+   border-radius:6px;
+   background:#d5d5d5;
+}
+.popbox.wordPopup .sliderDotBox li:hover,
+.popbox.wordPopup .sliderDotBox li.active{
+    background-color:#666666 !important;
+    color:#fff;
+}
+
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.popbox.wordPopup .innerPrevBtn,
+.popbox.wordPopup .innerNextBtn{position:relative; display:block !important;width:26px; height:56px; border-radius:0; z-index:10;}
+.popbox.wordPopup .innerPrevBtn{background:url(../../common/images/word_btn_prev.png) center/cover no-repeat; margin-right:-2px;}
+.popbox.wordPopup .innerNextBtn{background:url(../../common/images/word_btn_next.png) center/cover no-repeat; margin-left:-2px;}
+.popbox.wordPopup .innerPrevBtn.off{background:url(../../common/images/word_btn_prev_off.png) center/cover no-repeat; pointer-events:none;}
+.popbox.wordPopup .innerNextBtn.off{background:url(../../common/images/word_btn_next_off.png) center/cover no-repeat; pointer-events:none;}
+.popbox.wordPopup .innerPrevBtn:hover{background:url(../../common/images/word_btn_prev_over.png) center/cover no-repeat;}
+.popbox.wordPopup .innerNextBtn:hover{background:url(../../common/images/word_btn_next_over.png) center/cover no-repeat;}
+
+/* 왼쪽 용어 이미지 */
+.popbox.wordPopup .leftContentsTitle {
+    position: relative;
+	margin-left:22px;
+    font-size: 45px;
+    line-height: 43px;
+    display: inline-block;
+    width: 100%;
+    font-family: NotoKRB;
+    padding: 0;
+    text-align: justify;
+	vertical-align: top;
+    box-sizing: border-box;
+}
+.popbox.wordPopup .leftContentsTitle:before {
+    position: absolute;
+    content: '';
+    left: -22px;
+    top: 14px;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 4px solid #ff6600;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.popbox.wordPopup .leftContents .imgContainer{
+    width: 453px;
+    margin-top:20px;
+
+}
+.popbox.wordPopup .leftContents .imgContainer img{
+	width:100%;
+	max-height:310px;
+	border-radius: 12px;
+	vertical-align: top; 
+}
+.popbox.wordPopup .imgTitle{
+    font-size: 45px;
+    text-align: center;
+}
+
+
+/* 오른쪽 용어 설명*/
+.popbox.wordPopup .rightContents .scrollOutBox{
+	width:520px;
+	height:426px;
+}
+.rightContents .wordExplane{
+    width: 490px;
+    text-align: justify;
+}
+
+.rightContents .wordExplane .wordDL {line-height:0;; }
+.rightContents .wordExplane .wordDL + .wordDL{margin-top:40px;}
+.rightContents .wordExplane .wordDL:nth-child(1) dt{
+	position:absolute;
+	width:1px;
+	height:1px;
+	left:-9999px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
+.rightContents .wordExplane .wordDL:nth-child(1) .text{
+	display:block;
+    font-family: NotoB;
+	font-size:40px;
+	line-height:45px;
+}
+.rightContents .wordExplane .wordDL:nth-child(2) dt{
+	display:inline-block;
+	width:100%;
+	height:32px;
+	background:url(../../common/images/word_icon_ex.png) 0px 0px no-repeat;
+	background-size:52px 32px;
+	text-indent:-9999px;
+	margin-bottom:10px;
+}
+.popbox.wordPopup .rightContents .qBox{
+	width: 490px;
+	text-align:justify;
+	background:none;
+}
+
+.popbox.wordPopup .rightContents .qBoxBg{
+	border:none;
+	padding:6px 0px;
+	text-align:justify;
+}
+.popbox.wordPopup .rightContents .qBox.dapView .qBoxBg{
+	background:none;
+}
+.popbox.wordPopup .rightContents .qText{
+	font-family: NotoM;
+	font-size:38px;
+	line-height:42px;
+	color:#000;
+}

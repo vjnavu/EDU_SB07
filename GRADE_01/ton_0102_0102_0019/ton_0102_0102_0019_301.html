@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .flex {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .flex .items:first-child {
+            width: 750px;
+        }
+
+        .flex .items {
+            width: 100%;
+        }
+
+        #girl_3 {
+            position: absolute;
+            bottom: 30px;
+            left: 110px;
+        }
+
+        #girl_3 .balloon {
+            top: -230px !important;
+            left: -60px !important;
+            width: max-content;
+        }
+
+        .noteText .text-exam.flex-wrap {
+            width: 100%;
+            padding: 35px 40px 0px;
+            top: 0;
+            left: 0;
+        }
+
+        .noteText .dot {
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .noteText p.dot:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            border-radius: 50%;
+            background: #006ee6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                친구들의 실천 카드 내용을 듣고 느낀 점을 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-quiz="toggle">
+                        <div class="flex">
+                            <div class="items">
+                                <div id="girl_3" class="character-item"></div>
+                            </div>
+                            <div class="items">
+                                <div class="noteText noteLine purple">
+                                    <div class="textareaWrap">
+                                        <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                            data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                            autocomplete="off"></textarea>
+                                    </div>
+                                    <div class="text-exam flex-wrap">
+                                        <div class="blueT">
+                                            <p class="dot">실천 카드 내용을 잘 지키다보면 건강한 하루를 보낼 수 있을 것 같아요.</p>
+                                            <p class="dot">무리한 다짐보다는 내가 지킬 수 있는 실천 카드를 쓰는게 중요한 것 같아요.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buttonContainer">
+                                    <button class="writeBtn" data-answer-btn=""></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.girl3({
+                id: '#girl_3',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0019_301/ton_0102_0102_0019_301_01.mp3',
+                text: '실천 카드 내용을<br>꾸준히 실천하고<br>스스로 확인해요.',
+                class: 'b1 bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -150,
+            });
+        });
+    </script>
+</body>
+
+</html>

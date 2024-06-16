@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .flex {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .flex .items {
+            flex: 1;
+        }
+
+        .flex .items img {
+            width: 100%;
+            height: 300px;
+            border: 4px solid #F3E7D6;
+            border-radius: 20px;
+        }
+
+        .flex .items .toggle.box {
+            margin-top: 10px;
+            display: block;
+            height: 120px;
+        }
+
+        .flex .items .toggle .answer {
+            height: 100%;
+            text-align: center;
+        }
+
+        .examViewBtn {
+            right: 28px;
+        }
+
+        /* page 2 */
+        .page_2 img {
+            height: auto;
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .noteText {
+            box-shadow: none;
+            height: 80px;
+            padding: 0;
+            width: 265px;
+            position: absolute;
+        }
+
+        .noteText .textareaWrap {
+            height: 80px;
+            padding: 0;
+        }
+
+        .noteText .text-exam.flex-wrap {
+            padding: 0;
+        }
+
+        .blueT {
+            font-size: 38px;
+            margin-top: 8px;
+        }
+
+
+        .noteText1 {
+            top: 197px;
+            left: 270px;
+        }
+
+        .noteText2 {
+            top: 280px;
+            left: 270px;
+        }
+
+        .noteText3 {
+            top: 363px;
+            left: 270px;
+        }
+
+        .noteText4 {
+            top: 197px;
+            left: 705px;
+        }
+
+        .noteText5 {
+            top: 280px;
+            left: 705px;
+        }
+
+        .noteText6 {
+            top: 363px;
+            left: 705px;
+        }
+
+        /* .page_3 */
+        .page_3 .flex {
+            display: flex;
+            gap: 20px;
+            margin-top: 0;
+        }
+
+        .page_3 .flex .howtoBox {
+            width: 100%;
+        }
+
+        .page_3 .flex .howtoBox .text-box {
+            text-align: center;
+        }
+
+        .boxTextbg {
+            border: 4px solid #cabee0;
+            background: #f6effb;
+            line-height: 1.3em !important;
+            text-align: center;
+            box-sizing: border-box;
+            color: #000;
+            font-family: "NotoM";
+            padding: 10px 20px;
+            border-radius: 22px;
+            z-index: 1;
+            position: absolute;
+            left: 570px;
+            top: 0px;
+            font-size: 32px;
+        }
+
+        .boxTextbg:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 25px solid #cabee0;
+            left: 55px;
+            transform: rotate(0deg);
+            top: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple gap">
+                매일 아침과 저녁에 잊지 않고 해야 하는 일을 떠올려 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="매일 아침과 저녁에 잊지 않고 해야 하는 일을 떠올려 볼까요?" data-gap="true">활동 1</li>
+                    <li data-hover="" data-text="매일 해야 하는 일을 스스로 실천하고 확인해 볼까요?">활동 2</li>
+                    <li data-hover="" data-text="하루 실천 카드를 만들어 볼까요?">활동 3</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-quiz="toggle">
+                        <div class="flex">
+                            <div class="items">
+                                <img src="./images/ton_0102_0102_0019_202/img_01.jpg">
+                                <div class="toggle examBtn box" data-toggle-obj="7">
+                                    <div class="answer" data-toggle-target="7">
+                                        <div class="ls-2h">편식하지 않고 골고루<br>밥을 먹어요.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="./images/ton_0102_0102_0019_202/img_02.jpg">
+                                <div class="toggle examBtn box" data-toggle-obj="8">
+                                    <div class="answer" data-toggle-target="8">
+                                        <div class="ls-2h">몸을 깨끗하게<br>씻어요.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="./images/ton_0102_0102_0019_202/img_03.jpg">
+                                <div class="toggle examBtn box" data-toggle-obj="9">
+                                    <div class="answer" data-toggle-target="9">
+                                        <div class="ls-2h">‌‌‌일찍 자고<br>일찍 일어나요.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="examViewBtn" type="button" data-answer-btn=""></button>
+                    </li>
+                    <li class="page_2" data-quiz="toggle">
+                        <img src="./images/ton_0102_0102_0019_202/img_bg.png" alt="">
+                        <div class="noteText noLine noteText1">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">
+                                    스스로 일어나기
+                                </div>
+                            </div>
+                        </div>
+                        <div class="noteText noLine noteText2">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="noteText noLine noteText3">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="noteText noLine noteText4">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">목욕하기</div>
+                            </div>
+                        </div>
+                        <div class="noteText noLine noteText5">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="noteText noLine noteText6">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="writeBtn" data-answer-btn=""></button>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <a class="docDownBtn" href="" target="_blank" data-hover="">배움 자료</a>
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">1</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0019_202/img_01.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    교과서 참고 작품을 살펴보며<br>
+                                                    실천 카드를 어떻게 만들지 생각해 봐요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">2</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0019_202/img_02.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    나의 하루 일과를 생각하면서 매일 스스로 실천해야 하는 일은<br>
+                                                    무엇인지 고민하고 정해 봐요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">3</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0019_202/img_03.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    실천 카드를 만들고 스스로 실천하고 확인할 하루 일과를<br>실천 카드에 적어요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_4" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">4</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0019_202/img_04.png">
+                                                        <div class="boxTextbg">저는 스스로 일어나기, 세수하고 양치하기,<br>
+                                                            옷 입기, 숙제 하기를<br>
+                                                            매일 스스로 실천하겠습니다.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    만든 카드를 보며 실천 카드 내용을 발표해요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
