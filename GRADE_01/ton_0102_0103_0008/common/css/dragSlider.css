@@ -1,0 +1,206 @@
+.up {
+  position: absolute;
+  cursor: pointer;
+  top: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../../common/images/arrow_top.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+.up:hover {
+  background-image: url(../../common/images/arrow_top_hover.png);
+}
+.up.none {
+  background-image: url(../../common/images/arrow_top_gray.png);
+}
+
+.down {
+  position: absolute;
+  cursor: pointer;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../../common/images/arrow_bottom.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+.down:hover {
+  background-image: url(../../common/images/arrow_bottom_hover.png);
+}
+.down.none {
+  background-image: url(../../common/images/arrow_bottom_gray.png);
+}
+
+.next {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: -50px;
+  margin: auto;
+  background-image: url(../../common/images/arrow_right.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+.next:hover {
+  background-image: url(../../common/images/arrow_right_hover.png);
+}
+.next.none {
+  background-image: url(../../common/images/arrow_right_gray.png);
+}
+
+.prev {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: -50px;
+  margin: auto;
+  background-image: url(../../common/images/arrow_left.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+.prev:hover {
+  background-image: url(../../common/images/arrow_left_hover.png);
+}
+.prev.none {
+  background-image: url(../../common/images/arrow_left_gray.png);
+}
+
+.backImg {
+  object-fit: contain;
+  width: 500px;
+  height: 400px;
+}
+
+.dragBox {
+  position: absolute;
+  top: 240px;
+  right: 450px;
+  width: 300px;
+  height: 110px;
+}
+
+.dragBg {
+  position: absolute;
+  top: 240px;
+  right: 450px;
+  width: 300px;
+  background-size: contain;
+}
+
+.dragged {
+  display: none !important;
+}
+
+.tabContent {
+  width: 1170px;
+  height: 534px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  font-size: 45px;
+  font-family: "NanumSquareB";
+}
+
+.slideWrapBorder {
+  position: absolute;
+  right: 70px;
+  top: 160px;
+  width: 350px;
+  height: 350px;
+  border: 3px solid #f6e7d4;
+  border-radius: 12px;
+}
+
+.slideWrapBorder::before {
+  content: "붙임 딱지";
+  background: #f6e7d4;
+  font-family: YGJAL;
+  color: #d1af84;
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: #ccb087;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 0 10px;
+  border-radius: 12px 0 12px 0;
+}
+
+.slideWrap4,
+.slideWrap3,
+.slideWrap2,
+.slideWrap {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 300px;
+  height: 230px;
+}
+
+.slide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dragList4,
+.dragList3,
+.dragList2,
+.dragList {
+  width: 300px;
+  height: 2400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drag {
+  cursor: pointer;
+  width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto !important;
+}
+
+.clone {
+  width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: 0 0;
+}

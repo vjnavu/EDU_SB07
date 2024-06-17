@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <link rel="stylesheet" href="./proto_ton_006/css/proto_ton_006.css">
+    <style>
+        #gate h2::before {
+            content: '리듬 뛰기!\A몇 단계일까요?';
+            left: 0;
+        }
+
+        #gate h2 {
+            z-index: 1;
+            white-space: pre;
+            top: 205px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <!-- <div class="contentsTitle">
+                <div class="title">
+                    <div class="titleText">
+                    </div>
+                </div>
+            </div> -->
+            <!-- Content -->
+            <div class="contentsBox">
+                <div id="frame">
+                    <!-- 게임 설정 -->
+                    <div class="settingWrap">
+                        <div class="bg-setting">
+                            <button id="settings" type="button">설정</button>
+                        </div>
+                        <div class="settingPop">
+                            <div class="settingArea">
+                                <button id="goGatePageBtn" type="button">처음으로 돌아가기</button>
+                                <div id="soundControls">
+                                    <div>
+                                        <button id="backSoundControl" type="button">배경음</button>
+                                        <span>배경음</span>
+                                        <button id="effectSoundControl" type="button">효과음</button>
+                                        <span>효과음</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .background-sound : 소리 퀴즈 (소리 포함 퀴즈 1문제 이상이어야 함) -->
+                    <!-- .background-ox : ox 퀴즈 (소리 미포함 퀴즈, ox로만 구성) -->
+                    <!-- .background-select : 객관식 퀴즈 (소리 미포함 퀴즈, 객관식으로만 구성) -->
+                    <!-- .background-word : 초성 퀴즈 (소리 미포함 퀴즈, 초성으로만 구성) -->
+                    <!-- .background-fusion : 알쏭달쏭 퀴즈 (ox,객관식,초성 중 2가지 이상이 있어야 함) -->
+                    <div id="gate" class="background-select">
+                        <h1>객관식 퀴즈</h1>
+                        <h2>리듬 뛰기!<br>몇 단계일까요?</h2>
+                        <button id="quizStartBtn" type="button">시작</button>
+                        <div class="timer-contents">
+                            <p class="timer-info">타이머를 설정하세요.</p>
+                            <div id="timerDropDown">
+                                <input class="dropdown-input" type="text" maxlength="2" value="15">
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li data-time="10">10</li>
+                                        <li data-time="15">15</li>
+                                        <li data-time="20">20</li>
+                                        <li data-time="25">25</li>
+                                        <li data-time="30">30</li>
+                                        <li data-time="35">35</li>
+                                        <li data-time="40">40</li>
+                                        <li data-time="45">45</li>
+                                        <li data-time="50">50</li>
+                                        <li data-time="55">55</li>
+                                        <li data-time="60">60</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="quiz">
+                        <div id="quizSlider">
+                            <div class="quizBody">
+                                <!-- 슬라이드 -->
+                                <ul id="quizSliderContainer">
+                                    <!-- 객관식 유형 (소리X) 1줄 -->
+                                    <li class="multiChoiceQuiz line2">
+                                        <div class="quizHeader">
+                                            <div class="quizHeader-title">
+                                                <div class="quizHeader-name">객관식</div>
+                                                <div class="quizHeader-num">
+                                                    <span class="quizHeader-current-idx"></span>
+                                                    <span>/</span>
+                                                    <span class="quizHeader-total-idx"></span>
+                                                </div>
+                                            </div>
+                                            <div class="quizHeader-icon">객관식</div>
+                                        </div>
+                                        <div class="quizQuestion">
+                                            <p>
+                                                앞 친구가 다음 줄로 가자마자 차례로 들어와서
+                                                뛰는 것은 리듬 뛰기 몇 단계일까요?
+                                            </p>
+                                        </div>
+                                        <div class="quizAnswer">
+                                            <ul class="quizArea">
+                                                <img src="./images/ton_0102_0103_0008_302/img_01.png" alt="">
+                                                <li>
+                                                    <button type="button" data-quiz-button="true">1</button>
+                                                    <p class="multiChoiceQuiz-textArea">1단계</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-quiz-button="true">2</button>
+                                                    <p class="multiChoiceQuiz-textArea">2단계</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-quiz-button="true"
+                                                        data-answer="true">3</button>
+                                                    <p class="multiChoiceQuiz-textArea">3단계</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- 객관식 유형 (소리X) 2줄 -->
+                                    <li class="multiChoiceQuiz line2">
+                                        <div class="quizHeader">
+                                            <div class="quizHeader-title">
+                                                <div class="quizHeader-name">객관식</div>
+                                                <div class="quizHeader-num">
+                                                    <span class="quizHeader-current-idx"></span>
+                                                    <span>/</span>
+                                                    <span class="quizHeader-total-idx"></span>
+                                                </div>
+                                            </div>
+                                            <div class="quizHeader-icon">객관식</div>
+                                        </div>
+                                        <div class="quizQuestion">
+                                            <p>
+                                                서로 마주 보고 뛰며 이동하는 것은 리듬 뛰기
+                                                몇 단계일까요?
+                                            </p>
+                                        </div>
+                                        <div class="quizAnswer">
+                                            <ul class="quizArea">
+                                                <img src="./images/ton_0102_0103_0008_302/img_02.png" alt="">
+                                                <li>
+                                                    <button type="button" data-quiz-button="true">1</button>
+                                                    <p class="multiChoiceQuiz-textArea">1단계</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-quiz-button="true">2</button>
+                                                    <p class="multiChoiceQuiz-textArea">2단계</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-quiz-button="true"
+                                                        data-answer="true">3</button>
+                                                    <p class="multiChoiceQuiz-textArea">3단계</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- 객관식 유형 (소리X) 3줄 -->
+                                    <li class="multiChoiceQuiz line3">
+                                        <div class="quizHeader">
+                                            <div class="quizHeader-title">
+                                                <div class="quizHeader-name">객관식</div>
+                                                <div class="quizHeader-num">
+                                                    <span class="quizHeader-current-idx"></span>
+                                                    <span>/</span>
+                                                    <span class="quizHeader-total-idx"></span>
+                                                </div>
+                                            </div>
+                                            <div class="quizHeader-icon">객관식</div>
+                                        </div>
+                                        <div class="quizQuestion">
+                                            <p>
+                                                앞 친구가 마지막 줄의 후프에서 나가는 동시에
+                                                뒤 친구가 따라 들어와 뛰는 것은 리듬 뛰기
+                                                몇 단계일까요?
+                                            </p>
+                                        </div>
+                                        <div class="quizAnswer">
+                                            <ul class="quizArea">
+                                                <img src="./images/ton_0102_0103_0008_302/img_03.png" alt="">
+                                                <li>
+                                                    <button type="button" data-quiz-button="true">1</button>
+                                                    <p class="multiChoiceQuiz-textArea">1단계</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-quiz-button="true"
+                                                        data-answer="true">2</button>
+                                                    <p class="multiChoiceQuiz-textArea">2단계</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" data-quiz-button="true">3</button>
+                                                    <p class="multiChoiceQuiz-textArea">3단계</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- 슬라이드 버튼 -->
+                                <button class="quizSlider-btn btn-prev" type="button">이전</button>
+                                <button class="quizSlider-btn btn-next" type="button">다음</button>
+
+                                <!-- 칭찬 스티커 버튼 -->
+                                <button class="btn-compliment" type="button">
+                                    <div>칭찬<br>스티커</div>
+                                </button>
+
+                            </div>
+
+                            <div class="quizFooter">
+                                <!-- 타이머 -->
+                                <div id="timerArea">
+                                    <div id="timer">타이머</div>
+                                    <div id="btn-timer">타이머 버튼</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="backgroundPage">
+                        <div class="background-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Common Script -->
+    <script src="./common/js/jquery.js"></script>
+    <script src="./common/js/base.js"></script>
+    <script src="./common/js/common.js"></script>
+    <script src="./common/js/contents.js"></script>
+
+    <script src="./proto_ton_006/js/proto_ton_006.js"></script>
+</body>
+
+</html>
