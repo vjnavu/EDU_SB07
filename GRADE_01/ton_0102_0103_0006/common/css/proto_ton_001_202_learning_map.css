@@ -1,0 +1,494 @@
+@font-face {
+    font-family: sdchild;
+    src: url("./../font/SDChildfundkoreaTTF.ttf");
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+.bgImg {
+    height: 100%;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.study_guide {
+    right: 70px;
+    top: 20px;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 140px;
+    height: 70px;
+    pointer-events: auto;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popLearning:hover input {
+    outline: 2px solid #ddd;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.popLearning>input {
+    position: absolute;
+    top: -30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.popLearning.purple>input {
+    outline: solid 2px #CABEE0;
+    background-color: #E9E0FF;
+}
+
+.popLearning.blue>input {
+    outline: solid 2px #A8D6F6;
+    background-color: #E7F4F9;
+}
+
+.popLearning.pink>input {
+    outline: solid 2px #FFC4C9;
+    background-color: #FFDBDF;
+}
+
+.popLearning.yellow>input {
+    outline: solid 2px #FFD89E;
+    background-color: #FFEBCD;
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0;
+}
+
+.learning-wrap>span:not(:last-child) {
+    line-height: 1.2;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 6px 1px 6px;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+.learning-list>li .learning-item>li:hover,
+.learning-list>li .learning-item>li.off,
+.popLearning.complete:hover {
+    background-color: #FFDBEA;
+}
+
+.popbox .popLearning.pop0 .learning-badge {
+    line-height: 1.2;
+    font-family: "NotoM";
+    font-size: 15px;
+    padding: 1px 12px 1px 12px;
+}
+
+.popbox .popLearning.pop0 .learning-wrap {
+    gap: 1px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.popbox .popLearning.pop0 {
+    top: 180px;
+    left: 180px;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    font-family: "sdchild";
+    font-weight: bold;
+}
+
+.popbox .popLearning.pop1 {
+    top: 130px;
+    left: 280px;
+}
+
+.popbox .popLearning.pop2 {
+    top: 145px;
+    left: 374px;
+}
+
+.popbox .popLearning.pop3 {
+    top: 183px;
+    left: 445px;
+}
+
+.popbox .popLearning.pop4 {
+    top: 248px;
+    right: 720px;
+}
+
+.popbox .popLearning.pop5 {
+    top: 318px;
+    right: 686px;
+}
+
+.popbox .popLearning.pop6 {
+    top: 403px;
+    right: 674px;
+}
+
+.popbox .popLearning.pop7 {
+    top: 492px;
+    right: 701px;
+}
+
+.popbox .popLearning.pop8 {
+    top: 559px;
+    right: 736px;
+}
+
+.popbox .popLearning.pop9 {
+    top: 614px;
+    right: 788px;
+}
+
+.popbox .popLearning.pop10 {
+    top: 645px;
+    right: 870px;
+}
+
+.popbox .popLearning.pop11 {
+    top: 657px;
+    left: 277px;
+}
+
+.popbox .popLearning.pop12 {
+    top: 643px;
+    left: 199px;
+}
+
+.popbox .popLearning.pop13 {
+    top: 613px;
+    left: 120px;
+}
+
+.popbox .popLearning.pop14 {
+    top: 559px;
+    left: 69px;
+}
+
+.popbox .popLearning.pop15 {
+    top: 488px;
+    left: 29px;
+}
+
+.popbox .popLearning.pop16 {
+    top: 406px;
+    left: 5px;
+    height: 60px;
+}
+
+.popbox .popLearning.pop17 {
+    top: 314px;
+    left: 19px;
+}
+
+.popbox .popLearning.pop18 {
+    top: 241px;
+    left: 53px;
+}
+
+.popbox .popLearning.pop19 {
+    top: 180px;
+    left: 115px;
+}
+
+.popbox .popLearning.pop20 {
+    top: 144px;
+    left: 183px;
+}
+
+
+.popbox .popLearning.pop21 {
+    top: 110px;
+    left: 776px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop22 {
+    top: 100px;
+    left: 852px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop23 {
+    top: 188px;
+    right: 448px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop24 {
+    top: 169px;
+    right: 354px;
+    width: 64px;
+}
+
+.popbox .popLearning.pop25 {
+    top: 125px;
+    left: 998px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop26 {
+    top: 147px;
+    left: 1068px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop27 {
+    top: 141px;
+    left: 1131px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop28 {
+    top: 179px;
+    left: 1208px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop29 {
+    top: 115px;
+    left: 1235px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop30 {
+    top: 112px;
+    left: 1309px;
+    width: 60px;
+}
+
+.popbox .popLearning.pop31 {
+    top: 302px;
+    left: 996px;
+}
+
+.popbox .popLearning.pop32 {
+    top: 256px;
+    left: 1116px;
+}
+
+.popbox .popLearning.pop33 {
+    top: 320px;
+    left: 1106px;
+}
+
+.popbox .popLearning.pop34 {
+    top: 596px;
+    left: 844px;
+}
+
+.popbox .popLearning.pop35 {
+    top: 630px;
+    left: 970px;
+    width: max-content;
+}
+
+.popbox .popLearning.pop36 {
+    top: 560px;
+    left: 1051px;
+}
+
+.popbox .popLearning.pop37 {
+    top: 618px;
+    left: 1122px;
+}
+
+.popbox .popLearning.pop21 input {
+    left: 47px;
+}
+
+.popbox .popLearning.pop22 input {
+    left: 47px;
+    top: -15px;
+}
+
+.popbox .popLearning.pop23 input {
+    left: 40px;
+    top: -25px;
+}
+
+.popbox .popLearning.pop24 input {
+    left: 12px;
+    top: -33px;
+}
+
+.popbox .popLearning.pop25 input {
+    left: 13px;
+    top: -38px;
+}
+
+.popbox .popLearning.pop26 input {
+    left: 8px;
+}
+
+.popbox .popLearning.pop27 input {
+    left: -2px;
+}
+
+.popbox .popLearning.pop28 input {
+    left: -13px;
+    top: -30px;
+}
+
+.popbox .popLearning.pop29 input {
+    left: -23px;
+    top: -19px;
+}
+
+.popbox .popLearning.pop30 input {
+    left: -35px;
+}
+
+.popbox .popLearning.pop31 input {
+    top: -43px;
+}
+
+.popbox .popLearning.pop32 input {
+    top: -43px;
+}
+
+.popbox .popLearning.pop33 input {
+    left: 105px;
+    top: 6px;
+}
+
+.popbox .popLearning.pop35 input {
+    top: -35px;
+}
+
+.popbox .popLearning.pop42 {
+    bottom: 70px;
+    right: 185px;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    font-family: "sdchild";
+    font-weight: bold;
+}
+
+.popbox .popLearning.pop42 .learning-badge {
+    line-height: 1.2;
+    font-family: "NotoM";
+    font-size: 15px;
+    padding: 1px 12px 1px 12px;
+}
+
+.popbox .popLearning.pop42 .learning-wrap {
+    gap: 1px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.greenText {
+    color: #43ad50;
+}
+
+.starTitle {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+}
+
+.starTitle::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-image: url("../images/proto_ton_001/before.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.starArrow {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0px 3px 0px 0px;
+    position: absolute;
+    width: 38px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.starArrow.purple {
+    background-image: url("../images/proto_ton_001/arrow-purple.png");
+    bottom: 54px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.starArrow.blue {
+    background-image: url("../images/proto_ton_001/arrow-blue.png");
+    bottom: 54px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.starArrow.red {
+    background-image: url("../images/proto_ton_001/arrow-red.png");
+    bottom: 54px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

@@ -1,0 +1,1452 @@
+@charset "utf-8";
+/* 공통 */
+.hide {
+    display: none !important;
+}
+button {
+    cursor: pointer;
+}
+/* // 공통 */
+
+/* 프레임(비율) */
+#frame {
+    position: relative;
+    height: 100%;
+    font-size: 40px;
+    line-height: initial;
+}
+/* // 프레임(비율) */
+/* 설정 */
+.settingWrap {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+.bg-setting {
+    z-index: 250;
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    width: 75px;
+    height: 65px;
+    background-color: #0075c1;
+    box-shadow: 0px 8px 0px #004986;
+    border-radius: 0px 0px 34px 34px;
+}
+.bg-setting:hover {
+    background-color: #da31e7;
+    box-shadow: 0px 8px 0px #920783;
+    transition: all .1s;
+}
+#settings {
+    box-sizing: content-box;
+    border: 14px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/btn-setting.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all .1s;
+    text-indent: -9999px;
+    font-size: 0px;
+}
+.settingWrap.active #settings {
+    background-image: url("../images/btn-closeSetting.png");
+}
+.settingPop {
+    position: absolute;
+    right: -530px;
+    top: 38px;
+    z-index: 240;
+    background-color: #ffc5c5;
+    border: 5px solid #ffebd8;
+    border-right: 0px;
+    border-radius: 150px 0px 0px 150px;
+    transition: right .4s;
+    box-sizing: border-box;
+    width: max-content;
+}
+.settingWrap.active .settingPop {
+    right: 0px;
+}
+.settingArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 40px 50px;
+}
+#soundControls {
+    width: 100%;
+    position: relative;
+    background-color: #61a3ba;
+    border: 3px solid #7eb3c6;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 75px;
+    border-radius: 60px;
+}
+#soundControls::before {
+    content: "";
+    background-image: url("../images/icon-sound.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+#soundControls > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 7px 10px;
+    font-size: 20px;
+}
+#soundControls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #000;
+    font-size: 0px;
+    text-indent: -9999px;
+}
+#soundControls button.active {
+    background-image: url("../images/icon-soundCheck.png");
+    background-size: 18px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+#goGatePageBtn {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    color: #fff;
+    background-color: #eb6877;
+    border: 3px solid #e48a94;
+    border-radius: 60px;
+    box-sizing: border-box;
+    font-size: 0px;
+    text-indent: -9999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+#goGatePageBtn::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/icon-btnHome.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%,-50%);
+}
+#goGatePageBtn:hover {
+    background-color: #ec6941;
+    border: 3px solid #f59c81;
+    transition: all .1s;
+}
+/* // 설정 */
+/* 게이트 */
+#gate {
+    position: fixed;
+    top: 38px;
+    left: 0px;
+    right: 0px;
+    bottom: 38px;
+    background-color: #ddd;
+    z-index: 200;
+    padding: 84px 40px 40px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    background-image: url("../images/background-gate.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-sound::before {
+    content: "";
+    width: 225px;
+    height: 225px;
+    position: absolute;
+    left: 843px;
+    top: -17px;
+    background-image: url("../images/char-gate1-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-sound::after {
+    content: "";
+    width: 225px;
+    height: 225px;
+    position: absolute;
+    left: 203px;
+    top: 373px;
+    background-image: url("../images/char-gate1-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-ox::before {
+    content: "";
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    left: 880px;
+    top: 25px;
+    background-image: url("../images/char-gate2-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-ox::after {
+    content: "";
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 184px;
+    top: 381px;
+    background-image: url("../images/char-gate2-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-select::before {
+    content: "";
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    left: 882px;
+    top: 27px;
+    background-image: url("../images/char-gate3-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-select::after {
+    content: "";
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    left: 211px;
+    top: 348px;
+    background-image: url("../images/char-gate3-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-word::before {
+    content: "";
+    width: 155px;
+    height: 155px;
+    position: absolute;
+    left: 884px;
+    top: 22px;
+    background-image: url("../images/char-gate4-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-word::after {
+    content: "";
+    width: 265px;
+    height: 265px;
+    position: absolute;
+    left: 156px;
+    top: 310px;
+    background-image: url("../images/char-gate4-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-fusion::before {
+    content: "";
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    left: 912px;
+    top: 39px;
+    background-image: url("../images/char-gate5-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate.background-fusion::after {
+    content: "";
+    width: 186px;
+    height: 186px;
+    position: absolute;
+    left: 186px;
+    top: 354px;
+    background-image: url("../images/char-gate5-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gate h1 {
+    font-size: 40px;
+    color: #fff;
+    font-family: "YGJAL";
+    background-color: #e95c6c;
+    position: absolute;
+    left: 301px;
+    top: 100px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 3px solid #16305c;
+}
+#gate h1::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    background-image: url("../images/icon-title-before.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: -50px;
+    top: -20px;
+}
+#gate h2 {
+    font-family: "YGJAL";
+    font-size: 80px;
+    line-height: 1.2;
+    position: absolute;
+    left: 50%;
+    top: 211px;
+    transform: translate(-50%,0);
+    color: #16305c;
+}
+#gate h2::before {
+    content: "몸에서 나는 소리 알아맞히기";
+    position: absolute;
+    -webkit-text-stroke: 10px #fff;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    z-index: -1;
+}
+#gate h2 > strong {
+    color: #ff507d;
+
+}
+#quizStartBtn {
+    font-size: 45px;
+    padding: 20px 60px;
+    border-radius: 60px;
+    font-family: "YGJAL";
+    position: absolute;
+    left: 50%;
+    top: 416px;
+    transform: translate(-50%,0);
+    background-color: #f3d5dd;
+    color: #e95c6c;
+}
+#quizStartBtn:hover {
+    background-color: #ABF1FF;
+    transition: all .1s;
+}
+.timer-contents {
+    position: absolute;
+    box-sizing: border-box;
+    background-image: url("../images/line.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 85%;
+    height: 100px;
+    margin: auto;
+    bottom: 15px;
+    left: 60px;
+}
+.timer-contents::before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 130px;
+    background-image: url("../images/fire.gif");
+    background-size: 160% 160%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -63px;
+    top: -7px;
+}
+.timer-info {
+    position: absolute;
+    right: -130px;
+    top: -65px;
+    font-size: 20px;
+    background-image: url("../images/balloon.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 15px 20px 32px;
+    color: #16305c;
+    font-family: 'YGJAL';
+}
+/* #soundControls {
+    width: 100%;
+    position: absolute;
+    background-color: #e4007f;
+    border: 3px solid #ea68a2;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 75px;
+    border-radius: 60px;
+    left: 151px;
+    top: 326px;
+    width: 297px;
+}
+#soundControls::before {
+    content: "";
+    background-image: url("../images/icon-sound.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+#soundControls > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 22px;
+}
+#soundControls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #000;
+    font-size: 0px;
+    text-indent: -9999px;
+}
+#soundControls button.active {
+    background-image: url("../images/icon-soundCheck.png");
+    background-size: 18px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+} */
+/* // 게이트 */
+
+/* 드롭다운 */
+.dropdown-input {
+    padding: 32px 55px 20px 18px;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    color: #fff;
+    box-sizing: border-box;
+    height: 100%;
+    background-image: url("../images/bomb.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1;
+}
+#timerDropDown::after {
+    content: "";
+    width: 16px;
+    height: 9px;
+    background-image: url("../images/icon-dropdownarrow.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 38px;
+    top: 53%;
+    z-index: 1;
+    transform: rotate(-180deg);
+    transition: transform .3s;
+}
+#timerDropDown {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 95px;
+    right: -111px;
+    top: 1px;
+}
+#timerDropDown.active::after {
+    transform: rotate(0deg);
+}
+#timerDropDown.active .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px 5px 10px 5px;
+    border: 5px solid #000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    bottom: 2px;
+    left: 0;
+    right: 28px;
+    text-align: center;
+    border-radius: 30px 30px 60px 60px;
+    box-sizing: border-box;
+    border-bottom: 84px solid transparent;
+    font-size: 30px;
+}
+.dropdown-content > ul {
+    overflow: auto;
+    max-height: 123px;
+}
+/* 전체 스크롤바에 대한 스타일 */
+.dropdown-content > ul::-webkit-scrollbar {
+    width: 12px; /* 스크롤바의 너비 설정 */
+}
+  
+.dropdown-content > ul::-webkit-scrollbar-thumb {
+    background-color: #888; /* 스크롤바의 색상 설정 */
+    border-radius: 6px; /* 스크롤바의 모서리를 둥글게 만듭니다. */
+}
+  
+  /* Firefox에서 스크롤바 스타일링 */
+  /* Mozilla Firefox */
+.dropdown-content > ul {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}
+  
+.dropdown-content > ul::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+.dropdown-content > ul::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+.dropdown-content > ul > li {
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+/* // 드롭다운 */
+
+/* 퀴즈 */
+#quiz {
+    position: relative;
+    height: 100%;
+    background-image: url("../images/background-quiz.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.quizHeader {
+    position: absolute;
+    left: calc(-144px + 60px);
+    top: 0px;
+    right: 0px;
+}
+.quizHeader-title {
+    font-family: "YGJAL";
+    position: absolute;
+    top: -105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    color: #16305c;
+    gap: 5px;
+}
+.quizHeader-name {
+    width: 100px;
+    text-align: center;
+}
+.quizHeader-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+.quizHeader-current-idx {
+    color: #e95c6c;
+}
+.quizHeader-icon {
+    display: none;
+    position: absolute;
+    right: 89px;
+    top: -51px;
+    color: #ffd500;
+    -webkit-text-stroke: 2px #000;
+    font-family: "NotoBK";
+    font-size: 35px;
+}
+.quizHeader-icon > span {
+    color: #6788ff;
+    -webkit-text-stroke: 2px #000;
+}
+.quizBody {
+    position: absolute;
+    left: 144px;
+    right: 152px;
+    top: 122px;
+    bottom: 98px;
+}
+.quizFooter {
+    position: absolute;
+    left: 50px;
+    right: 120px;
+    bottom: 15px;
+}
+button[data-quiz-button].disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.oxQuiz button[data-quiz-button] {
+    background-image: url("../images/box.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 95px 75px 60px 75px;
+    transition: all .1s;
+}
+.oxQuiz button[data-quiz-button].answerO > div {
+    background-color: #009e96;
+    background-image: url("../images/icon-oxQuiz-o.png");
+    background-size: 60px 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.oxQuiz button[data-quiz-button].answerX > div {
+    background-color: #e95c6c;
+    background-image: url("../images/icon-oxQuiz-x.png");
+    background-size: 50px 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.oxQuiz button[data-quiz-button] > div {
+    width: 120px;
+    height: 120px;
+    font-size: 0px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    overflow: hidden;
+    transition: all .1s;
+}
+.oxQuiz button[data-quiz-button].answerO:hover {
+    background-image: url("../images/box-hover.png");
+}
+.oxQuiz button[data-quiz-button].answerX:hover {
+    background-image: url("../images/box-hover.png");
+}
+.oxQuiz button.answerO[data-quiz-button]:hover > div {
+    background-color: #01479d;
+}
+.oxQuiz button.answerX[data-quiz-button]:hover > div {
+    background-color: #e70012;
+}
+.oxQuiz button[data-quiz-button][data-answer="true"].answerO.disable {
+    background-image: url("../images/box-hover.png");
+}
+.oxQuiz button[data-quiz-button][data-answer="true"].answerO.disable > div {
+    background-color: #01479d;
+}
+.oxQuiz button[data-quiz-button][data-answer="true"].answerX.disable {
+    background-image: url("../images/box-hover.png");
+}
+.oxQuiz button[data-quiz-button][data-answer="true"].answerX.disable > div {
+    background-color: #e70012;
+}
+button[data-quiz-sound] {
+    font-size: 0px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url("../images/icon-play.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+button[data-quiz-sound]:hover {
+    transform: translateY(-15px);
+    transition: all .1s;
+}
+button[data-quiz-sound].play {
+    background-image: url("../images/icon-stop.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.initialQuiz-textArea input[type="text"].disable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.initialQuiz-textArea input[type="text"]::placeholder {
+    color: #fdb6b6 !important;
+    -webkit-text-stroke: 2px #000;
+}
+.initialQuiz-textArea input[type="text"].correct {
+    color: #6788ff;
+    -webkit-text-stroke: 2px #000;
+}
+.initialQuiz-textArea input[type="text"].incorrect {
+    color: #ec6941;
+    -webkit-text-stroke: 2px #000;
+}
+.quizQuestion {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 3px;
+    bottom: 79%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #16305c;
+    padding: 20px 40px;
+}
+.quizQuestion > p {
+    font-size: 45px;
+    font-family: "YGJAL";
+    position: relative;
+    padding-left: 65px;
+    box-sizing: border-box;
+    line-height: 1.2;
+    width: 100%;
+    text-align: justify;
+}
+.quizQuestion > p::before {    
+    content: "Q";
+    font-size: 70px;
+    color: #e95c6c;
+    position: absolute;
+    left: 0px;
+    top: -15px;
+}
+.quizQuestion.soundNote::after {
+    content: "";
+    width: 100px;
+    height: 68px;
+    position: absolute;
+    right: 17px;
+    bottom: 10px;
+    background-image: url("../images/icon-soundNote.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    display: none;
+}
+.quizAnswer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 21%;
+    bottom: 0px;
+    border-radius: 0px 0px 25px 25px;
+    overflow: hidden;
+}
+.oxQuiz .quizArea {
+    gap: 20px;
+}
+.quizArea {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.quizSoundArea + .quizArea {
+    box-sizing: border-box;
+    padding: 50px 50px 50px 330px;
+}
+.quizSoundArea {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+}
+.quizSoundArea-info b {
+    color: #000;
+}
+.quizSoundArea-info {
+    font-family: "YGJAL";
+    font-size: 16px;
+    background-color: #f5f5f5;
+    padding: 14px 15px 14px 45px;
+    box-sizing: border-box;
+    border: 2px solid #999;
+    border-radius: 60px;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #666;
+}
+.quizSoundArea-info::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url("../images/icon-play-alarm.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.soundEffect {
+    position: absolute;
+    left: 150px;
+    bottom: 50px;
+    width: 80px;
+    height: 120px;
+    background-image: url("../images/rydhm.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size: 0px;
+    text-indent: -9999px;
+}
+.soundEffect.play {
+    animation: playSound 1s infinite;
+}
+@keyframes playSound {
+    0% {
+        background-image: url("../images/rydhm.png");
+    }
+    30% {
+        background-image: url("../images/rydhm.png");
+    }
+    33.33% {
+        background-image: url("../images/rydhm1.png");
+    }
+    63.33% {
+        background-image: url("../images/rydhm1.png");
+    }
+    66.66% {
+        background-image: url("../images/rydhm2.png");
+    }
+    96.66% {
+        background-image: url("../images/rydhm2.png");
+    }
+    100% {
+        background-image: url("../images/rydhm.png");
+    }
+}
+.initialQuiz-textArea {
+    font-family: "YGJAL";
+    line-height: 2;
+    font-size: 50px;
+    word-break: break-word;
+    line-break: anywhere;
+}
+.initialQuiz input[data-answer] {
+    font-family: "YGJAL";
+    background-color: transparent;
+    background-image: url("../images/box.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 25px 20px 15px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 50px;
+    width: 95px;
+}
+.initialQuizInfo {
+    position: absolute;
+    right: 125px;
+    bottom: 0px;
+    font-size: 20px;
+    background-image: url("../images/balloon2.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 15px 40px 15px 25px;
+    font-family: 'YGJAL';
+}
+.initialQuizInfo::before {
+    content: "";
+    width: 80px;
+    height: 55px;
+    background-image: url("../images/icon-bee.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 265px;
+    bottom: -5px;
+}
+.initialQuizInfo > b {
+    color: #e95c6c;
+}
+.multiChoiceQuiz .quizArea {
+    gap: 30px;
+}
+.multiChoiceQuiz .quizArea li {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.multiChoiceQuiz-textArea {
+    font-family: "YGJAL";
+}
+.multiChoiceQuiz .quizArea button[data-quiz-button] {
+    font-family: "YGJAL";
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border: 5px solid #000;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.multiChoiceQuiz .quizArea button[data-quiz-button]:hover {
+    background-color: #ec6941;
+    margin-bottom: 20px;
+    transition: all .1s;
+}
+.multiChoiceQuiz .quizArea button[data-quiz-button]:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+    transform: translate(-50%,0);
+    width: 30px;
+    height: 7px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+.multiChoiceQuiz .quizArea button.disable[data-quiz-button][data-answer="true"] {
+    background-color: #ffd500;
+}
+.line2 .quizArea {
+    padding: 40px 50px;
+}
+.line2 .quizSoundArea + .quizArea {
+    padding: 40px 50px 40px 330px;
+}
+.line2 .quizQuestion {
+    bottom: 66%;
+}
+.line2 .quizAnswer {
+    top: 34%;
+}
+.line2.oxQuiz button[data-quiz-button] {
+    padding: 74px 64px 54px 64px;
+}
+.line2.oxQuiz button[data-quiz-button] > div {
+    width: 100px;
+    height: 100px;
+}
+.line2 .quizSoundArea-info {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.line2 button[data-quiz-sound] {
+    width: 70px;
+    height: 70px;
+}
+.line2 .soundEffect {
+    left: 156px;
+    bottom: 40px;
+    width: 70px;
+    height: 105px;
+}
+.line2 button[data-quiz-sound]:hover {
+    transform: translateY(-10px);
+}
+.line2.oxQuiz button[data-quiz-button].answerO > div {
+    background-size: 50px 50px;
+}
+.line2.oxQuiz button[data-quiz-button].answerX > div {
+    background-size: 40px 40px;
+}
+.multiChoiceQuiz.line2 button[data-quiz-sound] {
+    width: 80px;
+    height: 80px;
+}
+.multiChoiceQuiz.line2 button[data-quiz-sound]:hover {
+    transform: translateY(-15px);
+}
+.multiChoiceQuiz.line2 .soundEffect {
+    left: 150px;
+    bottom: 50px;
+    width: 80px;
+    height: 120px;
+}
+.multiChoiceQuiz.line2 button[data-quiz-sound]:hover {
+    transform: translateY(-15px);
+}
+.line3 .quizArea {
+    padding: 30px 50px;
+} 
+.line3 .quizSoundArea + .quizArea {
+    padding: 30px 50px 30px 330px;
+}
+.line3 .quizAnswer {
+    top: 46%;
+}
+.line3 .quizQuestion {
+    bottom: 54%;
+}
+.line3.oxQuiz button[data-quiz-button] {
+    padding: 64px 56px 49px 56px;
+}
+.line3.oxQuiz button[data-quiz-button] > div {
+    width: 80px;
+    height: 80px;
+}
+.line3 .quizSoundArea-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.line3 button[data-quiz-sound] {
+    width: 50px;
+    height: 50px;
+}
+.line3 .soundEffect {
+    left: 166px;
+    bottom: 30px;
+    width: 50px;
+    height: 77px;
+}
+.line3 button[data-quiz-sound]:hover {
+    transform: translateY(-5px);
+}
+.line3.oxQuiz button[data-quiz-button].answerO > div {
+    background-size: 40px 40px;
+}
+.line3.oxQuiz button[data-quiz-button].answerX > div {
+    background-size: 30px 30px;
+}
+.multiChoiceQuiz.line3 button[data-quiz-sound] {
+    width: 80px;
+    height: 80px;
+}
+.multiChoiceQuiz.line3 button[data-quiz-sound]:hover {
+    transform: translateY(-15px);
+}
+.multiChoiceQuiz.line3 .soundEffect {
+    left: 150px;
+    bottom: 50px;
+    width: 80px;
+    height: 120px;
+}
+.multiChoiceQuiz.line3 button[data-quiz-sound]:hover {
+    transform: translateY(-15px);
+}
+.initialQuiz .size1 input[data-answer] {
+    padding: 65px 55px 45px 55px;
+    width: 205px;
+    font-size: 80px;
+}
+.initialQuiz .size2 input[data-answer] {
+    padding: 55px 45px 35px 45px;
+    width: 175px;
+    font-size: 70px;
+}
+.initialQuiz .size3 input[data-answer] {
+    padding: 45px 35px 25px 35px;
+    width: 145px;
+    font-size: 60px;
+}
+/* //퀴즈 */
+
+/* 퀴즈 슬라이드 */
+#quizSlider {
+    position: relative;
+    height: 100%;
+}
+#quizSliderContainer {
+    position: relative;
+    height: 100%;
+}
+#quizSliderContainer > li {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition: opacity .1s;
+}
+#quizSliderContainer > li.show {
+    opacity: 1;
+    z-index: 100;
+}
+/* // 퀴즈 슬라이드 */
+
+/* 퀴즈 슬라이드 버튼 */
+.quizSlider-btn {
+    position: absolute;
+    opacity: 1;
+    font-size: 0px;
+    text-indent: -9999px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    background-color: #16305c;
+    border-radius: 50%;
+}
+.quizSlider-btn:hover {
+    background-color: #e95c6c;
+    transition: all .1s;
+}
+.quizSlider-btn.disable {
+    display: none;
+    pointer-events: none;
+}
+.quizSlider-btn.btn-prev {
+    left: -36px;
+    top: 58%;
+    transform: translate(0,-50%);
+    background-image: url("../images/arrow-left.png");
+    background-size: 18px 28px;
+    background-position: 44% center;
+    background-repeat: no-repeat;
+}
+.quizSlider-btn.btn-next {
+    right: -36px;
+    top: 58%;
+    transform: translate(0,-50%);
+    background-image: url("../images/arrow-right.png");
+    background-size: 18px 28px;
+    background-position: 56% center;
+    background-repeat: no-repeat;
+}
+.quizSlider-btn.btn-next.emphasize {
+    transform: translate(0,-50%) scale(1.6);
+}
+.btn-compliment {
+    position: absolute;
+    right: -255px;
+    top: 60%;
+    transform: translate(0,-50%);
+    transition: right .5s;
+    opacity: 0;
+    z-index: -1;
+}
+.btn-compliment.show {
+    right: -158px;
+    opacity: 1;
+    z-index: 200;
+}
+.btn-compliment::before {
+    content: "";
+    width: 147px;
+    height: 180px;
+    background-image: url("../images/compliment-bear.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 23px;
+    top: -110px;
+    z-index: -1;
+}
+.btn-compliment > div {
+    font-family: "YGJAL";
+    color: #fff;
+    z-index: 1;
+    background-color: #00a0e9;
+    border: 5px solid #006699;
+    border-radius: 60px 0px 0px 60px;
+    font-size: 30px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+}
+/* // 퀴즈 슬라이드 버튼 */
+
+/* 타이머 */
+#timerArea {
+    position: relative;
+    height: 100px;
+    background-image: url("../images/line.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#timerArea::before {
+    content: "";
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    background-image: url("../images/line-burned.png");
+    background-size: 1635px 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#timer {
+    width: 130px;
+    height: 130px;
+    background-image: url("../images/fire.gif");
+    background-size: 160% 160%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -65px;
+    top: -7px;
+    font-size: 0px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+#btn-timer {
+    font-size: 30px;
+    width: 115px;
+    height: 95px;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+    z-index: 101;
+    background-image: url("../images/bomb.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 9px 29px 0px 0px;
+    overflow: hidden;
+}
+#btn-timer:hover {
+    transform: translate(0,-50%) scale(1.1);
+    background-image: url("../images/bomb-stop.png");
+    font-size: 0px;
+}
+#btn-timer.stop {
+    font-size: 0px;
+    background-image: url("../images/bomb-play.png");
+    transition: background-image .5s;
+}
+#btn-timer.disable {
+    pointer-events: none;
+}
+/* // 타이머 */
+
+/* 백그라운드 */
+#backgroundPage {
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: backgroundColor 1s;
+    z-index: -100;
+}
+#backgroundPage.show {
+    z-index: 300;
+    background-color: rgba(0,0,0,0.8);
+}
+.background-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.background-content.bomb {
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+}
+.background-content.bomb.text::before {
+    content: "다시 한번 더~!";
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-family: "YGJAL";
+    -webkit-text-stroke: 3px #ff0000;
+    width: max-content;
+}
+.background-content.correct {
+    background-image: url("../images/버리_맞았어요.png");
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.background-content.correct.animation {
+    animation: correct 1s;
+}
+.background-content.incorrect {
+    background-image: url("../images/버리_틀렸어요.png");
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.background-content.incorrect.animation {
+    animation: incorrect 1s;
+}
+.background-content.compliment {
+    background-image: url("../images/bear-compliment.png");
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    top: 60%;
+}
+/* .background-content.compliment::before {
+    content: "참 잘했어요!";
+    width: 540px;
+    height: 164px;
+    position: absolute;
+    left: 50%;
+    top: -124px;
+    color: #fff;
+    font-family: "YGJAL";
+    font-size: 40px;
+    background-image: url("../images/잘-title.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 20px 20px 37px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translate(-50%,0);
+    text-shadow: calc(3px * 1) 0 0 #000,
+    calc(3px * 0.9239) calc(3px * 0.3827) 0 #000,
+    calc(3px * 0.7071) calc(3px * 0.7071) 0 #000,
+    calc(3px * 0.3827) calc(3px * 0.9239) 0 #000,
+    0 calc(3px * 1) 0 #000,
+    calc(3px * -0.3827) calc(3px * 0.9239) 0 #000,
+    calc(3px * -0.7071) calc(3px * 0.7071) 0 #000,
+    calc(3px * -0.9239) calc(3px * 0.3827) 0 #000,
+    calc(3px * -1) 0 0 #000,
+    calc(3px * -0.9239) calc(3px * -0.3827) 0 #000,
+    calc(3px * -0.7071) calc(3px * -0.7071) 0 #000,
+    calc(3px * -0.3827) calc(3px * -0.9239) 0 #000,
+    0 calc(3px * -1) 0 #000,
+    calc(3px * 0.3827) calc(3px * -0.9239) 0 #000,
+    calc(3px * 0.7071) calc(3px * -0.7071) 0 #000,
+    calc(3px * 0.9239) calc(3px * -0.3827) 0 #000;
+} */
+path {
+    fill: transparent;
+}
+text {
+    fill: #fff;
+}
+textPath {
+    letter-spacing: 1px;
+}
+.background-content.compliment > div svg {
+    position: relative;
+    top: -58px;
+    left: 18px;
+}
+.background-content.compliment > div {
+    width: 540px;
+    height: 164px;
+    position: absolute;
+    left: 50%;
+    top: -124px;
+    color: #fff;
+    font-family: "YGJAL";
+    font-size: 40px;
+    background-image: url("../images/잘-title.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 20px 20px 37px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translate(-50%,0);
+    text-shadow: calc(3px * 1) 0 0 #000,
+    calc(3px * 0.9239) calc(3px * 0.3827) 0 #000,
+    calc(3px * 0.7071) calc(3px * 0.7071) 0 #000,
+    calc(3px * 0.3827) calc(3px * 0.9239) 0 #000,
+    0 calc(3px * 1) 0 #000,
+    calc(3px * -0.3827) calc(3px * 0.9239) 0 #000,
+    calc(3px * -0.7071) calc(3px * 0.7071) 0 #000,
+    calc(3px * -0.9239) calc(3px * 0.3827) 0 #000,
+    calc(3px * -1) 0 0 #000,
+    calc(3px * -0.9239) calc(3px * -0.3827) 0 #000,
+    calc(3px * -0.7071) calc(3px * -0.7071) 0 #000,
+    calc(3px * -0.3827) calc(3px * -0.9239) 0 #000,
+    0 calc(3px * -1) 0 #000,
+    calc(3px * 0.3827) calc(3px * -0.9239) 0 #000,
+    calc(3px * 0.7071) calc(3px * -0.7071) 0 #000,
+    calc(3px * 0.9239) calc(3px * -0.3827) 0 #000;
+}
+@keyframes correct {
+    0% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(0.1);
+    }
+    50% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(1.5);
+    }
+    100% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+}
+@keyframes incorrect {
+    from {
+        transform: translate(-50%,-50%) rotate(0deg) scale(0.1);
+    }
+    to {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+/* // 백그라운드 */

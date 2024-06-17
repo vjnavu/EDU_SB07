@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .char-box-06 .balloon {
+            top: -235px;
+            left: -210px;
+        }
+
+        .char-box-07 .balloon {
+            top: -200px;
+            left: -150px;
+        }
+
+        .char-box-08 .balloon {
+            top: -210px;
+            left: -200px;
+        }
+
+        .char-box-09 .balloon {
+            top: -200px;
+            left: -120px;
+        }
+
+        .char-box-06 .balloon::after {
+            left: 280px;
+        }
+
+        .char-box-07 .balloon::after {
+            left: 230px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue">
+                고양이와 쥐 달리기 놀이 소감을 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="고양이와 쥐 달리기 놀이 소감을 이야기해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="규칙을 잘 지키고 놀이에 열심히 참여한 친구를 칭찬해 볼까요?" data-ani-show="true">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-03">
+                                <div class="char-box char-box-06" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon yellow bottom">
+                                        <span>언제 고양이가<br>
+                                            짝 옆에 앉을지 몰라서<br>
+                                            긴장되었어요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-07" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon purple bottom">
+                                        <span>친구들과 함께<br>
+                                            모이는 게임을 하니<br>
+                                            재미있었어요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-08 char-box-08_1" data-tail="tail-01"
+                                    data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon purple bottom">
+                                        <span>게임을 하면서 친하지 않았던<br>친구들과도 이야기를 할 수 있서 <br>좋았어요.</span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-09 char-box-09_1" data-tail="tail-01"
+                                    data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon green bottom">
+                                        <span>달려갈 때 친구와<br>
+                                            부딪치지 않으려면<br>
+                                            서로 조심해야 해요.<br>
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="character-flex">
+                            <div id="girl_1" class="character-item"></div>
+                            <div id="boy_2" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <div class="praise-box hide" data-type="0" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.girl1({
+                id: '#girl_1',
+                speech: 'right',
+                sound: './media/ton_0102_0103_0006_302/ton_0102_0103_0006_302_01.mp3',
+                text: '짝꿍이 빨리 일어나서<br>도망가도록 알려 준<br>태오를 칭찬해요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -230,
+                balloon_left: -90,
+            });
+            $prite.boy2({
+                id: '#boy_2',
+                speech: 'right',
+                sound: './media/ton_0102_0103_0006_302/ton_0102_0103_0006_302_02.mp3',
+                text: '즐겁게 놀이에 참여한<br>우리 반 모두를 칭찬해요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -145,
+            });
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
+            });
+        });
+    </script>
+</body>
+
+</html>
