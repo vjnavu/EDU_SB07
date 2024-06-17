@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .self-check .checkWrap {
+            justify-content: center;
+            margin: 0;
+            background: transparent;
+        }
+
+        .table-box.color-03 {
+            margin-top: 32px;
+            margin-left: 0;
+            width: 96%;
+        }
+
+        .icon-box {
+            gap: 80px;
+        }
+
+        .noteText {
+            box-shadow: none;
+            height: 125px;
+            padding: 0;
+        }
+
+        .noteText .text-exam.flex-wrap {
+            padding: 0;
+        }
+
+        .table-box td {
+            padding: 0 15px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                수업에 즐겁게 참여했는지 확인하고 수업에 참여하면서 느낀 점을 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-quiz="toggle" data-ani-show="true">
+                        <div class="study_guide"><em>얼굴</em>을 <em>클릭</em>하세요.</div>
+                        <div class="table-box color-03 ">
+                            <rowgroup>
+                                <row style="width: 280px;"></row>
+                            </rowgroup>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">질문</th>
+                                        <th colspan="3">내 생각</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2" style="border-right: 2px solid #d5c5e0;">
+                                            즐겁게 참여했나요?
+                                        </th>
+                                        <td colspan="3">
+                                            <div class="self-check">
+                                                <div class="checkWrap">
+                                                    <div class="icon-box">
+                                                        <div class="wrap">
+                                                            <div class="button-smile icon1"></div>
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <div class="button-smile icon2"></div>
+                                                        </div>
+                                                        <div class="wrap">
+                                                            <div class="button-smile icon3"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" style="border-right: 2px solid #d5c5e0;">
+                                            수업에서 새롭게<br>
+                                            알게 된 것은 무엇인가요?
+
+                                        </th>
+                                        <td colspan="3">
+                                            <div class="noteText">
+                                                <div class="textareaWrap">
+                                                    <textarea class="textLine afterDisplay" type="text"
+                                                        placeholder="직접 쓰기" data-input-obj="" data-answer=" " onfocus=""
+                                                        onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                                </div>
+                                                <div class="text-exam flex-wrap">
+                                                    <div class="blueT">
+                                                        나무 그늘 밑에 돗자리를 깔고 누웠더니 시원한 것을 알게 되었어요.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" style="border-right: 2px solid #d5c5e0;">
+                                            수업에서 새롭게<br>
+                                            알게 된 것은 무엇인가요?
+
+                                        </th>
+                                        <td colspan="3">
+                                            <div class="noteText">
+                                                <div class="textareaWrap">
+                                                    <textarea class="textLine afterDisplay" type="text"
+                                                        placeholder="직접 쓰기" data-input-obj="" data-answer=" " onfocus=""
+                                                        onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                                </div>
+                                                <div class="text-exam flex-wrap">
+                                                    <div class="blueT">
+                                                        수업을 준비할 때는 어려웠는데 진짜 수업을<br>
+                                                        해 보니까 노는 것 같이 즐거웠어요.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="writeBtn" data-answer-btn=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <div class="praise-box hide" data-type="0" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
+            });
+        });
+    </script>
+</body>
+
+</html>

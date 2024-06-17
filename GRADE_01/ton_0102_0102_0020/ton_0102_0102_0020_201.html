@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex .howtoBox {
+            width: 100%;
+        }
+
+        .flex .howtoBox .text-box {
+            text-align: center;
+        }
+
+        .icon-char {
+            top: 75px;
+            right: 15px;
+        }
+
+        [data-popup-page="1"] {
+            top: 220px;
+            left: 575px;
+            width: 660px;
+        }
+
+        .text_bobble {
+            text-align: center;
+            position: absolute;
+            border: 4px solid #ffc4c9;
+            background: #ffeef3;
+            padding: 5px 15px;
+            border-radius: 15px;
+        }
+
+        .text1 {
+            top: 10px;
+            left: 150px;
+        }
+
+        .text2 {
+            top: 40px;
+            left: 800px;
+        }
+
+        .text1:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            clip-path: polygon(100% 50%, 0 10%, 0 90%);
+            width: 25px;
+            height: 25px;
+            background-color: #ffc4c9;
+            transform: translate(100%, -50%);
+        }
+
+        .text2:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            clip-path: polygon(100% 10%, 0 50%, 100% 90%);
+            width: 25px;
+            height: 25px;
+            background-color: #ffc4c9;
+            transform: translate(-100%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                우리 반 친구들과 특별한 하루를 만들어 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">1</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0020_201/img_01.png">
+                                                    </div>
+                                                    <div class="text_bobble text1">운동장에서 <br>간식도 먹고 뛰어<br>놀고 싶어요.
+                                                    </div>
+                                                    <div class="text_bobble text2">팝콘을 먹으면서<br>
+                                                        영화 보고 싶어요.
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    하고 싶은 활동을 생각하고 함께 의논해요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">2</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0020_201/img_02.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    붙임딱지에 하고 싶은 수업을 적은 뒤 칠판에 붙여요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">3</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0020_201/img_03.jpg">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    함께 이야기를 나누며 하고 싶은 수업 활동을 정해요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_4" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">4</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0020_201/img_04.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    우리가 정한 수업의 이름을 만들어요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_5" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number orange inline">5</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0102_0102_0020_201/img_05.jpg">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    수업을 위해 하고 싶은 활동과 필요한 준비물을 적으며 준비해요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min " data-popup-page="1" data-drag="">
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            오늘은 노는 날, 우리가 왕, 오늘은 내가 선생님 등의 이름을 만들 수 있어요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
