@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+    <link rel="stylesheet" href="./common/css/proto_ton_001.css">
+    <link rel="stylesheet" href="./common/css/proto_ton_001_209_learning_map.css">
+
+    <style>
+        .check-text .check-box {
+            height: 47px;
+            width: 47px;
+            background: url(./common/images/checkBox.png) no-repeat center top / 100%;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .check-box .red-check {
+            width: 54px;
+            height: 40px;
+            background: url(./common/images/redCheck.png) no-repeat center top / contain;
+            position: relative;
+            top: -10px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 50px;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+        }
+
+        .page_2 img {
+            width: 400px;
+        }
+
+        .page_2 .check-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page_2 .item:last-child {
+            display: flex;
+
+        }
+
+        .page_2 .flex .item .flex {
+            flex-direction: column;
+            align-items: start;
+            margin-left: 20px;
+        }
+
+        .page_2 .flex .item .flex .check-text {
+
+            cursor: pointer;
+
+        }
+
+        .border_dashed {
+            border-bottom: 2px dashed #DDD;
+            width: 590px;
+            position: absolute;
+        }
+
+        .border_dashed1 {
+            top: 175px;
+            left: 645px;
+        }
+
+        .border_dashed2 {
+            top: 295px;
+            left: 645px;
+        }
+
+        .border_dashed3 {
+            top: 410px;
+            left: 645px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                ‘나의 하루’ 하면 떠오르는 것에 대해 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="‘나의 하루’ 하면 떠오르는 것에 대해 이야기해 볼까요?">물음</li>
+                    <li data-hover="" data-text="나의 하루 중, 매일 똑같이 하는 일은 무엇인가요?">활동</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="character-flex">
+                            <div id="girl_2" class="character-item"></div>
+                            <div id="boy_2" class="character-item"></div>
+                            <div id="girl_4" class="character-item"></div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="flex">
+                            <div class="item">
+                                <img src="./images/ton_0102_0102_0012_102/img_01.png" alt="">
+                            </div>
+                            <div class="item">
+                                <div class="flex">
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>밥 먹기</span>
+                                    </div>
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>잠옷 갈아입기</span>
+                                    </div>
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>숙제하기</span>
+                                    </div>
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>잠자기</span>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>세수하기</span>
+                                    </div>
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>학교 가기</span>
+                                    </div>
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>놀기</span>
+                                    </div>
+                                    <div class="check-text active">
+                                        <div class="check-box"></div>
+                                        <span>옷 입기</span>
+                                    </div>
+                                </div>
+                                <div class="border_dashed border_dashed1"></div>
+                                <div class="border_dashed border_dashed2"></div>
+                                <div class="border_dashed border_dashed3"></div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+
+    <!-- Drag/drop -->
+    <script src="./common/js/jquery-ui.min.js"></script>
+
+    <!-- Script -->
+    <script src="./common/js/proto_ton_001_02.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.girl2({
+                id: '#girl_2',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0012_102/ton_0102_0102_0012_102_01.mp3',
+                text: '학원 가야 해서 힘들어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -120,
+                balloon_left: -135,
+            }); $prite.boy2({
+                id: '#boy_2',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0012_102/ton_0102_0102_0012_102_01.mp3',
+                text: '수영이요.<br>오늘도 수영 가서 좋아요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -140,
+            }); $prite.girl4({
+                id: '#girl_4',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0012_102/ton_0102_0102_0012_102_01.mp3',
+                text: '주말에 가족과 같이<br>여행 가서 좋았어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -95,
+            });
+
+
+            $(document).on('click', '.check-text', function () {
+                if ($(this).hasClass("active")) {
+                    $(this).addClass('active');
+                    $(this).find(".check-box").children().remove();
+                } else {
+                    $(this).removeClass('active');
+                    $(this).find(".check-box").append("<p class='red-check'></p>");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

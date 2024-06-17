@@ -1,0 +1,522 @@
+@font-face {
+    font-family: sdchild;
+    src: url("./../font/SDChildfundkoreaTTF.ttf");
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+.bgImg {
+    height: 100%;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.study_guide {
+    right: 28px;
+    top: 80px;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 68px;
+    height: 45px;
+    pointer-events: auto;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.popLearning.purple:hover {
+    background-color: #DAD5F2;
+}
+
+.popLearning.purple.active {
+    background-color: #DAD5F2;
+}
+
+.popLearning.pink:hover {
+    background-color: #A7D1EB;
+}
+
+.popLearning.pink.active {
+    background-color: #A7D1EB;
+}
+
+.popLearning.orange:hover {
+    background-color: #F69CA0;
+}
+
+.popLearning.orange.active {
+    background-color: #F69CA0;
+}
+
+.popLearning.green:hover {
+    background-color: #FBC88F;
+}
+
+.popLearning.green.active {
+    background-color: #FBC88F;
+}
+
+.popLearning.blue:hover {
+    background-color: #ADD5ED;
+}
+
+.popLearning.blue.active {
+    background-color: #ADD5ED;
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 6px 1px 6px;
+    border-radius: 5px;
+}
+
+.learning-list>li .learning-item>li:hover,
+.learning-list>li .learning-item>li.off,
+.popLearning.complete:hover {
+    background-color: #FFDBEA;
+}
+
+.popLearning.pop0 .learning-badge {
+    line-height: 1.2;
+    font-family: "NotoM";
+    font-size: 15px;
+    padding: 1px 12px 1px 12px;
+}
+
+.popLearning.pop0 .learning-wrap {
+    gap: 1px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* .popLearning.pop0.active {
+    background-image: url("../images/proto_ton_001/balloonImg1-active.png");
+}
+
+.popLearning.pop0:hover {
+    background-image: url("../images/proto_ton_001/balloonImg1-hover.png");
+    transition: all .1s
+} */
+
+.popLearning.pop0 {
+    top: 180px;
+    left: 180px;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    font-family: "sdchild";
+    font-weight: bold;
+}
+
+.popLearning.purple {
+    border: 2px solid #DAD5F2;
+}
+
+.popLearning.pink {
+    border: 2px solid #F58F94;
+}
+
+.popLearning.blue {
+    border: 2px solid #ADD5ED;
+}
+
+.popLearning.orange {
+    border: 2px solid #FBC78D;
+}
+
+.popLearning.green {
+    border: 2px solid #9EE2A8;
+}
+
+.popLearning.pop1 {
+    top: 375px;
+    left: 288px;
+    height: 60px;
+}
+
+.popLearning.pop2 {
+    top: 405px;
+    left: 215px;
+    height: 60px;
+}
+
+.popLearning.pop3 {
+    top: 405px;
+    left: 360px;
+    height: 60px;
+}
+
+.popLearning.pop4 {
+    top: 473px;
+    right: 1050px;
+    height: 60px;
+}
+
+.popLearning.pop5 {
+    top: 473px;
+    right: 971px;
+    height: 60px;
+}
+
+.popLearning.pop6 {
+    top: 96px;
+    right: 694px;
+    height: 60px;
+}
+
+.popLearning.pop7 {
+    top: 160px;
+    right: 755px;
+}
+
+.popLearning.pop8 {
+    top: 208px;
+    right: 800px;
+}
+
+.popLearning.pop9 {
+    top: 259px;
+    right: 811px;
+}
+
+.popLearning.pop10 {
+    top: 308px;
+    right: 779px;
+}
+
+.popLearning.pop11 {
+    top: 357px;
+    right: 742px;
+}
+
+.popLearning.pop12 {
+    top: 166px;
+    left: 620px;
+}
+
+.popLearning.pop13 {
+    top: 219px;
+    left: 591px;
+}
+
+.popLearning.pop14 {
+    top: 271px;
+    left: 591px;
+}
+
+.popLearning.pop15 {
+    top: 322px;
+    left: 628px;
+}
+
+.popLearning.pop16 {
+    top: 380px;
+    left: 632px;
+}
+
+.popLearning.pop17 {
+    top: 134px;
+    left: 721px;
+}
+
+.popLearning.pop18 {
+    top: 193px;
+    left: 720px;
+}
+
+.popLearning.pop19 {
+    top: 247px;
+    left: 730px;
+}
+
+.popLearning.pop20 {
+    top: 305px;
+    left: 721px;
+}
+
+
+.popLearning.pop21 {
+    top: 364px;
+    left: 721px;
+}
+
+.popLearning.pop22 {
+    top: 160px;
+    right: 497px;
+}
+
+.popLearning.pop23 {
+    top: 217px;
+    right: 489px;
+}
+
+.popLearning.pop24 {
+    top: 272px;
+    right: 483px;
+}
+
+.popLearning.pop25 {
+    top: 335px;
+    left: 800px;
+}
+
+.popLearning.pop26 {
+    top: 178px;
+    left: 1041px;
+}
+
+.popLearning.pop27 {
+    top: 237px;
+    left: 998px;
+}
+
+.popLearning.pop28 {
+    top: 192px;
+    left: 1128px;
+}
+
+.popLearning.pop29 {
+    top: 247px;
+    left: 1084px;
+}
+
+.popLearning.pop30 {
+    top: 291px;
+    left: 1008px;
+}
+
+.popLearning.pop31 {
+    top: 244px;
+    left: 1167px;
+    width: 78px;
+}
+
+.popLearning.pop32 {
+    top: 299px;
+    left: 1160px;
+}
+
+.popLearning.pop33 {
+    top: 317px;
+    left: 1084px;
+}
+
+.popLearning.pop34 {
+    top: 445px;
+    left: 881px;
+    height: 60px;
+}
+
+.popLearning.pop35 {
+    top: 446px;
+    left: 963px;
+    height: 60px;
+}
+
+.popLearning.pop36 {
+    top: 507px;
+    left: 881px;
+    height: 60px;
+}
+
+.popLearning.pop37 {
+    top: 507px;
+    left: 963px;
+    height: 60px;
+}
+
+.popLearning.pop38 {
+    top: 275px;
+    left: 555px;
+}
+
+.popLearning.pop39 {
+    top: 572px;
+    left: 920px;
+    padding-top: 18px;
+}
+
+.popLearning.pop40 {
+    top: 535px;
+    left: 1005px;
+    padding-top: 18px;
+}
+
+.popLearning.pop41 {
+    top: 463px;
+    left: 1016px;
+    padding-top: 18px;
+}
+
+
+.pop3 .starTitle {
+    top: -10px;
+}
+
+.pop3 .starArrow.purple {
+    bottom: 22px;
+}
+
+.pop3 .learning-badge {
+    position: relative;
+    top: 8px;
+}
+
+.pop4 .starTitle {
+    top: -10px;
+}
+
+.pop4 .starArrow.blue {
+    bottom: 22px;
+}
+
+.pop4 .learning-badge {
+    position: relative;
+    top: 8px;
+}
+
+.pop5 .starTitle {
+    top: -10px;
+}
+
+.pop5 .starArrow.red {
+    bottom: 22px;
+}
+
+.pop5 .learning-badge {
+    position: relative;
+    top: 8px;
+}
+
+/* .popLearning.pop42.active {
+    background-image: url("../images/proto_ton_001/balloonImg2-active.png");
+}
+
+.popLearning.pop42:hover {
+    background-image: url("../images/proto_ton_001/balloonImg2-hover.png");
+    transition: all .1s;
+} */
+
+.popLearning.pop42 {
+    bottom: 70px;
+    right: 185px;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    font-family: "sdchild";
+    font-weight: bold;
+}
+
+.popLearning.pop42 .learning-badge {
+    line-height: 1.2;
+    font-family: "NotoM";
+    font-size: 15px;
+    padding: 1px 12px 1px 12px;
+}
+
+.popLearning.pop42 .learning-wrap {
+    gap: 1px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.greenText {
+    color: #43ad50;
+}
+
+.starTitle {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+}
+
+.starTitle::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-image: url("../images/proto_ton_001/before.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.starArrow {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0px 3px 0px 0px;
+    position: absolute;
+    width: 38px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.starArrow.purple {
+    background-image: url("../images/proto_ton_001/arrow-purple.png");
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.starArrow.blue {
+    background-image: url("../images/proto_ton_001/arrow-blue.png");
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.starArrow.red {
+    background-image: url("../images/proto_ton_001/arrow-red.png");
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
