@@ -12,6 +12,73 @@
 
 
     <style>
+        /* page 1 */
+        .page_1 .flex {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        .page_1 ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            gap: 20px;
+        }
+
+        .page_1 ul li {
+            display: flex;
+            gap: 20px;
+        }
+
+        .bullet.orange.number {
+            margin-top: 7px;
+        }
+
+        /* page 2 */
+        .character-item {
+            position: absolute;
+        }
+
+        #boy_1_c {
+            left: 70px;
+            top: 50px;
+        }
+
+        #girl_4_c {
+            bottom: 50px;
+            right: 70px;
+        }
+
+        .balloon {
+            height: 200px;
+            width: 1000px;
+        }
+
+        .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1.png') no-repeat;
+        }
+
+        .characterWrap.speech.right:hover::before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png') no-repeat;
+        }
+
+        #boy_1_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_1.png') !important;
+        }
+
+        #girl_4_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_4.png') !important;
+        }
     </style>
 </head>
 
@@ -30,18 +97,42 @@
             <div class="basicSlider contentsBox" data-slide-container="main">
                 <ul class="basicSlider_tabs" data-tabs="">
                     <li data-hover="" data-text="계절을 담은 작품을 감상해 볼까요?">활동</li>
-                    <li data-hover="" data-text="친구들의 작품에서 칭찬하고 싶은 부분을 찾아 이야기해 볼까요?">물음</li>
+                    <li data-hover="" data-text="친구들의 작품에서 칭찬하고 싶은 부분을 찾아 이야기해 볼까요?" data-ani-show="true">물음</li>
                 </ul>
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1">
-
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img src="./images/ton_0202_0102_0013_301/img_01.png">
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="bullet number orange inline">1</div>
+                                    <div class="bulletText">친구들이 완성한 작품을 감상해요.</div>
+                                </li>
+                                <li>
+                                    <div class="bullet number orange inline">2</div>
+                                    <div class="bulletText">내 마음에 드는 작품에 칭찬 붙임딱지를 붙여요.</div>
+                                </li>
+                                <li>
+                                    <div class="bullet number orange inline">3</div>
+                                    <div class="bulletText">작품에서 칭찬하고 싶은 부분을 찾아 이야기해요.</div>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="page_2">
-
+                        <div id="boy_1_c" class="character-item"></div>
+                        <div id="girl_4_c" class="character-item"></div>
                     </li>
                 </ul>
             </div>
         </main>
+
+        <div class="praise-box hide" data-type="0" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
 
         <section class="popup_container" data-popup-container="">
             <ul class="popup_pages">
@@ -76,6 +167,88 @@
                 } else {
                     $('header .title').removeClass('gap');
                 }
+            });
+
+            $prite.boy1({
+                id: '#boy_1_c',
+                speech: 'right',
+                circle: true,
+                sound: '',
+                text: `전 재경이의 작품이 기억에 남아요. <br>두 눈을 각각 오이와 바나나로, 두 귀를 토마토와 귤로<br> 다르게 표현한 것이 재밌었어요.`,
+                class: 'left middle',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -20,
+                balloon_left: 210
+            });
+
+            $prite.girl4({
+                id: '#girl_4_c',
+                circle: true,
+                speech: 'right',
+                sound: '',
+                text: `두 눈을 석류로 표현한 서준이의 작품이 인상적이에요.<br> 삐에로의 반짝이는 눈빛처럼 느껴졌기 때문이에요.`,
+                class: 'right middle',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -20,
+                balloon_left: -1040
+            });
+
+            $(document).on('click', '.character-item', function () {
+                $('.balloon').removeClass('fff');
+            });
+
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
             });
         });
     </script>
