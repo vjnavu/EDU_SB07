@@ -1,0 +1,419 @@
+.bgImg {
+    height: 100%;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    pointer-events: auto;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 30px;
+}
+
+.learning-wrap>span:not(.learning-badge) {
+    text-shadow: -1px -1px 2px #fff, 1px 1px 2px #fff;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 0px 5px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 18px;
+    left: 87px;
+}
+
+.popLearning .learning-badge {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.popLearning .learning-wrap {
+    padding-bottom: 0;
+}
+
+.popbox.mini .navControl {
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+    color: #fff;
+    font-family: 'YGJAL';
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.popbox.mini .navControl .navItem.purple {
+    background: #7E6BAA;
+}
+
+.popbox.mini .navControl .navItem.blue {
+    background: #4D90CB;
+}
+
+.popbox.mini .navControl .navItem.red {
+    background: #D73731;
+}
+
+.popbox.mini .navControl .navItem.orange {
+    background: #E9943F;
+}
+
+.popbox.mini .navControl .navItem {
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'YGJAL';
+    line-height: 1;
+}
+
+.popbox.mini .navControl .navItem.off {
+    background: #ccc;
+}
+
+.learning-list>li {
+    display: none;
+    position: relative;
+}
+
+.learning-list>li.on {
+    display: block;
+}
+
+.learning-list>li .learning-item {
+    display: grid;
+    grid-template: 2fr/ 1fr 1fr;
+    overflow: hidden;
+    height: auto;
+    width: 480px;
+    gap: 30px 20px;
+    margin: 40px auto 20px;
+}
+
+.learning-list>li .learning-item>li {
+    position: relative;
+    width: 220px;
+    height: 130px;
+    font-size: 22px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.learning-list>li .learning-item>li[data-color="purple"],
+.popbox .popLearning[data-color="purple"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_01.png');
+}
+
+.learning-list>li .learning-item>li[data-color="purple"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_01_hover.png');
+}
+
+.learning-list>li .learning-item>li[data-color="blue"],
+.popbox .popLearning[data-color="blue"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_02.png');
+}
+
+.learning-list>li .learning-item>li[data-color="blue"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_02_hover.png');
+}
+
+.learning-list>li .learning-item>li[data-color="red"],
+.popbox .popLearning[data-color="red"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_03.png');
+}
+
+.learning-list>li .learning-item>li[data-color="red"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_03_hover.png');
+}
+
+.learning-list>li .learning-item>li[data-color="yellow"],
+.popbox .popLearning[data-color="yellow"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_04.png');
+}
+
+.learning-list>li .learning-item>li[data-color="yellow"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_04_hover.png');
+}
+
+.learning-list>li .learning-item>li.off {
+    pointer-events: none;
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_main.png');
+}
+
+.slideBtn {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.slideBtn.prev {
+    left: 40px;
+}
+
+.slideBtn.next {
+    right: 40px;
+}
+
+.slideBtn.off {
+    pointer-events: none;
+    opacity: .2;
+}
+
+.popbox.mini {
+    border-radius: 32px;
+    overflow: unset;
+    cursor: move;
+}
+
+.popbox.mini .popCloseBtn {
+    background: #a4826c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 0 30px 0 50px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.popbox.mini .popCloseBtn::after {
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn:hover {
+    background: #f60;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.popbox .popLearning {
+    width: 104px;
+    height: 75px;
+    pointer-events: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.popbox .popLearning:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_206_main.png');
+    filter: drop-shadow(2px 2px 2px #000);
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.popbox .popLearning.pop1 {
+    top: 171px;
+    left: 291px;
+}
+
+.popbox .popLearning.pop2 {
+    top: 54px;
+    left: 419px;
+}
+
+.popbox .popLearning.pop3 {
+    top: 10px;
+    left: 611px;
+}
+
+.popbox .popLearning.pop4 {
+    top: 48px;
+    left: 800px;
+}
+
+.popbox .popLearning.pop5 {
+    top: 107px;
+    left: 940px;
+}
+
+.popbox .popLearning.pop6 {
+    top: 195px;
+    left: 1039px;
+}
+
+.popbox .popLearning.pop7 {
+    top: 295px;
+    left: 1119px;
+}
+
+.popbox .popLearning.pop8 {
+    top: 406px;
+    left: 1163px;
+}
+
+.popbox .popLearning.pop9 {
+    top: 509px;
+    left: 1179px;
+}
+
+.popbox .popLearning.pop10 {
+    top: 100px;
+    left: 518px;
+}
+
+.popbox .popLearning.pop11 {
+    top: 121px;
+    left: 689px;
+}
+
+.popbox .popLearning.pop12 {
+    top: 197px;
+    left: 838px;
+}
+
+.popbox .popLearning.pop13 {
+    top: 296px;
+    left: 941px;
+}
+
+.popbox .popLearning.pop14 {
+    top: 395px;
+    left: 1016px;
+}
+
+.popbox .popLearning.pop15 {
+    top: 513px;
+    left: 1058px;
+}
+
+.popbox .popLearning.pop16 {
+    top: 219px;
+    left: 438px;
+}
+
+.popbox .popLearning.pop17 {
+    top: 207px;
+    left: 603px;
+}
+
+.popbox .popLearning.pop18 {
+    top: 281px;
+    left: 743px;
+}
+
+.popbox .popLearning.pop19 {
+    top: 407px;
+    left: 848px;
+}
+
+.popbox .popLearning.pop20 {
+    top: 540px;
+    left: 890px;
+}
+
+.starTitle {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+    top: -18px;
+    left: 5px;
+}
+
+.starTitle::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-image: url("../images/proto_ton_001/before.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.starArrow {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0px 3px 0px 0px;
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    left: 53%;
+    bottom: 50px;
+    transform: translate(-50%, 0);
+    text-shadow: none !important;
+}
+
+.starArrow.purple {
+    background-image: url("../images/proto_ton_001/arrow-purple.png");
+}
+
+.starArrow.blue {
+    background-image: url("../images/proto_ton_001/arrow-blue.png");
+}
+
+.starArrow.red {
+    background-image: url("../images/proto_ton_001/arrow-red.png");
+}
