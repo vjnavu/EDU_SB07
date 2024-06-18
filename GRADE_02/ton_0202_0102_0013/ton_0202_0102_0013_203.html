@@ -65,6 +65,257 @@
             left: 590px;
             width: 670px;
         }
+
+        /* drag drop */
+
+        .drag-zone>.dragObjComplete {
+            opacity: 0;
+        }
+
+        .page_3 .drag-zone {
+            background: url('./images/ton_0202_0102_0013_203/img_02.png') no-repeat center / 100% auto;
+            width: 450px;
+            height: 470px;
+            position: absolute;
+            left: 580px;
+            top: 15px;
+            border-radius: 15px;
+            background-size: contain;
+        }
+
+        .page_3 .clearArea {
+            width: 450px;
+            height: 470px;
+        }
+
+        .dragDropContainer {
+            width: 470px !important;
+            height: 490px !important;
+            position: absolute;
+            left: 170px;
+            top: 80px;
+        }
+
+        .dragDropContainer.bogi .lineBox {
+            width: 470px;
+            height: 510px;
+            top: -20px;
+        }
+
+        .dragDropContainer.bogi .bogi-icon:after {
+            content: "붙임 딱지";
+        }
+
+        .dragDropContainer.bogi .bogi-icon {
+            width: 95px;
+        }
+
+        .page_3 .js-dragObj {
+            position: absolute;
+            padding: 0;
+        }
+
+        .page_3 .js-dragObj {
+            cursor: pointer;
+        }
+
+        .page_3 .js-dragObj img {
+            pointer-events: none;
+        }
+
+        .js-dragObj img {
+            width: 110px;
+        }
+
+
+        .d9 img {
+            width: 50px;
+        }
+
+        .d10 img {
+            width: 58px;
+        }
+
+        .d11 img {
+            width: 65px;
+        }
+
+        .d12 img {
+            width: 80px;
+        }
+
+        .d13 img {
+            width: 90px;
+        }
+
+        .d14 img {
+            width: 70px;
+        }
+
+        .d15 img {
+            width: 80px;
+        }
+
+        .d16 img {
+            width: 80px;
+        }
+
+        .d17 img {
+            width: 70px
+        }
+
+        .d18 img {
+            width: 45px;
+        }
+
+        .d1 {
+            top: 76px;
+            left: -490px;
+        }
+
+
+        .d2 {
+            top: 170px;
+            left: -491px;
+        }
+
+        .d3 {
+            top: 272px;
+            left: -485px;
+        }
+
+        .d4 {
+            top: 352px;
+            left: -482px;
+        }
+
+        .d5 {
+            top: 80px;
+            left: -285px;
+        }
+
+        .d6 {
+            top: 178px;
+            left: -287px;
+        }
+
+        .d7 {
+            top: 261px;
+            left: -293px;
+        }
+
+        .d8 {
+            top: 365px;
+            left: -295px;
+        }
+
+
+        .d9 {
+            top: 46px;
+            left: -504px;
+        }
+
+        .d10 {
+            top: 56px;
+            left: -387px;
+        }
+
+
+        .d11 {
+            top: 51px;
+            left: -256px;
+        }
+
+        .d12 {
+            top: 224px;
+            left: -506px;
+        }
+
+        .d13 {
+            top: 212px;
+            left: -379px;
+        }
+
+        .d14 {
+            top: 215px;
+            left: -242px;
+        }
+
+        .d15 {
+            top: 368px;
+            left: -527px;
+        }
+
+        .d16 {
+            top: 365px;
+            left: -419px;
+        }
+
+        .d17 {
+            top: 372px;
+            left: -306px;
+        }
+
+        .d18 {
+            top: 380px;
+            left: -214px;
+        }
+
+        .resetBtn {
+            right: 0px;
+            bottom: 10px;
+        }
+
+        .js-dropDap>div {
+            width: max-content;
+            position: absolute;
+        }
+
+
+        .js-dropDap {
+            display: none;
+        }
+
+        .slideBtn {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .slideBtn.prev {
+            background-image: url('./common/images/arrow_top.png');
+            top: 0;
+        }
+
+        .slideBtn.prev:hover {
+            background-image: url('./common/images/arrow_top_hover.png');
+        }
+
+        .slideBtn.prev.off {
+            opacity: 1;
+            background-image: url('./common/images/arrow_top_gray.png');
+        }
+
+        .slideBtn.next {
+            background-image: url('./common/images/arrow_bottom.png');
+            bottom: 0px;
+        }
+
+        .slideBtn.next:hover {
+            background-image: url('./common/images/arrow_bottom_hover.png');
+        }
+
+        .slideBtn.next.off {
+            opacity: 1;
+            background-image: url('./common/images/arrow_bottom_gray.png');
+        }
     </style>
 </head>
 
@@ -108,11 +359,81 @@
                             </div>
                         </div>
                     </li>
-                    <li class="page_3">
+                    <li class="page_3" data-quiz="dragDrop" data-option="answer,copy" data-quiz-name="dragdrop"
+                        data-total-complete-count="">
                         <a class="docDownBtn" href="./images/proto_km_232/proto_km_232.zip" target="_blank"
                             data-hover="">도움 자료 <span class="circleNum">4</span></a>
                         <div class="study_guide"><em>붙임딱지</em>를 <em>드래그</em>하여 붙이세요.</div>
                         <div class="icon-char" data-hover="" data-popup-btn="1"></div>
+                        <div class="dragDropContainer bogi">
+                            <div class=" lineBox ">
+                                <div class="bogi-icon"></div>
+                                <div class="drag-zone">
+                                    <div class="dragGroup">
+                                        <div class="js-dragObj d1" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_03.png">
+                                        </div>
+                                        <div class="js-dragObj d2" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_04.png">
+                                        </div>
+                                        <div class="js-dragObj d3" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_05.png">
+                                        </div>
+                                        <div class="js-dragObj d4" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_06.png">
+                                        </div>
+                                        <div class="js-dragObj d5" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_07.png">
+                                        </div>
+                                        <div class="js-dragObj d6" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_08.png">
+                                        </div>
+                                        <div class="js-dragObj d7" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_09.png">
+                                        </div>
+                                        <div class="js-dragObj d8" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_10.png">
+                                        </div>
+                                    </div>
+                                    <div class="dragGroup">
+                                        <div class="js-dragObj d9" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_11.png">
+                                        </div>
+                                        <div class="js-dragObj d10" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_12.png">
+                                        </div>
+                                        <div class="js-dragObj d11" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_13.png">
+                                        </div>
+                                        <div class="js-dragObj d12" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_14.png">
+                                        </div>
+                                        <div class="js-dragObj d13" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_15.png">
+                                        </div>
+                                        <div class="js-dragObj d14" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_16.png">
+                                        </div>
+                                        <div class="js-dragObj d15" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_17.png">
+                                        </div>
+                                        <div class="js-dragObj d16" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_18.png">
+                                        </div>
+                                        <div class="js-dragObj d17" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_19.png">
+                                        </div>
+                                        <div class="js-dragObj d18" data-drag-obj-answer="1" data-ps="free">
+                                            <img src="./images/ton_0202_0102_0013_203/img_20.png">
+                                        </div>
+                                    </div>
+                                    <div class="js-dropArea a1 clearArea" data-drop-area-answer="1">
+                                    </div>
+                                </div>
+                                <div class="slideBtn prev off"></div>
+                                <div class="slideBtn next"></div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -148,6 +469,7 @@
     <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
     <script type="text/javascript" src="./ko/contents.js"></script>
     <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript" src="../math/contents/js/ui.Math.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             $(document).on('click', '.basicSlider_tabs li', function () {
@@ -186,7 +508,51 @@
                 callback_start: () => { KmAudioPlayer.buttonClick(); },
                 callback_end: () => { console.log('end'); }
             });
+            let dragObj = $('.dragGroup');
+            let currentIndex = 0;
+            let totalSlides = dragObj.length;
+            let slidesToShow = 1; // number dragObj show at a time
 
+            // next button click event
+            $('.slideBtn.next').on('click', function () {
+                KmAudioPlayer.buttonClick();
+                if (currentIndex < totalSlides - slidesToShow) {
+                    currentIndex += slidesToShow;
+                    $('.dragGroup:nth-child(2)').css('opacity', '1');
+                    updateSlider();
+                }
+            });
+
+            // Previous button click event
+            $('.slideBtn.prev').on('click', function () {
+                KmAudioPlayer.buttonClick();
+                if (currentIndex >= slidesToShow) {
+                    currentIndex -= slidesToShow;
+                    updateSlider();
+                }
+            });
+
+            function updateSlider() {
+                dragObj.hide();
+                dragObj.slice(currentIndex, currentIndex + slidesToShow).show();
+
+                // Toggle off class for previous button
+                if (currentIndex === 0) {
+                    $('.slideBtn.prev').addClass('off');
+                } else {
+                    $('.slideBtn.prev').removeClass('off');
+                }
+
+                // Toggle off class for next button
+                if (currentIndex >= totalSlides - slidesToShow) {
+                    $('.slideBtn.next').addClass('off');
+                } else {
+                    $('.slideBtn.next').removeClass('off');
+                }
+            }
+            $(document).ready(function () {
+                $('.dragGroup:nth-child(2)').css('opacity', '0');
+            });
         });
     </script>
 </body>
