@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <link rel="stylesheet" href="./proto_ton_006/css/proto_ton_006.css">
+
+    <style>
+        #gate h2::before {
+            content: '밤나무 놀이!\A재미있게 했나요?';
+            left: 0;
+        }
+
+        #gate h2 {
+            z-index: 1;
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <!-- <div class="contentsTitle">
+                <div class="title">
+                    <div class="titleText">
+                    </div>
+                </div>
+            </div> -->
+            <!-- Content -->
+            <div class="contentsBox">
+                <div id="frame">
+                    <!-- 게임 설정 -->
+                    <div class="settingWrap">
+                        <div class="bg-setting">
+                            <button id="settings" type="button">설정</button>
+                        </div>
+                        <div class="settingPop">
+                            <div class="settingArea">
+                                <button id="goGatePageBtn" type="button">처음으로 돌아가기</button>
+                                <div id="soundControls">
+                                    <div>
+                                        <button id="backSoundControl" type="button">배경음</button>
+                                        <span>배경음</span>
+                                        <button id="effectSoundControl" type="button">효과음</button>
+                                        <span>효과음</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gate" class="background-ox">
+                        <h1>OX 퀴즈</h1>
+                        <h2>밤나무 놀이!<br>재미있게 했나요?</h2>
+                        <button id="quizStartBtn" type="button">시작</button>
+                        <div class="timer-contents">
+                            <p class="timer-info">타이머를 설정하세요.</p>
+                            <div id="timerDropDown">
+                                <input class="dropdown-input" type="text" maxlength="2" value="15">
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li data-time="10">10</li>
+                                        <li data-time="15">15</li>
+                                        <li data-time="20">20</li>
+                                        <li data-time="25">25</li>
+                                        <li data-time="30">30</li>
+                                        <li data-time="35">35</li>
+                                        <li data-time="40">40</li>
+                                        <li data-time="45">45</li>
+                                        <li data-time="50">50</li>
+                                        <li data-time="55">55</li>
+                                        <li data-time="60">60</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="quiz">
+                        <div id="quizSlider">
+                            <div class="quizBody">
+                                <!-- 슬라이드 -->
+                                <ul id="quizSliderContainer">
+
+                                    <!-- GAME WORD -->
+                                    <li class="oxQuiz line2">
+                                        <div class="quizHeader">
+                                            <div class="quizHeader-title">
+                                                <div class="quizHeader-name">OX</div>
+                                                <div class="quizHeader-num">
+                                                    <span class="quizHeader-current-idx"></span>
+                                                    <span>/</span>
+                                                    <span class="quizHeader-total-idx"></span>
+                                                </div>
+                                            </div>
+                                            <div class="quizHeader-icon"><span>O</span>X</div>
+                                        </div>
+                                        <div class="quizQuestion" style="padding: 20px 36px;">
+                                            <p>
+                                                술래는 게임 시작 전, “밤 따러 가세.”라고 <br>외쳐야 해요.
+                                            </p>
+                                        </div>
+                                        <div class="quizAnswer">
+                                            <ul class="quizArea">
+                                                <li>
+                                                    <button type="button" class="answerO" data-quiz-button="true"
+                                                        data-answer="true">
+                                                        <div>o</div>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="answerX" data-quiz-button="true">
+                                                        <div>x</div>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="oxQuiz">
+                                        <div class="quizHeader">
+                                            <div class="quizHeader-title">
+                                                <div class="quizHeader-name">OX</div>
+                                                <div class="quizHeader-num">
+                                                    <span class="quizHeader-current-idx"></span>
+                                                    <span>/</span>
+                                                    <span class="quizHeader-total-idx"></span>
+                                                </div>
+                                            </div>
+                                            <div class="quizHeader-icon"><span>O</span>X</div>
+                                        </div>
+                                        <div class="quizQuestion">
+                                            <p>
+                                                접시콘이 머리에서 떨어지면 살아날 수 없어요.
+                                            </p>
+                                        </div>
+                                        <div class="quizAnswer">
+                                            <ul class="quizArea">
+                                                <li>
+                                                    <button type="button" class="answerO" data-quiz-button="true">
+                                                        <div>o</div>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="answerX" data-quiz-button="true"
+                                                        data-answer="true">
+                                                        <div>x</div>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="oxQuiz line2">
+                                        <div class="quizHeader">
+                                            <div class="quizHeader-title">
+                                                <div class="quizHeader-name">OX</div>
+                                                <div class="quizHeader-num">
+                                                    <span class="quizHeader-current-idx"></span>
+                                                    <span>/</span>
+                                                    <span class="quizHeader-total-idx"></span>
+                                                </div>
+                                            </div>
+                                            <div class="quizHeader-icon"><span>O</span>X</div>
+                                        </div>
+                                        <div class="quizQuestion">
+                                            <p>
+                                                친구의 접시콘을 씌워 줄 때 “밤나무 밤.”이라고<br>
+                                                외쳐야 해요.
+                                            </p>
+                                        </div>
+                                        <div class="quizAnswer">
+                                            <ul class="quizArea">
+                                                <li>
+                                                    <button type="button" class="answerO" data-quiz-button="true"
+                                                        data-answer="true">
+                                                        <div>o</div>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="answerX" data-quiz-button="true">
+                                                        <div>x</div>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- 슬라이드 버튼 -->
+                                <button class="quizSlider-btn btn-prev" type="button">이전</button>
+                                <button class="quizSlider-btn btn-next" type="button">다음</button>
+
+                                <!-- 칭찬 스티커 버튼 -->
+                                <button class="btn-compliment" type="button">
+                                    <div>칭찬<br>스티커</div>
+                                </button>
+
+                            </div>
+
+                            <div class="quizFooter">
+                                <!-- 타이머 -->
+                                <div id="timerArea">
+                                    <div id="timer">타이머</div>
+                                    <div id="btn-timer">타이머 버튼</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="backgroundPage">
+                        <div class="background-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Common Script -->
+    <script src="./common/js/jquery.js"></script>
+    <script src="./common/js/base.js"></script>
+    <script src="./common/js/common.js"></script>
+    <script src="./common/js/contents.js"></script>
+
+    <script src="./proto_ton_006/js/proto_ton_006.js"></script>
+</body>
+
+</html>

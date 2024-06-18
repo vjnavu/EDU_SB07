@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/****************************************
+*			   SCROLL.css               *
+****************************************/
+.popupContents > .scrollOutBox.scroll-wrapper { height: 710px; }
+.popupContents .popupTitle + .scrollOutBox.scroll-wrapper { height: 670px; }
+.poetContainer .scroll-wrapper.scrollOutBox.height {
+    width: 93.2%;
+    height: 545px;
+}
+.popupContents .poetContainer .scroll-wrapper.scrollOutBox.height {
+    width: 84.2%;
+    height: 590px;
+}
+.popupContents > .scroll-wrapper.scrollOutBox.height {
+    width: 94.8%;
+}
+.popupContents .scrollOutBox.scroll-content > * { max-width: 1080px; }
+.tableContainer td .scrollOutBox.scroll-wrapper {
+    position:relative !important;
+    width: 99.5%;
+}
+.scroll-wrapper.scrollOutBox {
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+}
+.scroll-wrapper > .scroll-content {
+    border: none !important;
+    box-sizing: content-box !important;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: auto !important;
+    height: auto;
+    max-height: none;
+    max-width: none !important;
+    overflow: scroll !important;
+    position: relative !important;
+}
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.scroll-element {
+    display: none;
+}
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+    cursor: default;
+}
+/* 스크롤 유무 */
+.scroll-wrapper.width > .scroll-element.scroll-y {
+    overflow: hidden;
+    display: none;
+}
+.scroll-wrapper.height > .scroll-element.scroll-x {
+    overflow: hidden;
+    display: none;
+}
+
+/* ***************************************************************** */
+/* scrollOutBox 영역 */
+.scroll-wrapper { overflow: auto; }
+.scroll-wrapper.height { width: 97.8%; }
+.scroll-wrapper.width {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* 스크롤 : div 영역 속성 생성 */
+.scrollOutBox > .scroll-element,
+.scrollOutBox > .scroll-element div {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+.scrollOutBox > .scroll-element {
+	/* 기본 스크롤 : 감추기 */
+    /* background-color: #fff; */
+}
+/* 스크롤 : 영역 */
+.scrollOutBox > .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* 스크롤 : track 배경색 및 투명도 */
+.scrollOutBox.width > .scroll-element.scroll-x .scroll-element_size {
+    background: rgb(224,232,243); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(224,232,243,1) 0%, rgba(133,164,207,1) 5%, rgba(133,164,207,1) 91%, rgba(133,164,207,1) 91%, rgba(69,100,143,1) 100%, rgba(125,185,232,1) 100%, rgba(69,100,143,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(224,232,243,1) 0%,rgba(133,164,207,1) 5%,rgba(133,164,207,1) 91%,rgba(133,164,207,1) 91%,rgba(69,100,143,1) 100%,rgba(125,185,232,1) 100%,rgba(69,100,143,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(224,232,243,1) 0%,rgba(133,164,207,1) 5%,rgba(133,164,207,1) 91%,rgba(133,164,207,1) 91%,rgba(69,100,143,1) 100%,rgba(125,185,232,1) 100%,rgba(69,100,143,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e8f3', endColorstr='#45648f',GradientType=0 ); /* IE6-9 */
+}
+.scrollOutBox > .scroll-element.scroll-y .scroll-element_size {
+    top: -6px;
+    left: 5px;
+    width: 6px;
+    background: #ede8e2;
+	border-radius: 16px;
+ }
+/* 스크롤 : y 크기 */
+.scrollOutBox > .scroll-element.scroll-y {
+    height: 100%;
+    min-height: 100%;
+    padding: 3px 0 2px;
+    bottom: 0;
+    right: -5px;
+    width: 34px;
+}
+
+/* 스크롤 : x 크기 */
+.scrollOutBox > .scroll-element.scroll-x {
+    width: 100%;
+    min-width: 100%;
+    padding: 3px 0 2px;
+    bottom: 0;
+    left: 0px;
+    height: 32px;
+}
+ /* 스크롤 : x */
+ .scrollOutBox > .scroll-element.scroll-x .scroll-bar {
+     height: 31px;
+     min-width: 10px;
+     top: -11px;
+ }
+ .scrollOutBox > .scroll-element.scroll-x .scroll-element_outer {
+     height: 7px;
+     left: 0px;
+     background-color: #fff;
+     border: none;
+ }
+.scrollOutBox > .scroll-element.scroll-x .scroll-element_size { height: 4px; left: 0px; top: 3px; }
+ /* 스크롤 : thumb */
+.scrollOutBox > .scroll-element.scroll-x .scroll-bar {
+    width: 39px !important;
+    height: 33px !important;
+    background: url(../../common/images/jsScroller/scrollBtn_x.png) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+}
+.scrollOutBox > .scroll-element .scroll-bar:hover {
+
+}
+/* 스크롤 : y */
+.scrollOutBox > .scroll-element.scroll-y .scroll-element_outer {
+    top: 5px;
+    width: 16px;
+    border: none;
+}
+
+ /* 스크롤 : thumb */
+.scrollOutBox > .scroll-element.scroll-y .scroll-bar {
+    width: 16px !important;
+    height: 46px !important;
+    z-index: 1000;
+    background-image: url(../../common/images/jsScroller/scrollBtn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+}

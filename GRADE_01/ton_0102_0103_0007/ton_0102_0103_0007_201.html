@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* Page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .videoPlayBtn:hover {
+            background: #d04511 url('../ko/contents/images/icon/icon_play.svg') 28px center/27px no-repeat;
+        }
+
+        /* .videoBackground {
+            background-image: url('');
+            background-size: 100% 100%;
+        } */
+
+        /* Page 2 */
+        .wrap-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 520px;
+        }
+
+        .wrap-item>img {
+            height: 550px;
+        }
+
+        .item1 {
+            top: 100px;
+            left: 610px;
+        }
+
+        .item2 {
+            top: 180px;
+            left: 740px;
+        }
+
+        .item3 {
+            top: 240px;
+            left: 645px;
+        }
+
+        .item4 {
+            top: 455px;
+            left: 773px;
+        }
+
+
+        .popupItem {
+            border: 4px solid #a8d6f6;
+            background: #f1f9fc;
+            position: absolute;
+            opacity: 0;
+            padding: 10px 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .popupItem:before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #a8d6f6;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+
+        .popupItem::after {
+            content: "";
+            transform: rotate(0deg);
+            height: 4px;
+            background-color: #a8d6f6;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+
+        .popupItem1 {
+            top: 50px;
+            left: 160px;
+        }
+
+        .popupItem1:before {
+            right: -98px;
+        }
+
+        .popupItem1:after {
+            right: -93px;
+            width: 91px;
+        }
+
+        .popupItem2 {
+            top: 125px;
+            left: 910px;
+        }
+
+        .popupItem2:before {
+            left: -175px;
+        }
+
+        .popupItem2:after {
+            left: -170px;
+            width: 170px;
+        }
+
+        .popupItem3 {
+            top: 220px;
+            left: 200px;
+        }
+
+        .popupItem3:before {
+            top: 20%;
+            right: -156px;
+        }
+
+        .popupItem3:after {
+            right: -151px;
+            width: 155px;
+            top: 60px;
+            transform: rotate(-19deg);
+        }
+
+        .popupItem4 {
+            top: 402px;
+            left: 880px;
+        }
+
+        .popupItem4:before {
+            left: -100px;
+        }
+
+        .popupItem4:after {
+            left: -97px;
+            width: 95px;
+        }
+
+        [data-popup-page="1"] {
+            top: 145px;
+            left: 550px;
+            width: 700px;
+        }
+
+        p.arrow {
+            display: flex;
+            padding-left: 30px;
+            margin: 20px 0px;
+            line-height: 60px;
+            position: relative;
+        }
+
+        p.arrow::before {
+            width: 20px;
+            height: 20px;
+            content: "";
+            background-image: url(./common/images/bullet_arrow.png);
+            background-size: 100% 100%;
+            position: absolute;
+            left: 0;
+            top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue">
+                바른 걷기 자세를 살펴볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="바른 걷기 자세를 살펴볼까요?">영상</li>
+                    <li data-hover="" data-text="바르게 걷는 방법을 연습해 볼까요?">활동</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="videoBackground">
+                            <div class="innerVideoWrap">
+                                <div class="videoFrameWrap">
+                                    <div class="innerVideoTitle">
+                                        <p><em>걷기</em>의<em> 바른 자세</em>와 <em>동작</em></p>
+                                        <div class="videoPlayBtn" data-video-link="M202401113_800k.mp4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
+                                    <div class="memoIcon blue">
+                                        <div class="icon">
+                                            <div class="iconImg"></div>
+                                        </div>
+                                        <div class="memoTxt">이렇게 움직여요</div>
+                                    </div>
+                                    <div class="wrap-item">
+                                        <img src="./images/ton_0102_0103_0007_201/img_01.png" />
+                                        <span class="click-finger-Btn blinkOn blinkOpacity item1" data-hover=""
+                                            data-popup="1"></span>
+                                        <span class="click-finger-Btn blinkOn blinkOpacity item2" data-hover=""
+                                            data-popup="2"></span>
+                                        <span class="click-finger-Btn blinkOn blinkOpacity item3" data-hover=""
+                                            data-popup="3"></span>
+                                        <span class="click-finger-Btn blinkOn blinkOpacity item4" data-hover=""
+                                            data-popup="4"></span>
+                                        <div class="popupItem popupItem1" data-show="1">턱을 가볍게<br>당기고 앞을 봐요.</div>
+                                        <div class="popupItem popupItem2" data-show="2">양팔을 자연스럽게<br>앞뒤로 흔들어요.</div>
+                                        <div class="popupItem popupItem3" data-show="3">허리를 세우고<br>배에 힘을 주고<br>걸어요.
+                                        </div>
+                                        <div class="popupItem popupItem4" data-show="4">
+                                            <img src="./images/ton_0102_0103_0007_201/img_02.png" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="sideTopSlider contentsBox doItContent" data-slide-container="">
+                                        <div class="sideTopButtonContainer" data-slide-btn-container="">
+                                            <ul class="sideTopSlider_tabs" data-tabs="">
+                                                <li data-hover="">상체</li>
+                                                <li data-hover="">다리</li>
+                                                <li data-hover="">어깨 평행</li>
+                                                <li data-hover="">머리</li>
+                                                <li data-hover="">발</li>
+                                                <li data-hover="">보폭</li>
+                                            </ul>
+                                        </div>
+                                        <ul class="basicSlider_slides" data-slides="">
+                                            <li class="innerTab innerTab_1">
+                                                <div class="flex">
+                                                    <div>
+                                                        <p class="arrow">가슴을 펴고 어깨는 안으로 굽지 않게 해요.</p>
+                                                        <p class="arrow"> 허리를 세우고 배에 힘을 줘요.</p>
+                                                        <p class="arrow">팔꿈치를 굽히고 손은 가볍게 주먹을 쥔 채로 자연스럽게 흔들어요.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="innerTab innerTab_2">
+                                                <div class="flex">
+                                                    <div>
+                                                        <p class="arrow">앞쪽 다리는 무릎을 쭉 펴요.</p>
+                                                        <p class="arrow">뒤쪽 다리는 무릎을 자연스럽게 굽혀요.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="innerTab innerTab_3">
+                                                <div class="flex">
+                                                    <div>
+                                                        <p class="arrow">머리가 좌우로 흔들리지 않도록 유지해요.</p>
+                                                        <p class="arrow">어깨 높이는 평행을 유지해요.</p>
+                                                        <p class="arrow">척추가 걷는 방향의 중심에 있도록 신경 써서 걸어요.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="innerTab innerTab_4">
+                                                <div class="flex">
+                                                    <div>
+                                                        <p class="arrow">시선은 앞을 바라봐요.</p>
+                                                        <p class="arrow">머리를 뒤로 밀듯이 턱을 가볍게 당겨요.</p>
+                                                        <p class="arrow">턱을 당길 때 머리가 앞으로 숙여지지 않게 주의해요.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="innerTab innerTab_5">
+                                                <div class="flex">
+                                                    <div>
+                                                        <p class="arrow">앞쪽 발은 뒤꿈치→발바닥→발가락 순으로 땅에 닿게 해요.</p>
+                                                        <p class="arrow">뒤쪽 발은 앞꿈치와 발가락에 힘을 주어 바닥을 밀어내요.</p>
+                                                        <p class="arrow">신체의 무게 중심이 발뒤꿈치에서 엄지 발가락으로 전달되게 해요.</p>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="innerTab innerTab_6">
+                                                <div class="flex">
+                                                    <div>
+                                                        <p class="arrow">본인 키의 절반 정도가 적당해요.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="1" data-drag="">
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            친구와 함께 서로의 걷기 동작을 관찰하고 바르게 걷는 친구를 칭찬해요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $(document).on('click', '.click-finger-Btn', function () {
+                var $data_popup = $(this).attr('data-popup');
+                $('.popupItem[data-show="' + $data_popup + '"]').css('opacity', '1');
+                $('.popupItem[data-show="' + $data_popup + '"]').append('<div class="close-speech-button beforeNon"></div>')
+                $(this).hide();
+            });
+
+            $(document).on('click', '.close-speech-button', function () {
+                var $data_show = $(this).parent().attr('data-show');
+                $(this).parent().css('opacity', '0');
+                $('.click-finger-Btn[data-popup="' + $data_show + '"]').show();
+                $(this).parent().find($('.close-speech-button')).remove();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
