@@ -98,8 +98,8 @@
 
         .dragDropContainer.bogi .lineBox {
             width: 470px;
-            height: 510px;
-            top: -20px;
+            height: 500px;
+            top: -10px;
         }
 
         .dragDropContainer.bogi .bogi-icon:after {
@@ -227,37 +227,37 @@
         }
 
         .d12 {
-            top: 224px;
+            top: 209px;
             left: -506px;
         }
 
         .d13 {
-            top: 212px;
+            top: 197px;
             left: -379px;
         }
 
         .d14 {
-            top: 215px;
+            top: 200px;
             left: -242px;
         }
 
         .d15 {
-            top: 368px;
+            top: 353px;
             left: -527px;
         }
 
         .d16 {
-            top: 365px;
+            top: 350px;
             left: -419px;
         }
 
         .d17 {
-            top: 372px;
+            top: 367px;
             left: -306px;
         }
 
         .d18 {
-            top: 380px;
+            top: 365px;
             left: -214px;
         }
 
@@ -315,6 +315,10 @@
         .slideBtn.next.off {
             opacity: 1;
             background-image: url('./common/images/arrow_bottom_gray.png');
+        }
+
+        .buttonContainer {
+            right: 28px;
         }
     </style>
 </head>
@@ -434,6 +438,9 @@
                                 <div class="slideBtn next"></div>
                             </div>
                         </div>
+                        <div class="buttonContainer">
+                            <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -519,6 +526,7 @@
                 if (currentIndex < totalSlides - slidesToShow) {
                     currentIndex += slidesToShow;
                     $('.dragGroup:nth-child(2)').css('opacity', '1');
+                    $('.dragGroup:nth-child(2)').css('pointer-events', 'auto');
                     updateSlider();
                 }
             });
@@ -552,6 +560,11 @@
             }
             $(document).ready(function () {
                 $('.dragGroup:nth-child(2)').css('opacity', '0');
+                $('.dragGroup:nth-child(2)').css('pointer-events', 'none');
+            });
+
+            $(document).on('click', '.resetBtn', function () {
+                $('.clearArea').empty();
             });
         });
     </script>
