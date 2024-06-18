@@ -21,6 +21,18 @@
             background-image: url('../ko/contents/images/character/girl_1.png') !important;
         }
 
+        #boy_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_2.png') !important;
+        }
+
+        #boy_4_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_4.png') !important;
+        }
+
+        #girl_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_2.png') !important;
+        }
+
         .characterWrap.speech.right:before {
             background: url('../ko/contents/images/button/btn_speech_balloon_left1.png') no-repeat center / contain;
         }
@@ -40,6 +52,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: auto;
         }
 
         .flex .items .imgWrap {
@@ -49,6 +62,42 @@
 
         .flex .items .character-item {
             margin-top: -210px;
+        }
+
+        /* popup */
+        .popup_pages .flex {
+            height: 600px;
+            justify-content: space-between;
+            padding: 0 50px;
+            margin-top: 50px;
+        }
+
+        .popup_pages .flex .zoom_img {
+            height: 100%;
+            flex: 1;
+        }
+
+        .popup_pages .flex .zoomImg,
+        .popup_pages .flex .zoomImg .bgImg {
+            height: 100%;
+        }
+
+        .popup_pages .flex .zoomImg .bgImg img {
+            object-fit: fill;
+        }
+
+        .popup_pages .flex h1 {
+            text-align: center;
+            flex: 1;
+        }
+
+        .popup_pages .zoomContainer.horizon .zoomController {
+            top: 100px;
+            left: 100px;
+        }
+
+        .popup_pages .linkBtn {
+            top: 30px;
         }
     </style>
 </head>
@@ -74,6 +123,8 @@
                                 <ul class="basicSlider_circle_tabs" data-tabs="">
                                     <li data-hover=""></li>
                                     <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
                                 </ul>
                                 <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
                             </div>
@@ -81,7 +132,7 @@
                                 <li class="innerTab_1" data-quiz="toggle">
                                     <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
                                     <div class="flex">
-                                        <div class="items">
+                                        <div class="items" data-type="toggleButton">
                                             <span class="imgWrap line popBtn" data-popup-btn="2"
                                                 data-targetSlideNum="1">
                                                 <img src="./images/ton_0202_0102_0013_201/img_01.png">
@@ -99,7 +150,61 @@
                                     </div>
                                 </li>
                                 <li class="innerTab_2" data-quiz="toggle">
-
+                                    <div class="flex">
+                                        <div class="items" data-type="toggleButton">
+                                            <span class="imgWrap line popBtn" data-popup-btn="2" data-targetSlideNum="2"
+                                                style="width: 390px;">
+                                                <img src="./images/ton_0202_0102_0013_201/img_02.png">
+                                                <button class="popBtn zoomBtn" data-hover=""></button>
+                                            </span>
+                                            <div class="toggle" data-toggle-obj="2">
+                                                <div class="answer" data-toggle-target="2">
+                                                    <div>여름</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="items">
+                                            <div id="boy_2_c" class="character-item"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="items" data-type="toggleButton">
+                                            <span class="imgWrap line popBtn" data-popup-btn="2"
+                                                data-targetSlideNum="3">
+                                                <img src="./images/ton_0202_0102_0013_201/img_03.png">
+                                                <button class="popBtn zoomBtn" data-hover=""></button>
+                                            </span>
+                                            <div class="toggle" data-toggle-obj="3">
+                                                <div class="answer" data-toggle-target="3">
+                                                    <div>겨울</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="items">
+                                            <div id="boy_4_c" class="character-item"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_4" data-quiz="toggle">
+                                    <div class="flex">
+                                        <div class="items" data-type="toggleButton">
+                                            <span class="imgWrap line popBtn" data-popup-btn="2" data-targetSlideNum="4"
+                                                style="width: 380px;">
+                                                <img src="./images/ton_0202_0102_0013_201/img_04.png">
+                                                <button class="popBtn zoomBtn" data-hover=""></button>
+                                            </span>
+                                            <div class="toggle" data-toggle-obj="4">
+                                                <div class="answer" data-toggle-target="4">
+                                                    <div>가을</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="items">
+                                            <div id="girl_2_c" class="character-item"></div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -121,10 +226,107 @@
 
                 <li class="fullLine whole image" data-popup-page="2">
                     <div class="full_content">
-                        <div class="text">
-                            풀팝업 확인용 텍스트
+                        <div class="basicSlider" data-slide-container="popup">
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1">
+                                    <a class="linkBtn"
+                                        href="http://gwangjuart.com/bbs/board.php?bo_table=artist01&wr_id=166"
+                                        target="_blank"><span>『도원 풍경』
+                                            작품 보기</span></a>
+                                    <div class="flex">
+                                        <div class="page_zoom zoom_img">
+                                            <div class="zoomContainer horizon pointerOff">
+                                                <div class="zoomArea">
+                                                    <div class="zoomImgContainer">
+                                                        <div class="zoomImg">
+                                                            <div class="bgImg">
+                                                                <img src="./images/ton_0202_0102_0013_201/img_05.jpg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1>오지호의<br>
+                                            『도원 풍경』
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2">
+                                    <div class="flex">
+                                        <div class="page_zoom zoom_img">
+                                            <div class="zoomContainer horizon pointerOff">
+                                                <div class="zoomArea">
+                                                    <div class="zoomImgContainer">
+                                                        <div class="zoomImg">
+                                                            <div class="bgImg">
+                                                                <img src="./images/ton_0202_0102_0013_201/img_06.jpg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1>신사임당의<br>
+                                            『초충도』
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3">
+                                    <div class="flex">
+                                        <div class="page_zoom zoom_img">
+                                            <div class="zoomContainer horizon pointerOff">
+                                                <div class="zoomArea">
+                                                    <div class="zoomImgContainer">
+                                                        <div class="zoomImg">
+                                                            <div class="bgImg">
+                                                                <img src="./images/ton_0202_0102_0013_201/img_07.jpg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1>그랜마 모지스의<br>
+                                            『강 건너 할머니 댁으로』
+                                        </h1>
+                                    </div>
+                                </li>
+                                <li class="innerTab_4">
+                                    <div class="flex">
+                                        <div class="page_zoom zoom_img">
+                                            <div class="zoomContainer horizon pointerOff">
+                                                <div class="zoomArea">
+                                                    <div class="zoomImgContainer">
+                                                        <div class="zoomImg">
+                                                            <div class="bgImg">
+                                                                <img src="./images/ton_0202_0102_0013_201/img_08.jpg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h1>주세페 아르침볼도의<br>
+                                            『가을』
+                                        </h1>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
                         </div>
                     </div>
+
                 </li>
             </ul>
         </section>
@@ -145,6 +347,8 @@
     <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
     <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
     <script type="text/javascript" src="./ko/contents.js"></script>
+
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
     <script type="text/javascript" src="./common/js/guide.js"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
@@ -172,6 +376,45 @@
                 class: 'bottom',
                 balloon_top: -190,
                 balloon_left: -110,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.boy2({
+                id: '#boy_2_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `빨갛게 속이 익은 수박은<br> 여름 과일이에요.`,
+                class: 'bottom',
+                balloon_top: -190,
+                balloon_left: -150,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `하얀 눈으로 덮여 있고<br> 사람들이 털모자와<br> 목도리를 하는 겨울이에요.`,
+                class: 'bottom',
+                balloon_top: -250,
+                balloon_left: -170,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.girl2({
+                id: '#girl_2_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `가을에 수확할 수 있는<br> 열매들로 얼굴을<br> 나타냈어요.`,
+                class: 'bottom',
+                balloon_top: -250,
+                balloon_left: -130,
                 callback_start: () => { KmAudioPlayer.buttonClick(); },
                 callback_end: () => { console.log('end'); }
             });

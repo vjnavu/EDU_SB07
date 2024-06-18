@@ -17,9 +17,11 @@ function efSound(src) {
 }
 
 if (document.querySelectorAll('.page_zoom').length > 0) {
-  zoomInstance = new ZoomImage(
-    QS('.page_zoom').querySelector('.zoomContainer')
-  );
+  zoomContainers = QS('.popup_pages').querySelectorAll('.zoomContainer');
+  zoomContainers.forEach(zoom => {
+    zoomInstance = new ZoomImage(zoom);
+  });
+
 
   $(document).on('click', '.popup_closeBtn', function () {
     if (!$(this).parent().hasClass('min')) {

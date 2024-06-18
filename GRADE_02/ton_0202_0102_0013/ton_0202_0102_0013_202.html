@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .page_1 {
+            justify-content: center;
+        }
+
+        .page_1 .flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .page_1 .flex .itemBox {
+            display: flex;
+            background-color: #FDF3E7;
+            border-radius: 50px;
+            padding: 10px 30px;
+        }
+
+        .page_1 .flex .itemBox>em {
+            margin: 0 -15px;
+        }
+
+        /* popup */
+        .popup_pages img {
+            height: 570px;
+            width: 650px;
+        }
+
+        .popup_pages .wrap {
+            width: 70%;
+        }
+
+        .popup_pages .wrap h1 {
+            text-align: center;
+            width: 700px;
+        }
+
+        .popup_pages .wrap h1 em {
+            margin: 0 -15px;
+        }
+
+        .blueBox {
+            position: absolute;
+            right: 0;
+            top: 230px;
+            pointer-events: auto;
+            background-color: #E9F4F8;
+            border: 4px solid #B1D5F3;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .blueBox::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background-color: #B1D5F3;
+            position: absolute;
+            left: -100px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .blueBox::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 4px solid #B1D5F3;
+            background-color: #E9F4F8;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: -110px;
+            z-index: 1;
+        }
+
+        .blueBox .toggle .answer {
+            text-align: center;
+        }
+
+        .toggle.box {
+            background-color: transparent;
+        }
+
+        [data-popup-page="1"] .innerTab_2 .blueBox {
+            top: 430px;
+        }
+
+        [data-popup-page="1"] .innerTab_2 .blueBox::after {
+            left: -310px;
+            width: 310px;
+        }
+
+        [data-popup-page="1"] .innerTab_2 .blueBox::before {
+            left: -320px;
+        }
+
+        [data-popup-page="2"] .blueBox.box1 {
+            top: 30px;
+        }
+
+        [data-popup-page="2"] .blueBox.box1::after {
+            transform: rotate(-18deg);
+            width: 615px;
+            left: -602px;
+            top: 190px;
+        }
+
+        [data-popup-page="2"] .blueBox.box1::before {
+            top: 340px;
+            left: -600px;
+        }
+
+        [data-popup-page="2"] .blueBox.box2 {
+            top: 360px;
+        }
+
+        [data-popup-page="2"] .blueBox.box2::after {
+            left: -315px;
+            width: 315px;
+        }
+
+        [data-popup-page="2"] .blueBox.box2::before {
+            left: -325px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                다양한 방법으로 그림을 감상해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="sideLeftSlider contentsBox doItContent" data-slide-container="">
+                            <div class="sideLeftButtonContainer" data-slide-btn-container="">
+                                <ul class="sideLeftSlider_tabs" data-tabs="">
+                                    <li data-hover="">자세하게<br>감상하기</li>
+                                    <li data-hover="">상상하며<br>감상하기</li>
+                                </ul>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab innerTab_1">
+                                    <p>그림을 살펴보며 처음에는 눈에 띄지 않았지만 새롭게 발견한 부분을 이야기해요.</p>
+                                    <div class="flex">
+                                        <div class="itemBox">오지호의 <em>『도원 풍경』</em>
+                                            <div class="popBtn mouse" data-hover="" data-popup-btn="1"
+                                                data-targetSlideNum="1"></div>
+                                        </div>
+                                        <div class="itemBox">신사임당의 <em>『초충도』</em>
+                                            <div class="popBtn mouse" data-hover="" data-popup-btn="1"
+                                                data-targetSlideNum="2"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab innerTab_2">
+                                    <p>그림을 보고 이야기를 상상하거나 내가 만약 그림 속 장소에 있다면 무엇을 하고 싶은지 이야기해요.</p>
+                                    <div class="flex">
+                                        <div class="itemBox">그랜마 모지스의 <em>『 강 건너 할머니 댁으로 』</em>
+                                            <div class="popBtn mouse" data-hover="" data-popup-btn="2"
+                                                data-targetSlideNum="1"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="fullLine whole image" data-popup-page="1">
+                    <div class="full_content">
+                        <div class="basicSlider" data-slide-container="popup">
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="page_zoom zoom_img">
+                                        <div class="zoomContainer horizon pointerOff">
+                                            <div class="zoomArea">
+                                                <div class="zoomImgContainer">
+                                                    <div class="zoomImg">
+                                                        <div class="bgImg">
+                                                            <div class="wrap">
+                                                                <img src="./images/ton_0202_0102_0013_202/img_01.jpg">
+                                                                <h1>오지호의 <em>『도원 풍경』</em></h1>
+                                                            </div>
+                                                            <div class="blueBox">
+                                                                <div data-type="toggleButton" class="box">
+                                                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                                                        <div class="answer" data-toggle-target="1">
+                                                                            <div class="ls-2h">복숭아나무 뒤로 <br>하얀 자두나무가
+                                                                                보여요.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="page_zoom zoom_img">
+                                        <div class="zoomContainer horizon pointerOff">
+                                            <div class="zoomArea">
+                                                <div class="zoomImgContainer">
+                                                    <div class="zoomImg">
+                                                        <div class="bgImg">
+                                                            <div class="wrap">
+                                                                <img src="./images/ton_0202_0102_0013_202/img_02.jpg">
+                                                                <h1>신사임당의 <em>『초충도』</em></h1>
+                                                                <div class="blueBox">
+                                                                    <div data-type="toggleButton" class="box">
+                                                                        <div class="toggle examBtn box"
+                                                                            data-toggle-obj="2">
+                                                                            <div class="answer" data-toggle-target="2">
+                                                                                <div class="ls-2h">깨진 수박을 먹고 있는<br>
+                                                                                    들쥐 두 마리가 보여요.
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="fullLine whole image" data-popup-page="2">
+                    <div class="full_content" data-quiz="toggle">
+                        <div class="page_zoom zoom_img">
+                            <div class="zoomContainer horizon pointerOff">
+                                <div class="zoomArea">
+                                    <div class="zoomImgContainer">
+                                        <div class="zoomImg">
+                                            <div class="bgImg">
+                                                <div class="wrap">
+                                                    <img src="./images/ton_0202_0102_0013_202/img_03.jpg">
+                                                    <h1>그랜마 모지스의<br>
+                                                        『강 건너 할머니 댁으로』
+                                                    </h1>
+                                                    <div class="blueBox box1">
+                                                        <div data-type="toggleButton" class="box">
+                                                            <div class="toggle examBtn box" data-toggle-obj="3">
+                                                                <div class="answer" data-toggle-target="3">
+                                                                    <div class="ls-2h">빨간 옷을 입은 남자는<br>
+                                                                        썰매를 타려고 했는데<br>
+                                                                        썰매 스틱을 집에 놓고<br>
+                                                                        온 것이 생각나 급히<br>
+                                                                        집으로 가고 있는 것 같아요.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="blueBox box2">
+                                                        <div data-type="toggleButton" class="box">
+                                                            <div class="toggle examBtn box" data-toggle-obj="4">
+                                                                <div class="answer" data-toggle-target="4">
+                                                                    <div class="ls-2h">제가 만약 그림 속 마을에<br>
+                                                                        있다면 친구들과 커다란<br>
+                                                                        눈사람을<br>
+                                                                        만들고 싶어요.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
