@@ -1,0 +1,556 @@
+.bgImg {
+    height: 100%;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    pointer-events: auto;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 30px;
+    font-size: 17px;
+}
+
+.learning-wrap>span:not(.learning-badge) {
+    text-shadow: -1px -1px 2px #fff, 1px 1px 2px #fff;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 0px 5px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 27px;
+    left: 96px;
+    font-size: 20px;
+}
+
+.popLearning .learning-badge {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+.popLearning .learning-wrap {
+    padding-bottom: 0;
+}
+
+.popbox.mini .navControl {
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+    color: #fff;
+    font-family: 'YGJAL';
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.popbox.mini .navControl .navItem.purple {
+    background: #7E6BAA;
+}
+
+.popbox.mini .navControl .navItem.blue {
+    background: #4D90CB;
+}
+
+.popbox.mini .navControl .navItem.red {
+    background: #D73731;
+}
+
+.popbox.mini .navControl .navItem.orange {
+    background: #E9943F;
+}
+
+.popbox.mini .navControl .navItem {
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'YGJAL';
+    line-height: 1;
+}
+
+.popbox.mini .navControl .navItem.off {
+    background: #ccc;
+}
+
+.learning-list>li {
+    display: none;
+    position: relative;
+}
+
+.learning-list>li.on {
+    display: block;
+}
+
+.learning-list>li .learning-item {
+    display: grid;
+    grid-template: 2fr/ 1fr 1fr;
+    overflow: hidden;
+    height: auto;
+    width: 480px;
+    gap: 30px 0;
+    margin: 40px auto 20px;
+}
+
+.learning-list>li .learning-item>li {
+    position: relative;
+    width: 250px;
+    height: 160px;
+    font-size: 22px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* purple */
+.learning-list>li .learning-item>li[data-color="purple"],
+.popbox .popLearning[data-color="purple"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_01.png');
+}
+
+.learning-list>li .learning-item>li[data-color="purple"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_off.png');
+}
+
+/* blue */
+.learning-list>li .learning-item>li[data-color="blue"],
+.popbox .popLearning[data-color="blue"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_02.png');
+}
+
+.learning-list>li .learning-item>li[data-color="blue"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_off.png');
+}
+
+/* red */
+.learning-list>li .learning-item>li[data-color="red"],
+.popbox .popLearning[data-color="red"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_03.png');
+}
+
+.learning-list>li .learning-item>li[data-color="red"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_off.png');
+}
+
+/* yellow */
+.learning-list>li .learning-item>li[data-color="yellow"],
+.popbox .popLearning[data-color="yellow"] {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_04.png');
+}
+
+.learning-list>li .learning-item>li[data-color="yellow"]:hover {
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_off.png');
+}
+
+.learning-list>li .learning-item>li.off {
+    pointer-events: none;
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_off.png');
+}
+
+.slideBtn {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.slideBtn.prev {
+    left: 40px;
+}
+
+.slideBtn.next {
+    right: 40px;
+}
+
+.slideBtn.off {
+    pointer-events: none;
+    opacity: .2;
+}
+
+.popbox.mini {
+    border-radius: 32px;
+    overflow: unset;
+    cursor: move;
+}
+
+.popbox.mini .popCloseBtn {
+    background: #a4826c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 0 30px 0 50px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.popbox.mini .popCloseBtn::after {
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn:hover {
+    background: #f60;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.popbox .popLearning {
+    width: 65px;
+    height: 65px;
+    pointer-events: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.popbox .popLearning:hover {
+    background-color: rgb(249, 66, 97);
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.popbox .popLearning.pop1 {
+    top: 172px;
+    left: 291px;
+}
+
+.popbox .popLearning.pop2 {
+    top: 140px;
+    left: 437px;
+}
+
+.popbox .popLearning.pop3 {
+    top: 279px;
+    left: 193px;
+}
+
+.popbox .popLearning.pop4 {
+    top: 362px;
+    left: 121px;
+}
+
+.popbox .popLearning.pop5 {
+    top: 520px;
+    left: 146px;
+}
+
+.popbox .popLearning.pop6 {
+    top: 620px;
+    left: 162px;
+}
+
+.popbox .popLearning.pop7 {
+    top: 326px;
+    left: 342px;
+}
+
+.popbox .popLearning.pop8 {
+    top: 324px;
+    left: 457px;
+}
+
+.popbox .popLearning.pop9 {
+    top: 441px;
+    left: 275px;
+}
+
+.popbox .popLearning.pop10 {
+    top: 581px;
+    left: 261px;
+}
+
+.popbox .popLearning.pop11 {
+    top: 445px;
+    left: 407px;
+}
+
+.popbox .popLearning.pop12 {
+    top: 123px;
+    left: 851px;
+}
+
+.popbox .popLearning.pop13 {
+    top: 155px;
+    left: 997px;
+}
+
+.popbox .popLearning.pop14 {
+    top: 262px;
+    left: 1096px;
+}
+
+.popbox .popLearning.pop15 {
+    top: 307px;
+    left: 831px;
+}
+
+.popbox .popLearning.pop16 {
+    top: 310px;
+    left: 946px;
+}
+
+.popbox .popLearning.pop17 {
+    top: 345px;
+    left: 1168px;
+}
+
+.popbox .popLearning.pop18 {
+    top: 504px;
+    left: 1143px;
+}
+
+.popbox .popLearning.pop19 {
+    top: 420px;
+    left: 874px;
+}
+
+.popbox .popLearning.pop20 {
+    top: 424px;
+    left: 1013px;
+}
+
+.popbox .popLearning.pop21 {
+    top: 603px;
+    left: 1127px;
+}
+
+.popbox .popLearning[data-color] {
+    width: 130px;
+    height: 130px;
+}
+
+.popbox .popLearning[data-color]:hover {
+    background-color: transparent;
+    background-image: url('../images/proto_ton_001/proto_ton_001_208_off.png');
+}
+
+.popbox .popLearning[data-color].pop1 {
+    top: 145px;
+    left: 276px;
+}
+
+.popbox .popLearning[data-color].pop2 {
+    top: 110px;
+    left: 408px;
+}
+
+.popbox .popLearning[data-color].pop3 {
+    top: 235px;
+    left: 176px;
+}
+
+.popbox .popLearning[data-color].pop4 {
+    top: 335px;
+    left: 96px;
+}
+
+.popbox .popLearning[data-color].pop5 {
+    top: 475px;
+    left: 116px;
+}
+
+.popbox .popLearning[data-color].pop6 {
+    top: 605px;
+    left: 126px;
+}
+
+.popbox .popLearning[data-color].pop7 {
+    top: 285px;
+    left: 309px;
+}
+
+.popbox .popLearning[data-color].pop8 {
+    top: 285px;
+    left: 426px;
+}
+
+.popbox .popLearning[data-color].pop9 {
+    top: 415px;
+    left: 256px;
+}
+
+.popbox .popLearning[data-color].pop10 {
+    top: 555px;
+    left: 236px;
+}
+
+.popbox .popLearning[data-color].pop11 {
+    top: 425px;
+    left: 366px;
+}
+
+.popbox .popLearning[data-color].pop12 {
+    top: 110px;
+    right: 408px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop13 {
+    top: 145px;
+    right: 276px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop14 {
+    top: 235px;
+    right: 176px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop15 {
+    top: 285px;
+    right: 426px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop16 {
+    top: 285px;
+    right: 309px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop17 {
+    top: 325px;
+    right: 96px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop18 {
+    top: 460px;
+    right: 116px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop19 {
+    top: 395px;
+    right: 386px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop20 {
+    top: 420px;
+    right: 256px;
+    left: auto;
+}
+
+.popbox .popLearning[data-color].pop21 {
+    top: 590px;
+    right: 156px;
+    left: auto;
+}
+
+
+.starTitle {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+    top: -18px;
+    left: 5px;
+}
+
+.starTitle::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-image: url("../images/proto_ton_001/before.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.starArrow {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0px 3px 0px 0px;
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    left: 50%;
+    bottom: 60px;
+    transform: translate(-50%, 0);
+    text-shadow: none !important;
+}
+
+.starArrow.purple {
+    background-image: url("../images/proto_ton_001/arrow-purple.png");
+}
+
+.starArrow.blue {
+    background-image: url("../images/proto_ton_001/arrow-blue.png");
+}
+
+.starArrow.red {
+    background-image: url("../images/proto_ton_001/arrow-red.png");
+}
