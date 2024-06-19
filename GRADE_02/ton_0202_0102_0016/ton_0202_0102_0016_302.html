@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <link rel="stylesheet" href="./proto_ton_007/css/proto_ton_007.css">
+    <style>
+        #gate {
+            padding-top: 120px;
+        }
+
+        #gate>h2 {
+            margin-top: 20px;
+        }
+
+        #quizStartBtn {
+            margin-top: 20px;
+        }
+
+        .answerImg.img1 {
+            background: url('./images/ton_0202_0102_0016_302/img_01.png') no-repeat center / 100% 100%;
+        }
+
+        .answerImg.img2 {
+            background: url('./images/ton_0202_0102_0016_302/img_02.jpg') no-repeat center / 100% 100%;
+        }
+
+        .answerImg.img3 {
+            background: url('./images/ton_0202_0102_0016_302/img_03.png') no-repeat center / 100% 100%;
+        }
+
+        .answerImg.img4 {
+            background: url('./images/ton_0202_0102_0016_302/img_04.png') no-repeat center / 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <!-- <div class="contentsTitle">
+                <div class="title">
+                    <div class="titleText">
+                    </div>
+                </div>
+            </div> -->
+            <!-- Content -->
+            <div class="contentsBox">
+                <div id="frame">
+                    <!-- 게임 설정 -->
+                    <div class="settingWrap">
+                        <div class="bg-setting">
+                            <button id="settings" type="button">설정</button>
+                        </div>
+                        <div class="settingPop">
+                            <div class="settingArea">
+                                <button id="goGatePageBtn" type="button">처음으로 돌아가기</button>
+                                <div id="soundControls">
+                                    <div>
+                                        <button id="backSoundControl" type="button">배경음</button>
+                                        <span>배경음</span>
+                                        <button id="effectSoundControl" type="button">효과음</button>
+                                        <span>효과음</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gate">
+                        <p class="game-name">그림 맞히기 퀴즈</p>
+                        <h1>어떤 계절일까요?</h1>
+                        <h2>지우개로 지운 부분을 보고<br>무슨 그림인지 맞혀 보세요.</h2>
+                        <button id="quizStartBtn" type="button">시작</button>
+                    </div>
+                    <div id="quiz">
+                        <div id="quizSlider">
+                            <div class="quizHeader">
+                                <div class="quizHeader-left">
+                                    <h2>어떤 계절일까요?</h2>
+                                </div>
+                                <div class="quizHeader-right">
+                                    <!-- 슬라이드 버튼 -->
+                                    <div class="slideControls">
+                                        <button class="quizSlider-btn btn-prev" type="button">이전</button>
+                                        <div id="quizHeaderNum" class="quizHeader-num">
+                                            <span class="quizHeader-current-idx"></span>
+                                            <span>/</span>
+                                            <span class="quizHeader-total-idx"></span>
+                                        </div>
+                                        <button class="quizSlider-btn btn-next" type="button">다음</button>
+                                    </div>
+                                    <div id="eraserDropDown">
+                                        <button class="dropdown-input" type="button">지우개 선택</button>
+                                        <ul class="dropdown-content">
+                                            <li>
+                                                <button type="button" data-size="6">소</button>
+                                            </li>
+                                            <li>
+                                                <button class="active" type="button" data-size="12">중</button>
+                                            </li>
+                                            <li>
+                                                <button type="button" data-size="18">대</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quizBody">
+                                <!-- 슬라이드 -->
+                                <ul id="quizSliderContainer">
+                                    <li>
+                                        <div class="paintBoard">
+                                            <div class="answerImg img1">
+                                                <span class="answer">봄</span>
+                                            </div>
+                                            <canvas class="paintArea"></canvas>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="paintBoard">
+                                            <div class="answerImg img2">
+                                                <span class="answer">겨울</span>
+                                            </div>
+                                            <canvas class="paintArea"></canvas>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="paintBoard">
+                                            <div class="answerImg img3">
+                                                <span class="answer">가을</span>
+                                            </div>
+                                            <canvas class="paintArea"></canvas>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="paintBoard">
+                                            <div class="answerImg img4">
+                                                <span class="answer">여름</span>
+                                            </div>
+                                            <canvas class="paintArea"></canvas>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="quizFooter">
+                                <!-- 정답 확인,다시 하기 -->
+                                <button class="btn-checkAnswer" type="button">정답 확인</button>
+                                <button class="btn-replay hide" type="button">다시 하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Common Script -->
+    <script src="./common/js/jquery.js"></script>
+    <script src="./common/js/base.js"></script>
+    <script src="./common/js/common.js"></script>
+    <script src="./common/js/contents.js"></script>
+    <script src="./proto_ton_007/js/proto_ton_007.js"></script>
+</body>
+
+</html>

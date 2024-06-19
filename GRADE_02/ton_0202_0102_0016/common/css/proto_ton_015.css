@@ -1,0 +1,106 @@
+.fingerAnswerContainer {
+    padding-left: 38px;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    box-sizing: border-box;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fingerAnswerContainer .fingerAnswer {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+}
+
+.fingerAnswerContainer .fingerAnswer p {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    font-size: 45px;
+    text-align: justify;
+    border: 4px solid #fccd89;
+    border-radius: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all .3s ease-in-out .1s;
+}
+
+.fingerAnswerContainer .fingerAnswer.view p {
+    opacity: 1;
+}
+
+.fingerAnswerContainer .fingerAnswer+.fingerAnswer {
+    margin-top: 30px;
+}
+
+.finger {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    left: -70px;
+    top: 3px;
+    background: #fccc86;
+    cursor: pointer;
+    z-index: 21;
+}
+
+.finger::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.finger:hover {
+    background: #f3d5dd;
+}
+
+.finger.finger_01::after {
+    background: url("../images/proto_ton_015/num-01.png") no-repeat center / contain;
+}
+
+.finger.finger_02::after {
+    background: url("../images/proto_ton_015/num-02.png") no-repeat center / contain;
+}
+
+.finger.finger_03::after {
+    background: url("../images/proto_ton_015/num-03.png") no-repeat center / contain;
+}
+
+.finger.finger_04::after {
+    background: url("../images/proto_ton_015/num-04.png") no-repeat center / contain;
+}
+
+.finger.finger_05::after {
+    background: url("../images/proto_ton_015/num-05.png") no-repeat center / contain;
+}
+
+.finger.finger_06::after {
+    background: url("../images/proto_ton_015/num-06.png") no-repeat center / contain;
+}
+
+.finger.finger_07::after {
+    background: url("../images/proto_ton_015/num-07.png") no-repeat center / contain;
+}
+
+.finger.finger_08::after {
+    background: url("../images/proto_ton_015/num-08.png") no-repeat center / contain;
+}
+
+.finger.finger_09::after {
+    background: url("../images/proto_ton_015/num-09.png") no-repeat center / contain;
+}
+
+.finger.finger_10::after {
+    background: url("../images/proto_ton_015/num-10.png") no-repeat center / contain;
+}
