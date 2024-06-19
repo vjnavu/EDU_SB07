@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <link rel="stylesheet" href="./proto_ton_008/css/proto_ton_008.css">
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <!-- <div class="contentsTitle">
+                <div class="title">
+                    <div class="titleText">
+                    </div>
+                </div>
+            </div> -->
+            <!-- Content -->
+            <div class="contentsBox">
+                <div id="frame">
+                    <!-- 게임 설정 -->
+                    <div class="settingWrap">
+                        <div class="bg-setting">
+                            <button id="settings" type="button">설정</button>
+                        </div>
+                        <div class="settingPop">
+                            <div class="settingArea">
+                                <button id="goGatePageBtn" type="button">처음으로 돌아가기</button>
+                                <div id="soundControls">
+                                    <div>
+                                        <button id="backSoundControl" type="button">배경음</button>
+                                        <span>배경음</span>
+                                        <button id="effectSoundControl" type="button">효과음</button>
+                                        <span>효과음</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gate">
+                        <h1><span>다섯</span> <span>고</span><span>개</span> <span>퀴즈</span></h1>
+                        <h2>다섯 개의 힌트를 보고 퀴즈를 풀어<br>선비가 고개를 넘을 수 있도록 도와주세요!</h2>
+                        <button id="quizStartBtn" type="button">시작</button>
+                        <div class="char-gate">선비 캐릭터</div>
+                        <div class="balloon-gate pos-1">도와줘!</div>
+                        <div class="balloon-gate pos-2">그냥은 못 가지!<br>문제를 맞혀라!</div>
+                    </div>
+                    <div id="quiz">
+                        <div id="quizSlider">
+                            <div class="quizHeader">
+                                <h2><span>다섯</span> <span>고</span><span>개</span> <span>퀴즈</span></h2>
+                                <button class="btn-showHints popBtn noSound" type="button" data-pop="1"
+                                    data-slide="1">힌트 모두 보기</button>
+
+                            </div>
+
+                            <div class="quizBody">
+
+                                <!-- 퀴즈 현황 -->
+                                <div id="currentSituation">
+                                    <div id="currentChar">캐릭터</div>
+                                </div>
+
+                                <!-- 슬라이드 -->
+                                <ul id="quizSliderContainer">
+                                    <li>
+                                        <p class="numText">사람들이 도로 사이를 건널 때 이용해요.</p>
+                                    </li>
+                                    <li>
+                                        <p class="numText">나를 지나갈 때는 손을 들고 지나가요</p>
+                                    </li>
+                                    <li>
+                                        <p class="numText">내 앞에 서면 우선 멈춰야 해요.</p>
+                                    </li>
+                                    <li>
+                                        <p class="numText">나를 건널 때는 주위를 잘 살펴야 해요.</p>
+                                    </li>
+                                    <li>
+                                        <p class="numText">나는 하얀색 줄무늬가 있어요.</p>
+                                    </li>
+                                </ul>
+
+                                <!-- 슬라이드 버튼 -->
+                                <button class="quizSlider-btn btn-prev" type="button">이전 고개</button>
+                                <button class="quizSlider-btn btn-next" type="button">다음 고개</button>
+
+                            </div>
+
+                            <div class="quizFooter">
+                                <!-- 정답 확인,다시 하기, 특별 힌트 -->
+                                <button class="btn-checkAnswer popBtn noSound" type="button" data-pop="3"
+                                    data-slide="1">정답 확인</button>
+                                <button class="btn-replay hide" type="button">다시 하기</button>
+                                <button class="btn-specialHint popBtn noSound" type="button" data-pop="2"
+                                    data-slide="1">특별 힌트</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="hintPopup" class="popbox mini popup" data-pop="1" data-pop-type="mini">
+                        <div class="popupContents">
+                            <button class="btn-closePopup" type="button">닫기</button>
+                            <div class="popup-contents">
+                                <h3>힌트</h3>
+                                <ol class="ordered-list">
+                                    <li>
+                                        <span>1</span>
+                                        <p>사람들이 도로 사이를 건널 때 이용해요.</p>
+                                    </li>
+                                    <li>
+                                        <span>2</span>
+                                        <p>나를 지나갈 때는 손을 들고 지나가요</p>
+                                    </li>
+                                    <li>
+                                        <span>3</span>
+                                        <p>내 앞에 서면 우선 멈춰야 해요.</p>
+                                    </li>
+                                    <li>
+                                        <span>4</span>
+                                        <p>나를 건널 때는 주위를 잘 살펴야 해요.</p>
+                                    </li>
+                                    <li>
+                                        <span>5</span>
+                                        <p>나는 하얀색 줄무늬가 있어요.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="specilaHintPopup" class="popbox mini popup" data-pop="2" data-pop-type="mini">
+                        <div class="popupContents">
+                            <button class="btn-closePopup" type="button">닫기</button>
+                            <div class="popup-contents">
+                                <h3>특별 힌트</h3>
+                                <ul class="spell-list">
+                                    <li>ㅎ</li>
+                                    <li>ㄷ</li>
+                                    <li>ㅂ</li>
+                                    <li>ㄷ</li>
+                                </ul>
+                            </div>
+                            <div class="char-pop">
+                                <div class="balloon-char-pop">
+                                    이제 알겠지?
+                                </div>
+                            </div>
+                            <div class="item-pop">팝업 디자인 아이템</div>
+                        </div>
+                    </div>
+                    <div id="correctPopup" class="popbox mini popup" data-pop="3" data-pop-type="mini">
+                        <div class="popupContents">
+                            <button class="btn-closePopup" type="button">닫기</button>
+                            <div class="popup-contents">
+                                <h3>정답</h3>
+                                <div class="answer-area">
+                                    <p>나는<b>&ldquo;횡단보도&rdquo;</b>입니다.</p>
+                                    <div class="answer-image">
+                                        <img src="./images/ton_0102_0104_0003_102/img_01.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-dark hide"></div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+    </div>
+    <!-- Common Script -->
+    <script src="./common/js/jquery.js"></script>
+    <script src="./common/js/base.js"></script>
+    <script src="./common/js/common.js"></script>
+    <script src="./common/js/contents.js"></script>
+
+    <script src="./proto_ton_008/js/proto_ton_008.js"></script>
+</body>
+
+</html>

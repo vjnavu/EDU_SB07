@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex .howtoBox {
+            width: 100%;
+        }
+
+        .flex .howtoBox .text-box {
+            text-align: center;
+        }
+
+        .page_1 .flex {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0 0 115px;
+        }
+
+        .page_1 .innerTab_3 .flex {
+            margin: 20px 0 0 375px;
+        }
+
+        .page_1 .flex .howtoBox {
+            width: 100%;
+        }
+
+        .page_1 .flex .howtoBox .text-box {
+            text-align: center;
+        }
+
+        .page_1 .howtoBox .pic-box {
+            height: 306px;
+        }
+
+        .page_1 .howtoBox .pic-box .imageWrap {
+            padding: 0;
+        }
+
+        .page_1 .imgWrap.line.popBtn {
+            height: 100%;
+        }
+
+        /* drag drop */
+        .dragDropContainer.bogi .bogi-icon {
+            width: max-content;
+            text-align: center;
+            left: -2px;
+            top: -1px;
+            left: 0;
+            right: unset;
+            margin: auto;
+            border-radius: 0 0 18px 0px;
+            font-size: 22px;
+            height: max-content;
+            padding: 2px 10px;
+        }
+
+        .dragDropContainer.bogi .lineBox {
+            position: absolute;
+            width: 175px;
+            height: 280px;
+            top: 105px;
+            right: 28px;
+        }
+
+        .js-dragObj {
+            cursor: pointer;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            scale: 1.4;
+            background-size: contain;
+            padding: 0;
+            left: 65px;
+            top: 70px;
+        }
+
+        .d1 {
+            background-image: url("./images/ton_0102_0104_0003_201/icon_o.png");
+        }
+
+        .d2 {
+            background-image: url("./images/ton_0102_0104_0003_201/icon_x.png");
+            top: 180px;
+        }
+
+        .clearArea {
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .a1 {
+            top: 317px;
+            left: 135px;
+        }
+
+        .a2 {
+            top: 305px;
+            left: 540px;
+        }
+
+        .a3 {
+            top: 97px;
+            left: 400px;
+        }
+
+        .a4 {
+            top: 88px;
+            left: 838px;
+        }
+
+        .a5 {
+            top: 287px;
+            left: 781px;
+        }
+
+        .js-dragObj.dragObjComplete {
+            opacity: 1;
+            cursor: auto;
+        }
+
+        .clearArea .dragObjComplete {
+            top: 10px;
+            left: 45px;
+        }
+
+        .innerTab_2 .clearArea .dragObjComplete {
+            top: 20px;
+            left: 30px;
+        }
+
+        .innerTab_3 .clearArea .dragObjComplete {
+            top: 18px;
+            left: 30px;
+        }
+
+        .dapCheckBtn {
+            right: 28px;
+        }
+
+        .bullet.orange.number {
+            z-index: 2;
+        }
+
+        .popup_pages p .dot {
+            margin-top: 20px;
+            background: #000;
+            width: 10px;
+            height: 10px;
+            border: none;
+        }
+
+        .icon-char[data-popup-btn="2"] {
+            top: 37px;
+            left: unset;
+            right: 28px;
+        }
+
+        .min[data-popup-page="2"] {
+            top: 250px;
+            left: 630px;
+            width: 601px;
+        }
+
+        .popup_pages>li.whole h2 {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .popup_pages>li.whole img {
+            width: 580px;
+            height: 380px;
+            margin: 50px auto;
+            display: block;
+        }
+
+        .popup_pages .text_bottom {
+            width: 90%;
+            display: block;
+            margin: auto;
+            text-align: center;
+            background: #fef3e6;
+            padding: 20px 10px;
+            border-radius: 15px;
+        }
+
+        .popup_pages .basicSlider_slides {
+            padding: 0 20px;
+        }
+
+        .zoomBtn:after,
+        .popBtn.zoom {
+            border: none;
+            background: url(../ko/contents/images/icon/icon_click.png) no-repeat 50% 50% / 59px;
+        }
+
+        .zoomBtn:hover::after {
+            box-shadow: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title red">
+                골목에서 안전한 행동과 그렇지 않은 행동을 찾아 O와 X표시를 해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="dragDrop" data-option="answer, copy"
+                                    data-quiz-name="dragDrop" data-total-complete-count="2">
+                                    <div class="study_guide"><em>보기</em>에서 <em>끌어</em> 붙이세요.</div>
+                                    <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="2"></div>
+                                    <div class="dragDropContainer bogi">
+                                        <div class="it-start-wrap dragBox lineBox dragObjUL">
+                                            <div class="bogi-icon"></div>
+                                            <div class="drag-zone">
+                                                <div class="js-dragObj d1" data-drag-obj-answer="1" data-ps="free">
+                                                </div>
+                                                <div class="js-dragObj d2" data-drag-obj-answer="2" data-ps="free">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-wrap bgDrop">
+                                            <div class="flex">
+                                                <div class="how-to-box howtoBox">
+                                                    <div class="pic-box">
+                                                        <div class="bullet number orange inline">1</div>
+                                                        <div class="image-box">
+                                                            <div class="imageWrap">
+                                                                <span class="imgWrap line popBtn" data-popup-btn="3"
+                                                                    data-targetSlideNum="1">
+                                                                    <img
+                                                                        src="./images/ton_0102_0104_0003_202/img_01.png">
+                                                                    <button class="popBtn zoomBtn"
+                                                                        data-hover=""></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="how-to-box howtoBox">
+                                                    <div class="pic-box">
+                                                        <div class="bullet number orange inline">2</div>
+                                                        <div class="image-box">
+                                                            <div class="imageWrap">
+                                                                <span class="imgWrap line popBtn" data-popup-btn="4"
+                                                                    data-targetSlideNum="1">
+                                                                    <img
+                                                                        src="./images/ton_0102_0104_0003_202/img_02.png">
+                                                                    <button class="popBtn zoomBtn"
+                                                                        data-hover=""></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="js-dropArea a1 clearArea" data-drop-area-answer="2">
+                                            </div>
+                                            <div class="js-dropArea a2 clearArea" data-drop-area-answer="1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="dapCheckBtn" data-answer-btn=""></button>
+                                </li>
+                                <li class="innerTab_2" data-quiz="dragDrop" data-option="answer, copy"
+                                    data-quiz-name="dragDrop" data-total-complete-count="2">
+                                    <div class="study_guide"><em>보기</em>에서 <em>끌어</em> 붙이세요.</div>
+                                    <div class="dragDropContainer bogi">
+                                        <div class="it-start-wrap dragBox lineBox dragObjUL">
+                                            <div class="bogi-icon"></div>
+                                            <div class="drag-zone">
+                                                <div class="js-dragObj d1" data-drag-obj-answer="3" data-ps="free">
+                                                </div>
+                                                <div class="js-dragObj d2" data-drag-obj-answer="4" data-ps="free">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-wrap bgDrop">
+                                            <div class="flex">
+                                                <div class="how-to-box howtoBox">
+                                                    <div class="pic-box">
+                                                        <div class="bullet number orange inline">3</div>
+                                                        <div class="image-box">
+                                                            <div class="imageWrap">
+                                                                <span class="imgWrap line popBtn" data-popup-btn="5"
+                                                                    data-targetSlideNum="1">
+                                                                    <img
+                                                                        src="./images/ton_0102_0104_0003_202/img_03.png">
+                                                                    <button class="popBtn zoomBtn"
+                                                                        data-hover=""></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="how-to-box howtoBox">
+                                                    <div class="pic-box">
+                                                        <div class="bullet number orange inline">4</div>
+                                                        <div class="image-box">
+                                                            <div class="imageWrap">
+                                                                <span class="imgWrap line popBtn" data-popup-btn="6"
+                                                                    data-targetSlideNum="1">
+                                                                    <img
+                                                                        src="./images/ton_0102_0104_0003_202/img_04.png">
+                                                                    <button class="popBtn zoomBtn"
+                                                                        data-hover=""></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="js-dropArea a3 clearArea" data-drop-area-answer="3">
+                                            </div>
+                                            <div class="js-dropArea a4 clearArea" data-drop-area-answer="4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="dapCheckBtn" data-answer-btn=""></button>
+                                </li>
+                                <li class="innerTab_3" data-quiz="dragDrop" data-option="answer, copy"
+                                    data-quiz-name="dragDrop" data-total-complete-count="1">
+                                    <div class="study_guide"><em>보기</em>에서 <em>끌어</em> 붙이세요.</div>
+                                    <div class="dragDropContainer bogi">
+                                        <div class="it-start-wrap dragBox lineBox dragObjUL">
+                                            <div class="bogi-icon"></div>
+                                            <div class="drag-zone">
+                                                <div class="js-dragObj d1" data-drag-obj-answer="5" data-ps="free">
+                                                </div>
+                                                <div class="js-dragObj d2" data-drag-obj-answer="6" data-ps="free">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-wrap bgDrop">
+                                            <div class="flex">
+                                                <div class="how-to-box howtoBox">
+                                                    <div class="pic-box">
+                                                        <div class="bullet number orange inline">5</div>
+                                                        <div class="image-box">
+                                                            <div class="imageWrap">
+
+                                                                <span class="imgWrap line popBtn" data-popup-btn="7"
+                                                                    data-targetSlideNum="1">
+                                                                    <img
+                                                                        src="./images/ton_0102_0104_0003_202/img_05.png">
+                                                                    <button class="popBtn zoomBtn"
+                                                                        data-hover=""></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="js-dropArea a5 clearArea" data-drop-area-answer="5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="dapCheckBtn" data-answer-btn=""></button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="2" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p><ins class="dot"></ins>자동차 주변에는 눈으로 확인할 수 없는 지역이 있어요.</p>
+                        <p><ins class="dot"></ins>멈춰 있는 차 앞이나 뒤에 앉아서 놀지 않아요.</p>
+                    </div>
+                </li>
+                <li class="whole image" data-popup-page="3">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>이면 도로에서 안전하게 길 건너기</h2>
+                                <div class="flex">
+                                    <div class="how-to-box howtoBox">
+                                        <div class="pic-box">
+                                            <div class="bullet number orange inline">1</div>
+                                            <div class="image-box">
+                                                <div class="imageWrap">
+                                                    <img src="./images/ton_0102_0104_0003_202/img_01.png">
+                                                </div>
+                                            </div>
+                                            <div class="text-box">
+                                                좁은 골목에서 자동차를 등지고 걷지 않아야 해요.<br>
+                                                벽이나 골목의 가장자리에 멈춰서 자동차가 지나간 뒤에 걸어가요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="whole image" data-popup-page="4">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>이면 도로에서 안전하게 길 건너기</h2>
+                                <div class="flex">
+                                    <div class="how-to-box howtoBox">
+                                        <div class="pic-box">
+                                            <div class="bullet number orange inline">2</div>
+                                            <div class="image-box">
+                                                <div class="imageWrap">
+                                                    <img src="./images/ton_0102_0104_0003_202/img_02.png">
+                                                </div>
+                                            </div>
+                                            <div class="text-box">
+                                                자동차가 오는 방향을 마주하고 걸어요.<br>
+                                                뛰거나 장난치며 걷지 않고 여럿이 갈 때에는 한 줄로 걸어요. </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="whole image" data-popup-page="5">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>이면 도로에서 안전하게 길 건너기</h2>
+                                <div class="flex">
+                                    <div class="how-to-box howtoBox">
+                                        <div class="pic-box">
+                                            <div class="bullet number orange inline">3</div>
+                                            <div class="image-box">
+                                                <div class="imageWrap">
+                                                    <img src="./images/ton_0102_0104_0003_202/img_03.png">
+                                                </div>
+                                            </div>
+                                            <div class="text-box">자동차가 오는 방향을 마주하고 걸어요.<br>
+                                                뛰거나 장난치며 걷지 않고 여럿이 갈 때에는 한 줄로 걸어요. </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="whole image" data-popup-page="6">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>이면 도로에서 안전하게 길 건너기</h2>
+                                <div class="flex">
+                                    <div class="how-to-box howtoBox">
+                                        <div class="pic-box">
+                                            <div class="bullet number orange inline">4</div>
+                                            <div class="image-box">
+                                                <div class="imageWrap">
+                                                    <img src="./images/ton_0102_0104_0003_202/img_04.png">
+                                                </div>
+                                            </div>
+                                            <div class="text-box">자동차가 오는 방향을 마주하고 걸어요.<br>
+                                                뛰거나 장난치며 걷지 않고 여럿이 갈 때에는 한 줄로 걸어요.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="whole image" data-popup-page="7">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>이면 도로에서 안전하게 길 건너기</h2>
+                                <div class="flex">
+                                    <div class="how-to-box howtoBox">
+                                        <div class="pic-box">
+                                            <div class="bullet number orange inline">5</div>
+                                            <div class="image-box">
+                                                <div class="imageWrap">
+                                                    <img src="./images/ton_0102_0104_0003_202/img_05.png">
+                                                </div>
+                                            </div>
+                                            <div class="text-box">좁은 도로에서 차가 오면 우선 멈춘 후 몸을 벽 쪽으로 붙이고
+                                                차가 지나간 뒤에 천천히 걸어요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

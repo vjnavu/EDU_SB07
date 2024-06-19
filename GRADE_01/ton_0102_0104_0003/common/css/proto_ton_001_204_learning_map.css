@@ -1,0 +1,695 @@
+@font-face {
+    font-family: sdchild;
+    src: url("./../font/SDChildfundkoreaTTF.ttf");
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+.bgImg {
+    height: 100%;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 20px;
+    right: 28px;
+}
+
+.study_guide {
+    right: 78px;
+    top: 33px;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 68px;
+    height: 68px;
+    pointer-events: auto;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.popbox .popLearning.pink.active {
+    background-color: #F69CAD;
+}
+
+.popbox .popLearning.yellow.active,
+.popbox .popLearning.orange.active {
+    background-color: #FBC88F;
+}
+
+.popbox .popLearning.green.active {
+    background-color: #9EE2A8;
+}
+
+.popbox .popLearning.blue.active {
+    background-color: #A7D1EB;
+}
+
+.popbox .popLearning.purple.active {
+    background-color: #DAD5F2;
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 6px 1px 6px;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
+.learning-list>li .learning-item>li:hover,
+.learning-list>li .learning-item>li.off,
+.popLearning.complete:hover {
+    background-color: #FFDBEA;
+}
+
+.popbox .popLearning.pop0 .learning-badge {
+    line-height: 1.2;
+    font-family: "NotoM";
+    font-size: 15px;
+    padding: 1px 12px 1px 12px;
+}
+
+.popbox .popLearning.pop0 .learning-wrap {
+    gap: 1px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.popbox .popLearning.pop0 {
+    top: 180px;
+    left: 180px;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    font-family: "sdchild";
+    font-weight: bold;
+}
+
+.popLearning:not(.pop6, .pop7, .pop12, .pop15, .pop18, .pop4):hover {
+    outline: 2px solid #f93333;
+}
+
+.popbox .popLearning.pop1 {
+    top: 108px;
+    left: 770px;
+    width: 68px;
+    height: 40px;
+    border-radius: 0;
+}
+
+.popbox .popLearning.pop2 {
+    top: 107px;
+    left: 879px;
+    border-radius: 0;
+    width: 56px;
+    height: 46px;
+}
+
+.popbox .popLearning.pop3 {
+    top: 109px;
+    left: 974px;
+    border-radius: 0;
+    width: 69px;
+    height: 39px;
+}
+
+.popbox .popLearning.pop4 {
+    top: 98px;
+    left: 1087px;
+    border-radius: 0;
+    width: 47px;
+    height: 61px;
+}
+
+.popbox .popLearning.pop5 {
+    top: 120px;
+    left: 1177px;
+    border-radius: 0;
+    width: 61px;
+    height: 34px;
+}
+
+.popbox .popLearning.pop6 {
+    top: 129px;
+    left: 214px;
+    border-radius: 0;
+    width: 107px;
+    height: 47px;
+    /* border-radius: 45%; */
+}
+
+.popbox .popLearning.pop7 {
+    top: 195px;
+    left: 214px;
+    border-radius: 0;
+    width: 113px;
+    height: 39px;
+}
+
+.popbox .popLearning.pop8 {
+    top: 262px;
+    left: 241px;
+    border-radius: 0;
+    width: 61px;
+    height: 41px;
+}
+
+.popbox .popLearning.pop9 {
+    top: 123px;
+    left: 381px;
+    border-radius: 45%;
+    width: 62px;
+    height: 73px;
+}
+
+.popbox .popLearning.pop10 {
+    top: 140px;
+    left: 486px;
+    border-radius: 0;
+    width: 65px;
+    height: 47px;
+}
+
+.popbox .popLearning.pop11 {
+    top: 241px;
+    left: 387px;
+    border-radius: 34px;
+    width: 61px;
+    height: 47px;
+}
+
+.popbox .popLearning.pop12 {
+    top: 238px;
+    left: 488px;
+    border-radius: 0;
+    width: 72px;
+    height: 42px;
+}
+
+.popbox .popLearning.pop13 {
+    top: 336px;
+    left: 78px;
+    border-radius: 0;
+    width: 55px;
+    height: 61px;
+}
+
+.popbox .popLearning.pop14 {
+    top: 339px;
+    left: 180px;
+    border-radius: 15px;
+    width: 45px;
+    height: 53px;
+}
+
+.popbox .popLearning.pop15 {
+    top: 336px;
+    left: 272px;
+    border-radius: 0;
+    width: 52px;
+    height: 60px;
+}
+
+.popbox .popLearning.pop16 {
+    top: 341px;
+    left: 372px;
+    border-radius: 0;
+    width: 41px;
+    height: 47px;
+}
+
+.popbox .popLearning.pop17 {
+    top: 342px;
+    left: 475px;
+    border-radius: 33px;
+    width: 42px;
+    height: 49px;
+}
+
+.popbox .popLearning.pop18 {
+    top: 449px;
+    left: 79px;
+    border-radius: 0;
+    width: 55px;
+    height: 72px;
+}
+
+.popbox .popLearning.pop19 {
+    top: 464px;
+    left: 178px;
+    border-radius: 0;
+    width: 52px;
+    height: 40px;
+}
+
+.popbox .popLearning.pop20 {
+    top: 462px;
+    left: 283px;
+    border-radius: 0;
+    width: 55px;
+    height: 42px;
+}
+
+
+.popbox .popLearning.pop21 {
+    top: 462px;
+    left: 382px;
+    border-radius: 0;
+    width: 58px;
+    height: 43px;
+}
+
+.popbox .popLearning.pop22 {
+    top: 457px;
+    left: 474px;
+    border-radius: 50px;
+    width: 58px;
+    height: 55px;
+}
+
+.popbox .popLearning.pop23 {
+    top: 567px;
+    left: 65px;
+    border-radius: 50%;
+    width: 52px;
+    height: 53px;
+}
+
+.popbox .popLearning.pop24 {
+    top: 567px;
+    left: 149px;
+    border-radius: 0;
+    width: 50px;
+    height: 53px;
+}
+
+.popbox .popLearning.pop25 {
+    top: 567px;
+    left: 232px;
+    border-radius: 6px;
+    width: 45px;
+    height: 57px;
+}
+
+.popbox .popLearning.pop26 {
+    top: 200px;
+    left: 774px;
+    border-radius: 0;
+    width: 71px;
+    height: 35px;
+}
+
+.popbox .popLearning.pop27 {
+    top: 198px;
+    left: 883px;
+    border-radius: 0;
+    width: 43px;
+    height: 40px;
+}
+
+.popbox .popLearning.pop28 {
+    top: 202px;
+    left: 976px;
+    border-radius: 0;
+    width: 51px;
+    height: 38px;
+}
+
+.popbox .popLearning.pop29 {
+    top: 336px;
+    left: 774px;
+    border-radius: 22px;
+    width: 50px;
+    height: 47px;
+}
+
+.popbox .popLearning.pop30 {
+    top: 332px;
+    left: 873px;
+    border-radius: 25px;
+    width: 60px;
+    height: 55px;
+}
+
+.popbox .popLearning.pop31 {
+    top: 337px;
+    left: 979px;
+    border-radius: 30px;
+    width: 50px;
+    height: 46px;
+}
+
+.popbox .popLearning.pop32 {
+    top: 334px;
+    left: 1068px;
+    border-radius: 24px;
+    width: 61px;
+    height: 53px;
+}
+
+.popbox .popLearning.pop33 {
+    top: 492px;
+    left: 769px;
+    border-radius: 0;
+    width: 66px;
+    height: 47px;
+}
+
+.popbox .popLearning.pop34 {
+    top: 485px;
+    left: 876px;
+    border-radius: 0;
+    width: 59px;
+    height: 54px;
+}
+
+.popbox .popLearning.pop35 {
+    top: 486px;
+    left: 982px;
+    border-radius: 0;
+    width: 50px;
+    height: 49px;
+}
+
+.popbox .popLearning.pop36 {
+    top: 483px;
+    left: 1077px;
+    border-radius: 0;
+    width: 57px;
+    height: 58px;
+}
+
+.popbox .popLearning.pop37 {
+    top: 487px;
+    left: 1171px;
+    border-radius: 5px;
+    width: 63px;
+    height: 54px;
+}
+
+.popbox .popLearning.pop38 {
+    top: 0px;
+    left: 0px;
+    border-radius: 0;
+    width: 114px;
+    height: 39px;
+}
+
+.popbox .popLearning.pop39 {
+    top: 0px;
+    left: 0px;
+    padding-top: 18px;
+}
+
+.popbox .popLearning.pop40 {
+    top: 0px;
+    left: 0px;
+    padding-top: 18px;
+}
+
+.popbox .popLearning.pop41 {
+    top: 0px;
+    left: 0px;
+    padding-top: 18px;
+}
+
+
+.popbox .popLearning.pop6:hover {
+    background-image: url('../images/proto_ton_001/img_hover_204_1.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop6.active {
+    background-image: url('../images/proto_ton_001/img_active_204_1.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.popbox .popLearning.pop6.active:hover {
+    background-image: url('../images/proto_ton_001/img_active_hover_204_1.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop7:hover {
+    background-image: url('../images/proto_ton_001/img_hover_204_2.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop7.active {
+    background-image: url('../images/proto_ton_001/img_active_204_2.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.popbox .popLearning.pop7.active:hover {
+    background-image: url('../images/proto_ton_001/img_active_hover_204_2.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop12:hover {
+    background-image: url('../images/proto_ton_001/img_hover_204_3.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop12.active {
+    background-image: url('../images/proto_ton_001/img_active_204_3.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.popbox .popLearning.pop12.active:hover {
+    background-image: url('../images/proto_ton_001/img_active_hover_204_3.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop15:hover {
+    background-image: url('../images/proto_ton_001/img_hover_204_4.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop15.active {
+    background-image: url('../images/proto_ton_001/img_active_204_4.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.popbox .popLearning.pop15.active:hover {
+    background-image: url('../images/proto_ton_001/img_active_hover_204_4.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop18:hover {
+    background-image: url('../images/proto_ton_001/img_hover_204_5.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop18.active {
+    background-image: url('../images/proto_ton_001/img_active_204_5.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.popbox .popLearning.pop18.active:hover {
+    background-image: url('../images/proto_ton_001/img_active_hover_204_5.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop4:hover {
+    background-image: url('../images/proto_ton_001/img_hover_204_6.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop4.active {
+    background-image: url('../images/proto_ton_001/img_active_204_6.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.popbox .popLearning.pop4.active:hover {
+    background-image: url('../images/proto_ton_001/img_active_hover_204_6.png');
+    background-size: 100% 100%;
+}
+
+.popbox .popLearning.pop42 {
+    bottom: 70px;
+    right: 185px;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    font-family: "sdchild";
+    font-weight: bold;
+}
+
+.popbox .popLearning.pop42 .learning-badge {
+    line-height: 1.2;
+    font-family: "NotoM";
+    font-size: 15px;
+    padding: 1px 12px 1px 12px;
+}
+
+.popbox .popLearning.pop42 .learning-wrap {
+    gap: 1px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.greenText {
+    color: #43ad50;
+}
+
+.pop35 .starTitle {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+    top: -9px;
+}
+
+.pop35 .starArrow.purple {
+    bottom: 15px !important;
+}
+
+.pop35 .learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 6px 1px 6px;
+    border-radius: 5px;
+    bottom: -7px;
+    position: relative;
+}
+
+.pop36 .starTitle {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+    top: -10px;
+}
+
+.pop36 .starArrow.blue {
+    bottom: 19px !important;
+}
+
+.pop36 .learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 6px 1px 6px;
+    border-radius: 5px;
+    bottom: -10px;
+    position: relative;
+}
+
+.pop37 .starTitle {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 15px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+    top: -9px;
+}
+
+.pop37 .starArrow.red {
+    bottom: 17px !important;
+}
+
+.pop37 .learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 6px 1px 6px;
+    border-radius: 5px;
+    bottom: -10px;
+    position: relative;
+}
+
+.starTitle::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-image: url("../images/proto_ton_001/before.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.starArrow {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0px 3px 0px 0px;
+    position: absolute;
+    width: 38px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.starArrow.purple {
+    background-image: url("../images/proto_ton_001/arrow-purple.png");
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.starArrow.blue {
+    background-image: url("../images/proto_ton_001/arrow-blue.png");
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.starArrow.red {
+    background-image: url("../images/proto_ton_001/arrow-red.png");
+    bottom: 37px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
