@@ -3945,9 +3945,9 @@ li.pgPadding {
     line-height: 1;
 }
 
-.toggle.examBtn.complete {
+/* .toggle.examBtn.complete {
     pointer-events: none;
-}
+} */
 
 .narBox {
     display: flex;
@@ -4051,9 +4051,9 @@ li.pgPadding {
     animation: opacity 1.5s ease-in 3;
 }
 
-.icon-char.popupOn {
+/* .icon-char.popupOn {
     pointer-events: none !important;
-}
+} */
 
 .min.pop_page_3 {
     position: absolute;
