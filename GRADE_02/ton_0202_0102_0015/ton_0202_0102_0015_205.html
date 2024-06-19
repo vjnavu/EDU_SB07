@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex .items {
+            flex: 1;
+        }
+
+        .flex .items img {
+            height: 300px;
+            border-radius: 20px;
+            object-fit: contain;
+        }
+
+        .flex .items .toggle.box {
+            margin-top: 70px;
+            display: block;
+            height: 350px;
+        }
+
+        .flex .items .toggle .answer {
+            height: 100%;
+            text-align: center;
+        }
+
+        .flex .items .textBox {
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 10px;
+            background-color: #FDF3E7;
+            padding: 15px;
+        }
+
+        .ytb2 {
+            left: 670px;
+        }
+
+        [data-popup-page="1"] {
+            top: 225px;
+            left: 555px;
+            width: 780px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                기억에 남는 노랫말을 천을 이용하여 표현해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-quiz="toggle">
+                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
+                        <a class="videoSubPlayBtn large youtube" data-youtube-id="1R6YPFbnlpE" target="_blank">눈</a>
+                        <a class="videoSubPlayBtn large youtube ytb2" data-youtube-id="maUfsZPPu54" target="_blank">봄
+                            나들이</a>
+                        <div class="flex">
+                            <div class="items">
+                                <div class="toggle box" data-toggle-obj="1">
+                                    <div class="answer" data-toggle-target="1">
+                                        <img src="./images/ton_0202_0102_0015_205/img_01.png">
+                                    </div>
+                                </div>
+                                <div class="textBox">
+                                    펄~ 펄~ 눈이 옵니다
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="toggle box" data-toggle-obj="2">
+                                    <div class="answer" data-toggle-target="2">
+                                        <img src="./images/ton_0202_0102_0015_205/img_02.png">
+                                    </div>
+                                </div>
+                                <div class="textBox">
+                                    나리나리 개나리
+                                </div>
+                            </div>
+                        </div>
+                        <button class="examViewBtn" type="button" data-answer-btn=""></button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="1" data-drag="">
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            노랫말의 내용과 느낌을 잘 표현한 친구를 찾아 동작을 따라 해 보아요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
