@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .contentsBox {
+            padding: 0;
+        }
+
+        .study_guide {
+            z-index: 1;
+            top: 20px;
+            right: 28px;
+        }
+
+
+        .mark .o_mark,
+        .mark .x_mark {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .o_mark {
+            background-image: url("./images/ton_0202_0102_0018_201/icon_o.png");
+            display: none;
+        }
+
+        .x_mark {
+            background-image: url("./images/ton_0202_0102_0018_201/icon_x.png");
+            display: none;
+        }
+
+        .mark {
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .mark1 {
+            left: 420px;
+            top: 380px;
+            width: 120px;
+            height: 225px;
+        }
+
+        .mark1:hover {
+            border: 4px dashed red;
+            border-radius: 18px;
+        }
+
+        .mark1 .o_mark {
+            top: 50px;
+            left: 5px;
+        }
+
+        /* page_2 */
+        .page_2 .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .check_list .check_view .check_box {
+            width: 60px;
+            height: 60px;
+            border: 7px solid #c4c4c4;
+            border-radius: 15px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .check_list .check_view .text {
+            padding-left: 10px;
+        }
+
+        .page_2 .flex .item.flex-col:last-child {
+            gap: 30px;
+        }
+
+        .page_2 .toggle .answer {
+            margin: auto;
+        }
+
+        .page_2 .check_view .flex {
+            justify-content: start;
+            margin-left: 90px;
+        }
+
+        .toggle.box {
+            min-width: 700px;
+            margin-right: 90px;
+        }
+
+        .check_list {
+            margin-top: 70px;
+        }
+
+        .examViewBtn {
+            bottom: 10px;
+            right: 28px;
+        }
+
+        .blue_check {
+            display: none;
+        }
+
+        .check_list .check_view {
+            pointer-events: auto !important;
+        }
+
+        /* page 3 */
+
+        .page_3 .character-item {
+            position: absolute;
+        }
+
+        .page_3 #boy_1_c .charSpriteAni {
+            background: url('../ko/contents/images/character/boy_1.png') !important;
+        }
+
+        .page_3 #girl_3_c .charSpriteAni {
+            background: url('../ko/contents/images/character/girl_3.png') !important;
+        }
+
+
+        .page_3 .balloon {
+            height: 150px;
+            width: 900px;
+        }
+
+        .page_3 .balloon span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .page_3 #boy_1_c .balloon {
+            top: 10px !important;
+            left: 200px !important;
+            pointer-events: none;
+            border: 4px solid #ffc4c9;
+            background: #ffeef3;
+        }
+
+        .page_3 #boy_1_c .balloon::after {
+            left: -25px;
+        }
+
+
+        .page_3 #girl_3_c .balloon {
+            top: 10px !important;
+            right: 220px !important;
+            pointer-events: none;
+            border: 4px solid #cabee0;
+            background: #f6effb;
+        }
+
+        .page_3 #girl_3_c .balloon::after {
+            right: -25px;
+            left: unset;
+            transform: rotate(-90deg);
+        }
+
+        .page_3 #girl_3_c .balloon {
+            border: 4px solid #ffd89e;
+            background: #fdf3e7;
+        }
+
+        .close-speech-button {
+            pointer-events: auto;
+        }
+
+        .characterWrap.speech.right:before {
+            content: "";
+            background-image: url('../ko/contents/images/button/btn_speech_balloon_left1.png');
+        }
+
+        .characterWrap.speech.right:hover:before {
+            content: "";
+            background-image: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png');
+        }
+
+        .balloon:after {
+            top: 40%;
+        }
+
+        .page_3 #boy_1_c {
+            top: 70px;
+            left: 70px;
+        }
+
+        .page_3 #girl_3_c {
+            bottom: 70px;
+            right: 70px;
+        }
+
+        /* page 4 */
+        .page_4 {
+            padding: 20px 28px;
+        }
+
+        .tab-content.content-01 {
+            margin-top: 60px;
+        }
+
+        .table-box tbody th {
+            width: 350px;
+        }
+
+        .table-box td {
+            padding: 5px;
+        }
+
+        .noteText {
+            box-shadow: none;
+            height: 70px;
+            padding: 0;
+        }
+
+        .noteText .text-exam.flex-wrap {
+            padding: 0;
+        }
+
+        .noteText .textLine,
+        .noteText .textareaWrap {
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple gap">
+                계절의 소중함을 느끼며 바르게 나들이하는 친구를 찾아볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="계절의 소중함을 느끼며 바르게 나들이하는 친구를 찾아볼까요?" data-gap="true">물음 1</li>
+                    <li data-hover="" data-text="나들이 계획을 세워 볼까요?">물음 2</li>
+                    <li data-hover="" data-text="나들이에서 계절 속 자연을 지키기 위하여 실천해야 할 행동을 말해 볼까요?">물음</li>
+                    <li data-hover="" data-text="계획한 내용을 바탕으로 ‘우리 반 나들이 계획서’를 만들어 볼까요?" data-gap="true">물음 3</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="study_guide"><em>인물</em> 을<em>클릭</em>하세요</div>
+                        <img src="./images/ton_0202_0102_0018_201/img_01.png" alt="">
+                        <div class="mark mark1">
+                            <div class="o_mark"></div>
+                        </div>
+                        <div class="mark mark2">
+                            <div class="o_mark"></div>
+                        </div>
+                        <div class="mark mark3">
+                            <div class="o_mark"></div>
+                        </div>
+                        <div class="mark mark4">
+                            <div class="o_mark"></div>
+                        </div>
+                        <div class="mark mark5">
+                            <div class="x_mark"></div>
+                        </div>
+                        <div class="mark mark6">
+                            <div class="x_mark"></div>
+                        </div>
+                        <div class="mark mark7">
+                            <div class="x_mark"></div>
+                        </div>
+                        <div class="mark mark8">
+                            <div class="o_mark"></div>
+                        </div>
+                        <div class="mark mark9">
+                            <div class="x_mark"></div>
+                        </div>
+                        <div class="mark mark10">
+                            <div class="o_mark"></div>
+                        </div>
+                        <div class="mark mark11">
+                            <div class="o_mark"></div>
+                        </div>
+                    </li>
+                    <li class="page_2" data-quiz="toggle" data-pagetype="checkWithEx">
+                        <div class="study_guide"><em>네모 칸</em> 을 <em>클릭</em>하세요.</div>
+                        <div class=" check_list">
+                            <div class="item">
+                                <div class="check_view check_ans flex">
+                                    <div class="flex">
+                                        <div class="check_box check_ans">
+                                        </div>
+                                        <div class="text">언제 갈까요?</div>
+                                    </div>
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            월요일, 4월, 놀이 시간 등
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check_view check_ans flex">
+                                    <div class="flex">
+                                        <div class="check_box check_ans">
+                                        </div>
+                                        <div class="text">어디로 갈까요?</div>
+                                    </div>
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            학교 운동장, 뒷산, 공원 등
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check_view check_ans flex">
+                                    <div class="flex">
+                                        <div class="check_box check_ans">
+                                        </div>
+                                        <div class="text">무엇을 할까요?</div>
+                                    </div>
+                                    <div class="toggle examBtn box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            사진 찍기, 놀이하기 등
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check_view check_ans flex">
+                                    <div class="flex">
+                                        <div class="check_box check_ans">
+                                        </div>
+                                        <div class="text">무엇을 준비할까요?</div>
+                                    </div>
+                                    <div class="toggle examBtn box" data-toggle-obj="4">
+                                        <div class="answer" data-toggle-target="4">
+                                            물통, 사진기, 공책 등
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check_view check_ans flex">
+                                    <div class="flex">
+                                        <div class="check_box check_ans">
+                                        </div>
+                                        <div class="text">무엇을 지켜야 할까요?</div>
+                                    </div>
+                                    <div class="toggle examBtn box" data-toggle-obj="5">
+                                        <div class="answer" data-toggle-target="5">
+                                            질서 지키기, 쓰레기 버리지 않기 등
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="examViewBtn" data-answer-btn=""></button>
+                    </li>
+                    <li class="page_3">
+                        <div id="boy_1_c" class="character-item"></div>
+                        <div id="girl_3_c" class="character-item"></div>
+                    </li>
+                    <li class="page_4" data-quiz="toggle">
+                        <a class="docDownBtn" href="" target="_blank" data-hover="">배움 자료</a>
+
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="tab-content content-01">
+                                        <div class="table-box color-02 ">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>나들이 장소</th>
+                                                        <td colspan="5">
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>나들이 날짜</th>
+                                                        <td colspan="5">
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>나들이에서 할 일</th>
+                                                        <td colspan="5">
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2">나들이 준비물</th>
+                                                        <td style="text-align: center;">이름</td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: center;">가져올 것</td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="tab-content content-01">
+                                        <div class="table-box color-02 ">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <th rowspan="3">계절 속 자연을<br>지키기 위해<br>실천할 점<br></th>
+                                                        <td colspan="5">
+                                                            <div
+                                                                style="display: flex;align-items: center; margin-left: 10px;">
+                                                                <span>1. </span>
+                                                                <div class=" noteText">
+                                                                    <div class="textareaWrap">
+                                                                        <textarea class="textLine afterDisplay"
+                                                                            type="text" placeholder="직접 쓰기"
+                                                                            data-input-obj="" data-answer=" " onfocus=""
+                                                                            onblur="placeholder='직접 쓰기'"
+                                                                            autocomplete="off"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div
+                                                                style="display: flex;align-items: center; margin-left: 10px;">
+                                                                <span>2. </span>
+                                                                <div class=" noteText">
+                                                                    <div class="textareaWrap">
+                                                                        <textarea class="textLine afterDisplay"
+                                                                            type="text" placeholder="직접 쓰기"
+                                                                            data-input-obj="" data-answer=" " onfocus=""
+                                                                            onblur="placeholder='직접 쓰기'"
+                                                                            autocomplete="off"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5">
+                                                            <div
+                                                                style="display: flex;align-items: center; margin-left: 10px;">
+                                                                <span>3. </span>
+                                                                <div class=" noteText">
+                                                                    <div class="textareaWrap">
+                                                                        <textarea class="textLine afterDisplay"
+                                                                            type="text" placeholder="직접 쓰기"
+                                                                            data-input-obj="" data-answer=" " onfocus=""
+                                                                            onblur="placeholder='직접 쓰기'"
+                                                                            autocomplete="off"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th rowspan="2">나들이 역할</th>
+                                                        <td style="text-align: center;">역할</td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: center;">이름</td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="noteText">
+                                                                <div class="textareaWrap">
+                                                                    <textarea class="textLine afterDisplay" type="text"
+                                                                        placeholder="직접 쓰기" data-input-obj=""
+                                                                        data-answer=" " onfocus=""
+                                                                        onblur="placeholder='직접 쓰기'"
+                                                                        autocomplete="off"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $(document).on('click', '.examViewBtn', function () {
+                if ($(this).hasClass('reset')) {
+                    $(this).removeClass('reset');
+                    $('.toggle.examBtn.box').removeClass('complete');
+                    $('.answer').removeClass('on');
+                } else {
+                    $(this).addClass('reset')
+                    $('.toggle.examBtn.box').addClass('complete');
+                    $('.answer').addClass('on');
+                }
+            });
+            $(document).on('click', '.page_2 .toggle.box', function () {
+                if ($('.page_2 .toggle.box.complete').length === $('.page_2 .toggle.box').length) {
+                    $('.examViewBtn').addClass('reset');
+                } else {
+                    $('.examViewBtn').removeClass('reset');
+                }
+            });
+
+            // page 3
+            $prite.boy1({
+                id: '#boy_1_c',
+                speech: 'right',
+                circle: true,
+                text: `꽃이나 나무를 함부로 만지지 않아요.`,
+                class: 'left speech',
+                callback_start: () => {
+                    console.log('start');
+                },
+                callback_end: () => {
+                    console.log('end');
+                }
+            });
+            $prite.girl3({
+                id: '#girl_3_c',
+                speech: 'right',
+                circle: true,
+                text: `계절의 모습은 눈으로 보거나 사진으로 찍어요.`,
+                class: 'left speech',
+                callback_start: () => {
+                    console.log('start');
+                },
+                callback_end: () => {
+                    console.log('end');
+                }
+            });
+            $(document).on('click', '.resetBtn', function () {
+                KmAudioPlayer.buttonClick('./media/click.mp3');
+                $('.textLine').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>

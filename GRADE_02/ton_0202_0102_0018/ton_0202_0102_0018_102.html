@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .contentsBox {
+            padding: 0;
+        }
+
+        .bgImg img {
+            width: 100%;
+        }
+
+        .character-item {
+            pointer-events: auto;
+        }
+
+        .character-flex {
+            position: absolute;
+            top: 100px;
+            left: 130px;
+        }
+
+
+        .page_1 #boy_4_c .charSpriteAni {
+            background: url('../ko/contents/images/character/boy_4.png') !important;
+        }
+
+        .page_1 #girl_2_c .charSpriteAni {
+            background: url('../ko/contents/images/character/girl_2.png') !important;
+        }
+
+        .page_1 #girl_1_c .charSpriteAni {
+            background: url('../ko/contents/images/character/girl_1.png') !important;
+        }
+
+        .page_1 #boy_2_c .charSpriteAni {
+            background: url('../ko/contents/images/character/boy_2.png') !important;
+        }
+
+        .characterWrap.speech.right:before {
+            content: "";
+            background-image: url('../ko/contents/images/button/btn_speech_balloon_left1.png');
+        }
+
+        .characterWrap.speech.right:hover:before {
+            content: "";
+            background-image: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png');
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                교과서 그림을 보면서 어떤 장면인지 발표해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="교과서 그림을 보면서 어떤 장면인지 발표해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="교과서에서 학생들이 무엇을 하고 있는지 발표해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1 page_zoom zoom_img">
+                        <div class="zoomContainer horizon pointerOff">
+                            <div class="zoomArea">
+                                <div class="zoomImgContainer pointerOff">
+                                    <div class="zoomImg">
+                                        <div class="bgImg">
+                                            <img src="./images/ton_0202_0102_0018_102/img_01.png" />
+                                            <div class="character-flex">
+                                                <div id="boy_4_c" class="character-item"></div>
+                                                <div id="girl_2_c" class="character-item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2 page_zoom zoom_img">
+                        <div class="zoomContainer horizon pointerOff">
+                            <div class="zoomArea">
+                                <div class="zoomImgContainer pointerOff">
+                                    <div class="zoomImg">
+                                        <div class="bgImg">
+                                            <img src="./images/ton_0202_0102_0018_102/img_01.png" />
+                                            <div class="character-flex">
+                                                <div id="girl_1_c" class="character-item"></div>
+                                                <div id="boy_2_c" class="character-item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `나들이를 나온 것<br>같아요.`,
+                class: 'bottom',
+                balloon_top: -190,
+                balloon_left: -80,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.girl2({
+                id: '#girl_2_c',
+                speech: 'right',
+                circle: true,
+                sound: '',
+                text: `공원에 놀러 온 것<br>같아요.`,
+                class: 'bottom',
+                balloon_top: -190,
+                balloon_left: -90,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+            $prite.boy2({
+                id: '#boy_2_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `쓰레기를 줍고 있어요.`,
+                class: 'bottom',
+                balloon_top: -140,
+                balloon_left: -125,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.girl1({
+                id: '#girl_1_c',
+                speech: 'right',
+                circle: true,
+                sound: '',
+                text: `사진을 찍고 있어요.`,
+                class: 'bottom',
+                balloon_top: -140,
+                balloon_left: -105,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+        });
+    </script>
+</body>
+
+</html>
