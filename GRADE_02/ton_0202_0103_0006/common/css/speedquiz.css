@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* common */
+.show {display:block !important;}
+/* 인트로 */
+.qzIntro {position: absolute; top: 38px; bottom: 38px; left: 0; right: 0; background: #f7f1da; z-index: 5;}
+.qzIntro.hide {display:none}
+
+/* 인트로 - animate cc */
+.qzIntro .gate_ani{position: absolute; width: 100%; height: 692px; top: 0; overflow:hidden;}
+.qzIntro .gate_ani #animation_container{position: absolute;}
+.qzIntro .gate_ani .gate_ani .gate_ani_cover{position: absolute; left: 0px; top: 0px;}
+
+.qzIntro .gate_topbox{position: absolute; top: 0; width: 100%; height: 100%; z-index: 2;}
+
+.qzIntro .aniTitleContainer {position:absolute; top:155px; left:0; width:100%; height:0; overflow:hidden; opacity:1;}
+.qzIntro .aniTitleContainer.hide{opacity:0}
+
+.qzIntro .introTitleText {position:absolute; top:62px; left:342px; width:447px; height:90px; background:url('../images/speedquiz/sp_intro_title.png') no-repeat; background-size:100% auto; font-size:0; text-indent:-9999px;}
+.qzIntro .introTitleText:before{content:''; position:absolute; top:77px; left:-157px; display:inline-block; width:270px; height:212px; background:url('../images/speedquiz/sp_intro_img01.png') no-repeat; background-size:100% auto;}
+.qzIntro .introTitleText:after{content:''; position:absolute; top:153px; right:-114px; display:inline-block; width:126px; height:135px; background:url('../images/speedquiz/sp_intro_img02.png') no-repeat; background-size:100% auto;}
+
+.qzIntro .introStartBtn {position:absolute; top:438px; left:477px; display:inline-block; width:216px; height:52px; line-height:52px; font-size:23px; text-align:center; border-radius:8px; font-family:'YGJAL'; background:#ffe100; cursor:pointer;}
+.qzIntro .introStartBtn:after {content:'>'; position:absolute; top:0; right:18px; font-size:18px;}
+.qzIntro .introStartBtn:hover {color:#fff; background:#593f1f; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+.qzIntro .gate_txt {position:absolute; top:586px; width:100%; color:#000; font-size:24px; line-height:36px; text-align:center; font-family:'NotoB';}
+
+
+/* 인트로 - 문항 버튼 */
+.qzIntro .wrapSet{position:absolute; top:520px; left: 50%; margin-left: -332px;}
+.qzIntro .wrapSet.show{opacity:1;}
+.qzIntro .wrapSet .contSet{float:left; display:flex; justify-content:center; align-items:center; width:320px; height:125px; background-color:#e7c599; border-radius:30px;}
+.qzIntro .wrapSet .contSet:after{content:''; display:block; clear:both;}
+.qzIntro .wrapSet .contSet + .contSet{margin-left:10px;}
+
+.qzIntro .wrapSet .contSet .set_title{width:70px; color:#5e3e18; font-size:18px; font-family:'YGJAL';}
+.qzIntro .wrapSet .contSet:nth-child(1) .set_title{width:110px;}
+.qzIntro .wrapSet .contSet button{float:left; display:inline-block; width:66px; height:87px; background:url('../images/speedquiz/sp_intro_btn.png') no-repeat; background-size:auto 384px; cursor:pointer;}
+.qzIntro .wrapSet .contSet button + button{margin-left:6px;}
+.qzIntro .wrapSet .contSet button span{font-size:0;}
+
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(1){background-position:0 0;}
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(2){background-position:-77px 0;}
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(1){background-position:0px -198px;}
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(2){background-position:-77px -198px;}
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(3){background-position:-154px -198px;}
+
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(1).sel,
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(1):hover,
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(1):focus{background-position:0px -99px;}
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(2).sel,
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(2):hover,
+.qzIntro .wrapSet .contSet:nth-child(1) button:nth-child(2):focus{background-position:-77px -99px;}
+
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(1).sel,
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(1):hover,
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(1):focus{background-position:0px -297px;}
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(2).sel,
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(2):hover,
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(2):focus{background-position:-77px -297px;}
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(3).sel,
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(3):hover,
+.qzIntro .wrapSet .contSet:nth-child(2) button:nth-child(3):focus{background-position:-154px -297px;}
+
+@media screen and (-ms-high-contrast: active), all and (-ms-high-contrast: none) {
+	.qzIntro .wrapSet .contSet:nth-last-child(1) dt{padding-top:4px;}
+	.qzIntro .wrapSet .contSet:nth-last-child(2) dt{padding-top:7px;}
+}
+
+/* 인트로 - 문항 미리보기 */
+.quizContainer .wrapLayer{position:absolute; right:37px; bottom:46px;}
+.quizContainer .wrapLayer > button{position:relative; display:flex; align-items:center; width:198px; height:43px; padding-left:40px; border-radius:20px; color:#fff; font-family:'YGJAL'; font-size:18px; text-align:left; box-sizing:border-box;  -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+.quizContainer .wrapLayer .btnView{margin-bottom:10px; background-color:#d6a96e;}
+.quizContainer .wrapLayer .btnView:hover{color:#fff; background-color:#6f2184;}
+.quizContainer .wrapLayer .btnView:before{content:''; position:absolute; top:50%; left:17px; display:inline-block; width:15px; height:16px; background:url('../images/speedquiz/sp_intro_img03.png') no-repeat; background-size:100% auto;     transform: translateY(-50%);}
+.quizContainer .wrapLayer .btnView:after {content:">"; position:absolute; top:50%; right:16px; transform:translateY(-50%);}
+
+/* 인트로 - 활동 방법 */
+.quizContainer .wrapLayer .btnLayer{background-color:#5e3e18;}
+.quizContainer .wrapLayer .btnLayer:hover{color:#fff; background-color:#9d00c5;}
+.quizContainer .wrapLayer .btnLayer:before{content:''; position:absolute; top:50%; left:17px; display:inline-block; width:13px; height:16px; background:url('../images/speedquiz/sp_intro_img04.png') no-repeat; background-size:100% auto;     transform: translateY(-50%);}
+.quizContainer .wrapLayer .btnLayer:after {content:">"; position:absolute; top:50%; right:16px; transform:translateY(-50%);}
+
+.quizContainer .btnView.show{opacity:1;}
+.quizContainer .btnLayer.show{opacity:1;}
+
+/* 활동 방법 팝업 */
+.quizContainer .popbox{left:0; top:0; width:100%; height:100%; padding:0 36px; background:transparent; box-sizing:border-box;}
+.quizContainer .popbox.full:before{position:absolute; top:0; left:0; width:100%; height:100%; background-color:#000000; opacity:0.5; content:''; z-index:-1;}
+
+.quizContainer .popbox.full .popupContents{position:relative; top:0; left:0; width:100%; height:auto; padding:0; margin-top:38px; border-bottom-left-radius:40px; border-bottom-right-radius:40px; background-color:#fff;}
+.quizContainer .popbox.full .popupContents.view{height:670px;}
+
+.quizContainer .popbox.full .popup_title{position:relative; display:flex; align-items:center; height:87px; padding-left:50px; border-bottom-left-radius:40px; border-bottom-right-radius:40px; background-color:#ff6600; font-family:'YGJAL'; box-sizing:border-box;}
+.quizContainer .popbox.full .popup_title p{position:relative; color:#fff; font-size:39px;}
+
+.quizContainer .popbox .how .popup_title p:before{content:''; display:inline-block; width:28px; height:34px; margin-right:10px; background:url('../images/speedquiz/sp_intro_img04.png') no-repeat; background-size:28px auto;}
+.quizContainer .popbox .how .inner_wrap{display:flex; justify-content:space-between; height:585px; padding:50px 90px; box-sizing:border-box;}
+.quizContainer .popbox .how .inner_wrap > ul{width:calc(100% / 2);}
+.quizContainer .popbox .how .inner_wrap > ul .bulletBox{position:relative; margin-bottom:25px; text-align:justify;}
+.quizContainer .popbox .how .inner_wrap > ul .bulletBox p{line-height:44px;}
+
+.quizContainer .popbox .how .img_wrap{padding-top:70px; padding-left:40px; text-align:center;}
+.quizContainer .popbox .how .img_wrap > img{width:294px; height:284px;}
+
+
+.quizContainer .popbox.full .popCloseBtn{position:absolute; top:67px; right:90px; width:29px; height:29px; background:url('../images/goldenbell/gb_how_close.png') no-repeat; background-size:100% auto;}
+.quizContainer .popbox.full .popCloseBtn:hover{ background:url('../images/goldenbell/gb_how_close_hover.png') no-repeat; background-size:100% auto; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+
+.quizContainer .btnLayer.show{opacity:1;}
+
+/* 문항 미리보기 - 팝업 */
+.quizContainer .popbox .view .popup_title p:before{content:''; display:inline-block; width:30px; height:37px; margin-right:10px; background:url('../images/speedquiz/sp_intro_img03.png') 0 7px no-repeat; background-size:30px auto;}
+.quizContainer .popbox .view .inner_wrap {padding:45px 90px;}
+
+.view_inner:after{content:''; display:block; clear:both;}
+.view_inner > li{float:left; width:calc(100% / 2 - 15px);}
+.view_inner > li + li{margin-left:30px;}
+.view_inner > li .pop_view_tit{display:flex; justify-content:center; align-items:center; width:100%; height:60px; margin-bottom:20px; background-color:#f6e7d4; border-radius:10px; color:#000; font-size:35px; font-family:'NotoB'; text-align:center;}
+
+.view_inner > li .bulletBox .bullet.num+p,
+.view_inner > li .bulletBox .bullet.num+span,
+.view_inner > li .bulletBox .bullet.num+div{text-align:justify;}
+
+
+/* 문항 다운로드 */
+.btnDownload{position:absolute; top:25px; right:132px; display:flex; align-items:center; width:170px; height:38px; padding-left:50px; border-radius:20px; background:#ffe100 url('../images/speedquiz/sp_icon_down.png') 21px 11px no-repeat; background-size:21px 15px; color:#000; font-family:'YGJAL'; font-size:16px; text-align:left; box-sizing:border-box; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+.btnDownload:hover{background-color:#5e3e18; color:#fff;}
+
+/*  */
+.pageInfo{position:absolute; right:90px; top:200px; border-bottom:1px solid #ae7c65; font-family:'YGJAL'; font-size:13px; color:#ae7c65; z-index:3;}
+
+/* 스피트게임 타이틀 */
+.spTitle{position:relative; width:100%; height:100px; box-sizing:border-box;}
+.spTitle h1{display:inline-block; position:absolute; top:20px; left:15px; width:307px; height:92px; background:url('../images/speedquiz/sp_title.png') no-repeat; background-size:100% auto; font-size:0; text-indent:-9999px;}
+
+.quizContainer .contentsBox{height:auto;}
+.quizContainer .innerBox{padding:0 38px; background-color:transparent;}
+
+/* tab */
+.qzTab{position:absolute; top:-66px; right:40px; z-index:3;}
+.qzTab > em{float:left; display:inline-block; width:28px; height:28px; border:1px solid #e9d0b0; background-color:#f6e7d4; text-align:center; font-family:'YGJAL'; color:#ae7c65; font-size:10px; line-height:26px; box-sizing:border-box;}
+.qzTab > em + em{border-left:none;}
+.qzTab > em.pass{background-color:#ddd; color:#fff;}
+.qzTab > em.ans{background-color:#ae7c65; color:#fff;}
+
+/* 퀴즈 상세 */
+.qzContentWrap{width:100%; height:100%; background-color:#fff; border-top-left-radius:30px; border-top-right-radius:30px; box-sizing:border-box;}
+.qzContentWrap:before{content:''; display:inline-block; position:absolute; top:-39px; left:349px; width:67px; height:44px; background:url('../images/checkPage/chk_bee.png') no-repeat; background-size:100% auto;}
+.qzContentWrap > div{height:604px; padding:50px 50px; box-sizing:border-box;}
+.qzContentWrap > div > .quiz{width:720px; height:483px; box-sizing:border-box;}
+
+
+.qzContentWrap .quiz .inner{position:relative; width:100%; height:100%; display:flex; justify-content:center; align-items:center; border:10px solid #f6e7d4; border-radius:30px; box-sizing:border-box;}
+.qzContentWrap .typeText p{width:100%; text-align:center; font-family:'NotoBK'; font-size:89px; color:#000; letter-spacing:0.1em;}
+
+.qzContentWrap .quiz .text{position:absolute; top:30px; left:20px;}
+.qzContentWrap .quiz .text > span{float:left; display:inline-block; width:70px; height:70px; border-radius:16px; border:4px solid #ae7c65; background-color:#fff; font-family:'NotoBK'; font-size:52px; line-height:60px; text-align:center; color:#000000; box-sizing:border-box;}
+.qzContentWrap .quiz .text > span + span{margin-left:5px;}
+.qzContentWrap .quiz img{width:100%; border-radius:16px; box-sizing:border-box;}
+
+.qzContentWrap > div.hide, .quiz.hide{display:none;}
+
+/* 맞힌 문제 결과 */
+/* alert_popup */
+.alert_popup{position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); text-align: center; z-index:5; display:none;}
+
+.alert_popup .result{position:absolute; top:50%; left:50%; width:720px; height:420px; border-radius:10px; background-color:#fff;transform:translate(-50%,-50%); -ms-transform: translate(-50%,-50%); -webkit-transform: translate(-50%,-50%); box-sizing:border-box;}
+.alert_popup .result .inner{position:relative; display:flex; justify-content:center; align-items:center; flex-direction:column; width:100%; height:100%; background:url('../images/character/speedQuiz_done_bg.png') center center no-repeat; background-size:632px 338px; border-radius:15px;}
+
+.result .characterAni{position:absolute; top:127px; left:363px; width:300px; height:260px; background:url('../images/character/speedQuiz_done_sprite.png') no-repeat;}
+
+.result .innerHtml{position:absolute; top:117px; left:119px; font-family:'YGJAL'; box-sizing:border-box;}
+.result .innerHtml > p{font-size:25px; color:#fff; text-shadow:4px 0 0 #0d713f, -4px 0 0 #0d713f, 0 4px 0 #0d713f, 0 -4px 0 #0d713f, 3px 3px #0d713f, -3px -3px 0 #0d713f, 3px -3px 0 #0d713f, -3px 3px 0 #0d713f, 3px 3px 5px rgba(0,0,0,0.3);}
+.result .innerHtml .inner_bg{display:table; width:196px; height:112px; margin-top:22px; padding:5px; background-color:#ffe100; border-radius:20px; box-sizing:border-box;}
+.result .innerHtml .inner_border{display:table-cell; width:100%; height:100%; background-color:#ffe100; border-radius:20px; border:3px solid #fabe00; color:#fff; font-size:20px; vertical-align:middle; text-align:center; text-shadow:4px 0 0 #000, -4px 0 0 #000, 0 4px 0 #000, 0 -4px 0 #000, 3px 3px #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 5px rgba(0,0,0,0.3); box-sizing:border-box;}
+.result .innerHtml .inner_border strong{font-size:72px;}
+.result .innerHtml .inner_border span{display:inline-block; width:33px; height:35px; margin-top:-10px; background:url('../images/speedquiz/popup_text.png') no-repeat; background-size:33px 35px; vertical-align:middle; font-size:0; text-indent:-9999px;}
+
+.result .popup_closeBtn{position:absolute; top:0px; right:0px; width:32px; height:32px; border-radius:0 10px 0 15px; background-size: 15px; background:#f77c19 url('../images/goldenbell/gb_how_close.png') center/12px no-repeat; background-size:12px auto; cursor:pointer;}
+.result .popup_closeBtn:hover{background-color:#666;}
+
+.temp{position:absolute; top: 0; left: 0; width: 100%; height: 100%; background:url('../images/character/sp_temp.png') no-repeat; background-size: 100% auto; opacity:0.6; display:none;}
+
+
+/* ********************************************************** */
+/* 조각퍼즐 타이머 */
+.qzTimer {
+	position: absolute;
+	left: 880px;
+	top: 92px;
+	width: 182px;
+	height: 182px;
+}
+
+.qzTimer .qzBtnTimer {
+	width: 182px;
+	height: 182px;
+	cursor: pointer;
+}
+
+.qzTimer.off .qzBtnTimer {
+	background: url('../../common/images/puzz/puzz_timer.png') no-repeat;
+}
+
+.qzTimer.go .qzBtnTimer {
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	background: url('../../common/images/puzz/puzz_timer_on.png') no-repeat;
+}
+
+.qzTimer.go .qzBtnTimer:after {
+	position: absolute;
+	content: '';
+	top: 28px;
+	left: -34px;
+	width: 200px;
+	height: 160px;
+	background: url('../../common/images/puzz/puzz_timer_on_ani.png') no-repeat;
+	transform-origin: 160px 120px;
+}
+
+.qzTimer.go .qzBtnTimer.active:after {
+	animation: timerFlag 1s infinite linear;
+	-webkit-animation: timerFlag 1s infinite linear;
+	-moz-animation: timerFlag 1s infinite linear;
+}
+
+.qzTimer .bar {
+	position: absolute;
+	top: 210px;
+	left: 20px;
+	width: 170px;
+	height: 15px;
+	padding: 3px;
+	line-height: 0;
+	font-size: 0;
+	background: #e9e9e9;
+	border: 1px solid #dadada;
+	border-radius: 16px;
+	box-sizing: border-box;
+}
+
+.qzTimer .bar span {
+	display: inline-block;
+	width: 100%;
+	height: 7px;
+	background: #ff6600;
+	border-radius: 50px;
+	box-sizing: border-box;
+	opacity: 0;
+}
+
+.qzTimer .qzBtnTimer.active+.bar span {
+	animation: puzzBarWidth 30.0s linear;
+	-webkit-animation: puzzBarWidth 30.0s linear;
+	-moz-animation: puzzBarWidth 30.0s linear;
+	opacity: 1;
+}
+.qzTimer .bar:before {
+	position: absolute;
+	content: '';
+	left: -41px;
+	top: -17px;
+	width: 47px;
+	height: 47px;
+	border-radius:50%;
+	background-color:#fff;
+}
+.qzTimer .bar:after {
+	position: absolute;
+	content: '';
+	left: -42px;
+	top: -18px;
+	width: 49px;
+	height: 49px;
+	border-radius:50%;
+}
+
+.qzTimer.go .bar:after {
+	-webkit-animation: clockColor 1s steps(28) infinite;
+    -ms-animation: clockColor 1s steps(28) infinite;
+    animation: clockColor 1s steps(28) infinite;
+	background-image:url('../../common/images/puzz/icon_clock_on.svg'), url('../../common/images/puzz/timerSheet.png');
+	background-position:center, 0 center;
+	background-repeat:no-repeat, no-repeat;
+	background-size:contain, auto 48px;
+}
+
+.qzTimer.off .bar:after {
+	background:#fff url('../../common/images/puzz/icon_clock.svg') center/contain no-repeat;
+}
+.qzTimer .count {
+	position: absolute;
+	top: 234px;
+	left: 30px;
+	font-family: YGJAL;
+	font-size: 15px;
+	color: #999;
+}
+
+.qzTimer .count span span {
+	color: #000;
+}
+
+.qzTimer.go .count span {
+	color: #000;
+}
+
+.qzTimer.go .count span.num {
+	color: #ff6600;
+}
+
+
+@keyframes clockColor {
+	from {
+		background-position: center, 0 0
+	}
+
+	to {
+		background-position: center, -1344px 0
+	}
+}
+
+@-webkit-keyframes clockColor {
+	from {
+		background-position: center, 0 0
+	}
+
+	to {
+		background-position: center, -1344px 0
+	}
+}
+
+@-ms-keyframes clockColor {
+	from {
+		background-position: center, 0 0
+	}
+
+	to {
+		background-position: center, -1344px 0
+	}
+}
+
+/* ********************************************************** */
+/* 조각퍼즐 버튼 */
+.qzFunc {position:absolute; bottom:60px; right:90px;}
+.qzFunc button {position:relative; display:block; vertical-align:top; width:220px; height:55px; margin-bottom:10px; text-indent:-9999px;}
+.qzFunc .qzBtnSuss {background:url('../../common/images/btn_sp_dap.png') no-repeat; background-size:100% auto;}
+.qzFunc .qzBtnSuss.hide {display:none;}
+
+.qzFunc .qzBtnOut {background:url('../../common/images/btn_pass.png') no-repeat; background-size:100% auto;}
+.qzFunc .qzBtnOut.hide {display:none;}
+
+.qzFunc .qzBtnAgain{background:url('../../common/images/btn_sp_again.png') no-repeat; background-size:100% auto;}
+
+.qzFunc .qzBtnSuss:hover {background:url('../../common/images/btn_sp_dap_hover.png') no-repeat; background-size:100% auto;}
+.qzFunc .qzBtnOut:hover {background:url('../../common/images/btn_pass_hover.png') no-repeat; background-size:100% auto;}
+.qzFunc .qzBtnAgain:hover {background:url('../../common/images/btn_sp_again_hover.png') no-repeat; background-size:100% auto;}

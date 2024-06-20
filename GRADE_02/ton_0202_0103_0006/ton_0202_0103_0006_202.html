@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .page_2 .flex {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .page_2 img {
+            width: 300px;
+            margin-left: 100px;
+            border: 2px solid #ffd89e;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .character-flex {
+            left: 450px;
+        }
+
+        .icon-char[data-popup-btn="2"] {
+            top: 0px;
+            left: unset;
+            right: 0px;
+        }
+
+        .min[data-popup-page="2"] {
+            top: 155px;
+            left: 490px;
+            width: 766px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue">
+                우리 반 뛰기 왕 놀이 방법을 알아볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="우리 반 뛰기 왕 놀이 방법을 알아볼까요?">활동 1</li>
+                    <li data-hover="" data-text="우리 반 뛰기 왕을 뽑아 볼까요?">활동 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="how-to-box">
+                            <div class="title-box">
+                                <div class="title">활동 방법</div>
+                            </div>
+                        </div>
+                        <ul class="how-to-play">
+                            <li>
+                                <div class="bullet number orange inline">
+                                    1
+                                </div>
+                                <div class="text">
+                                    뛰기 왕을 어떻게 뽑을지 정해요.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bullet number orange inline">
+                                    2
+                                </div>
+                                <div class="text">
+                                    각 뛰기 왕별로 도전할 친구를 정해요.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bullet number orange inline">
+                                    3
+                                </div>
+                                <div class="text" style="letter-spacing: -2px;">
+                                    도전하는 친구는 방법에 맞게 뛰고 다른 친구들은 평가해요.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bullet number orange inline">
+                                    4
+                                </div>
+                                <div class="text" style="letter-spacing: -2px;">
+                                    추천을 많이 받은 친구가 우리 반 뛰기 왕이 돼요.
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="page_2">
+                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="2"></div>
+                        <div class="flex">
+                            <img src="./images/ton_0202_0103_0006_202/img_01.png" alt="">
+                            <div class="character-flex">
+                                <div id="boy_3" class="character-item"></div>
+                                <div id="girl_3" class="character-item"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="2" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            친구들의 뛰기 동작에 대해 이야기해 보아요.
+                        </p>
+                        <p style="display: flex;">
+                            <span class="exam bullet" style="margin-top: 9px;">예</span>
+                            <span>동물 흉내를 가장 잘 낸 친구는 가람이예요.</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.boy3({
+                id: '#boy_3',
+                speech: 'right',
+                sound: './media/ton_0202_0103_0006_202_01.mp3',
+                text: '높이뛰기 왕은<br>민호예요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -45,
+            });
+            $prite.girl3({
+                id: '#girl_3',
+                speech: 'right',
+                sound: './media/ton_0202_0103_0006_202_02.mp3',
+                text: '재밌게 뛰기 왕은<br>채윤이에요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -65,
+            });
+        });
+    </script>
+</body>
+
+</html>

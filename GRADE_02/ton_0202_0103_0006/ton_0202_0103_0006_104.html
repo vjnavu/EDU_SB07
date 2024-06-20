@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .bgImg img {
+            height: 580px;
+            width: auto;
+            margin: auto;
+            display: flex;
+        }
+
+        .study_guide {
+            top: 20px;
+            right: 28px;
+        }
+
+        .icon-char[data-popup-btn="2"] {
+            top: 60px;
+            right: 28px;
+            left: unset;
+        }
+
+        .min[data-popup-page="2"] {
+            top: 190px;
+            left: 675px;
+            width: 580px;
+        }
+
+        .boxChat {
+            position: absolute;
+            width: 300px !important;
+            height: 150px !important;
+        }
+
+        .boxChat1 {
+            top: 110px;
+            left: 70px;
+        }
+
+        .boxChat2 {
+            top: 170px;
+            right: 60px;
+        }
+
+        .textBoxChat {
+            position: absolute;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .textBoxChat1 {
+            top: 146px;
+            left: 82px;
+        }
+
+        .textBoxChat2 {
+            top: 195px;
+            right: 96px;
+        }
+
+        .videoSubPlayBtn {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: unset;
+        }
+
+        .videoSubPlayBtn:hover {
+            background-color: transparent;
+        }
+
+        .animal {
+            position: absolute;
+            z-index: 1;
+            border-radius: 20px;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        .animal:hover {
+            border: 3px dashed red;
+
+        }
+
+        .animal1 {
+            top: 95px;
+            right: 765px;
+            width: 120px;
+            height: 85px;
+        }
+
+        .animal2 {
+            top: 180px;
+            right: 813px;
+            width: 55px;
+            height: 55px;
+        }
+
+        .animal3 {
+            top: 5px;
+            right: 550px;
+            width: 185px;
+            height: 205px;
+        }
+
+        .animal4 {
+            top: 70px;
+            right: 365px;
+            width: 145px;
+            height: 175px;
+        }
+
+        .animal5 {
+            top: 310px;
+            right: 908px;
+            width: 100px;
+            height: 75px;
+        }
+
+        .animal6 {
+            top: 275px;
+            right: 480px;
+            width: 90px;
+            height: 100px;
+        }
+
+        .animal7 {
+            top: 380px;
+            right: 445px;
+            width: 180px;
+            height: 200px;
+        }
+
+        .animal8 {
+            top: 380px;
+            right: 775px;
+            width: 130px;
+            height: 115px;
+        }
+
+        /* page 2 */
+        .page_2 .flex {
+            display: flex;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .page_2 .flex .items {
+            flex: 1;
+        }
+
+        .page_2 .flex .items img {
+            width: 100%;
+            height: 300px;
+            border: 4px solid #F3E7D6;
+            border-radius: 20px;
+        }
+
+        .page_2 .flex .items .cho {
+            margin-top: 10px;
+            display: block;
+            height: 120px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page_2 .flex .items .choWrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cho .choBox {
+            margin-left: 0;
+        }
+
+
+
+        .examViewBtn {
+            right: 28px;
+        }
+
+        /* page 3 */
+        .text_top {
+            border: 4px solid #a8d6f6;
+            background: #f1f9fc;
+            line-height: 1.3em !important;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: "NotoM";
+            padding: 10px 20px;
+            border-radius: 22px;
+            z-index: 1;
+            position: absolute;
+            left: 28px;
+            top: 20px;
+        }
+
+        .page_3 .flex {
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 150px;
+        }
+
+
+        .page_3 img {
+            width: 300px;
+            height: 300px
+        }
+
+        .page_3 .img_arrow {
+            width: 70px;
+            height: 70px;
+        }
+
+        .page_3 .flex .img_animal {
+            border: 2px solid #ffd89e;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue">
+                동물이 높이 뛰는 모습을 살펴볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="동물이 높이 뛰는 모습을 살펴볼까요?">영상</li>
+                    <li data-hover="" data-text="동물이 뛸 때 어떤 동작을 하는지 이야기해 볼까요?">물음</li>
+                    <li data-hover="" data-text="동물의 모습을 상상하여 뛰어 볼까요?">활동</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1 page_zoom zoom_img">
+                        <div class="zoomContainer horizon pointerOff">
+                            <div class="zoomArea">
+                                <div class="zoomImgContainer pointerOff">
+                                    <div class="zoomImg">
+                                        <div class="bgImg">
+                                            <div class="study_guide"><em>동물</em> 을 <em>클릭</em>하세요.</div>
+                                            <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="2"></div>
+                                            <img src="./images/ton_0202_0103_0006_104/img_01.png" />
+                                            <img class="boxChat boxChat1"
+                                                src="./images/ton_0202_0103_0006_104/img_02.png" />
+                                            <img class="boxChat boxChat2"
+                                                src="./images/ton_0202_0103_0006_104/img_03.png" />
+                                            <div class="textBoxChat textBoxChat1">동물을 클릭하면<br>영상을 볼 수 있어요.</div>
+                                            <div class="textBoxChat textBoxChat2">높이뛰기를 잘하는<br>다른 동물들도<br>떠올려 보아요.</div>
+                                            <div class="animal animal1">
+                                                <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="tP2TWhDVPVY?si=4kSX76BjJP2bxGnC"
+                                                    target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal2"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="mcnoL1kJ4so" target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal3"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="fVZ_c8BHy1s?si=8BQbRk9OZ5Gtc8V2"
+                                                    target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal4"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="_C1vjEOitSA" target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal5"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="SGKzUPH__3A?si=nKZyLziuF0PMqMRY"
+                                                    target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal6"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="RlveKVGw0fY" target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal7"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="hHe4mIegBDk?si=aPh7mqIARq3WUMiq"
+                                                    target="_blank"></a>
+                                            </div>
+                                            <div class="animal animal8"> <a class="videoSubPlayBtn large"
+                                                    data-youtube-id="t4pkaFABNQc?si=y3LnwmWapdN0hg-E"
+                                                    target="_blank"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2" data-quiz="toggle">
+                        <div class="memoIconWrap">
+                            <div class="memoIcon blue border">
+                                <div class="icon">
+                                    <div class="iconImg"></div>
+                                </div>
+                                <div class="memoTxt">어떻게 높이 뛸까?</div>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="items">
+                                <img src="./images/ton_0202_0103_0006_104/img_04.png">
+                                <div class="cho">
+                                    <div class="choWrap">
+                                        개구리는<br>
+                                        <div class="choBox">
+                                            <span class="dir-rect" data-cho="ㅍ" data-letter="팔"></span>
+                                            <span class="dir-rect" data-cho="ㅉ" data-letter="짝"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="./images/ton_0202_0103_0006_104/img_06.png">
+                                <div class="cho">
+                                    <div class="choWrap">
+                                        메뚜기는<br>
+                                        <div class="choBox">
+                                            <span class="dir-rect" data-cho="ㅍ" data-letter="폴"></span>
+                                            <span class="dir-rect" data-cho="ㅉ" data-letter="짝"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="./images/ton_0202_0103_0006_104/img_05.png">
+                                <div class="cho">
+                                    <div class="choWrap">
+                                        토끼는<br>
+                                        <div class="choBox">
+                                            <span class="dir-rect" data-cho="ㄲ" data-letter="깡"></span>
+                                            <span class="dir-rect" data-cho="ㅊ" data-letter="충"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="./images/ton_0202_0103_0006_104/img_07.png">
+                                <div class="cho">
+                                    <div class="choWrap">
+                                        캥거루는<br>
+                                        <div class="choBox">
+                                            <span class="dir-rect" data-cho="ㄱ" data-letter="겅"></span>
+                                            <span class="dir-rect" data-cho="ㅈ" data-letter="중"></span>
+                                            <span class="dir-rect" data-cho="ㄱ" data-letter="겅"></span>
+                                            <span class="dir-rect" data-cho="ㅈ" data-letter="중"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="examViewBtn" type="button" data-answer-btn=""></button>
+                    </li>
+                    <li class="page_3">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="text_top">개구리처럼 뛰기</div>
+                                    <div class="flex">
+                                        <div class="item">
+                                            <img class="img_animal" src="./images/ton_0202_0103_0006_104/img_04.png"
+                                                alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img class="img_arrow" src="./images/ton_0202_0103_0006_104/img_arrow.png">
+                                        </div>
+                                        <div class="item">
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="1">
+                                                    <div class="answer" data-toggle-target="1">
+                                                        <img src="./images/ton_0202_0103_0006_104/img_08.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="text_top">토끼처럼 뛰기</div>
+                                    <div class="flex">
+                                        <div class="item">
+                                            <img class="img_animal" src="./images/ton_0202_0103_0006_104/img_05.png"
+                                                alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img class="img_arrow" src="./images/ton_0202_0103_0006_104/img_arrow.png">
+                                        </div>
+                                        <div class="item">
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="2">
+                                                    <div class="answer" data-toggle-target="2">
+                                                        <img src="./images/ton_0202_0103_0006_104/img_09.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="2" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            동물 중 높이뛰기 왕이 누구일지도 생각해 보아요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+
+            $(document).on('click', '.choBox', function () {
+                if ($(this).hasClass('ans')) {
+                    $(this).removeClass('ans');
+                } else {
+                    $(this).addClass('ans');
+                }
+                if ($('.choBox.ans').length == 4) {
+                    $('.examViewBtn').addClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                let dirRect = $(this).parent().find('.dir-rect');
+                if (!$(this).hasClass('reset')) {
+                    $(this).removeClass('reset');
+                    dirRect.removeClass('on');
+                    $('.choBox').removeClass('ans');
+                    dirRect.each(function () {
+                        let dataCho = $(this).data('cho');
+                        $(this).text(dataCho);
+                    })
+                    $(this).parent().find('.choBox').removeClass('active');
+                    $('.items').removeClass('active');
+                } else {
+                    $(this).addClass('reset');
+                    dirRect.addClass('on');
+                    $('.choBox').addClass('ans');
+                    dirRect.each(function () {
+                        let dataLetter = $(this).data('letter');
+                        $(this).text(dataLetter);
+                    })
+                    $(this).parent().find('.choBox').addClass('active');
+                    $('.items').addClass('active');
+                }
+
+            });
+        }); 
+    </script>
+</body>
+
+</html>
