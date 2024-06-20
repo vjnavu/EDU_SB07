@@ -4065,7 +4065,13 @@ tr.ta-c td {
     left: 0;
 }
 
-.noteText p .dot {
+.noteText p.dot {
+    position: relative;
+    padding-left: 20px;
+}
+
+.noteText p.dot::after {
+    content: '';
     background: #006ee6;
     display: inline-flex;
     flex-shrink: 0;
@@ -4075,6 +4081,9 @@ tr.ta-c td {
     border-radius: 50%;
     margin: 10px 13px 10px -2px;
     box-sizing: border-box;
+    left: 0;
+    position: absolute;
+    top: 15px;
 }
 
 /***

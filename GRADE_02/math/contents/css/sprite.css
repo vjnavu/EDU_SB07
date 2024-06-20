@@ -37,7 +37,7 @@
     height: 74px;
     border-radius: 50%;
     background: #f60 url(../images/icon/icon_play.svg) 28px center/27px no-repeat;
-    box-shadow: 0 3px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     z-index: 2
 }
@@ -64,42 +64,53 @@
     transform-origin: center top;
     transform: translate(-50%) scale(0.75) rotate(0.1deg) !important
 }
+
 .characterImg.rabbit.circle div:not(.nameBox) {
     transform: translate(-50%, -10px) scale(0.65) rotate(0.1deg) !important
 }
-.charSpriteImg.boy_1,.charImg.boy_1 {
+
+.charSpriteImg.boy_1,
+.charImg.boy_1 {
     background-image: url('../../contents/images/character/boy_1.png')
 }
 
-.charSpriteImg.boy_2,.charImg.boy_2 {
+.charSpriteImg.boy_2,
+.charImg.boy_2 {
     background-image: url('../../contents/images/character/boy_2.png')
 }
 
-.charSpriteImg.boy_3,.charImg.boy_3 {
+.charSpriteImg.boy_3,
+.charImg.boy_3 {
     background-image: url('../../contents/images/character/boy_3.png')
 }
 
-.charSpriteImg.boy_4,.charImg.boy_4 {
+.charSpriteImg.boy_4,
+.charImg.boy_4 {
     background-image: url('../../contents/images/character/boy_4.png')
 }
 
-.charSpriteImg.girl_1,.charImg.girl_1 {
+.charSpriteImg.girl_1,
+.charImg.girl_1 {
     background-image: url('../../contents/images/character/girl_1.png')
 }
 
-.charSpriteImg.girl_2,.charImg.girl_2 {
+.charSpriteImg.girl_2,
+.charImg.girl_2 {
     background-image: url('../../contents/images/character/girl_2.png')
 }
 
-.charSpriteImg.girl_3,.charImg.girl_3 {
+.charSpriteImg.girl_3,
+.charImg.girl_3 {
     background-image: url('../../contents/images/character/girl_3.png')
 }
 
-.charSpriteImg.girl_4,.charImg.girl_4 {
+.charSpriteImg.girl_4,
+.charImg.girl_4 {
     background-image: url('../../contents/images/character/girl_4.png')
 }
 
-.charSpriteImg.rabbit,.charImg.rabbit {
+.charSpriteImg.rabbit,
+.charImg.rabbit {
     background-image: url('../../contents/images/character/rabbit.png')
 }
 
@@ -209,7 +220,13 @@
     -ms-animation: girl_4 4s steps(200) infinite;
     animation: girl_4 4s steps(200) infinite
 }
-.single.charSpriteImg {width:340px;height:421px;background-repeat:no-repeat;display:inline-block}
+
+.single.charSpriteImg {
+    width: 340px;
+    height: 421px;
+    background-repeat: no-repeat;
+    display: inline-block
+}
 
 @keyframes boy_1 {
     from {
@@ -450,101 +467,195 @@
         background-position: -54000px 0
     }
 }
-.character-item .balloon span{pointer-events: none;}
-.character-item{position: relative;}
-.character-flex{
-    display:  flex;
-    justify-content: center;
-    gap:100px;
-    width: auto;
-    margin:0 auto
+
+.character-item .balloon span {
+    pointer-events: none;
 }
-.characterWrap+.balloon.bottom:after,.characterWrap+.balloon.top:after {
+
+.character-item {
+    position: relative;
+}
+
+.character-flex {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: auto;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+}
+
+.characterWrap+.balloon.bottom:after,
+.characterWrap+.balloon.top:after {
     left: 50%;
     transform: translate(-50%)
 }
 
 /* 말풍선추가 */
-.characterWrap{
+.characterWrap {
     position: relative;
     display: inline-block;
-    top:0;
+    top: 0;
 }
-.characterWrap .characterImg{position: relative; z-index:3;cursor: pointer}
+
+.characterWrap .characterImg {
+    position: relative;
+    z-index: 3;
+    cursor: pointer
+}
+
 .characterWrap.speech.left:before {
-    content:"";
+    content: "";
     display: block;
-    width:64px;
-    height:64px;
+    width: 64px;
+    height: 64px;
     position: absolute;
-    background:url("../images/button/btn_speech_balloon_right.png") no-repeat center / contain;
+    background: url("../images/button/btn_speech_balloon_right.png") no-repeat center / contain;
     top: 0;
     left: 0;
     z-index: 4;
     pointer-events: none;
 }
+
 .characterWrap.speech.right:before {
-    content:"";
+    content: "";
     display: block;
-    width:64px;
-    height:64px;
+    width: 64px;
+    height: 64px;
     position: absolute;
-    background:url("../images/button/btn_speech_balloon_left.png") no-repeat center / contain;
+    background: url("../images/button/btn_speech_balloon_left.png") no-repeat center / contain;
     top: 0;
     z-index: 4;
-   pointer-events: none;
+    pointer-events: none;
 }
+
 .characterWrap.speech.right:hover:before {
-    background:url("../images/button/btn_speech_balloon_left_hover.png") no-repeat center / contain;
+    background: url("../images/button/btn_speech_balloon_left_hover.png") no-repeat center / contain;
 }
+
 .characterWrap.speech.left:hover:before {
-    background:url("../images/button/btn_speech_balloon_right_hover.png") no-repeat center / contain;
+    background: url("../images/button/btn_speech_balloon_right_hover.png") no-repeat center / contain;
 }
 
-.characterImg{left:0; transition: left .2s ease-out, right .2s ease-out;}
+.characterImg {
+    left: 0;
+    transition: left .2s ease-out, right .2s ease-out;
+}
 
-.characterWrap.speech::before{
-    right:-25px;
+.characterWrap.speech::before {
+    right: -25px;
 }
-.characterWrap.left.speech::before{
-    left:-40px !important;
-}
-.characterWrap{padding: 0 20px;}
-.characterWrap.speech.boy_1-wrap::before{right:0;}
-.characterWrap.speech.boy_2-wrap::before{right:0;}
-.characterWrap.speech.boy_3-wrap::before{right:0;}
-.characterWrap.speech.boy_4-wrap::before{right:0;}
-.characterWrap.left.speech.boy_1-wrap::before{left:0 !important;}
-.characterWrap.left.speech.boy_2-wrap::before{left:0 !important;}
-.characterWrap.left.speech.boy_3-wrap::before{left:0 !important;}
-.characterWrap.left.speech.boy_4-wrap::before{left:0 !important;}
 
-.characterWrap.speech.girl_1-wrap::before{right:0;}
-.characterWrap.speech.girl_2-wrap::before{right:0;}
-.characterWrap.speech.girl_3-wrap::before{right:0;}
-.characterWrap.speech.girl_4-wrap::before{right:0;}
-.characterWrap.left.speech.girl_1-wrap::before{left:0 !important;}
-.characterWrap.left.speech.girl_2-wrap::before{left:0 !important;}
-.characterWrap.left.speech.girl_3-wrap::before{left:0 !important;}
-.characterWrap.left.speech.girl_4-wrap::before{left:0 !important;}
+.characterWrap.left.speech::before {
+    left: -40px !important;
+}
 
-.character-item{transition: left .2s ease-out;}
-.characterWrap.speech.circle.right:before{
-    top:0px;
-    right:-5px;
+.characterWrap {
+    padding: 0 20px;
 }
-.characterWrap.speech.left.circle:before{
-    top:0;
-    left:-5px;
+
+.characterWrap.speech.boy_1-wrap::before {
+    right: 0;
 }
-.characterWrap.speech-not::before{
+
+.characterWrap.speech.boy_2-wrap::before {
+    right: 0;
+}
+
+.characterWrap.speech.boy_3-wrap::before {
+    right: 0;
+}
+
+.characterWrap.speech.boy_4-wrap::before {
+    right: 0;
+}
+
+.characterWrap.left.speech.boy_1-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.left.speech.boy_2-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.left.speech.boy_3-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.left.speech.boy_4-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.speech.girl_1-wrap::before {
+    right: 0;
+}
+
+.characterWrap.speech.girl_2-wrap::before {
+    right: 0;
+}
+
+.characterWrap.speech.girl_3-wrap::before {
+    right: 0;
+}
+
+.characterWrap.speech.girl_4-wrap::before {
+    right: 0;
+}
+
+.characterWrap.left.speech.girl_1-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.left.speech.girl_2-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.left.speech.girl_3-wrap::before {
+    left: 0 !important;
+}
+
+.characterWrap.left.speech.girl_4-wrap::before {
+    left: 0 !important;
+}
+
+.character-item {
+    transition: left .2s ease-out;
+}
+
+.characterWrap.speech.circle.right:before {
+    top: 0px;
+    right: -5px;
+}
+
+.characterWrap.speech.left.circle:before {
+    top: 0;
+    left: -5px;
+}
+
+.characterWrap.speech-not::before {
     display: none !important;
 }
+
 .character-item.no-ani *,
 .character-item.no-ani {
     pointer-events: none;
 }
-.character-item.no-ani .close-speech-button{display: none !important;}
-.character-item.no-ani .balloon {display: block !important;}
-.character-item.no-ani .characterWrap.speech:before{display: none !important;}
-.characterWrap + .balloon{cursor: pointer;}
+
+.character-item.no-ani .close-speech-button {
+    display: none !important;
+}
+
+.character-item.no-ani .balloon {
+    display: block !important;
+}
+
+.character-item.no-ani .characterWrap.speech:before {
+    display: none !important;
+}
+
+.characterWrap+.balloon {
+    cursor: pointer;
+}

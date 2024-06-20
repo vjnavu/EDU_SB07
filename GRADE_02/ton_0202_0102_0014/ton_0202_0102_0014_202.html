@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .bg {
+            background: url('./images/ton_0202_0102_0014_202/img_bg.png') no-repeat center / 100% 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon-char {
+            top: 20px;
+            right: 28px;
+        }
+
+        .bg .popBtn {
+            position: absolute;
+        }
+
+        [data-popup-page="1"] {
+            top: 150px;
+            left: 690px;
+            width: 570px;
+        }
+
+        [data-targetSlideNum="1"] {
+            left: 320px;
+            top: 70px;
+        }
+
+        [data-targetSlideNum="2"] {
+            left: 250px;
+            top: 280px;
+        }
+
+        [data-targetSlideNum="3"] {
+            left: 400px;
+            top: 470px;
+        }
+
+        [data-targetSlideNum="4"] {
+            left: 920px;
+            top: 330px;
+        }
+
+        [data-targetSlideNum="5"] {
+            left: 1210px;
+            top: 530px;
+        }
+
+        .text-box {
+            position: relative;
+            top: 50px;
+            left: 200px;
+        }
+
+        .text-box.que::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -120px;
+            background: url('../ko/contents/images/ico_que.png') no-repeat;
+            width: 100px;
+            height: 49px;
+            background-size: 100px 49px;
+            margin: auto;
+        }
+
+        .popup_pages>li.whole h2 {
+            width: max-content;
+            margin: auto;
+        }
+
+        .popup_pages .balloon {
+            min-width: 900px;
+        }
+
+        .popup_pages .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .popup_pages .balloon>span>img {
+            width: 170px;
+        }
+
+        #girl_1_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_1.png') !important;
+        }
+
+        #boy_3_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_3.png') !important;
+        }
+
+        #boy_4_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_4.png') !important;
+        }
+
+        #girl_3_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_3.png') !important;
+        }
+
+        #girl_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_2.png') !important;
+        }
+
+        .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1.png') no-repeat center / contain;
+        }
+
+        .character-item:hover .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png') no-repeat center / contain;
+        }
+
+        /* page 2 */
+        .char-box-01 .balloon {
+            top: -240px;
+            left: -120px;
+        }
+
+        .char-box-02 .balloon {
+            top: -240px;
+            left: -170px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                우리 학교의 사계절을 생각해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="우리 학교의 사계절을 생각해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="학교에서 계절에 따라 경험했던 일 중에 기억에 남는 일을 이야기해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="bg">
+                            <div class="icon-char" data-hover="" data-popup-btn="1"></div>
+                            <span class="click-finger-Btn popBtn blinkOn blinkOpacity" data-popup-btn="2"
+                                data-targetSlideNum="1" data-hover=""></span>
+                            <span class="click-finger-Btn popBtn blinkOn blinkOpacity" data-popup-btn="2"
+                                data-targetSlideNum="2" data-hover=""></span>
+                            <span class="click-finger-Btn popBtn blinkOn blinkOpacity" data-popup-btn="2"
+                                data-targetSlideNum="3" data-hover=""></span>
+                            <span class="click-finger-Btn popBtn blinkOn blinkOpacity" data-popup-btn="2"
+                                data-targetSlideNum="4" data-hover=""></span>
+                            <span class="click-finger-Btn popBtn blinkOn blinkOpacity" data-popup-btn="2"
+                                data-targetSlideNum="5" data-hover=""></span>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="tab-content-box">
+                            <div class="tab-content group-speech group-speech-01">
+                                <div class="char-box char-box-01" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image left"></div>
+                                    <div class="balloon pink bottom">
+                                        <span>
+                                            저는 친구들과 함께<br>
+                                            보물찾기 놀이를 했던<br>
+                                            여름이 가장 좋아요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                                <div class="char-box char-box-02" data-tail="tail-01" data-tail-direction="br">
+                                    <div class="char-image"></div>
+                                    <div class="balloon yellow bottom">
+                                        <span>
+                                            저는 바람이 선선한<br>
+                                            운동장에서 운동회를<br>
+                                            했던 가을이 가장 좋아요.
+                                        </span>
+                                        <div class="close-speech-button"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min" data-popup-page="1" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents">
+                        <p>
+                            자유롭게 이동하며 만나는 친구와 서로 질문을 주고받아요.
+                        </p>
+                    </div>
+                </li>
+                <li class="whole image" data-popup-page="2">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>학교에서 만난 계절을 생각하며 질문에 답해 볼까요?</h2>
+                                <div class="text-box que">학교에서 봄에 주로 갔던 장소는 어디인가요?</div>
+                                <div id="girl_1_c" class="character-item"></div>
+                            </li>
+                            <li class="innerTab_2">
+                                <h2>학교에서 만난 계절을 생각하며 질문에 답해 볼까요?</h2>
+                                <div class="text-box que">학교에서 여름철 더위를 이기기 위해 했던 활동은 무엇인가요?</div>
+                                <div id="boy_3_c" class="character-item"></div>
+                            </li>
+                            <li class="innerTab_3">
+                                <h2>학교에서 만난 계절을 생각하며 질문에 답해 볼까요?</h2>
+                                <div class="text-box que">가을에 했던 활동 중 기억에 남는 활동은 무엇인가요?</div>
+                                <div id="boy_4_c" class="character-item"></div>
+                            </li>
+                            <li class="innerTab_4">
+                                <h2>학교에서 만난 계절을 생각하며 질문에 답해 볼까요?</h2>
+                                <div class="text-box que">학교에 계절의 변화를 알려 주는 나무가 있나요?</div>
+                                <div id="girl_3_c" class="character-item"></div>
+                            </li>
+                            <li class="innerTab_5">
+                                <h2>학교에서 만난 계절을 생각하며 질문에 답해 볼까요?</h2>
+                                <div class="text-box que">겨울이 오면 친구들과 해 보고 싶은 놀이가 있나요?</div>
+                                <div id="girl_2_c" class="character-item"></div>
+                            </li>
+                        </ul>
+
+                        <div class="moveButtonContainer" data-slide-btn-container="">
+                            <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                            <ul class="basicSlider_circle_tabs" data-tabs="">
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                            </ul>
+                            <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.girl1({
+                id: '#girl_1_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `봄에 산책을 하며 선생님, 친구들과<br> 함께 울타리에 핀 개나리를 <br>본 것이 기억나요. <img src="./images/ton_0202_0102_0014_202/img_01.jpg" />`,
+                class: 'left middle',
+                balloon_top: -20,
+                balloon_left: 225,
+                bottom: -250,
+                left: 80,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.boy3({
+                id: '#boy_3_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `<img src="./images/ton_0202_0102_0014_202/img_02.png" /> 여름의 무더위를 피하기 위한 비밀 장소는<br> 학교 뒷편에 있는 정자예요. 정자 앞에는<br> 작은 연못도 있고 그늘이 있어 시원해요.`,
+                class: 'right middle',
+                balloon_top: -20,
+                balloon_left: -1020,
+                bottom: -250,
+                left: 1140,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `가을에 체험 학습을 가서<br> 밤을 딴 것이 기억나요. <img src="./images/ton_0202_0102_0014_202/img_03.jpg" />`,
+                class: 'left middle',
+                balloon_top: -20,
+                balloon_left: 225,
+                bottom: -250,
+                left: 80,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.girl3({
+                id: '#girl_3_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `<img src="./images/ton_0202_0102_0014_202/img_04.jpg" /> 가을이 되면 노랗게 단풍이 드는<br> 은행나무가 있어요.`,
+                class: 'right middle',
+                balloon_top: -50,
+                balloon_left: -960,
+                bottom: -250,
+                left: 1140,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+            $prite.girl2({
+                id: '#girl_2_c',
+                circle: true,
+                sound: '',
+                speech: 'right',
+                text: `겨울이 오면 친구들과<br> 눈사람을 만들고 싶어요. <img src="./images/ton_0202_0102_0014_202/img_05.png" />`,
+                class: 'left middle',
+                balloon_top: -20,
+                balloon_left: 225,
+                bottom: -250,
+                left: 80,
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
+            });
+
+
+            $(document).on('click', '.character-item', function () {
+                $('.balloon').removeClass('fff');
+            });
+        });
+    </script>
+</body>
+
+</html>

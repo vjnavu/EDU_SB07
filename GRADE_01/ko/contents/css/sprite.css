@@ -465,7 +465,10 @@
     gap: 100px;
     width: auto;
     margin: 0 auto;
-    margin-top: 250px;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
 }
 
 .characterWrap+.balloon.bottom:after,

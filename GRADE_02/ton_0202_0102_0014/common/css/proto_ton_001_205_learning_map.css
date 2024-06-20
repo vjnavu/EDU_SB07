@@ -1,0 +1,415 @@
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+
+.bgImg {
+    height: 100%;
+}
+
+.popLearning {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    pointer-events: auto;
+}
+
+.learning-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.learning-badge {
+    color: #fff;
+    background-color: #9f9fa0;
+    padding: 1px 5px;
+    border-radius: 8px;
+}
+
+
+.popbox.mini .navControl {
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    align-items: center;
+    color: #fff;
+    font-family: 'YGJAL';
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.popbox.mini .navControl .navItem.purple {
+    background: #7E6BAA;
+}
+
+.popbox.mini .navControl .navItem.blue {
+    background: #4D90CB;
+}
+
+.popbox.mini .navControl .navItem.red {
+    background: #D73731;
+}
+
+.popbox.mini .navControl .navItem.orange {
+    background: #E9943F;
+}
+
+.popbox.mini .navControl .navItem {
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'YGJAL';
+    line-height: 1;
+}
+
+.popbox.mini .navControl .navItem.off {
+    background: #ccc;
+}
+
+.learning-list>li {
+    display: none;
+    position: relative;
+}
+
+.learning-list>li.on {
+    display: block;
+}
+
+.learning-list>li .learning-item {
+    display: grid;
+    grid-template: 2fr/ 1fr 1fr;
+    overflow: hidden;
+    height: auto;
+    width: 480px;
+    gap: 30px 20px;
+    margin: 40px auto 20px;
+}
+
+.learning-list>li .learning-item>li {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 220px;
+    height: 130px;
+    font-size: 22px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+    /* font-family: "bmjua"; */
+}
+
+.learning-list>li .learning-item>li[data-color="purple"],
+.popbox .popLearning[data-color="purple"] {
+    background-color: #e8e2ef;
+}
+
+.learning-list>li .learning-item>li[data-color="blue"],
+.popbox .popLearning[data-color="blue"] {
+    background-color: #d0dbec;
+}
+
+.learning-list>li .learning-item>li[data-color="red"],
+.popbox .popLearning[data-color="red"] {
+    background-color: #f4d0c6;
+}
+
+.learning-list>li .learning-item>li[data-color="yellow"],
+.popbox .popLearning[data-color="yellow"] {
+    background-color: #f2e6ab;
+}
+
+
+.learning-list>li .learning-item>li.off {
+    pointer-events: none;
+    background-color: #ddd;
+}
+
+.learning-list>li .learning-item>li:hover {
+    background-color: #ddd;
+}
+
+.slideBtn {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.slideBtn.prev {
+    left: 40px;
+}
+
+.slideBtn.next {
+    right: 40px;
+}
+
+.slideBtn.off {
+    pointer-events: none;
+    opacity: .2;
+}
+
+.popbox.mini {
+    border-radius: 32px;
+    overflow: unset;
+    cursor: move;
+}
+
+.popbox.mini .popCloseBtn {
+    background: #a4826c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 0 30px 0 50px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.popbox.mini .popCloseBtn::after {
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    margin-top: -5px;
+}
+
+.popbox.mini .popCloseBtn:hover {
+    background: #f60;
+}
+
+.btnSave {
+    pointer-events: auto;
+    bottom: 30px;
+    right: 28px;
+}
+
+.popbox .popLearning {
+    width: 119px;
+    height: 96px;
+    pointer-events: auto;
+    border-radius: 5px;
+    /* font-family: "bmjua"; */
+    letter-spacing: 0;
+}
+
+.popbox .popLearning:hover {
+    background-color: #ddd;
+}
+
+.popLearning p span {
+    color: #fff;
+    background-color: #ccc;
+    padding: 2px 8px;
+    position: relative;
+    top: 10px;
+    font-size: 11px;
+    border-radius: 5px;
+}
+
+.popbox .popLearning.pop1 {
+    top: 51px;
+    left: 456px;
+}
+
+.popbox .popLearning.pop2 {
+    top: 51px;
+    left: 601px;
+}
+
+.popbox .popLearning.pop3 {
+    top: 51px;
+    left: 746px;
+}
+
+.popbox .popLearning.pop4 {
+    top: 51px;
+    left: 1018px;
+}
+
+.popbox .popLearning.pop5 {
+    top: 51px;
+    left: 1166px;
+}
+
+.popbox .popLearning.pop6 {
+    top: 219px;
+    left: 598px;
+}
+
+.popbox .popLearning.pop7 {
+    top: 219px;
+    left: 742px;
+}
+
+.popbox .popLearning.pop8 {
+    top: 219px;
+    left: 882px;
+}
+
+.popbox .popLearning.pop9 {
+    top: 219px;
+    left: 1020px;
+}
+
+.popbox .popLearning.pop10 {
+    top: 219px;
+    left: 1158px;
+}
+
+.popbox .popLearning.pop11 {
+    top: 386px;
+    left: 459px;
+}
+
+.popbox .popLearning.pop12 {
+    top: 386px;
+    left: 598px;
+}
+
+.popbox .popLearning.pop13 {
+    top: 386px;
+    left: 740px;
+}
+
+.popbox .popLearning.pop14 {
+    top: 386px;
+    left: 882px;
+}
+
+.popbox .popLearning.pop15 {
+    top: 388px;
+    left: 1162px;
+}
+
+.popbox .popLearning.pop16 {
+    top: 557px;
+    left: 459px;
+}
+
+.popbox .popLearning.pop17 {
+    top: 557px;
+    left: 601px;
+}
+
+.popbox .popLearning.pop18 {
+    top: 557px;
+    left: 740px;
+}
+
+.popbox .popLearning.pop19 {
+    top: 557px;
+    left: 1023px;
+}
+
+.popbox .popLearning.pop20 {
+    top: 557px;
+    left: 1159px;
+}
+
+.popbox .popLearning.pop21 {
+    top: 362px;
+    left: 337px;
+}
+
+.popbox .popLearning.pop22 {
+    top: 501px;
+    left: 346px;
+}
+
+.popbox .popLearning:hover {
+    background-color: #ddd;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.zoomController {
+    top: 70px;
+    left: 200px;
+}
+
+
+.starTitle {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #afafb1;
+    border-radius: 5px;
+}
+
+.starTitle::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-image: url("../images/proto_ton_001/before.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+.starArrow {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0px 3px 0px 0px;
+    position: relative;
+    width: 60px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    left: 40%;
+    transform: translate(-50%, 0);
+    text-shadow: none !important;
+    font-size: 15px;
+}
+
+.starArrow.purple {
+    background-image: url("../images/proto_ton_001/arrow-purple.png");
+}
+
+.starArrow.blue {
+    background-image: url("../images/proto_ton_001/arrow-blue.png");
+}
+
+.starArrow.red {
+    background-image: url("../images/proto_ton_001/arrow-red.png");
+}

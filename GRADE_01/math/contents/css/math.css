@@ -4,7 +4,10 @@
 @import "calc_type1.css";
 
 .blueT {
-    color: #006ee6
+    color: #006ee6;
+    line-height: 60px;
+    margin-top: 2px;
+    letter-spacing: 0;
 }
 
 .redT {
@@ -49,12 +52,31 @@ h2 .minus {
 .answer .minus {
     background-color: #006ee6
 }
-.answer .contentsList .exam + div {
+
+.answer .contentsList .exam+div {
     font-size: 45px;
 }
-.answer .exInlineBlock{display:inline-block;width:90%;}
-.noClick{position:relative;}
-.noClick:after{content:"";display:block;width:100%;height:100%;position:absolute;left:0;top:0;z-index:10;background:transparent !important;}
+
+.answer .exInlineBlock {
+    display: inline-block;
+    width: 90%;
+}
+
+.noClick {
+    position: relative;
+}
+
+.noClick:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: transparent !important;
+}
 
 .plusArrowImg {
     position: absolute;
@@ -292,17 +314,20 @@ h2 .bunsuContainer .bunsu {
 .mathCalBox.violet {
     background-color: #ba8ece
 }
-.mathCalcContainer .answerBox.complete .answer{
-    line-height: 95px ;
+
+.mathCalcContainer .answerBox.complete .answer {
+    line-height: 95px;
 }
+
 .mathCalcContainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:80px;
+    gap: 80px;
     height: 100%;
     padding: 0 50px;
 }
+
 .mathCalcContainer * {
     font-size: 60px !important;
 }
@@ -318,7 +343,7 @@ h2 .bunsuContainer .bunsu {
 .mathCalcContainer .answerBox,
 .mathCalcContainer .inputBox {
     position: relative;
-   width: 181px;
+    width: 181px;
     border-radius: 8px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -378,7 +403,11 @@ h2 .bunsuContainer .bunsu {
     -webkit-animation: opacityEff 1s ease-out forwards;
     -moz-animation: opacityEff 1s ease-out forwards
 }
-.mathCalcContainer .horizon .answerBox.complete .answer{text-align: center;}
+
+.mathCalcContainer .horizon .answerBox.complete .answer {
+    text-align: center;
+}
+
 .mathCalcContainer .inputBox {
     padding: 0 12px 6px;
     border: 4px solid #ffac6b;
@@ -431,13 +460,16 @@ h2 .bunsuContainer .bunsu {
     top: 14px;
     line-height: 1
 }
+
 .mathCalcContainer .mathDot.dot3:after {
     content: '∙∙∙';
 }
+
 .mathCalcContainer .mathDot:after {
     position: relative;
     top: -4px;
 }
+
 .mathCalcContainer .vertical.dev table {
     background-image: url(../images/math/vertical_line.png);
     background-position: right 117px;
@@ -647,57 +679,107 @@ h2 .bunsuContainer .bunsu {
 .curveLine.dash .line {
     border-style: dashed
 }
-.flex-wrap .math_calc_table{
-    flex:0;
+
+.flex-wrap .math_calc_table {
+    flex: 0;
 }
+
 .math_calc_table {
     position: relative;
 }
+
 .math_calc_table.class3 {
     width: auto !important;
     display: inline-flex;
 }
-.math_calc_table.class3 table{width:auto !important; position: relative; }
-.math_calc_table.class3 .sum2{width: 80px;}
+
+.math_calc_table.class3 table {
+    width: auto !important;
+    position: relative;
+}
+
+.math_calc_table.class3 .sum2 {
+    width: 80px;
+}
+
 .math_calc_table th,
 .math_calc_table td {
     position: relative;
     text-align: center
 }
+
 .solve .math_calc_table tr td {
     box-sizing: border-box;
 }
+
 .math_calc_table tr td {
     line-height: 1;
     box-sizing: border-box;
 }
 
-.guide .math_calc_table tr:first-child td::after{content:""; display: block; width:1px; height:300px; border-left:1px dashed red; position: absolute; top:0; left:50%; z-index: 10;} 
-.guide .math_calc_table tr td:first-child::before{content:""; display: block; width:300px; height:1px; border-top:1px dashed red; position: absolute; top:50%; left:0; z-index: 10;} 
+.guide .math_calc_table tr:first-child td::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 300px;
+    border-left: 1px dashed red;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+}
+
+.guide .math_calc_table tr td:first-child::before {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    border-top: 1px dashed red;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 10;
+}
 
 .solve .math_calc_table.class3 tr td {
-    width:45px; height:45px; min-width:45px; min-height:45px; padding:0 0 0 1px !important;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    padding: 0 0 0 1px !important;
 }
+
 .math_calc_table.class3 tr td {
-    width:50px; height:64px; min-width:50px; min-height:64px; padding:0 0 0 1px !important;
+    width: 50px;
+    height: 64px;
+    min-width: 50px;
+    min-height: 64px;
+    padding: 0 0 0 1px !important;
 }
 
 .math_calc_table.class3.w-auto tr td {
-    width:auto; height:64px; min-width:50px; min-height:64px; padding:0 0 0 1px !important;
+    width: auto;
+    height: 64px;
+    min-width: 50px;
+    min-height: 64px;
+    padding: 0 0 0 1px !important;
 }
-.math_calc_table.class3.w-auto tr td:first-child{
-    width:50px; 
+
+.math_calc_table.class3.w-auto tr td:first-child {
+    width: 50px;
 }
 
 .math_calc_table.class3 tr.line-tr td,
-.math_calc_table.class3 tr.line td{
-    height:5px !important;
+.math_calc_table.class3 tr.line td {
+    height: 5px !important;
 }
+
 .math_calc_table tr.line-tr td,
-.math_calc_table tr.line td{
-    height:2px !important;
+.math_calc_table tr.line td {
+    height: 2px !important;
 }
-.math_calc_table.class3  tr:nth-last-of-type(2) td {
+
+.math_calc_table.class3 tr:nth-last-of-type(2) td {
     padding-bottom: 0
 }
 
@@ -716,12 +798,13 @@ h2 .bunsuContainer .bunsu {
     content: '';
     right: 0
 }
+
 .math_calc_table .rowLine2,
 .math_calc_table .rowLine {
     position: absolute;
     height: 4px;
     background-color: #000;
-    z-index:2;
+    z-index: 2;
 }
 
 .math_calc_table .smallDigits {
@@ -740,7 +823,7 @@ h2 .bunsuContainer .bunsu {
     background: url(../images/math/divide.png) center/contain no-repeat
 }
 
-.math_calc_table > table .toggle {
+.math_calc_table>table .toggle {
     display: block;
     width: 100%;
     padding: 6px 14px;
@@ -749,19 +832,22 @@ h2 .bunsuContainer .bunsu {
     /* height:50px; */
     position: relative;
 }
+
 .math-calc-side .toggle,
-.math_calc_table.class3 > table .toggle {
-    height:calc(100% - 4px); 
-    margin-top:0;
-    border:2px solid #fff;
+.math_calc_table.class3>table .toggle {
+    height: calc(100% - 4px);
+    margin-top: 0;
+    border: 2px solid #fff;
 }
-.math_calc_table.class3 > table .toggle .answer{
+
+.math_calc_table.class3>table .toggle .answer {
     position: absolute;
     right: -16px;
     letter-spacing: 26.3px !important;
     text-align: right !important;
-    top:2px;
+    top: 2px;
 }
+
 .circleChain {
     position: relative;
     display: flex;
@@ -996,20 +1082,30 @@ h2 .toggleBlank.orange {
 .suhi .lineTableContainer table tr:not(:last-of-type)>* {
     border-bottom: 3px solid #666
 }
-.math_calc_table.class3 .rowLine{
+
+.math_calc_table.class3 .rowLine {
     top: 0;
 }
+
 .math_calc_table .rowLine {
     width: 100%;
     top: 0;
     left: 0;
     height: 2px;
 }
-.solve .math_calc_table{font-size: 40px;}
-.solve .math_calc_table .sup{
+
+.solve .math_calc_table {
+    font-size: 40px;
+}
+
+.solve .math_calc_table .sup {
     font-size: 20px;
 }
-.popup_contents .math_calc_table .sup{top:-40px;}
+
+.popup_contents .math_calc_table .sup {
+    top: -40px;
+}
+
 .math_calc_table .sup {
     position: absolute;
     top: -50px;
@@ -1024,13 +1120,14 @@ h2 .toggleBlank.orange {
     width: 100%;
     height: 100%;
 }
+
 .math_calc_table .sup.s2 {
     top: -70px;
 }
 
 .math_calc_table .sup.complete .answer {
     opacity: 0;
-animation: opacityEff 1s ease-out forwards;
+    animation: opacityEff 1s ease-out forwards;
     -webkit-animation: opacityEff 1s ease-out forwards;
     -moz-animation: opacityEff 1s ease-out forwards;
     visibility: visible;
@@ -1041,7 +1138,8 @@ animation: opacityEff 1s ease-out forwards;
 
 .math_calc_table .del.complete {
     opacity: 0;
-    z-index: 1; animation: opacityEff 1s ease-out forwards;
+    z-index: 1;
+    animation: opacityEff 1s ease-out forwards;
     -webkit-animation: opacityEff 1s ease-out forwards;
     -moz-animation: opacityEff 1s ease-out forwards;
 }
@@ -1083,36 +1181,90 @@ animation: opacityEff 1s ease-out forwards;
     font-size: 45px;
 }
 
-.math_calc_table td .tip{position: absolute; left:100%; top:0; white-space: nowrap;}
+.math_calc_table td .tip {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    white-space: nowrap;
+}
 
-.p-04 {position:relative;top:-4px}
-.p-06 {position:relative;top:-6px}
-.p-08 {position:relative;top:-8px}
-.p-12 {position:relative;top:-12px}
-.p-13 {position:relative;top:-13px}
-.p-14 {position:relative;top:-14px;margin-bottom:-24px}
+.p-04 {
+    position: relative;
+    top: -4px
+}
+
+.p-06 {
+    position: relative;
+    top: -6px
+}
+
+.p-08 {
+    position: relative;
+    top: -8px
+}
+
+.p-12 {
+    position: relative;
+    top: -12px
+}
+
+.p-13 {
+    position: relative;
+    top: -13px
+}
+
+.p-14 {
+    position: relative;
+    top: -14px;
+    margin-bottom: -24px
+}
+
 .p-11,
-h2 .dot + span.p-11 {position:relative;top:-11px !important;}
-.bunsuWrap ul > li {line-height:1}
-.bunsuWrap ul > li:first-of-type {padding-bottom:3px}
-.box-flex-center {display:flex;align-items:center;justify-content:center}
+h2 .dot+span.p-11 {
+    position: relative;
+    top: -11px !important;
+}
+
+.bunsuWrap ul>li {
+    line-height: 1
+}
+
+.bunsuWrap ul>li:first-of-type {
+    padding-bottom: 3px
+}
+
+.box-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 .bunsuWrap ul li .toggle {
     min-height: auto !important;
     line-height: 1;
 }
-.bunsuWrap ul > li:first-of-type + li .toggle {margin-top:2px}
 
-.toggle.hand {background-color:transparent}
+.bunsuWrap ul>li:first-of-type+li .toggle {
+    margin-top: 2px
+}
+
+.toggle.hand {
+    background-color: transparent
+}
+
 .toggle.hand:after {
     width: 51px;
     height: 70px;
-    border-radius:0;
-    border:none;
-    content:'';
+    border-radius: 0;
+    border: none;
+    content: '';
     background: url("../../../math/contents/images/icon/icon_click_finger.png") center/contain no-repeat;
     -webkit-animation: opacity 1.5s ease-in 3;
     -o-animation: opacity 1.5s ease-in 3;
     animation: opacity 1.5s ease-in 3;
-    left:50%;
+    left: 50%;
 }
-.toggle.hand.complete:after {display:none}
+
+.toggle.hand.complete:after {
+    display: none
+}
