@@ -82,7 +82,7 @@
             <div class="basicSlider contentsBox" data-slide-container="main">
                 <ul class="basicSlider_tabs" data-tabs="">
                     <li data-hover="" data-text="3학년이 되어 ‘학교에서 계절을 다시 만난다면’ 하고 싶은 활동을 이야기해 볼까요?">물음 1</li>
-                    <li data-hover="" data-text="학교에서 만난 계절 활동을 하며 느낀 점을 이야기해 볼까요?">물음 2</li>
+                    <li data-hover="" data-text="학교에서 만난 계절 활동을 하며 느낀 점을 이야기해 볼까요?" data-ani-show="true">물음 2</li>
                 </ul>
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1" data-quiz="toggle">
@@ -139,6 +139,11 @@
             </div>
         </main>
 
+        <div class="praise-box hide" data-type="1" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
+
         <section class="popup_container" data-popup-container="">
             <ul class="popup_pages">
                 <li class="min" data-popup-page="1" data-drag>
@@ -180,6 +185,58 @@
                 } else {
                     $('header .title').removeClass('gap');
                 }
+            });
+
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
             });
         });
     </script>
