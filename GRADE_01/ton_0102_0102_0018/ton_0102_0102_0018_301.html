@@ -12,32 +12,12 @@
     <link rel="stylesheet" href="./common/css/proto_ton_014.css">
 
     <style>
-        /* Page 1*/
         .boxClick .clickText {
             text-align: center;
         }
 
         .topText {
             margin-top: 20px;
-        }
-
-        /* Page 2 */
-        .contentsBox {
-            padding: 0;
-        }
-
-        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_2) {
-            padding: 20px 28px 0 28px;
-        }
-
-        .char-box-01 .balloon {
-            top: -185px;
-            left: -124px;
-        }
-
-        .char-box-02 .balloon {
-            top: -185px;
-            left: -115px;
         }
     </style>
 </head>
@@ -55,10 +35,6 @@
 
             <!-- FRAME OF PAGE -->
             <div class="basicSlider contentsBox" data-slide-container="main">
-                <ul class="basicSlider_tabs" data-tabs="">
-                    <li data-hover="" data-text="나의 하루를 소중하게 만들 다짐을 해볼까요?">물음 1</li>
-                    <li data-hover="" data-text="오늘 공부한 내용에 대한 소감을 발표해 볼까요?" data-ani-show="true">물음 2</li>
-                </ul>
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1">
                         <div class="basicSlider contentsBox doItContent" data-slide-container=""
@@ -103,38 +79,11 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="page_2">
-                        <div class="tab-content-box">
-                            <div class="tab-content group-speech group-speech-01">
-                                <div class="char-box char-box-01" data-tail="tail-01" data-tail-direction="br">
-                                    <div class="char-image left"></div>
-                                    <div class="balloon pink bottom">
-                                        <span>
-                                            하루가 고맙다는 것을<br>알게 되었어요.
-                                        </span>
-                                        <div class="close-speech-button"></div>
-                                    </div>
-                                </div>
-                                <div class="char-box char-box-02" data-tail="tail-01" data-tail-direction="br">
-                                    <div class="char-image"></div>
-                                    <div class="balloon yellow bottom">
-                                        <span>
-                                            멋진 내일을 만들고<br>
-                                            싶어졌어요.
-                                        </span>
-                                        <div class="close-speech-button"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
         </main>
-        <div class="praise-box hide" data-type="0" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
-            <div class="praise-button"></div>
-            <div class="praiseAni"></div>
-        </div>
+
         <section class="popup_container" data-popup-container="">
             <ul class="popup_pages">
             </ul>
@@ -171,57 +120,7 @@
                 }
             });
 
-            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
-            const praiseButton = document.querySelector(".praise-button");
-            const praiseBox = document.querySelector(".praise-box");
-            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
-            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
-            const main = document.querySelector('#wrap > main');
-            const characterItem = document.querySelectorAll('.character-item');
 
-            basicSliderTabs.forEach(tab => {
-                tab.addEventListener("click", function () {
-                    if (tab.dataset.aniShow === "true") {
-                        praiseBox.classList.remove("hide");
-                    } else {
-                        praiseBox.classList.add("hide");
-                    }
-                });
-            });
-            basicSliderCircleTabs.forEach(slide => {
-                slide.addEventListener('click', function () {
-                    if (slide.dataset.aniShow === "true") {
-                        praiseBox.classList.remove("hide");
-                    } else {
-                        praiseBox.classList.add("hide");
-                    }
-                })
-            });
-            if (basicSliderSlides.dataset.aniShow === "true") {
-                praiseBox.classList.remove("hide");
-            }
-
-            praiseButton.addEventListener("click", function () {
-                $prite.allStopSound();
-                $prite.allresetSprite();
-                const aniBackground = document.createElement("div");
-                aniBackground.classList.add("ani-background");
-                praiseButton.style.pointerEvents = "none";
-                praiseBox.insertAdjacentElement("beforeend", aniBackground);
-                main.style.pointerEvents = "none";
-                characterItem.forEach(item => {
-                    item.classList.add('no-pointer');
-                });
-
-                setTimeout(() => {
-                    praiseBox.removeChild(aniBackground);
-                    praiseButton.style = "";
-                    main.style.pointerEvents = "auto";
-                    characterItem.forEach(item => {
-                        item.classList.remove('no-pointer');
-                    });
-                }, 2300);
-            });
         });
     </script>
 </body>

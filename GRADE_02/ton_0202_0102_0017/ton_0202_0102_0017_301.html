@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .noteText {
+            margin-top: 65px;
+            width: 96%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                겨울을 맞이하기 위해 해야 할 일을 써 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1" data-quiz="toggle" data-ani-show="true">
+                        <div class="noteText noteLine purple">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="" onblur="placeholder='직접 쓰기'"
+                                    autocomplete="off"></textarea>
+                            </div>
+                            <div class="text-exam flex-wrap">
+                                <div class="blueT">
+                                    <p><ins class="dot"></ins>여름옷이나 얇은 옷은 정리해서 옷장에 넣어 두어요.</p>
+                                    <p><ins class="dot"></ins>난로나 전기장판과 같이 따뜻하게 하는 도구를 준비해요.</p>
+                                    <p><ins class="dot"></ins>휴대용 손난로를 준비해요.</p>
+                                    <p><ins class="dot"></ins>찬바람이 들어오지 않도록 창문에 비닐을 붙여요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="writeBtn" data-answer-btn=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <div class="praise-box hide" data-type="1" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
+            });
+        });
+    </script>
+</body>
+
+</html>
