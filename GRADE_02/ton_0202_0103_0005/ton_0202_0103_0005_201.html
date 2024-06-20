@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+    <link rel="stylesheet" href="./common/css/proto_ton_015.css">
+
+
+    <style>
+        /* Page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .videoPlayBtn:hover {
+            background: #d04511 url('../ko/contents/images/icon/icon_play.svg') 28px center/27px no-repeat;
+        }
+
+        /* .videoBackground {
+            background-image: url('');
+            background-size: 100% 100%;
+        } */
+
+        /* Page 2 */
+        .flex {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex .howtoBox {
+            width: 100%;
+            margin-top: 70px;
+        }
+
+        .flex .howtoBox .text-box {
+            text-align: center;
+        }
+
+        /* Page 3 */
+        .fingerAnswerContainer {
+            height: calc(100% - 40px);
+            padding-left: 70px;
+            margin-top: 10px;
+        }
+
+        .fingerAnswerContainer .fingerAnswer p {
+            line-height: 1.2;
+        }
+
+        .lineBox.orange {
+            border: none;
+        }
+
+        .math .lineBox {
+            max-width: 100%;
+            padding: 0 !important;
+            border-radius: 16px;
+            background-color: #fff;
+            font-size: 40px;
+            line-height: 42px;
+            box-sizing: border-box;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .page_3 .finger {
+            top: 11px;
+        }
+
+        /* Page 4 */
+        .popBtn.more {
+            top: 0;
+            left: 210px;
+            right: auto;
+        }
+
+        [data-popup-page="1"] {
+            top: 205px;
+            left: 235px;
+        }
+
+        [data-popup-btn="2"].icon-char.orange {
+            top: 85px;
+            right: 15px;
+        }
+
+        [data-popup-page="2"] {
+            width: 760px;
+            top: 232px;
+            left: 479px;
+        }
+
+        [data-popup-btn="3"] {
+            right: 85px;
+            top: 85px;
+        }
+
+        [data-popup-page="3"] {
+            top: 230px;
+            left: 415px;
+            width: 750px;
+        }
+
+        [data-popup-btn="4"].icon-char.orange {
+            top: 85px;
+            right: 15px;
+        }
+
+        [data-popup-page="4"] {
+            top: 305px;
+            left: 590px;
+            width: 730px;
+        }
+
+        /* Page 5 */
+        /* Page 2 */
+        .character-item {
+            position: absolute;
+        }
+
+        #boy_1_c {
+            left: 70px;
+            top: 70px;
+        }
+
+        #boy_1_c {
+            right: 70px;
+            bottom: 70px;
+        }
+
+        #girl_2_c {
+            bottom: 70px;
+            right: 70px;
+        }
+
+        #girl_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_2.png') !important;
+        }
+
+        #girl_2_c .balloon {
+            display: none !important;
+        }
+
+        .wrap-input {
+            height: 160px;
+            width: 900px;
+            border: 4px solid #cabee0;
+            background: #fff;
+            position: absolute;
+            padding: 15px;
+            border-radius: 15px;
+            top: 345px;
+            left: 170px;
+            display: none;
+        }
+
+        .wrap-input:before {
+            content: "";
+            clip-path: polygon(100% 50%, 0 12%, 0 86%);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            background-color: #cabee0;
+            transform: translate(100%, -50%);
+        }
+
+        .balloon {
+            height: 160px;
+            width: 900px;
+        }
+
+        .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .balloon>span>img {
+            width: 170px;
+        }
+
+        .balloon::after {
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        .textareaWrap,
+        textarea {
+            width: 100%;
+        }
+
+        .buttonContainer {
+            right: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue gap">
+                달리기의 기본 동작을 익히고, 색깔 술래잡기를 해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="달리기의 기본 동작을 익히고, 색깔 술래잡기를 해 볼까요?" data-gap="true">영상</li>
+                    <li data-hover="" data-text="달리기의 기본 동작을 익혀 볼까요?">활동 1</li>
+                    <li data-hover="" data-text="색깔 술래잡기 놀이를 준비해 볼까요?">활동 2</li>
+                    <li data-hover="" data-text="다양하게 움직이며 놀아 볼까요?">활동 3</li>
+                    <li data-hover="" data-text="색깔 술래잡기를 잘할 수 있는 방법을 이야기해 볼까요?" data-gap="true">물음</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="videoBackground">
+                            <div class="innerVideoWrap">
+                                <div class="videoFrameWrap">
+                                    <div class="innerVideoTitle">
+                                        <p><em>달리기</em>의 <em>기본 동작</em>을 익히고<br><em>색깔 술래잡기 </em>하기</p>
+                                        <div class="videoPlayBtn" data-video-link="M202405527_800k.mp4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="memoIcon blue">
+                            <div class="icon">
+                                <div class="iconImg"></div>
+                            </div>
+                            <div class="memoTxt">이렇게 움직여요</div>
+                        </div>
+                        <div class="flex">
+                            <div class="how-to-box howtoBox">
+                                <div class="pic-box">
+                                    <div class="image-box">
+                                        <div class="imageWrap">
+                                            <img src="./images/ton_0202_0103_0005_201/img_01.png">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        제자리 뛰기
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="how-to-box howtoBox">
+                                <div class="pic-box">
+                                    <div class="image-box">
+                                        <div class="imageWrap">
+                                            <img src="./images/ton_0202_0103_0005_201/img_02.png">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        다리 올리기
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="how-to-box howtoBox">
+                                <div class="pic-box">
+                                    <div class="image-box">
+                                        <div class="imageWrap">
+                                            <img src="./images/ton_0202_0103_0005_201/img_03.png">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        무릎 굽히기
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <ul class="fingerAnswerContainer">
+                            <li class="lineBox orange fingerAnswer">
+                                <div class="finger finger_01"></div>
+                                <p>색깔이 다양한 장소를 찾아요.</p>
+                            </li>
+                            <li class="lineBox orange fingerAnswer">
+                                <div class="finger finger_02"></div>
+                                <p>여러 가지 색깔의 원판을 1m 간격으로 떨어뜨려 놓아요.</p>
+                            </li>
+                            <li class="lineBox orange fingerAnswer">
+                                <div class="finger finger_03"></div>
+                                <p>술래를 표시할 조끼나 모자, 목걸이를 준비해요.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="page_4">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="memoIcon blue">
+                                        <div class="icon">
+                                            <div class="iconImg"></div>
+                                        </div>
+                                        <div class="memoTxt">이렇게 놀아요</div>
+                                    </div>
+                                    <div class="popBtn more" data-hover="" data-popup-btn="1"><span>놀이 규칙</span></div>
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number red inline">1</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0202_0103_0005_201/img_04.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    술래를 한 명 정해요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="icon-char orange blinkOpacity" data-hover="" data-popup-btn="2"></div>
+                                    <div class="memoIcon blue">
+                                        <div class="icon">
+                                            <div class="iconImg"></div>
+                                        </div>
+                                        <div class="memoTxt">이렇게 놀아요</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number red inline">2</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0202_0103_0005_201/img_05.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    술래는 여러 색깔 중에서 한 가지를 골라 말해요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="3"></div>
+                                    <div class="icon-char orange blinkOpacity" data-hover="" data-popup-btn="4"></div>
+                                    <div class="memoIcon blue">
+                                        <div class="icon">
+                                            <div class="iconImg"></div>
+                                        </div>
+                                        <div class="memoTxt">이렇게 놀아요</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number red inline">3</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0202_0103_0005_201/img_06.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    다른 학생은 그 색깔이 있는 곳으로 들어가요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_4" data-quiz="toggle">
+                                    <div class="memoIcon blue">
+                                        <div class="icon">
+                                            <div class="iconImg"></div>
+                                        </div>
+                                        <div class="memoTxt">이렇게 놀아요</div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="how-to-box howtoBox">
+                                            <div class="pic-box">
+                                                <div class="bullet number red inline">4</div>
+                                                <div class="image-box">
+                                                    <div class="imageWrap">
+                                                        <img src="./images/ton_0202_0103_0005_201/img_07.png">
+                                                    </div>
+                                                </div>
+                                                <div class="text-box">
+                                                    그 색깔에 없는 학생이 술래에게 잡히면 다음 술래가 돼요.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="page_5" data-quiz="toggle">
+                        <div id="boy_1_c" class="character-item"></div>
+                        <div id="girl_2_c" class="character-item"></div>
+                        <div class="wrap-input">
+                            <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기" data-input-obj=""
+                                data-answer=" " onfocus="placeholder=''" onblur="placeholder='직접 쓰기'"
+                                autocomplete="off"></textarea>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="min word" data-popup-page="1" data-drag>
+                    <h2>놀이 규칙</h2>
+                    <div class="popup_contents ls1">
+                        <p><ins class="dot"></ins>
+                            술래는 장소에 있는 색깔 중에서 말해요.
+                        </p>
+                        <p><ins class="dot"></ins>
+                            한 곳에 2명까지만 있을 수 있어요.
+                        </p>
+                        <p><ins class="dot"></ins>
+                            같은 곳에 10초까지만 있을 수 있어요.
+                        </p>
+                        <p><ins class="dot"></ins>
+                            색깔이 있으면 어느 곳이든 맞댈 수 있어요.
+                        </p>
+                        <p>
+                        <div class="exam bullet">예</div> 옷, 나뭇가지, 놀이 기구 등
+                        </p>
+                    </div>
+                </li>
+                <li class="min" data-popup-page="2" data-drag="">
+                    <h2 class="orange">주의!</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            색깔을 말할 때 ‘빨갛고 파란색’과 같이 여러 색이 혼합된 색깔이나 ‘푸르스름한 색’과 같이 분명하지 않은 색깔은 말하지 않아요.
+                        </p>
+                    </div>
+                </li>
+                <li class="min" data-popup-page="3" data-drag="">
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            한 자리 남았는데 여러 명이 동시에 도착했을 경우 어떻게 할지 규칙을 정해 보아요.
+                        </p>
+                        <p>
+                        <div class="exam bullet">예</div> 가위바위보 하기
+
+                        </p>
+                    </div>
+                </li>
+                <li class="min" data-popup-page="4" data-drag="">
+                    <h2 class="orange">주의!</h2>
+                    <div class="popup_contents ls1">
+                        <p><ins class="dot"></ins>친구와 부딪히지 않도록 주위를 잘 살펴요.</p>
+                        <p><ins class="dot"></ins>놀이를 하다가 숨이 차거나 힘이 들 때는 잠시 쉬면서 몸을 회복해요.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script src="./common/js/proto_ton_015.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+
+            $prite.boy1({
+                id: '#boy_1_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0202_0103_0005_201/ton_0202_0103_0005_201_03.mp3',
+                text: `술래가 말하는 색깔을 주의 깊게 듣고,<br>술래가 다가오면 빨리 뛰어서 도망가요.`,
+                class: 'b1 left',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 0,
+                balloon_left: 220
+            });
+            $prite.girl2({
+                id: '#girl_2_c',
+                circle: true,
+            });
+
+            $(document).on('click', '#girl_2_c', function () {
+                $('.wrap-input').show();
+                $('.wrap-input').append('<div class="close-speech-button beforeNon"></div>')
+            });
+
+            $(document).on('click', '.close-speech-button', function () {
+                $('.wrap-input').hide();
+                $('.wrap-input').removeClass('close-speech-button');
+            });
+
+            $(document).on('click', '.resetBtn', function () {
+                KmAudioPlayer.buttonClick('./media/click.mp3');
+                $('.textLine').val('');
+                $prite.allresetSprite();
+                $('.wrap-input').hide();
+                $('.wrap-input').removeClass('close-speech-button');
+            });
+        });
+    </script>
+</body>
+
+</html>
