@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <link rel="stylesheet" href="./common/css/proto_ton_common.css">
+    <link rel="stylesheet" href="./common/css/proto_ton_011.css">
+    <style>
+        .popBtn.place[data-slide="22"],
+        .popBtn.place[data-slide="1"] {
+            left: 5px;
+        }
+
+        .popBtn.place[data-slide="17"],
+        .popBtn.place[data-slide="6"] {
+            left: 1px;
+        }
+
+        .popBtn.place[data-slide="16"],
+        .popBtn.place[data-slide="7"] {
+            left: -3px;
+        }
+
+        .popBtn.place[data-slide="15"],
+        .popBtn.place[data-slide="8"] {
+            left: -1px;
+        }
+
+        .popBtn.place[data-slide="14"],
+        .popBtn.place[data-slide="9"] {
+            width: 143px;
+        }
+
+        .popBtn.place[data-slide="23"] {
+            left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Content -->
+            <div class="content-container">
+                <div class="contentsBox fullScreen">
+                    <div class="innerBox">
+                        <img src="./common/images/proto_ton_011/bg.png" class="bg-img">
+                        <div class="wrapper-center-column">
+
+                            <div class="title-main">감기 예방 말판 놀이</div>
+                            <div class="title-sub">원하는 팀 수를 선택해 주세요!</div>
+
+                            <div class="select-group">
+                                <div class="select-game yellow" data-value="2">2팀</div>
+                                <div class="select-game red" data-value="3">3팀</div>
+                                <div class="select-game pink" data-value="4">4팀</div>
+                            </div>
+                            <div class="btn-group">
+                                <button class="popBtn btn-common btn-sub popWrap clickSound" data-pop="1"
+                                    data-slide="1">놀이
+                                    방법</button>
+                                <button class="btn-common btn-start">놀이 시작</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="innerBox boxMain">
+                        <img src="./common/images/proto_ton_011/bg-game.png" class="bg-img">
+                        <div class="placeContainer"></div>
+
+                        <div class="icon-group" id="drag">
+                            <div class="icon team-1" data-icon="1"></div>
+                            <div class="icon team-2" data-icon="2"></div>
+                            <div class="icon team-3" data-icon="3"></div>
+                            <div class="icon team-4" data-icon="4"></div>
+                        </div>
+
+                        <div class="app-dice" data-ui="app-dice" data-option='{}'></div>
+                        <button class="btn-home">
+                            <i class="icon-home"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <audio id="myAudio" controls style="display: none;">
+                <source src="./media/backSound.wav" type="audio/mpeg">
+            </audio> -->
+        </div>
+
+        <!-- PopUp Container : data-pop, data-slide -->
+        <div class="popbox miniSlide rule" data-pop="1">
+            <div class="popupContents">
+                <div class="bulletBox">
+                    <p>놀이 방법</p>
+                </div>
+                <ul class="contents">
+                    <li>
+                        <div class="bullet num">1</div> <span>주사위를 던져서 나온 수만큼 앞에 있는 칸을 클릭해요.</span>
+                    </li>
+                    <li>
+                        <div class="bullet num">2</div> <span>문제가 나오면 문제를 풀고, 정답을 확인해요.</span>
+                    </li>
+                    <li>
+                        <div class="bullet num">3</div> <span>정답을 맞히면 칸으로 말을 옮겨요! 맞히지 못하면 앞으로 갈 수 없어요.</span>
+                    </li>
+                    <li>
+                        <div class="bullet num">4</div> <span>말판을 한 바퀴 돌아 시작으로 다시 오면 성공!</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="popbox mini introSlide" data-pop="2">
+            <div class="popupContents">
+                <div class="bulletBox">
+                    <p>주사위를 던져서 큰 수가 나온 팀부터 출발해요!</p>
+                </div>
+                <div class="icon-group">
+                    <div class="icon team-1" data-icon="1">
+                        <span></span>
+                    </div>
+                    <div class="icon team-2" data-icon="2">
+                        <span></span>
+                    </div>
+                    <div class="icon team-3" data-icon="3">
+                        <span></span>
+                    </div>
+                    <div class="icon team-4" data-icon="4">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="app-dice dice-popbox" data-ui="app-dice" data-option='{}'></div>
+
+                <button class="btn-home">
+                    <i class="icon-home"></i>
+                </button>
+                <div class="btn-common btn-intro-close">놀이 시작</div>
+            </div>
+        </div>
+
+        <div class="popbox miniSlide game" data-pop="3">
+            <div class="popupContents">
+                <!-- <div class="popupHeader">1번 문제</div> -->
+                <div class="popupContent">
+                    <div class="popupQuestion">
+                        OX 유형입니다.<br>
+                        문제는 2줄까지 가능합니다.
+                    </div>
+                    <ul class="oxClickBox">
+                        <li class="oxSelect icon_O"></li>
+                        <li class="oxSelect icon_X ans"></li>
+                    </ul>
+                </div>
+                <div class="dapCheckBtn_js"></div>
+            </div>
+            <div class="popupContents">
+                <!-- <div class="popupHeader">2번 문제</div> -->
+                <div class="popupContent">
+                    <div class="popupQuestion">
+                        가로 객관식 유형입니다.<br>
+                        문제는 2줄까지 가능합니다.
+                    </div>
+                    <div class="selectContainer">
+                        <div class="selectBox">
+                            <div class="selectNum">1</div>
+                            <div class="selectText">바로 물에 들어가기</div>
+                        </div>
+                        <div class="selectBox">
+                            <div class="selectNum">2</div>
+                            <div class="selectText">구명조끼 벗기</div>
+                        </div>
+                        <div class="selectBox">
+                            <div class="selectNum">3</div>
+                            <div class="selectText">쉬지 않고 놀기</div>
+                        </div>
+                        <div class="selectBox ans">
+                            <div class="selectNum">4</div>
+                            <div class="selectText">어른과 함께 놀기</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dapCheckBtn_js"></div>
+            </div>
+            <div class="popupContents">
+                <!-- <div class="popupHeader">3번 문제</div> -->
+                <div class="popupContent">
+                    <div class="popupQuestion">
+                        세로 객관식 유형입니다.<br>
+                        문제는 2줄까지 가능합니다.
+                    </div>
+                    <div class="selectBoxContainer">
+                        <div class="selectBox ans">
+                            <div class="selectNum">1</div>
+                            <div class="selectText">무궁화<br> 2줄
+                            </div>
+                        </div>
+                        <div class="selectBox">
+                            <div class="selectNum">2</div>
+                            <div class="selectText">팬지<br> 2줄
+                            </div>
+                        </div>
+                        <div class="selectBox">
+                            <div class="selectNum">3</div>
+                            <div class="selectText">튤립<br> 2줄
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dapCheckBtn_js"></div>
+            </div>
+            <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
+                <div class="popupContent">
+                    <div class="popupQuestion">
+                        초성 유형입니다.
+                    </div>
+                    <div class="inputSpellContainer">
+                        <div class="spellContainer" data-spell="ㅎ,ㅂ,ㅂ,ㅂ,ㅂ"></div>
+                        <input type="text" placeholder="직접 쓰기" data-ans="aaa">
+                    </div>
+                </div>
+                <div class="dapCheckBtn_js"></div>
+            </div>
+            <div class="popupContents">
+                <!-- <div class="popupHeader">5번 문제</div> -->
+                <div class="popupContent">
+                    <div class="popupQuestion">
+                        단답 유형입니다.
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" placeholder="직접 쓰기" data-ans="aaa">
+                    </div>
+                </div>
+                <div class="dapCheckBtn_js"></div>
+            </div>
+            <div class="popupContents">
+                <div class="popupHeader">보물 상자를 눌러보세요!</div>
+                <div class="popupContent">
+                    <div class="treasureContainer">
+                        <div class="treasureBox"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <div class="popupContents"></div>
+            <!-- .popupContents*28 -> tab-->
+        </div>
+
+        <div class="popbox mini alert" data-pop="alert">
+            <div class="popupContents">
+                <i class="icon-alert"></i>
+                <p>팀 수를 선택해 주세요.</p>
+            </div>
+            <div class="popCloseBtn"></div>
+        </div>
+
+        <div class="bee-alert"></div>
+        <div class="wrap"></div>
+
+    </div>
+
+    <!-- Common Script -->
+    <script src="./common/js/ts.js"></script>
+    <script src="./common/js/jquery.js"></script>
+    <script src="./common/js/base.js"></script>
+    <script src="./common/js/common.js"></script>
+    <script src="./common/js/contents.js"></script>
+    <script src="./common/js/proto_ton_common.js"></script>
+
+    <!-- Drag/drop -->
+    <script src="./common/js/jquery-ui.min.js"></script>
+
+    <!-- Script -->
+    <script src="./common/js/proto_ton_011.js"></script>
+</body>
+
+</html>
