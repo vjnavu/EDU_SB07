@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* Page 2 */
+        .noteText {
+            box-shadow: none;
+            position: absolute;
+            width: 900px;
+            border-radius: 20px;
+            height: 200px;
+            padding: 35px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .noteText .textareaWrap {
+            height: 182px;
+        }
+
+        .noteText::after {
+            display: none;
+        }
+
+        #boy_4_c {
+            top: 70px;
+            left: 70px;
+        }
+
+        .noteText.green {
+            background: #f5f7e5;
+            border: 4px solid #d7dea3 !important;
+            left: 290px;
+            top: 50px;
+        }
+
+        .noteText::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 30px solid #d7dea3;
+            left: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        #girl_2_c {
+            right: 70px;
+            bottom: 70px;
+        }
+
+        .noteText.purple {
+            background: #f6effb;
+            border: 4px solid #cabee0 !important;
+            bottom: 60px;
+            left: 120px;
+        }
+
+        .noteText.purple::before {
+            border-left: 30px solid #cabee0;
+            border-right: none;
+            left: unset;
+            right: -30px;
+        }
+
+        .page_2 .character-item {
+            pointer-events: none;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title blue">
+                균형을 잃어 넘어졌던 경험을 이야기해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="균형을 잃어 넘어졌던 경험을 이야기해 볼까요?">물음 1</li>
+                    <li data-hover="" data-text="균형 잡기가 중요한 까닭을 생각해 볼까요?">물음 2</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="character-flex">
+                            <div id="girl_3" class="character-item"></div>
+                            <div id="boy_3" class="character-item"></div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div id="boy_4_c" class="character-item"></div>
+                        <div class="noteText noLine green">
+                            내 몸을 다치지 않게 보호할 수 있어요.
+                        </div>
+                        <div id="girl_2_c" class="character-item"></div>
+                        <div class="noteText noLine purple">
+                            <div class="textareaWrap">
+                                <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기"
+                                    data-input-obj="" data-answer=" " onfocus="placeholder=''"
+                                    onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                            </div>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+            $prite.girl3({
+                id: '#girl_3',
+                speech: 'right',
+                sound: './media/ton_0202_0103_0008_103/ton_0202_0103_0008_103_01.mp3',
+                text: '계단에서 균형을 잃고<br>넘어진 적이 있어요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -100,
+            });
+
+            $prite.boy3({
+                id: '#boy_3',
+                speech: 'right',
+                sound: './media/ton_0202_0103_0008_103/ton_0202_0103_0008_103_02.mp3',
+                text: '태권도 발차기 동작을 하다가<br>넘어진 적이 있어요.',
+                class: 'bottom',
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -180,
+                balloon_left: -170,
+            });
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+            });
+            $prite.girl2({
+                id: '#girl_2_c',
+                circle: true,
+            });
+            $(document).on('click', '.resetBtn', function () {
+                KmAudioPlayer.buttonClick('./media/click.mp3');
+                $('.textLine').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>

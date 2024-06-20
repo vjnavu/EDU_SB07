@@ -108,17 +108,16 @@
             margin-top: 70px;
         }
 
-        .examViewBtn {
-            bottom: 10px;
-            right: 28px;
-        }
-
         .blue_check {
             display: none;
         }
 
         .check_list .check_view {
             pointer-events: auto !important;
+        }
+
+        .page_2 .buttonContainer {
+            right: 28px;
         }
 
         /* page 3 */
@@ -238,6 +237,13 @@
         .noteText .textLine,
         .noteText .textareaWrap {
             height: 70px;
+        }
+
+
+
+        .page_4 .buttonContainer {
+            right: 0;
+            bottom: -10px;
         }
     </style>
 </head>
@@ -365,7 +371,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="examViewBtn" data-answer-btn=""></button>
+                        <div class="buttonContainer">
+                            <button class="examViewBtn" data-answer-btn=""></button>
+                        </div>
                     </li>
                     <li class="page_3">
                         <div id="boy_1_c" class="character-item"></div>
@@ -530,7 +538,9 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                    <div class="buttonContainer">
+                                        <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                    </div>
                                 </li>
                                 <li class="innerTab_2" data-quiz="toggle">
                                     <div class="tab-content content-01">
@@ -688,7 +698,9 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                    <div class="buttonContainer">
+                                        <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
