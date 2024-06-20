@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* page 1 */
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1, .page_3) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .videoPlayBtn:hover {
+            background: #d04511 url('../ko/contents/images/icon/icon_play.svg') 28px center/27px no-repeat;
+        }
+
+        .videoBackground {
+            /* background-image: url(''); */
+            background-size: 100% 100%;
+        }
+
+        /* page 2 */
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            height: 250px;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        .flex .imgWrap {
+            width: 300px;
+        }
+
+        .popup_pages>li.whole h2 {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .popup_pages>li.whole img {
+            height: 500px;
+            margin: 70px auto;
+            display: block;
+        }
+
+        /* page 3 */
+        .bg {
+            background: url('./images/ton_0202_0102_0020_202/img_bg.png') no-repeat center / 100% 100%;
+            width: 100%;
+            height: 100%;
+            padding: 20px 70px;
+        }
+
+        .bg::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            opacity: .5;
+        }
+
+        .bg .how-to-play {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .how-to-play li .text {
+            line-height: 60px;
+        }
+
+        .icon-char {
+            top: 298px;
+            left: 320px;
+            z-index: 2;
+        }
+
+        [data-popup-page="2"] {
+            width: 870px;
+            top: 345px;
+            left: 390px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                장식품에 필요한 재료와 만드는 방법을 알아볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="장식품에 필요한 재료와 만드는 방법을 알아볼까요?">영상</li>
+                    <li data-hover="" data-text="계절을 담아 교실을 꾸밀 장식품에는 어떤 것이 있는지 알아볼까요?" data-gap="true">물음</li>
+                    <li data-hover="" data-text="계절을 담아 교실을 꾸며 볼까요?">활동</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="videoBackground">
+                            <div class="innerVideoWrap">
+                                <div class="videoFrameWrap">
+                                    <div class="innerVideoTitle">
+                                        <p>계절을 담은 <em>장식품</em> 만들기</p>
+                                        <div class="videoPlayBtn" data-video-link="M202405602_800k.mp4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="memoIcon purple">
+                            <div class="icon">
+                                <div class="iconImg"></div>
+                            </div>
+                            <div class="memoTxt">이런 작품도 있어요!</div>
+                        </div>
+                        <div class="flex">
+                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="1">
+                                <div class="popBtnTitle">봄꽃</div>
+                                <img src="./images/ton_0202_0102_0020_202/img_01.png">
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="2">
+                                <div class="popBtnTitle">여름 바다</div>
+                                <img src="./images/ton_0202_0102_0020_202/img_02.png">
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="3">
+                                <div class="popBtnTitle">가을 허수아비</div>
+                                <img src="./images/ton_0202_0102_0020_202/img_03.png">
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="4">
+                                <div class="popBtnTitle">겨울 눈꽃</div>
+                                <img src="./images/ton_0202_0102_0020_202/img_04.png">
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div class="bg">
+                            <div class="icon-char" data-hover="" data-popup-btn="2"></div>
+                            <ul class="how-to-play">
+                                <li>
+                                    <div class="bullet number orange inline">
+                                        1
+                                    </div>
+                                    <div class="text">
+                                        만들고 싶은 장식품을 구상하여 만들어요.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bullet number orange inline">
+                                        2
+                                    </div>
+                                    <div class="text">
+                                        봄, 여름, 가을, 겨울 중 원하는 계절을 정하여 계절 풍경을<br> 만들어요.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="bullet number orange inline">
+                                        3
+                                    </div>
+                                    <div class="text">
+                                        계절에 어울리는 장식품을 만들어요.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="whole image" data-popup-page="1">
+                    <div class="basicSlider" data-slide-container="popup">
+                        <ul class="basicSlider_slides" data-slides="">
+                            <li class="innerTab_1">
+                                <h2>봄꽃</h2>
+                                <img src="./images/ton_0202_0102_0020_202/img_01.png" />
+                            </li>
+                            <li class="innerTab_2">
+                                <h2>여름 바다</h2>
+                                <img src="./images/ton_0202_0102_0020_202/img_02.png" />
+                            </li>
+                            <li class="innerTab_3">
+                                <h2>가을 허수아비</h2>
+                                <img src="./images/ton_0202_0102_0020_202/img_03.png" />
+                            </li>
+                            <li class="innerTab_4">
+                                <h2>겨울 눈꽃</h2>
+                                <img src="./images/ton_0202_0102_0020_202/img_04.png" />
+                            </li>
+                        </ul>
+
+                        <div class="moveButtonContainer" data-slide-btn-container="">
+                            <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                            <ul class="basicSlider_circle_tabs" data-tabs="">
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                                <li data-hover=""></li>
+                            </ul>
+                            <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="min" data-popup-page="2" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents">
+                        <p>
+                            계절 풍경을 만들 때 모든 학생이 똑같은 작품을 만들 필요는 없어요. 몇 명은 배경을 그리고, 몇 명은 계절 친구를 만드는 등 자유롭게 만들어요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
