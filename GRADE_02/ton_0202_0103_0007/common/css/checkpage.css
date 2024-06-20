@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+/* gate_container */
+.gate_container {position:absolute; top:38px; bottom:38px; left:0; right:0; z-index:30; background:#f7f1da;}
+.gate_container.off {display:none !important;}
+.gate_container .gate_ani {position:absolute; width:100%; height:100%; top:0;}
+.gate_container .gate_ani .gate_ani_cover {position:absolute; left:0px; top:0px; width:100%; height:100%; }
+
+.gate_container .gate_topbox {position:relative; top:0; width:100%; height:100%; z-index:2;}
+.gate_container .introTitleText {position:absolute; top:152px; width:100%; color:#fff; font-size:62px; line-height:100%; text-align:center; font-family:'YGJAL'; }
+
+.gate_container .introStartBtn {position:absolute; top:334px; left:477px; display:inline-block; width:216px; height:52px; line-height:52px; font-size:23px; text-align:center; border-radius:8px; font-family:'YGJAL'; background:#ffe100; cursor:pointer;}
+.gate_container .introStartBtn:after {content:'>'; position:absolute; top:0; right:18px; font-size:18px;}
+.gate_container .introStartBtn:hover {color:#fff; background:#f77c19; -moz-transition:all .1s ease-out; -o-transition:all .1s ease-out; -ms-transition:all .1s ease-out; transition:all .1s ease-out;}
+.gate_container .gate_txt {position:absolute; top:586px; width:100%; color:#000; font-size:24px; line-height:36px; text-align:center; font-family:'NotoB';}
+
+.gate_container.checkquiz .gate_topbox {background:url('../images/gate_bg/gate_container_checkquiz_img1.png') no-repeat center top/contain;}
+.gate_container.checkquiz .introTitleText {top:246px; text-shadow:4px 0 0 #0d7140, -4px 0 0 #0d7140, 0 4px 0 #0d7140, 0 -4px 0 #0d7140, 3px 3px #0d7140, -3px -3px 0 #0d7140, 3px -3px 0 #0d7140, -3px 3px 0 #0d7140, 3px 3px 5px rgba(0, 0, 0, 0.3);}
+
+/*  */
+.checkpage .checkTitle{position:relative; width:100%; height:100px; box-sizing:border-box;}
+.checkpage .checkTitle h1{display:inline-block; position:absolute; top:14px; left:26px; width:235px; height:70px; background:url('../images/checkPage/chk_title.png') no-repeat; background-size:100% auto; font-size:0; text-indent:-9999px;}
+
+/*  */
+.checkpage .contentsBox{height:632px;}
+.checkpage .innerBox{height: 100%;padding:0 38px; background-color:transparent; overflow: visible;}
+.checkpage .pageContainer{width:100%; height:100%; background-color:#fff; border-top-left-radius:30px; border-top-right-radius:30px;  box-sizing:border-box; }
+.checkpage .pageContainer:before{content:''; display:inline-block; position:absolute; top:-39px; left:279px; width:67px; height:44px; background:url('../images/checkPage/chk_bee.png') no-repeat; background-size:100% auto;}
+.checkpage .pageContainer > li{position:relative; height:100%; box-sizing:border-box; padding:30px 48px;}
+
+/*  */
+.checkpage .tabContainer{top:-63px; right:40px; }
+.checkpage .tabContainer > li{width:62px; height:30px; margin-left:0; background-color:#fff; border-radius:20px; color:#ae7c65; font-family:'YGJAL'; font-size:15px; line-height:0; text-align:center; box-sizing:border-box; cursor:pointer;}
+.checkpage .tabContainer > li + li{margin-left:5px;}
+
+.checkpage .tabContainer > li span{width:62px; height:32px; display:table-cell; vertical-align:middle;}
+
+.tabContainer > .tab_checkPage:hover, .tabContainer > .tab_checkPage.tabActive{background-color:#ae7c65; color:#fff;}
+
+/* 확인문제 - 질문 */
+.checkpage .quizText{margin-left:25px; margin-bottom:30px; padding-right:25px;white-space: normal;}
+.quizText .blankBox{
+    display:inline-block;
+    width: 90px;
+    height: 49px;
+    margin-top: 5px;
+    background-color:#f7f7f7; 
+    border-radius: 5px;
+    vertical-align:top;
+}
+
+/* 확인문제 - 선택 */
+.checkpage .selectContainer{width:100%; padding:0 30px; box-sizing:border-box; overflow:hidden; }
+.checkpage .contentsContainer{padding:0 25px;}
+.checkpage .selectBox{margin:0; font-size:35px; font-family:'NotoB'; float: left; clear: both;}
+.checkpage .selectBox + .selectBox{margin-top:5px;}
+.checkpage .selectText{vertical-align:middle;font-size: 40px;}
+.checkpage .selectNum{width:40px; height:40px; min-width:40px; padding:3px; background-image:none; background-color:#ffffff; border-radius:50%; border:4px solid #ffb753; font-family:'YGJAL'; color:#ffb753; font-size:20px; line-height:26px; vertical-align:middle; box-sizing:border-box;}
+
+.checkpage .selectBox:hover .selectNum{background-color:#ff9200; color:#fff;}
+.complete .selectNum{background-color:#ff9200; color:#fff;}
+
+.selectContainer[data-col="2"] .selectBox{float:left; margin-top:30px; margin-right:195px;}
+.selectContainer[data-col="2"] .selectBox:nth-child(2n+1){clear:both;}
+.selectContainer[data-col="2"]:after{content:''; display:block; clear:both;}
+
+.choice_img > ul {display:flex; flex-wrap:wrap; justify-content:space-between;}
+.choice_img > ul > li{display:flex; flex-direction:column; align-items:center; width:calc(100% / 3 - 1px); }
+.choice_img .selctImg{display:inline-block; margin-top:15px; vertical-align:top;}
+.choice_img .selctImg img{width:250px;}
+
+
+/* 정답 ox */
+.selectNum .oxCheck{position:absolute; z-index:2; -webkit-animation:'scaleMark' 0.4s ease-in-out; -moz-animation:'scaleMark' 0.4s ease-in-out; -o-animation:'scaleMark' 0.4s ease-in-out; animation:'scaleMark' 0.4s ease-in-out;}
+.selectNum .correctO{top:-6px; left:-7px; width:50px; height:55px; background:url('../images/checkPage/chk_correct.png') no-repeat; background-size:100% auto;}
+.selectNum .incorrectX{top:-4px; left:-4px; width:44px; height:50px; background:url('../images/checkPage/chk_incorrect.png') no-repeat; background-size:100% auto;}
+
+@keyframes scaleMark {
+    0% {transform:scale(0.5); }
+    100% { transform:scale(1.0); }
+}
+@-webkit-keyframes scaleMark {
+    0% {transform:scale(0.5); }
+    100% { transform:scale(1.0); }
+}
+@-moz-keyframes scaleMark {
+    0% {transform:scale(0.5); }
+    100% { transform:scale(1.0); }
+}
+@-o-keyframes scaleMark {
+    0% { transform:scale(0.5); }
+    100% { transform:scale(1.0); }
+}
+
+/* 풀이 확인 버튼 */
+.checkpage .btn_wrap{position:absolute; bottom:65px; right:50px; }
+.checkpage .btn_wrap:after{content:''; display:block; clear:both;}
+.checkpage .btn_wrap > button{float:left;}
+.solveCheckBtn{width:160px; height:50px; margin-right:10px; background:url('../images/btn_solve.png') no-repeat; background-size:160px auto; border-radius:5px; text-align:center;}
+.solveCheckBtn:hover{background:url('../images/btn_solve_active.png') no-repeat; background-size:160px auto;}
+.solveCheckBtn.daps{background:url('../images/btn_solve_active.png') no-repeat; background-size:160px auto;}
+.solveCheckBtn > span{font-size:0;}
+
+/* 풀이확인 팝업창 */
+.solve_pop {/* display:block; */ bottom:140px; left:80px;}
+.solve_pop:before{
+    content: '풀이';
+    position: absolute;
+    top: -40px;
+    left: 24px;
+    width: 120px;
+    height: 70px;
+    padding: 14px 0 0 50px;
+    background: url(../images/checkPage/solve_pop_icon.png) no-repeat;
+    background-size: 100% auto;
+    font-size: 0px;
+    text-indent: -9999px;
+    box-sizing: border-box;
+}
+
+.solve_pop .wrap {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+.solve_pop .popupContents{position:relative; width:1000px; color:#000; padding:35px 40px; font-size:35px; text-align:justify; border-radius:10px; background-color:#fff; border:3px solid #6f2183; box-sizing:border-box;}
+.solve_pop .popupContents:before{content:''; display:inline-block; position:absolute; bottom:-20px; right:217px; width:0; height:0; border-style:solid; border-width:20px 10px 0px 10px; border-color:#6f2183 transparent transparent transparent;}
+.solve_pop .popupContents:after{content:''; display:inline-block; position:absolute; bottom:-11px; right:222px; width:0; height:0; border-style:solid; border-width:12px 5px 0px 5px; border-color:#fff transparent transparent transparent;}
+.solve_pop .popCloseBtn{top:15px; right:15px; width:20px; height:20px; border-radius:0; background:url('../images/checkPage/btn_close_purple.png') no-repeat; background-size:100% auto;}
+.solve_pop .popCloseBtn:hover{background:url('../images/checkPage/btn_close_purple_hover.png') center/contain no-repeat;}
+
+/* 정답버튼 */
+.checkpage .dapCheckBtn{position:relative; bottom:0; right:0px; width:160px; height:50px; padding-top:15px; background:url('../images/btn_dap_viewAll.png') no-repeat; background-size:160px auto; border-radius:5px; text-align:center;}
+.checkpage .dapCheckBtn > span{font-size:0;}
+
+.checkpage .dapCheckBtn:hover{background:url('../images/btn_dap_viewAll_over.png') no-repeat; background-size:160px auto;}
+.checkpage .dapCheckBtn.daps{background:url('../images/btn_dap_hideAll.png') no-repeat; background-size:160px auto;}
+.checkpage .dapCheckBtn.daps:hover{background:url('../images/btn_dap_hideAll_over.png') no-repeat; background-size:160px auto;}
+
+/* 확인문제 - 라인박스  */
+.checkpage .lineBox{border:5px solid #FFECE2; padding:20px 20px; text-align:justify;}
+.checkpage .lineBox .indent{display:inline-block; width:25px; height:auto;}
+/* .checkpage .colorBox{padding:30px 40px; line-height:60px;} */
+.checkpage .lineBox .box{position:relative; display:inline-block; margin-right:2px; padding:4px 15px 6px 15px; border-radius:8px; background-color:#efefef; color:#00a0ff; line-height:35px; box-sizing:border-box;}
+.checkpage .lineBox .box > span{display:inline-block; width:100%; height:100%;}
+.checkpage .lineBox .box > span.hide{position:absolute; top:0; left:0; background-color:#efefef; border-radius:8px;}
+
+/* 확인문제 - ox */
+.icon_o{display:inline-block; width:40px; height:40px; margin-top:8px; background:url('../images/checkPage/chk_icon_O_title.png') no-repeat; background-size:100% auto; vertical-align:top;}
+.icon_x{display:inline-block; width:35px; height:35px; margin-top:5px; background:url('../images/checkPage/chk_icon_X_title.png') no-repeat; background-size:100% auto; vertical-align:top;}
+
+.checkpage .ox_choice .subtitle{position: relative; float:left; width:800px; margin-right:14px; padding:22px 20px; border-radius:8px; background-color:#f1f1f1; font-size:35px; line-height:40px; box-sizing:border-box;}
+.checkpage .subtitle .korBullet{position: absolute; left: 20px; display:inline-block; width:34px; height:34px; margin-top:5px; border-radius:10px; border:2px solid #ff6600; background-color:#fff; font-family:'YGJAL'; font-size:20px; line-height:30px; color:#ff6600; vertical-align:top; box-sizing:border-box; text-align:center;}
+.subtitle .kor_text{margin-left: 40px; line-height: 44px;}
+
+.checkpage .ox_choice > li:after{content:''; display:block; clear:both;}
+.checkpage .ox_choice > li + li{margin-top:20px;}
+
+.oxClickBox{float:left;}
+.oxClickBox .oxClick{float:left; width:87px; height:87px; background-color:#f1f1f1; background-position:center center; background-repeat:no-repeat; border-radius:8px; box-sizing:border-box; cursor:pointer;}
+.oxClickBox .oxClick:hover{background-color:#d4dee2;}
+.oxClickBox .oxClick:nth-child(1){margin-right:10px; background-image:url('../images/checkPage/chk_ox_o.png'); background-size:50px auto;}
+.oxClickBox .oxClick:nth-child(1):hover{background-image:url('../images/checkPage/chk_ox_o_hover.png');}
+.oxClickBox .oxClick:nth-child(2){background-image:url('../images/checkPage/chk_ox_x.png'); background-size:47px auto; }
+.oxClickBox .oxClick:nth-child(2):hover{background-image:url('../images/checkPage/chk_ox_x_hover.png');}
+
+.oxClickBox .oxClick.correctO{background-color:#ff0;}
+.oxClickBox .oxClick:nth-child(1).correctO{background-image:url('../images/checkPage/chk_ox_o_active.png'); }
+.oxClickBox .oxClick:nth-child(2).correctO{background-image:url('../images/checkPage/chk_ox_x_active.png'); }
+
+/* 두 줄 */
+.oxClickBox.line_2 .oxClick{height: 132px;}
+
+/* 확인문제 - 캐릭터 */
+.checkpage .oxTextContainer .select_ox > li{position:relative; display:flex; align-items:center; box-sizing:border-box; white-space: normal;}
+.checkpage .oxTextContainer .select_ox > li + li{margin-top:20px;}
+.checkpage .oxTextContainer ul > li.left .characterImg{margin-right:50px;}
+.checkpage .oxTextContainer ul > li.right .characterImg{margin-left:50px;}
+
+.checkpage .bubbleBox {
+    width: calc(100% - 220px);
+}
+.checkpage .oxTextContainer .select_ox > li.left {
+    float: left;
+    width: 100%;
+}
+.checkpage .oxTextContainer .select_ox > li.right {
+    float: right;
+    width: 100%;
+}
+
+.checkpage .characterImg.circle{position:relative; width:170px; height:170px;}
+
+.checkpage .characterImg.circle > div {
+    width: 170px;
+    height: 170px;
+    background-size: 100%;
+}
+.checkpage .characterImg.circle > div {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+}
+
+.checkpage .charSpriteImg.ch_boni{
+    background-image: url('../../common/images/character/new/ch_boni_cir.png');
+}
+.checkpage .charSpriteImg.ch_dinggu{
+    background-image: url('../../common/images/character/new/ch_dinggu_cir.png');
+}
+.checkpage .charSpriteImg.ch_ken{
+    background-image: url('../../common/images/character/new/ch_ken_cir.png');
+}
+.checkpage .charSpriteImg.ch_lee{
+    background-image: url('../../common/images/character/new/ch_lee_cir.png');
+}
+.checkpage .charSpriteImg.ch_lron{
+    background-image: url('../../common/images/character/new/ch_lron_cir.png');
+}
+.checkpage .charSpriteImg.ch_mimi{
+    background-image: url('../../common/images/character/new/ch_mimi_cir.png');
+}
+.checkpage .charSpriteImg.ch_oku{
+    background-image: url('../../common/images/character/new/ch_oku_cir.png');
+}
+.checkpage .charSpriteImg.ch_ron{
+    background-image: url('../../common/images/character/new/ch_ron_cir.png');
+}
+
+.checkpage .bubbleBox{position:relative; max-width: calc(100% - 220px); text-align:justify; cursor:pointer;}
+.checkpage .bubbleBox.correctO{background-color:#ff0;}
+
+.checkpage .bubbleBox.paleYellow.line .inner,
+.checkpage .bubbleBox.palePink.line .inner,
+.checkpage .bubbleBox.paleBlue.line .inner,
+.checkpage .bubbleBox.paleGreen.line .inner,
+.checkpage .bubbleBox.palePurple.line .inner,
+.checkpage .bubbleBox.deeppink.line .inner {
+	border-width: 10px;
+	background-color: transparent;
+}
+.checkpage .characterImg.circle.paleYellow {
+    background-color: #fff2d1;
+    border-color: #fccd89;
+}
+.checkpage .characterImg.circle.palePink {
+    background-color: #ffe5e7;
+    border-color: #f7c1c9;
+}
+.checkpage .characterImg.circle.paleBlue {
+    background-color: #e9f7f9;
+    border-color: #c1e8ec;
+}
+.checkpage .characterImg.circle.paleGreen {
+    background-color: #f3fcd0;
+    border-color: #cde38f;
+}
+.checkpage .characterImg.circle.palePurple {
+    background-color: #ece5ff;
+    border-color: #cabfe0;
+}
+
+.checkpage .bubbleBox.paleYellow.line .inner {
+	border-color: #fccd89;
+}
+.checkpage .bubbleBox.palePink.line .inner {
+	border-color: #f7c1c9;
+}
+.checkpage .bubbleBox.paleBlue.line .inner {
+	border-color: #c1e8ec;
+}
+.checkpage .bubbleBox.paleGreen.line .inner {
+	border-color: #cde38f;
+}
+.checkpage .bubbleBox.palePurple.line .inner {
+	border-color: #cabfe0;
+}
+
+.checkpage .bubbleBox.paleYellow .bubbleArrow.middle.left {
+    border-color: transparent #fccd89 transparent transparent;
+}
+.checkpage .bubbleBox.palePink .bubbleArrow.middle.left {
+    border-color: transparent #f7c1c9 transparent transparent;
+}
+.checkpage .bubbleBox.paleBlue .bubbleArrow.middle.left {
+    border-color: transparent #c1e8ec transparent transparent;
+}
+.checkpage .bubbleBox.paleGreen .bubbleArrow.middle.left {
+    border-color: transparent #cde38f transparent transparent;
+}
+.checkpage .bubbleBox.palePurple .bubbleArrow.middle.left {
+    border-color: transparent #cabfe0 transparent transparent;
+}
+
+
+.checkpage .bubbleBox.paleYellow .bubbleArrow.middle.right {
+    border-color: transparent transparent transparent #fccd89;
+}
+.checkpage .bubbleBox.palePink .bubbleArrow.middle.right {
+    border-color: transparent transparent transparent #f7c1c9;
+}
+.checkpage .bubbleBox.paleBlue .bubbleArrow.middle.right {
+    border-color: transparent transparent transparent #c1e8ec;
+}
+.checkpage .bubbleBox.paleGreen .bubbleArrow.middle.right {
+    border-color: transparent transparent transparent #cde38f;
+}
+.checkpage .bubbleBox.palePurple .bubbleArrow.middle.right {
+    border-color: transparent transparent transparent #cabfe0;
+}
+
+
+.bubbleArrow.middle.left{left: -18px;}
+.bubbleArrow.middle.right{left: 100%;}
+
+/* 선긋기 */
+.leftContainer li {margin-bottom:20px;}
+.rightContainer li {margin-bottom:20px;}
+.leftContainer .txtBox{position:relative; min-width:250px; padding:10px 12px; color:#000; border-radius:15px; font-family:'NotoM'; text-align:center; box-sizing:border-box;}
+.rightContainer .txtBox{position:relative; min-width:250px; padding:10px 12px; color:#000; border-radius:15px; font-family:'NotoM'; text-align:center; box-sizing:border-box;}
+
+.leftContainer .txtBox{background-color:#ffeb87;}
+.rightContainer .txtBox{background-color:#aae6eb;}
+
+.clickobj:hover{}
+
+/* 이미지 */
+.col .img_box{display:inline-block; box-sizing:border-box;}
+.col .img_box + .img_box{margin-left:20px;}
+
+.col[data-col="2"]{text-align:center;}
+.col[data-col="2"] .img_box{width:calc(50% - 106px);}
+.col[data-col="3"] .img_box{width:calc(33% - 16px);}
+
+.col .img_box > img{width:100%; box-sizing:border-box;}
+
+.col + .boxType{margin-top:20px;}
+
+/*  */
+.checkpage .icon_exam + .q_text_w{display:inline-block; width:calc(100% - 71px);}
+
+/* qbox_col */
+.lineBox .inTheQbox{margin-bottom:20px; font-size:35px; line-height:42px;}
+.lineBox .inTheQbox:last-child{margin-bottom:0;}
+.lineBox .inTheQbox .bullet{display:inline-block; margin-top:6px;}
+.lineBox .inTheQbox .bullet + p{display:inline-block;}
+
+.qbox_col{display:flex; justify-content:center; align-items:center; margin-top:20px;}
+.qbox_col > li{margin:0 8px;}
+.qbox_col .icon_arrow_bg{width:28px; height:23px; background:url('../images/checkPage/chk_arrow.png') no-repeat; background-size:100% auto;}
+
+/* alert_popup */
+.alert_popup{position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); text-align: center; z-index:100; display:none;}
+.alert_popup .characterAni {display:none;}
+.alert_popup .characterImg {position:relative; display:inline-block; cursor:pointer;}
+.alert_popup .charSpriteAni {position:absolute; top:0; left:0; opacity:1; background-position:0 0;}
+
+/*  */
+.tac{text-align:center;}
+.underline{display:inline-block; border-bottom:2px solid #000;}
