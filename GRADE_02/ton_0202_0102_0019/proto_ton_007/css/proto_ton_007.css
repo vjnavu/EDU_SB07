@@ -1,0 +1,734 @@
+@charset "utf-8";
+
+/* 공통 */
+.hide {
+    display: none !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* // 공통 */
+/* 프레임(비율) */
+#frame {
+    position: relative;
+    height: 100%;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    background-color: #f3d5dd;
+    font-size: 40px;
+    line-height: initial;
+}
+
+/* // 프레임(비율) */
+/* 설정 */
+.settingWrap {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.bg-setting {
+    z-index: 250;
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    width: 75px;
+    height: 65px;
+    background-color: #0075c1;
+    box-shadow: 0px 8px 0px #004986;
+    border-radius: 0px 0px 34px 34px;
+}
+
+.bg-setting:hover {
+    background-color: #da31e7;
+    box-shadow: 0px 8px 0px #920783;
+    transition: all .1s;
+}
+
+#settings {
+    box-sizing: content-box;
+    border: 14px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/btn-setting.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all .1s;
+    text-indent: -9999px;
+    font-size: 0px;
+}
+
+.settingWrap.active #settings {
+    background-image: url("../images/btn-closeSetting.png");
+}
+
+.settingPop {
+    position: absolute;
+    right: -530px;
+    top: 38px;
+    z-index: 240;
+    background-color: #ffc5c5;
+    border: 5px solid #ffebd8;
+    border-right: 0px;
+    border-radius: 150px 0px 0px 150px;
+    transition: right .4s;
+    box-sizing: border-box;
+    width: max-content;
+}
+
+.settingWrap.active .settingPop {
+    right: 0px;
+}
+
+.settingArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 40px 50px;
+}
+
+#soundControls {
+    width: 100%;
+    position: relative;
+    background-color: #61a3ba;
+    border: 3px solid #7eb3c6;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 75px;
+    border-radius: 60px;
+}
+
+#soundControls::before {
+    content: "";
+    background-image: url("../images/icon-sound.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#soundControls>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 7px 10px;
+    font-size: 20px;
+}
+
+#soundControls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #000;
+    font-size: 0px;
+    text-indent: -9999px;
+}
+
+#soundControls button.active {
+    background-image: url("../images/icon-soundCheck.png");
+    background-size: 18px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+#goGatePageBtn {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    color: #fff;
+    background-color: #eb6877;
+    border: 3px solid #e48a94;
+    border-radius: 60px;
+    box-sizing: border-box;
+    font-size: 0px;
+    text-indent: -9999px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+#goGatePageBtn::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/icon-btnHome.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+}
+
+#goGatePageBtn:hover {
+    background-color: #ec6941;
+    border: 3px solid #f59c81;
+    transition: all .1s;
+}
+
+/* // 설정 */
+/* 게이트 */
+#gate {
+    position: fixed;
+    top: 38px;
+    left: 0px;
+    right: 0px;
+    bottom: 38px;
+    z-index: 200;
+    background-image: url("../images/background-gate.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: border-box;
+    padding: 165px 50px 50px;
+    text-align: center;
+}
+
+#gate>.game-name {
+    font-family: "YGJAL";
+    background-color: #f46b6b;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 40px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+#gate>h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 80px;
+    font-family: "YGJAL";
+    margin-top: 25px;
+    -webkit-text-stroke: 3px #f46b6b;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#gate>h2 {
+    font-family: "YGJAL";
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.3;
+}
+
+#quizStartBtn {
+    font-size: 45px;
+    font-family: 'YGJAL';
+    border-radius: 60px;
+    padding: 20px 60px;
+    margin-top: 30px;
+    background-color: #f3d5dd;
+    color: #e95c6c;
+}
+
+#quizStartBtn:hover {
+    background-color: #ABF1FF;
+    transition: all .1s;
+}
+
+/* // 게이트 */
+
+/* 퀴즈 */
+#quiz {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+
+.quizHeader {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+}
+
+.quizHeader-left {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quizHeader-left>h2 {
+    font-family: "YGJAL";
+    font-size: 45px;
+    position: relative;
+    padding-left: 80px;
+    margin-top: 10px;
+}
+
+.quizHeader-left>h2::before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-image: url("../images/icon-title.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size: 70px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.quizHeader-right {
+    position: absolute;
+    right: 200px;
+    top: 0px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideControls {
+    position: relative;
+    box-sizing: border-box;
+    padding: 16px 59px;
+    border: 3px solid #ddd;
+    border-radius: 60px;
+}
+
+.quizBody {
+    position: absolute;
+    left: 200px;
+    right: 200px;
+    top: 100px;
+    bottom: 0px;
+}
+
+.quizFooter {
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+}
+
+.paintBoard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.answerImg {
+    width: 100%;
+    height: 100%;
+}
+
+.answerImg>.answer {
+    opacity: 0;
+    transition: opacity 1s;
+    color: #006ee6;
+    background-color: rgba(255, 255, 255, .6);
+    box-sizing: border-box;
+    padding: 10px 30px;
+    border-radius: 60px;
+    font-size: 45px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 20px;
+    font-family: "YGJAL";
+}
+
+.answerImg>.answer.show {
+    opacity: 1;
+}
+
+.paintArea {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: url("../images/icon-eraser.png"), auto;
+}
+
+.answerImg.img1 {
+    background-image: url("../images/proto_ton_007_101_01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.answerImg.img2 {
+    background-image: url("../images/proto_ton_007_101_01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.answerImg.img3 {
+    background-image: url("../images/proto_ton_007_101_01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.answerImg.img4 {
+    background-image: url("../images/proto_ton_007_101_01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.answerImg.img5 {
+    background-image: url("../images/proto_ton_007_101_01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* #soundControls {
+    width: 100%;
+    position: relative;
+    background-color: #e4007f;
+    border: 3px solid #ea68a2;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 75px;
+    border-radius: 60px;
+}
+#soundControls::before {
+    content: "";
+    background-image: url("../images/icon-sound.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+#soundControls > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 22px;
+}
+#soundControls button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #000;
+    font-size: 0px;
+    text-indent: -9999px;
+}
+#soundControls button.active {
+    background-image: url("../images/icon-soundCheck.png");
+    background-size: 18px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+} */
+.btn-checkAnswer {
+    background-color: #5e3e18;
+    border: 3px solid #7e592d;
+    border-radius: 60px;
+    color: #fff;
+    padding: 14px 55px 14px 30px;
+    font-size: 30px;
+    font-family: "YGJAL";
+}
+
+.btn-checkAnswer:hover {
+    color: #fff;
+    background-color: #9d00c4;
+    border: 3px solid #d63ff7;
+    transition: all .1s;
+}
+
+.btn-replay {
+    background-color: #9d00c4;
+    border: 3px solid #d63ff7;
+    border-radius: 60px;
+    color: #fff;
+    padding: 14px 55px 14px 30px;
+    font-size: 30px;
+    font-family: "YGJAL";
+}
+
+.btn-replay:hover {
+    color: #fff;
+    background-color: #5e3e18;
+    border: 3px solid #7e592d;
+    transition: all .1s;
+}
+
+/* //퀴즈 */
+
+/* 퀴즈 슬라이드 */
+#quizSlider {
+    position: relative;
+    height: 100%;
+}
+
+#quizSliderContainer {
+    position: relative;
+    height: 100%;
+}
+
+#quizSliderContainer>li {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quizSliderContainer>li.show {
+    opacity: 1;
+    z-index: 100;
+}
+
+#quizSliderContainer>li:nth-child(1) {
+    background-color: #333;
+}
+
+#quizSliderContainer>li:nth-child(2) {
+    background-color: #666;
+}
+
+#quizSliderContainer>li:nth-child(3) {
+    background-color: #999;
+}
+
+/* // 퀴즈 슬라이드 */
+
+/* 퀴즈 슬라이드 버튼 */
+#quizHeaderNum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 22px;
+    font-family: "NotoB";
+}
+
+.quizSlider-btn {
+    position: absolute;
+    opacity: 1;
+    font-size: 0px;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #a98b66;
+}
+
+.quizSlider-btn:hover {
+    opacity: .6;
+    transition: all .1s;
+}
+
+.quizSlider-btn.disable {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.quizSlider-btn.btn-prev {
+    left: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-image: url("../images/icon-slide-prev.png");
+    background-position: center center;
+    background-size: 9px 14px;
+    background-repeat: no-repeat;
+}
+
+.quizSlider-btn.btn-next {
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-image: url("../images/icon-slide-next.png");
+    background-position: center center;
+    background-size: 9px 14px;
+    background-repeat: no-repeat;
+}
+
+.quizSlider-btn.btn-next.emphasize {
+    transform: translate(0, -50%) scale(2);
+}
+
+/* // 퀴즈 슬라이드 버튼 */
+
+/* 드롭다운 */
+.dropdown-input {
+    background-color: #e4007f;
+    font-size: 0px;
+    text-indent: -9999px;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    width: 127px;
+    height: 70px;
+    border-radius: 60px;
+    position: relative;
+    z-index: 102;
+}
+
+.dropdown-input::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/icon-eraser.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.dropdown-input::after {
+    content: "";
+    width: 20px;
+    height: 13px;
+    background-image: url("../images/arrow-eraser.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.active>.dropdown-input::after {
+    transform: translate(0, -50%) rotate(180deg);
+}
+
+#eraserDropDown {
+    position: relative;
+    display: flex;
+}
+
+#eraserDropDown:hover .dropdown-input {
+    background-color: #e44ca0;
+    transition: all .1s;
+}
+
+#eraserDropDown:hover .dropdown-content {
+    border: 3px solid #e44ca0;
+    transition: all .1s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+    max-height: 350px;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 70px;
+    box-sizing: border-box;
+    border: 3px solid #e4007f;
+    border-radius: 38px;
+    background-color: #fff;
+}
+
+.dropdown-content>li {
+    text-decoration: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-content button {
+    text-indent: -9999px;
+    font-size: 0px;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    border-right: 15px solid #fff;
+    border-left: 15px solid #fff;
+}
+
+.dropdown-content button:hover {
+    background-color: #000 !important;
+    transition: all .1s;
+}
+
+.dropdown-content button.active {
+    background-color: #000 !important;
+}
+
+.dropdown-content>li:nth-child(1) button {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border-right: 50px solid #fff;
+    border-left: 50px solid #fff;
+}
+
+.dropdown-content>li:nth-child(2) button {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border-right: 40px solid #fff;
+    border-left: 40px solid #fff;
+}
+
+.dropdown-content>li:nth-child(3) button {
+    padding: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border-right: 30px solid #fff;
+    border-left: 30px solid #fff;
+}
+
+#eraserDropDown.active .dropdown-content {
+    display: block;
+    z-index: 101;
+}
+
+/* // 드롭다운 */
