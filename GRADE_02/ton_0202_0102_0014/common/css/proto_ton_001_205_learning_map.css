@@ -4,6 +4,21 @@
     /*font-display: swap;*/
 }
 
+.study_guide {
+    top: 16px;
+    right: 70px;
+}
+
+.zoomController {
+    top: 70px;
+    left: 200px;
+}
+
+.popbox .popLearning:hover {
+    background-color: #ddd;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
 
 .bgImg {
     height: 100%;
@@ -31,11 +46,16 @@
     gap: 5px;
 }
 
+
 .learning-badge {
     color: #fff;
     background-color: #9f9fa0;
     padding: 1px 5px;
     border-radius: 8px;
+}
+
+.popLearning .learning-badge {
+    border-radius: 4px;
 }
 
 
@@ -51,19 +71,19 @@
 }
 
 .popbox.mini .navControl .navItem.purple {
-    background: #7E6BAA;
+    background: #826AAF;
 }
 
 .popbox.mini .navControl .navItem.blue {
-    background: #4D90CB;
+    background: #2F92D0;
 }
 
 .popbox.mini .navControl .navItem.red {
-    background: #D73731;
+    background: #EA1B24;
 }
 
 .popbox.mini .navControl .navItem.orange {
-    background: #E9943F;
+    background: #F78F21;
 }
 
 .popbox.mini .navControl .navItem {
@@ -240,27 +260,27 @@
 }
 
 .popbox .popLearning.pop1 {
-    top: 51px;
+    top: 52px;
     left: 456px;
 }
 
 .popbox .popLearning.pop2 {
-    top: 51px;
+    top: 52px;
     left: 601px;
 }
 
 .popbox .popLearning.pop3 {
-    top: 51px;
+    top: 52px;
     left: 746px;
 }
 
 .popbox .popLearning.pop4 {
-    top: 51px;
+    top: 53px;
     left: 1018px;
 }
 
 .popbox .popLearning.pop5 {
-    top: 51px;
+    top: 53px;
     left: 1166px;
 }
 
@@ -286,7 +306,7 @@
 
 .popbox .popLearning.pop10 {
     top: 219px;
-    left: 1158px;
+    left: 1159px;
 }
 
 .popbox .popLearning.pop11 {
@@ -347,16 +367,6 @@
 .popbox .popLearning.pop22 {
     top: 501px;
     left: 346px;
-}
-
-.popbox .popLearning:hover {
-    background-color: #ddd;
-    filter: drop-shadow(2px 2px 2px black);
-}
-
-.zoomController {
-    top: 70px;
-    left: 200px;
 }
 
 

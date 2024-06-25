@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // draw place around image to click depend data-slide
     const dataSlides = [
-        [0, 1, 2, 3, 4, 5, 6, 7, 8,]
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [27, 10],
+        [26, 11],
+        [25, 12],
+        [24, 13],
+        [23, 22, 21, 20, 19, 18, 17, 16, 15, 14]
     ];
 
     generatePlace(3, dataSlides);
@@ -113,13 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // input spell
     // create spell element
     const spellContainer = $('.spellContainer');
-    spellContainer.each((spellsContainer) => {
-        const spells = spellsContainer.attr('data-spell').split(',');
-        spells.forEach(spell => {
-            spellContainer.append(`<div class="spell">${spell}</div>`)
-        })
-    })
-
+    const spells = spellContainer.data('spell').split(',');
+    spells.forEach(spell => {
+        spellContainer.append(`<div class="spell">${spell}</div>`)
+    });
 
     $(document).on('input', '.popupContents input', function () {
         $(this).removeClass('wrong');
