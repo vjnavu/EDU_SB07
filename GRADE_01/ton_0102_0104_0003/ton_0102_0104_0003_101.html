@@ -28,6 +28,43 @@
         .popbox.full.box .item-list .item-box .check-text .check-box {
             margin-top: 12px;
         }
+
+        .popbox.mini {
+            border-radius: 12px;
+        }
+
+        .popbox.mini .popCloseBtn,
+        .popbox.miniSlide .popCloseBtn {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            width: 42px;
+            height: 42px;
+            margin: 0px;
+            background: url(./common/images/pop_mini_close_title.png) no-repeat;
+            cursor: pointer;
+        }
+
+        .popbox.mini .popupTitle,
+        .popbox.miniSlide .popupTitle {
+            margin: 0 0 10px 0;
+        }
+
+        .popbox.mini .popCloseBtn:hover,
+        .popbox.miniSlide .popCloseBtn:hover {
+            background: url(./common/images/pop_mini_close_title_over.png) no-repeat;
+        }
+
+        .popbox.mini .popCloseBtn::before,
+        .popbox.mini .popCloseBtn::after {
+            display: none;
+        }
+
+        .click-induced.word {
+            width: max-content;
+            font-size: 50px;
+            font-family: 'NotoB';
+        }
     </style>
 </head>
 
@@ -135,7 +172,7 @@
                                         <div class="number">10</div>
                                     </div>
                                     <div class="popBtn popLearning pop11" data-popBtn="11" data-pop="3" data-slide="1"
-                                        data-pos="660,125">
+                                        data-pos="20,150">
                                         <div class="number">11</div>
                                     </div>
                                     <div class="popBtn popLearning pop12" data-popBtn="12" data-pop="3" data-slide="1"
@@ -196,9 +233,13 @@
                     <ul>
                         <li><i class="icon-bullet icon-bullet-1"></i><span>신호등이 없는 횡단보도를 건너는 방법을 알아봅시다.</span></li>
                         <li><i class="icon-bullet icon-bullet-1"></i><span>횡단보도에서 안전한 행동과 그렇지 않은 행동을 찾아봅시다.</span></li>
-                        <li><i class="icon-bullet icon-bullet-1"></i><span><span class="popBtn voca" data-hover=""
-                                    data-popup-btn="4" data-popup-parent="hidden">어휘팝업</span>
-                                에서 안전하게 길 건너는 방법을 알아봅시다.</span></li>
+                        <li><i class="icon-bullet icon-bullet-1"></i>
+                            <span>
+                                <span class="click-induced word popBtn" data-pop="4" data-slide="1"
+                                    data-pos="433,246">공항</span>에서 안전하게 길 건너는 방법을 알아봅시다.
+                            </span>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -482,14 +523,18 @@
             </div>
         </div>
 
-
-        <li class="min word" data-popup-page="4" data-drag>
-            <h2>낱말 익히기</h2>
-            <div class="popup_contents ls1">
-                <p><span class="pink">이면 도로</span></p>
-                <p>차도와 보도의 구분이 없는 좁은 도로</p>
+        <div class="popbox mini" data-pop="4" style="width: 660px;">
+            <div class="popupContents" style="display: block;">
+                <div class="popupTitle"><span>낱말 익히기</span></div>
+                <dl class="dicContainer">
+                    <dd style="color: #7142B8;">이면 도로</dd>
+                    <dd style="color: #000">
+                        차도와 보도의 구분이 없는 좁은 도로
+                    </dd>
+                </dl>
             </div>
-        </li>
+            <div class="popCloseBtn"></div>
+        </div>
     </div>
     <!-- Common Script -->
     <script src="./common/js/jquery.js"></script>

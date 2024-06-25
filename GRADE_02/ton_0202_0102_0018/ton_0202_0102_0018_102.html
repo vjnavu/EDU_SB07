@@ -136,10 +136,26 @@
     <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
     <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
     <script type="text/javascript" src="./ko/contents.js"></script>
-    <script type="text/javascript" src="./common/js/zoomImage.js"></script>
-    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <!-- <script type="text/javascript" src="./common/js/zoomImage.js"></script> -->
+    <!-- <script type="text/javascript" src="./common/js/guide.js"></script> -->
     <script type="text/javascript">
+
+        $(document).on('click', '.basicSlider_tabs li', function () {
+            zoomInstance.resetZoom();
+            $(document).find(".zoomController").remove();
+
+            var $idx = $(this).index() + 1;
+
+            loadScriptFile("common/js/zoomImage.js", function () {
+                zoomInstance = new ZoomImage(QS(".basicSlider_slides li:nth-child(" + $idx + ")").querySelector(".zoomContainer"));
+            });
+        });
+
         document.addEventListener('DOMContentLoaded', function () {
+            loadScriptFile("common/js/zoomImage.js", function () {
+                zoomInstance = new ZoomImage(QS(".basicSlider_slides li:nth-child(1)").querySelector(".zoomContainer"));
+            });
+
             $(document).on('click', '.basicSlider_tabs li', function () {
                 if ($(this).data('text')) {
                     $('header .title').text($(this).data('text'));
@@ -159,7 +175,7 @@
                 class: 'bottom',
                 balloon_top: -190,
                 balloon_left: -80,
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { onsole.log('start'); },
                 callback_end: () => { console.log('end'); }
             });
 
@@ -172,7 +188,7 @@
                 class: 'bottom',
                 balloon_top: -190,
                 balloon_left: -90,
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { onsole.log('start'); },
                 callback_end: () => { console.log('end'); }
             });
             $prite.boy2({
@@ -184,7 +200,7 @@
                 class: 'bottom',
                 balloon_top: -140,
                 balloon_left: -125,
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { onsole.log('start'); },
                 callback_end: () => { console.log('end'); }
             });
 
@@ -197,10 +213,29 @@
                 class: 'bottom',
                 balloon_top: -140,
                 balloon_left: -105,
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { onsole.log('start'); },
                 callback_end: () => { console.log('end'); }
             });
         });
+
+        function loadScriptFile(scriptSrc, callBack) {
+            var script = document.createElement('script');
+            script.src = scriptSrc;
+
+            if (callBack) {
+                script.onload = function () {
+                    callBack();
+                };
+            }
+            document.head.appendChild(script);
+        }
+
+        function QS(target) {
+            return document.querySelector(target);
+        }
+        function QSAll(target) {
+            return document.querySelectorAll(target);
+        }
     </script>
 </body>
 
