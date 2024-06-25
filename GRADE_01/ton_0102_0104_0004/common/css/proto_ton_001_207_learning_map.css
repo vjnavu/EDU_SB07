@@ -1,3 +1,15 @@
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: sdchild;
+    src: url("./../font/SDChildfundkoreaTTF.ttf");
+    /*font-display: swap;*/
+}
+
 .bgImg {
     height: 100%;
 }
@@ -21,9 +33,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     padding-bottom: 30px;
-    font-size: 18px;
+    font-size: 20px;
+    /* font-family: "sdchild"; */
+    font-weight: bold;
 }
 
 .learning-wrap>span:not(.learning-badge) {
@@ -33,7 +46,7 @@
 .learning-badge {
     color: #fff;
     background-color: #9f9fa0;
-    padding: 0px 5px;
+    padding: 2px 5px;
     border-radius: 8px;
     position: absolute;
     bottom: 18px;
@@ -42,12 +55,18 @@
 
 .popLearning .learning-badge {
     position: relative;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
+    padding: 5px;
+}
+
+.popLearning .starArrow {
+    bottom: 46px;
 }
 
 .popLearning .learning-wrap {
     padding-bottom: 0;
+    gap: 12px;
 }
 
 .popbox.mini .navControl {
@@ -62,19 +81,19 @@
 }
 
 .popbox.mini .navControl .navItem.purple {
-    background: #7E6BAA;
+    background: #826AAF;
 }
 
 .popbox.mini .navControl .navItem.blue {
-    background: #4D90CB;
+    background: #2F92D0;
 }
 
 .popbox.mini .navControl .navItem.red {
-    background: #D73731;
+    background: #EA1B24;
 }
 
 .popbox.mini .navControl .navItem.orange {
-    background: #E9943F;
+    background: #F78F21;
 }
 
 .popbox.mini .navControl .navItem {
@@ -125,6 +144,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    /* font-family: "bmjua"; */
+
 }
 
 /* purple */
@@ -304,7 +325,7 @@
 
 .popbox .popLearning {
     width: 170px;
-    height: 119px;
+    height: 116px;
     pointer-events: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -313,7 +334,8 @@
 }
 
 .popbox .popLearning:hover {
-    outline: 4px solid #e1b1ad;
+    /* outline: 4px solid #f75f52; */
+    background-color: #ddd;
 }
 
 .popLearning p span {
@@ -328,122 +350,122 @@
 
 .popbox .popLearning.pop1 {
     top: 193px;
-    left: 190px;
+    left: 187px;
 }
 
 .popbox .popLearning.pop2 {
     top: 193px;
-    left: 368px;
+    left: 366px;
 }
 
 .popbox .popLearning.pop3 {
     top: 320px;
-    left: 11px;
+    left: 9px;
 }
 
 .popbox .popLearning.pop4 {
     top: 320px;
-    left: 190px;
+    left: 187px;
 }
 
 .popbox .popLearning.pop5 {
     top: 446px;
-    left: 11px;
+    left: 9px;
 }
 
 .popbox .popLearning.pop6 {
     top: 446px;
-    left: 190px;
+    left: 187px;
 }
 
 .popbox .popLearning.pop7 {
     top: 446px;
-    left: 368px;
+    left: 366px;
 }
 
 .popbox .popLearning.pop8 {
     top: 572px;
-    left: 11px;
+    left: 9px;
 }
 
 .popbox .popLearning.pop9 {
     top: 572px;
-    left: 368px;
+    left: 366px;
 }
 
 .popbox .popLearning.pop10 {
     top: 67px;
-    left: 812px;
+    left: 808px;
 }
 
 .popbox .popLearning.pop11 {
     top: 67px;
-    left: 990px;
+    left: 985px;
 }
 
 .popbox .popLearning.pop12 {
     top: 193px;
-    left: 990px;
+    left: 985px;
 }
 
 .popbox .popLearning.pop13 {
     top: 193px;
-    left: 1168px;
+    left: 1165px;
 }
 
 .popbox .popLearning.pop14 {
     top: 320px;
-    left: 633px;
+    left: 630px;
 }
 
 .popbox .popLearning.pop15 {
     top: 320px;
-    left: 812px;
+    left: 808px;
 }
 
 .popbox .popLearning.pop16 {
     top: 320px;
-    left: 990px;
+    left: 985px;
 }
 
 .popbox .popLearning.pop17 {
     top: 320px;
-    left: 1168px;
+    left: 1165px;
 }
 
 .popbox .popLearning.pop18 {
     top: 446px;
-    left: 633px;
+    left: 630px;
 }
 
 .popbox .popLearning.pop19 {
     top: 446px;
-    left: 812px;
+    left: 808px;
 }
 
 .popbox .popLearning.pop20 {
     top: 446px;
-    left: 990px;
+    left: 985px;
 }
 
 .popbox .popLearning.pop21 {
     top: 446px;
-    left: 1168px;
+    left: 1165px;
 }
 
 .popbox .popLearning.pop22 {
     top: 572px;
-    left: 633px;
+    left: 630px;
 }
 
 .popbox .popLearning.pop23 {
     top: 572px;
-    left: 812px;
+    left: 808px;
 }
 
 .popbox .popLearning.pop24 {
     top: 572px;
-    left: 990px;
+    left: 985px;
 }
 
 .zoomController {
@@ -490,10 +512,11 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    left: 53%;
-    bottom: 50px;
+    left: 51%;
+    bottom: 48px;
     transform: translate(-50%, 0);
     text-shadow: none !important;
+    line-height: 1;
 }
 
 .starArrow.purple {

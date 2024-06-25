@@ -606,3 +606,7 @@
     top: 80px;
     font-size: 18px;
 }
+
+#frameContainer.off {
+    background-color: transparent;
+}

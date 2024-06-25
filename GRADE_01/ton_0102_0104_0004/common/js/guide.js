@@ -22,6 +22,8 @@ if (document.querySelectorAll('.page_zoom').length > 0) {
   );
 
   $(document).on('click', '.popup_closeBtn', function () {
-    zoomInstance.resetZoom();
+    if (!$(this).parent().hasClass('min')) {
+      zoomInstance.resetZoom();
+    }
   })
 }

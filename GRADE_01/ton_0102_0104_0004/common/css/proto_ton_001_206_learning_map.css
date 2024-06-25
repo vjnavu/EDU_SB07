@@ -1,3 +1,15 @@
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: sdchild;
+    src: url("./../font/SDChildfundkoreaTTF.ttf");
+    /*font-display: swap;*/
+}
+
 .bgImg {
     height: 100%;
 }
@@ -23,6 +35,9 @@
     align-items: center;
     gap: 5px;
     padding-bottom: 30px;
+    font-size: 20px;
+    /* font-family: "sdchild"; */
+    font-weight: bold;
 }
 
 .learning-wrap>span:not(.learning-badge) {
@@ -35,18 +50,31 @@
     padding: 0px 5px;
     border-radius: 8px;
     position: absolute;
-    bottom: 18px;
-    left: 87px;
+    bottom: 13px;
+    left: 94px;
 }
 
 .popLearning .learning-badge {
-    position: relative;
-    bottom: 0;
-    left: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 38px;
+    width: 23px;
+}
+
+.popLearning .starArrow {
+    height: 17px;
+    bottom: 27px;
+}
+
+.popLearning .starTitle {
+    width: 60px;
+    height: 20px;
+    top: -13px;
+    left: 3px;
 }
 
 .popLearning .learning-wrap {
-    padding-bottom: 0;
+    font-size: 12px;
 }
 
 .popbox.mini .navControl {
@@ -61,19 +89,19 @@
 }
 
 .popbox.mini .navControl .navItem.purple {
-    background: #7E6BAA;
+    background: #826AAF;
 }
 
 .popbox.mini .navControl .navItem.blue {
-    background: #4D90CB;
+    background: #2F92D0;
 }
 
 .popbox.mini .navControl .navItem.red {
-    background: #D73731;
+    background: #EA1B24;
 }
 
 .popbox.mini .navControl .navItem.orange {
-    background: #E9943F;
+    background: #F78F21;
 }
 
 .popbox.mini .navControl .navItem {
@@ -124,6 +152,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    /* font-family: "bmjua"; */
+
 }
 
 
@@ -416,4 +446,8 @@
 
 .starArrow.red {
     background-image: url("../images/proto_ton_001/arrow-red.png");
+}
+
+[data-color="yellow"]:first-child .learning-badge {
+    left: 100px;
 }

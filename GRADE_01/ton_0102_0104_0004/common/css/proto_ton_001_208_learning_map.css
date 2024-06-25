@@ -1,3 +1,15 @@
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
+@font-face {
+    font-family: sdchild;
+    src: url("./../font/SDChildfundkoreaTTF.ttf");
+    /*font-display: swap;*/
+}
+
 .bgImg {
     height: 100%;
 }
@@ -23,7 +35,9 @@
     align-items: center;
     gap: 5px;
     padding-bottom: 30px;
-    font-size: 17px;
+    font-size: 20px;
+    /* font-family: "sdchild";
+    font-weight: bold; */
 }
 
 .learning-wrap>span:not(.learning-badge) {
@@ -37,19 +51,34 @@
     border-radius: 8px;
     position: absolute;
     bottom: 27px;
-    left: 96px;
+    left: 35px;
     font-size: 20px;
+    width: 40px;
+}
+
+.popLearning .starTitle {
+    width: 70px;
+    height: 25px;
 }
 
 .popLearning .learning-badge {
     position: relative;
-    bottom: 0;
-    left: 0;
-    font-size: 14px;
+    bottom: -10px;
+    left: -5px;
+    padding: 5px;
+    font-size: 15px;
+    width: 30px;
 }
 
 .popLearning .learning-wrap {
     padding-bottom: 0;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.popLearning .starArrow {
+    height: 25px;
+    bottom: 52px;
 }
 
 .popbox.mini .navControl {
@@ -64,19 +93,19 @@
 }
 
 .popbox.mini .navControl .navItem.purple {
-    background: #7E6BAA;
+    background: #826AAF;
 }
 
 .popbox.mini .navControl .navItem.blue {
-    background: #4D90CB;
+    background: #2F92D0;
 }
 
 .popbox.mini .navControl .navItem.red {
-    background: #D73731;
+    background: #EA1B24;
 }
 
 .popbox.mini .navControl .navItem.orange {
-    background: #E9943F;
+    background: #F78F21;
 }
 
 .popbox.mini .navControl .navItem {
@@ -112,7 +141,7 @@
 
 .learning-list>li .learning-item>li {
     position: relative;
-    width: 250px;
+    width: 140px;
     height: 160px;
     font-size: 22px;
     line-height: 1.2;
@@ -123,7 +152,7 @@
     margin: auto;
     cursor: pointer;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 70px 70px 90px 90px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -255,7 +284,7 @@
 }
 
 .popbox .popLearning:hover {
-    background-color: rgb(249, 66, 97);
+    background-color: #ddd;
 }
 
 .popLearning p span {

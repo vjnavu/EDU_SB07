@@ -377,7 +377,7 @@ h2 .toggleBlank {
 .choAnsBtn,
 .dapCheckBtn,
 .solveCheckBtn {
-    background: #5e3e18 url(../../contents/images/icon/icon_check.svg) 20px center/22px auto no-repeat
+    background: #5e3e18 url(../../contents/images/icon/icon_check.svg) 15px center/22px auto no-repeat
 }
 
 .resetBtn {
@@ -448,6 +448,10 @@ h2 .toggleBlank {
 .examViewBtn,
 .writeBtn {
     background: url(../../contents/images/icon/icon_check.svg) 28px center/22px auto no-repeat
+}
+
+.examViewBtn.reset {
+    background: url(../../contents/images/icon/icon_check.svg) 22px center / 22px auto no-repeat;
 }
 
 .writeBtn.hover[data-type="reset"],

@@ -4,6 +4,12 @@
     /*font-display: swap;*/
 }
 
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
 .bgImg {
     height: 100%;
 }
@@ -61,7 +67,6 @@ input[type=number] {
     font-size: 20px;
 }
 
-
 .popLearning.purple>input {
     outline: solid 2px #CABEE0;
     background-color: #E9E0FF;
@@ -82,46 +87,6 @@ input[type=number] {
     background-color: #FFEBCD;
 }
 
-/* .popbox .popLearning.purple:hover {
-    background-color: #BFB2D6;
-}
-
-.popbox .popLearning.purple.active {
-    background-color: #BFB2D6;
-}
-
-.popbox .popLearning.pink:hover {
-    background-color: #F58F94;
-}
-
-.popbox .popLearning.pink.active {
-    background-color: #F58F94;
-}
-
-.popbox .popLearning.orange:hover {
-    background-color: #FBC78D;
-}
-
-.popbox .popLearning.orange.active {
-    background-color: #FBC78D;
-}
-
-.popbox .popLearning.green:hover {
-    background-color: #9EE2A8;
-}
-
-.popbox .popLearning.green.active {
-    background-color: #9EE2A8;
-}
-
-.popbox .popLearning.blue:hover {
-    background-color: #ADD5ED;
-}
-
-.popbox .popLearning.blue.active {
-    background-color: #ADD5ED;
-} */
-
 .popLearning p span {
     color: #fff;
     background-color: #ccc;
@@ -137,7 +102,11 @@ input[type=number] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2px;
+    letter-spacing: 0;
+}
+
+.learning-wrap>span:not(:last-child) {
+    line-height: 1.2;
 }
 
 .learning-badge {
@@ -145,6 +114,7 @@ input[type=number] {
     background-color: #9f9fa0;
     padding: 1px 6px 1px 6px;
     border-radius: 5px;
+    margin-top: 2px;
 }
 
 .learning-list>li .learning-item>li:hover,
@@ -166,15 +136,6 @@ input[type=number] {
     line-height: 1;
 }
 
-/* .popbox .popLearning.pop0.active {
-    background-image: url("../images/proto_ton_001/balloonImg1-active.png");
-}
-
-.popbox .popLearning.pop0:hover {
-    background-image: url("../images/proto_ton_001/balloonImg1-hover.png");
-    transition: all .1s
-} */
-
 .popbox .popLearning.pop0 {
     top: 180px;
     left: 180px;
@@ -184,26 +145,6 @@ input[type=number] {
     font-family: "sdchild";
     font-weight: bold;
 }
-
-/* .popLearning.purple {
-    border: 2px solid #BFB2D6;
-}
-
-.popLearning.pink {
-    border: 2px solid #F58F94;
-}
-
-.popLearning.blue {
-    border: 2px solid #ADD5ED;
-}
-
-.popLearning.orange {
-    border: 2px solid #FBC78D;
-}
-
-.popLearning.green {
-    border: 2px solid #9EE2A8;
-} */
 
 .popbox .popLearning.pop1 {
     top: 130px;
@@ -281,8 +222,9 @@ input[type=number] {
 }
 
 .popbox .popLearning.pop16 {
-    top: 402px;
+    top: 406px;
     left: 5px;
+    height: 60px;
 }
 
 .popbox .popLearning.pop17 {
@@ -319,8 +261,8 @@ input[type=number] {
 }
 
 .popbox .popLearning.pop23 {
-    top: 202px;
-    right: 453px;
+    top: 188px;
+    right: 448px;
     width: 60px;
 }
 
@@ -331,8 +273,8 @@ input[type=number] {
 }
 
 .popbox .popLearning.pop25 {
-    top: 127px;
-    left: 1006px;
+    top: 125px;
+    left: 998px;
     width: 60px;
 }
 
@@ -350,7 +292,7 @@ input[type=number] {
 
 .popbox .popLearning.pop28 {
     top: 179px;
-    left: 1212px;
+    left: 1208px;
     width: 60px;
 }
 
@@ -413,7 +355,7 @@ input[type=number] {
 
 .popbox .popLearning.pop23 input {
     left: 40px;
-    top: -39px;
+    top: -25px;
 }
 
 .popbox .popLearning.pop24 input {
@@ -436,7 +378,7 @@ input[type=number] {
 
 .popbox .popLearning.pop28 input {
     left: -13px;
-    top: -29px;
+    top: -30px;
 }
 
 .popbox .popLearning.pop29 input {
@@ -461,15 +403,9 @@ input[type=number] {
     top: 6px;
 }
 
-
-/* .popbox .popLearning.pop42.active {
-    background-image: url("../images/proto_ton_001/balloonImg2-active.png");
+.popbox .popLearning.pop35 input {
+    top: -35px;
 }
-
-.popbox .popLearning.pop42:hover {
-    background-image: url("../images/proto_ton_001/balloonImg2-hover.png");
-    transition: all .1s;
-} */
 
 .popbox .popLearning.pop42 {
     bottom: 70px;

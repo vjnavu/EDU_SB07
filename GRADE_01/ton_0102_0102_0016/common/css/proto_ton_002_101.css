@@ -45,15 +45,15 @@
 
 /* popup title color */
 .popbox.full .popupTitle.purple {
-    background: #7E6BAA;
+    background: #826AAF;
 }
 
 .popbox.full .popupTitle.blue {
-    background: #4D90CB;
+    background: #2F92D0;
 }
 
 .popbox.full .popupTitle.red {
-    background: #D73731;
+    background: #EA1B24;
 }
 
 .popbox.full .popupTitle.orange {
@@ -76,7 +76,7 @@
 
 .popbox.full.slide .contentsImg>img,
 .popbox.full.slide .contentsImg {
-    width: 100%;
+    width: fit-content;
     height: 570px;
     border-radius: 15px;
 }

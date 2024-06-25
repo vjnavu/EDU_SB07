@@ -155,153 +155,19 @@
     width: 100%;
 }
 
-.page-image .garland-left {
-    background: url('../images/proto_ton_001/gif/garland_left.gif') no-repeat center / 110% 130%;
-    width: 400px;
-    height: 350px;
-    position: absolute;
-    top: -110px;
-    left: -95px;
-}
-
-.page-image .garland-right {
-    background: url('../images/proto_ton_001/gif/garland_right.gif') no-repeat center / 110% 130%;
-    width: 400px;
-    height: 350px;
-    position: absolute;
-    top: -110px;
-    right: -95px;
-}
-
-.page-image .cloud {
-    background: url('../images/proto_ton_001/gif/cloud.gif') no-repeat center / 100% 100%;
-    width: 880px;
-    height: 500px;
-    position: absolute;
-    top: -140px;
-    left: 234px;
-}
-
-.page-image .flower-1 {
-    background: url('../images/proto_ton_001/gif/flower01.gif') no-repeat center / 100% 100%;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: -50px;
-    left: 50px;
-}
-
-.page-image .flower-2 {
-    background: url('../images/proto_ton_001/gif/flower02.gif') no-repeat center / 100% 100%;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: -15px;
-    left: 60px;
-    z-index: 3;
-}
-
-.page-image .flower-3 {
-    background: url('../images/proto_ton_001/gif/flower03.gif') no-repeat center / 100% 100%;
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    top: -15px;
-    left: -10px;
+.page-title .top {
+    /* background: url('../images/proto_ton_001/bg-7-top.png') no-repeat center / 1358px 100%; */
+    width: 100%;
+    height: 495px;
+    position: fixed;
+    top: 38px;
+    left: 0;
     z-index: 2;
 }
 
-.page-image .flower-group-left {
-    position: absolute;
-    left: 70px;
-    top: 20px;
-}
-
-.page-image .flower-group-right {
-    position: absolute;
-    right: 70px;
-    top: 20px;
-    transform: rotateY(180deg);
-}
-
-.page-image .twinkle {
-    background: url('../images/proto_ton_001/gif/twinkle.gif') no-repeat center / 100% 100%;
-    width: 250px;
-    height: 250px;
-    position: absolute;
-}
-
-.page-image .twinkle.twinkle-1 {
-    top: 20px;
-    left: 80px;
-}
-
-.page-image .twinkle.twinkle-2 {
-    top: -70px;
-    left: 725px;
-}
-
-.page-image .twinkle.twinkle-3 {
-    top: 30px;
-    right: 0;
-}
-
-.page-image .twinkle03 {
-    background: url('../images/proto_ton_001/gif/twinkle03.gif') no-repeat center / 100%;
-    width: 730px;
-    height: 270px;
-    position: absolute;
-}
-
-.page-image .twinkle03.twinkle-4 {
-    left: 160px;
-    top: -42px;
-}
-
-.page-image .twinkle03.twinkle-5 {
-    left: 880px;
-    top: 40px;
-}
-
-.page-image .petal {
-    background: url('../images/proto_ton_001/gif/petal.gif') no-repeat center / 100% 100%;
-    width: 600px;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    right: 350px;
-}
-
-.page-image .twinkle02 {
-    background: url('../images/proto_ton_001/gif/twinkle02.gif') no-repeat center / 100% 100%;
-    width: 250px;
-    height: 250px;
-    position: absolute;
-}
-
-.page-image .twinkle02.twinkle02_1 {
-    top: -65px;
-    left: 350px;
-}
-
-.page-image .twinkle02.twinkle02_2 {
-    top: -10px;
-    left: 950px;
-}
-
-.page-image .bubble {
-    background: url('../images/proto_ton_001/gif/bubble.gif') no-repeat center / contain;
-    width: 1500px;
-    height: 233px;
-    position: absolute;
-    top: 0;
-    left: -100px;
-    right: 0;
-    margin: auto;
-    border-radius: 0;
-    border: none;
-    transform: unset;
-    z-index: 1;
+.page-title .title-icon-group {
+    /* z-index: 1;
+    position: relative; */
 }
 
 .page-footer {
@@ -445,7 +311,7 @@
 }
 
 .zoomController {
-    top: 80px;
+    top: 70px;
     left: 60px;
     padding: unset;
 }

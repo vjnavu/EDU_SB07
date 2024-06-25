@@ -4,6 +4,12 @@
     /*font-display: swap;*/
 }
 
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
 .bgImg {
     height: 100%;
 }
@@ -74,10 +80,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0px;
-    font-family: "sdchild";
-    font-weight: bold;
-
+    line-height: 1.1;
+    letter-spacing: 0;
 }
 
 .learning-badge {
@@ -85,6 +89,7 @@
     background-color: #9f9fa0;
     padding: 1px 6px 1px 6px;
     border-radius: 5px;
+    margin-top: 2px;
 }
 
 .learning-list>li .learning-item>li:hover,
@@ -106,15 +111,6 @@
     line-height: 1;
 }
 
-/* .popbox .popLearning.pop0.active {
-    background-image: url("../images/proto_ton_001/balloonImg1-active.png");
-}
-
-.popbox .popLearning.pop0:hover {
-    background-image: url("../images/proto_ton_001/balloonImg1-hover.png");
-    transition: all .1s
-} */
-
 .popbox .popLearning.pop0 {
     top: 180px;
     left: 180px;
@@ -128,26 +124,6 @@
 .popLearning:not(.pop6, .pop7, .pop12, .pop15, .pop18, .pop4):hover {
     outline: 2px solid #f93333;
 }
-
-/* .popLearning.purple {
-    border: 2px solid #BFB2D6;
-}
-
-.popLearning.pink {
-    border: 2px solid #F58F94;
-}
-
-.popLearning.blue {
-    border: 2px solid #ADD5ED;
-}
-
-.popLearning.orange {
-    border: 2px solid #FBC78D;
-}
-
-.popLearning.green {
-    border: 2px solid #9EE2A8;
-} */
 
 .popbox .popLearning.pop1 {
     top: 108px;
@@ -213,8 +189,6 @@
     width: 61px;
     height: 41px;
 }
-
-
 
 .popbox .popLearning.pop9 {
     top: 123px;
@@ -298,9 +272,9 @@
 
 .popbox .popLearning.pop19 {
     top: 464px;
-    left: 180px;
+    left: 178px;
     border-radius: 0;
-    width: 49px;
+    width: 52px;
     height: 40px;
 }
 
@@ -572,15 +546,6 @@
     background-size: 100% 100%;
 }
 
-/* .popbox .popLearning.pop42.active {
-    background-image: url("../images/proto_ton_001/balloonImg2-active.png");
-}
-
-.popbox .popLearning.pop42:hover {
-    background-image: url("../images/proto_ton_001/balloonImg2-hover.png");
-    transition: all .1s;
-} */
-
 .popbox .popLearning.pop42 {
     bottom: 70px;
     right: 185px;
@@ -616,11 +581,11 @@
     background-color: #fff;
     border: 1px solid #afafb1;
     border-radius: 5px;
-    top: -6px;
+    top: -9px;
 }
 
 .pop35 .starArrow.purple {
-    bottom: 13px !important;
+    bottom: 15px !important;
 }
 
 .pop35 .learning-badge {
@@ -628,7 +593,7 @@
     background-color: #9f9fa0;
     padding: 1px 6px 1px 6px;
     border-radius: 5px;
-    bottom: -12px;
+    bottom: -7px;
     position: relative;
 }
 
@@ -644,7 +609,7 @@
 }
 
 .pop36 .starArrow.blue {
-    bottom: 21px !important;
+    bottom: 19px !important;
 }
 
 .pop36 .learning-badge {
@@ -668,7 +633,7 @@
 }
 
 .pop37 .starArrow.red {
-    bottom: 18px !important;
+    bottom: 17px !important;
 }
 
 .pop37 .learning-badge {

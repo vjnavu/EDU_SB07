@@ -66,7 +66,6 @@ const $navItem = $('.navItem');
 let currentIndex = 0;
 let slidesToShow = 4; // number of slides to show at a time
 
-var dataSave = $(document).find('.btnSave').data('save');
 let storedData = JSON.parse(localStorage.getItem('storage_village_' + dataSave)) || [];
 let $slides = $('.learning-list li.on .learning-item li')
 let totalSlides = $slides.length;
@@ -90,15 +89,17 @@ $(document).on('click', '.popBtn[data-pop="1"]', function () {
 
 })
 $(document).on('click', '.popbox[data-pop="1"] .btnSave', function () {
+    efSound('./media/click.mp3');
     $('.popbox[data-pop="1"] .check-box').each(function () {
         if ($(this).hasClass('checked')) {
             storedData.push($(this).data('check'));
         }
     })
-
-    efSound('./media/click.mp3');
     localStorage.setItem('storage_village_' + dataSave, JSON.stringify(storedData));
-    alert('저장되었습니다. 저장한 우리 반 배움 지도는 매 차시 ‘이번 시간 안내‘에서 확인하실 수 있습니다.');
+    setTimeout(() => {
+        alert('저장되었습니다. 저장한 우리 반 배움 지도는 매 차시 ‘이번 시간 안내‘에서 확인하실 수 있습니다.');
+    }, 200);
+
 })
 
 

@@ -4,6 +4,12 @@
     /*font-display: swap;*/
 }
 
+@font-face {
+    font-family: bmjua;
+    src: url("./../font/BMJUA.ttf");
+    /*font-display: swap;*/
+}
+
 .bgImg {
     height: 100%;
 }
@@ -140,7 +146,7 @@
     font-weight: bold;
 }
 
-/* .popLearning.purple {
+.popLearning.purple {
     border: 2px solid #DAD5F2;
 }
 
@@ -154,11 +160,11 @@
 
 .popLearning.orange {
     border: 2px solid #FBC78D;
-} */
+}
 
-/* .popLearning.green {
+.popLearning.green {
     border: 2px solid #9EE2A8;
-} */
+}
 
 .popbox .popLearning.pop1 {
     top: 477px;
@@ -192,7 +198,7 @@
 
 .popbox .popLearning.pop7 {
     top: 201px;
-    right: 754px;
+    right: 755px;
 }
 
 .popbox .popLearning.pop8 {
@@ -202,7 +208,7 @@
 
 .popbox .popLearning.pop9 {
     top: 329px;
-    right: 810px;
+    right: 811px;
 }
 
 .popbox .popLearning.pop10 {
@@ -232,12 +238,12 @@
 
 .popbox .popLearning.pop15 {
     top: 408px;
-    left: 629px;
+    left: 628px;
 }
 
 .popbox .popLearning.pop16 {
     top: 483px;
-    left: 631px;
+    left: 632px;
 }
 
 .popbox .popLearning.pop17 {
@@ -283,7 +289,7 @@
 
 .popbox .popLearning.pop25 {
     top: 423px;
-    left: 802px;
+    left: 800px;
 }
 
 .popbox .popLearning.pop26 {
@@ -333,7 +339,7 @@
 
 .popbox .popLearning.pop35 {
     top: 572px;
-    left: 962px;
+    left: 963px;
 }
 
 .popbox .popLearning.pop36 {
@@ -375,12 +381,12 @@
 }
 
 .pop3 .starArrow.purple {
-    bottom: 21px;
+    bottom: 10px;
 }
 
 .pop3 .learning-badge {
     position: relative;
-    top: 11px;
+    top: 8px;
 }
 
 .pop4 .starTitle {
@@ -388,12 +394,12 @@
 }
 
 .pop4 .starArrow.blue {
-    bottom: 21px;
+    bottom: 10px;
 }
 
 .pop4 .learning-badge {
     position: relative;
-    top: 11px;
+    top: 8px;
 }
 
 .pop5 .starTitle {
@@ -401,12 +407,12 @@
 }
 
 .pop5 .starArrow.red {
-    bottom: 21px;
+    bottom: 10px;
 }
 
 .pop5 .learning-badge {
     position: relative;
-    top: 11px;
+    top: 8px;
 }
 
 /* .popbox .popLearning.pop42.active {
