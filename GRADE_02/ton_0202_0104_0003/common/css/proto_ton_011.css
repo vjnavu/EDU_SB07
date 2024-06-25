@@ -380,7 +380,7 @@
     position: absolute;
     top: 210px;
     gap: 10px;
-    left: 210px;
+    left: 270px;
     align-items: end;
 }
 
@@ -400,8 +400,8 @@
     height: 70px;
     background: #eb6877;
     position: absolute;
-    bottom: 210px;
-    right: 210px;
+    bottom: 180px;
+    right: 260px;
     border-radius: 50%;
     border: 3px solid #e64154;
     display: flex;
@@ -436,7 +436,7 @@
     cursor: pointer;
     border: 5px solid transparent;
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
 }
 
 .placeContainer .place:hover {

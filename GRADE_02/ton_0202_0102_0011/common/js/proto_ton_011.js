@@ -117,10 +117,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // input spell
     // create spell element
-    const spellContainer = $('.spellContainer');
-    const spells = spellContainer.data('spell').split(',');
-    spells.forEach(spell => {
-        spellContainer.append(`<div class="spell">${spell}</div>`)
+    $('.popupContents').each(function () {
+        const spellContainer = $(this).find('.spellContainer');
+        if (spellContainer.length) {
+            const spells = spellContainer.data('spell').split(',');
+            spells.forEach(spell => {
+                spellContainer.append(`<div class="spell">${spell}</div>`);
+            });
+        }
     });
 
     $(document).on('input', '.popupContents input', function () {
