@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        /* Page 1, Page 2*/
+        .contentsBox {
+            padding: 0;
+        }
+
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_1) {
+            padding: 20px 28px 0 28px;
+        }
+
+        .page_1 .videoBackground {
+            background: url('./images/ton_0202_0104_0004_202/img_01.jpg') no-repeat center / 100% 100%;
+        }
+
+        .page_2 .videoBackground {
+            background: url('./images/ton_0202_0104_0004_202/img_02.jpg') no-repeat center / 100% 100%;
+        }
+
+        .youtubeTitleWrap .mediaSubContainer .screenPlayBtn:hover {
+            background: #d04511 url('../ko/contents/images/icon/icon_play.svg') 28px center/27px no-repeat;
+        }
+
+        /* Page 3 */
+        .character-item {
+            position: absolute;
+        }
+
+        #boy_4_c {
+            left: 70px;
+            top: 70px;
+        }
+
+        #girl_1_c {
+            right: 70px;
+            bottom: 70px;
+        }
+
+        #girl_1_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_1.png') !important;
+        }
+
+        #girl_1_c .balloon {
+            display: none !important;
+        }
+
+        .wrap-input {
+            height: 160px;
+            width: 900px;
+            border: 4px solid #ffc4c9;
+            background: #fff;
+            position: absolute;
+            padding: 15px;
+            border-radius: 15px;
+            top: 310px;
+            left: 170px;
+            display: none;
+        }
+
+        .wrap-input:before {
+            content: "";
+            clip-path: polygon(100% 50%, 0 12%, 0 86%);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            background-color: #ffc4c9;
+            transform: translate(100%, -50%);
+        }
+
+        .balloon {
+            height: 160px;
+            width: 900px;
+        }
+
+        .balloon>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .balloon>span>img {
+            width: 170px;
+        }
+
+        .balloon::after {
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+
+        .textareaWrap,
+        textarea {
+            width: 100%;
+        }
+
+        .balloon>span>img {
+            width: 140px;
+        }
+
+        .buttonContainer {
+            right: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="aniContainer">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title red">
+                동상이 무엇인지 알아보고, 동상에 걸리면 어떤 증상이 나타나는지 생각해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="동상이 무엇인지 알아보고, 동상에 걸리면 어떤 증상이 나타나는지 생각해 볼까요?">영상 1</li>
+                    <li data-hover="" data-text="화상이 무엇인지 알아보고, 화상에 걸리면 어떤 증상이 나타나는지 생각해 볼까요?">영상 2</li>
+                    <li data-hover="" data-text="집 안에서 사용하는 물건 중에서 겨울철에 화상을 일으킬 수 있는 물건에는 무엇이 있는지 이야기해 볼까요?">물음</li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="videoBackground youtubeTitleWrap">
+                            <div class="animationTitle">
+                                <div class="mediaSubContainer">
+                                    <h2>
+                                        <div class="orange">동상</div>증상과<br>대처 방법
+                                    </h2>
+                                    <button class="screenPlayBtn" title="재생" data-youtube-id="lmDyc_MzHkc"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="videoBackground youtubeTitleWrap">
+                            <div class="animationTitle">
+                                <div class="mediaSubContainer">
+                                    <h2>
+                                        추운 겨울에 조심해야 하는<br>
+                                        <div class="orange">저온 화상</div>
+
+                                    </h2>
+                                    <button class="screenPlayBtn" title="재생" data-youtube-id="lmDyc_MzHkc"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="page_3">
+                        <div id="boy_4_c" class="character-item"></div>
+                        <div id="girl_1_c" class="character-item"></div>
+                        <div class="wrap-input">
+                            <textarea class="textLine afterDisplay" type="text" placeholder="직접 쓰기" data-input-obj=""
+                                data-answer=" " onfocus="placeholder=''" onblur="placeholder='직접 쓰기'"
+                                autocomplete="off"></textarea>
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+
+
+            $prite.boy4({
+                id: '#boy_4_c',
+                circle: true,
+                speech: 'right',
+                sound: './media/ton_0202_0102_0015_301/ton_0202_0102_0015_301_03.mp3',
+                text: `패딩 주머니에 들어 있는<br>핫팩이 무척 뜨거웠어요.<img src="./images/ton_0202_0104_0004_202/img_03.png" />`,
+                class: 'b1 left',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: 0,
+                balloon_left: 220
+            });
+            $prite.girl1({
+                id: '#girl_1_c',
+                circle: true,
+            });
+
+            $(document).on('click', '#girl_1_c', function () {
+                $('.wrap-input').show();
+                $('.wrap-input').append('<div class="close-speech-button beforeNon"></div>')
+            });
+
+            $(document).on('click', '.close-speech-button, #boy_4_c', function () {
+                $('.wrap-input').hide();
+                $('.wrap-input').removeClass('close-speech-button');
+            });
+
+            $(document).on('click', '.resetBtn', function () {
+                KmAudioPlayer.buttonClick('./media/click.mp3');
+                $('.textLine').val('');
+                $prite.allresetSprite();
+                $('.wrap-input').hide();
+                $('.wrap-input').removeClass('close-speech-button');
+            });
+        });
+    </script>
+</body>
+
+</html>
