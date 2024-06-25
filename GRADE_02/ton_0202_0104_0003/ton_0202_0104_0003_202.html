@@ -11,74 +11,59 @@
     <link rel="stylesheet" href="./common/css/proto_ton_common.css">
     <link rel="stylesheet" href="./common/css/proto_ton_011.css">
     <style>
-        .innerBox .icon-group {
-            top: 170px;
-            left: 260px;
+        .popBtn.place[data-slide="1"] {
+            top: 4px;
+            left: 367px;
+            width: 137px;
+            height: 153px;
         }
 
-        .btn-home {
-            bottom: 170px;
-            right: 260px;
+        .popBtn.place[data-slide="2"] {
+            top: 4px;
+            left: 617px;
+            width: 167px;
+            height: 153px;
         }
 
-        .placeContainer .place {
-            position: absolute;
+        .popBtn.place[data-slide="3"] {
+            top: 4px;
+            left: 1127px;
+            width: 234px;
+            height: 163px;
         }
 
-        .placeContainer .place[data-slide="1"] {
-            top: 5px;
-            left: 365px;
-            width: 140px;
-            height: 155px;
+        .popBtn.place[data-slide="4"] {
+            top: 444px;
+            left: 1127px;
+            width: 224px;
+            height: 116px;
         }
 
-        .placeContainer .place[data-slide="2"] {
-            top: 5px;
-            left: 615px;
-            width: 170px;
-            height: 155px;
+        .popBtn.place[data-slide="5"] {
+            top: 533px;
+            left: 957px;
+            width: 164px;
+            height: 156px;
         }
 
-        .placeContainer .place[data-slide="3"] {
-            top: 5px;
-            left: 1120px;
-            width: 235px;
-            height: 165px;
-        }
-
-        .placeContainer .place[data-slide="4"] {
-            top: 445px;
-            left: 1125px;
-            width: 225px;
-            height: 135px;
-        }
-
-        .placeContainer .place[data-slide="5"] {
-            top: 535px;
-            left: 950px;
-            width: 170px;
-            height: 155px;
-        }
-
-        .placeContainer .place[data-slide="6"] {
-            top: 535px;
+        .popBtn.place[data-slide="6"] {
+            top: 533px;
             left: 420px;
-            width: 195px;
-            height: 155px;
+            width: 194px;
+            height: 156px;
         }
 
-        .placeContainer .place[data-slide="7"] {
-            top: 285px;
-            left: 10px;
-            width: 230px;
-            height: 135px;
+        .popBtn.place[data-slide="7"] {
+            top: 499px;
+            width: 233px;
+            height: 130px;
         }
 
-        .placeContainer .place[data-slide="8"] {
-            top: 495px;
-            left: 10px;
+        .popBtn.place[data-slide="8"] {
+            top: 280px;
+            left: 8px;
             width: 230px;
-            height: 135px;
+            height: 141px;
         }
     </style>
 </head>
@@ -112,7 +97,7 @@
                         </div>
                     </div>
                     <div class="innerBox boxMain">
-                        <img src="./images/ton_0202_0104_0003_202/img_bg.png" class="bg-img">
+                        <img src="./common/images/proto_ton_011/bg-game.png" class="bg-img">
                         <div class="placeContainer"></div>
 
                         <div class="icon-group" id="drag">
@@ -189,9 +174,10 @@
 
         <div class="popbox miniSlide game" data-pop="3">
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
-                        채소와 (ㄱㅇ)을 자주 먹는다.
+                        초성 유형입니다.
                     </div>
                     <div class="inputSpellContainer">
                         <div class="spellContainer" data-spell="ㄱ,ㅇ"></div>
@@ -200,7 +186,9 @@
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
+
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         기침이 나오면 옷소매나 (ㅅㅅㄱ)으로 가린다.
@@ -212,7 +200,9 @@
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
+
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         추운 날에는 (ㅇ)을 따뜻하게 입는다.
@@ -224,7 +214,9 @@
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
+
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         외출 후에는 (ㅂㄴ)를 사용해서 손을 씻는다.
@@ -236,7 +228,9 @@
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
+
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         방을 자주 (ㅊㅅ)한다.
@@ -248,19 +242,22 @@
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
+
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         기침이 자주 나면 (ㅁㅅㅋ)를 쓴다.
                     </div>
                     <div class="inputSpellContainer">
                         <div class="spellContainer" data-spell="ㅁ,ㅅ,ㅋ"></div>
-                        <input type="text" placeholder="직접 쓰기" data-ans="aaa">
+                        <input type="text" placeholder="직접 쓰기" data-ans="마스크">
                     </div>
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         따뜻한 (ㅁ)을 충분히 마신다.
@@ -272,7 +269,9 @@
                 </div>
                 <div class="dapCheckBtn_js"></div>
             </div>
+
             <div class="popupContents">
+                <!-- <div class="popupHeader">4번 문제</div> -->
                 <div class="popupContent">
                     <div class="popupQuestion">
                         손을 씻을 때는 손가락과 (ㅅㅌ) 사이를 닦는다.

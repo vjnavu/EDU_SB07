@@ -48,6 +48,26 @@
         }
 
         /* Page 2 */
+        .page_2 .noteText {
+            margin-top: 60px;
+        }
+
+        .page_2 .noteText .textareaWrap {
+            height: 180px !important;
+        }
+
+        .textIndent {
+            position: absolute;
+        }
+
+        .textIndent1 {
+            top: 40px;
+        }
+
+        .textIndent2 {
+            top: 220px;
+        }
+
         /* Page 3 */
         .character-flex {
             gap: 730px;
@@ -102,8 +122,35 @@
                             </div>
                         </div>
                     </li>
-                    <li class="page_2">
+                    <li class="page_2" data-quiz="true">
+                        <div class="noteText noteLine red">
+                            <div class="textareaWrap">
+                                <p class="textIndent textIndent1">좋은 점 :</p>
+                                <textarea style="text-indent: 160px;" class="textLine afterDisplay" type="text"
+                                    placeholder="직접 쓰기" data-input-obj="" data-answer=" " onfocus=""
+                                    onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                <div class="text-exam flex-wrap">
+                                    <div class="blueT" style="position: absolute;top: 35px;left: 205px;">
+                                        <p>따끈따끈한 붕어빵과 호떡을 먹을 수 있어요.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textareaWrap">
+                                <p class="textIndent textIndent2">좋지 않은 점 :</p>
+                                <textarea style="text-indent: 250px;" class="textLine afterDisplay" type="text"
+                                    placeholder="직접 쓰기" data-input-obj="" data-answer=" " onfocus=""
+                                    onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
+                                <div class="text-exam flex-wrap">
+                                    <div class="blueT" style="position: absolute;top: 215px;left: 290px;">
+                                        <p>날씨가 추워서 쉽게 감기에 걸려요.</p>
+                                    </div>
+                                </div>
+                            </div>
 
+                        </div>
+                        <div class="buttonContainer">
+                            <button class="writeBtn" data-answer-btn=""></button>
+                        </div>
                     </li>
                     <li class="page_3">
                         <span class="imgWrap line popBtn" data-popup-btn="1">
