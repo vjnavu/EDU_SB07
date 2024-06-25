@@ -9,10 +9,9 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
     <link rel="stylesheet" href="./proto_ton_006/css/proto_ton_006.css">
-
     <style>
         #gate h2::before {
-            content: '여름철 안전 수칙\A알아맞히기';
+            content: '겨울철 안전 수칙\A알아보기';
             left: 0;
         }
 
@@ -57,10 +56,14 @@
                             </div>
                         </div>
                     </div>
-
-                    <div id="gate" class="background-ox">
-                        <h1>OX 퀴즈</h1>
-                        <h2>여름철 <strong>안전 수칙</strong><br>알아맞히기</h2>
+                    <!-- .background-sound : 소리 퀴즈 (소리 포함 퀴즈 1문제 이상이어야 함) -->
+                    <!-- .background-ox : ox 퀴즈 (소리 미포함 퀴즈, ox로만 구성) -->
+                    <!-- .background-select : 객관식 퀴즈 (소리 미포함 퀴즈, 객관식으로만 구성) -->
+                    <!-- .background-word : 초성 퀴즈 (소리 미포함 퀴즈, 초성으로만 구성) -->
+                    <!-- .background-fusion : 알쏭달쏭 퀴즈 (ox,객관식,초성 중 2가지 이상이 있어야 함) -->
+                    <div id="gate" class="background-word">
+                        <h1>초성 퀴즈</h1>
+                        <h2>겨울철 <strong>안전 수칙</strong><br>알아보기</h2>
                         <button id="quizStartBtn" type="button">시작</button>
                         <div class="timer-contents">
                             <p class="timer-info">타이머를 설정하세요.</p>
@@ -89,171 +92,99 @@
                             <div class="quizBody">
                                 <!-- 슬라이드 -->
                                 <ul id="quizSliderContainer">
-
-                                    <!-- GAME WORD -->
-                                    <li class="oxQuiz">
+                                    <!-- 초성 유형 (소리X) 1줄 -->
+                                    <li class="initialQuiz">
                                         <div class="quizHeader">
                                             <div class="quizHeader-title">
-                                                <div class="quizHeader-name">OX</div>
+                                                <div class="quizHeader-name">초성</div>
                                                 <div class="quizHeader-num">
                                                     <span class="quizHeader-current-idx"></span>
                                                     <span>/</span>
                                                     <span class="quizHeader-total-idx"></span>
                                                 </div>
                                             </div>
-                                            <div class="quizHeader-icon"><span>O</span>X</div>
+                                            <div class="quizHeader-icon">초성</div>
                                         </div>
                                         <div class="quizQuestion">
                                             <p>
-                                                갈증이 나면 물을 충분히 마셔요.
+                                                빈칸에 들어갈 알맞은 말은 무엇일까요?
                                             </p>
                                         </div>
                                         <div class="quizAnswer">
-                                            <ul class="quizArea">
-                                                <li>
-                                                    <button type="button" class="answerO" data-quiz-button="true"
-                                                        data-answer="true">
-                                                        <div>o</div>
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="answerX" data-quiz-button="true">
-                                                        <div>x</div>
-                                                    </button>
-                                                </li>
-                                            </ul>
+                                            <div class="quizArea">
+                                                <div class="initialQuiz-textArea">
+                                                    추위로부터 몸을 보호하기 위해
+                                                    <input type="text" maxlength="1" data-answer="모" placeholder="ㅁ">
+                                                    <input type="text" maxlength="1" data-answer="자" placeholder="ㅈ">
+                                                    나 귀마개, 목도리, 장갑 등을 착용해요.
+                                                </div>
+                                            </div>
+                                            <p class="initialQuizInfo">
+                                                입력 후 <b>Enter</b>를 치세요.
+                                            </p>
                                         </div>
                                     </li>
-                                    <li class="oxQuiz">
+                                    <!-- 초성 유형 (소리X) 2줄 -->
+                                    <li class="initialQuiz ">
                                         <div class="quizHeader">
                                             <div class="quizHeader-title">
-                                                <div class="quizHeader-name">OX</div>
+                                                <div class="quizHeader-name">초성</div>
                                                 <div class="quizHeader-num">
                                                     <span class="quizHeader-current-idx"></span>
                                                     <span>/</span>
                                                     <span class="quizHeader-total-idx"></span>
                                                 </div>
                                             </div>
-                                            <div class="quizHeader-icon"><span>O</span>X</div>
+                                            <div class="quizHeader-icon">초성</div>
                                         </div>
                                         <div class="quizQuestion">
                                             <p>
-                                                젖은 손으로 전자 기기를 만져요.
+                                                빈칸에 들어갈 알맞은 말은 무엇일까요?
                                             </p>
                                         </div>
                                         <div class="quizAnswer">
-                                            <ul class="quizArea">
-                                                <li>
-                                                    <button type="button" class="answerO" data-quiz-button="true">
-                                                        <div>o</div>
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="answerX" data-quiz-button="true"
-                                                        data-answer="true">
-                                                        <div>x</div>
-                                                    </button>
-                                                </li>
-                                            </ul>
+                                            <div class="quizArea">
+                                                <div class="initialQuiz-textArea">
+                                                    <input type="text" maxlength="1" data-answer="손" placeholder="ㅅ">
+                                                    <input type="text" maxlength="1" data-answer="난" placeholder="ㄴ">
+                                                    <input type="text" maxlength="1" data-answer="로" placeholder="ㄹ">
+                                                    가 맨살에 닿지 않도록 해요.
+                                                </div>
+                                            </div>
+                                            <p class="initialQuizInfo">
+                                                입력 후 <b>Enter</b>를 치세요.
+                                            </p>
                                         </div>
                                     </li>
-                                    <li class="oxQuiz">
+                                    <!-- 초성 유형 (소리X) 3줄 -->
+                                    <li class="initialQuiz ">
                                         <div class="quizHeader">
                                             <div class="quizHeader-title">
-                                                <div class="quizHeader-name">OX</div>
+                                                <div class="quizHeader-name">초성</div>
                                                 <div class="quizHeader-num">
                                                     <span class="quizHeader-current-idx"></span>
                                                     <span>/</span>
                                                     <span class="quizHeader-total-idx"></span>
                                                 </div>
                                             </div>
-                                            <div class="quizHeader-icon"><span>O</span>X</div>
+                                            <div class="quizHeader-icon">초성</div>
                                         </div>
                                         <div class="quizQuestion">
                                             <p>
-                                                외출 후, 식사 전에는 손을 깨끗하게 씻어요.
+                                                빈칸에 들어갈 알맞은 말은 무엇일까요?
                                             </p>
                                         </div>
                                         <div class="quizAnswer">
-                                            <ul class="quizArea">
-                                                <li>
-                                                    <button type="button" class="answerO" data-quiz-button="true"
-                                                        data-answer="true">
-                                                        <div>o</div>
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="answerX" data-quiz-button="true">
-                                                        <div>x</div>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="oxQuiz">
-                                        <div class="quizHeader">
-                                            <div class="quizHeader-title">
-                                                <div class="quizHeader-name">OX</div>
-                                                <div class="quizHeader-num">
-                                                    <span class="quizHeader-current-idx"></span>
-                                                    <span>/</span>
-                                                    <span class="quizHeader-total-idx"></span>
+                                            <div class="quizArea">
+                                                <div class="initialQuiz-textArea">
+                                                    <input type="text" maxlength="1" data-answer="신" placeholder="ㅅ">
+                                                    <input type="text" maxlength="1" data-answer="발" placeholder="ㅂ">
+                                                    이 젖으면 되도록 빨리 말려요.
                                                 </div>
                                             </div>
-                                            <div class="quizHeader-icon"><span>O</span>X</div>
-                                        </div>
-                                        <div class="quizQuestion">
-                                            <p>
-                                                실온에 방치한 음식을 먹어도 괜찮아요.
+                                            <p class="initialQuizInfo">
+                                                입력 후 <b>Enter</b>를 치세요.
                                             </p>
-                                        </div>
-                                        <div class="quizAnswer">
-                                            <ul class="quizArea">
-                                                <li>
-                                                    <button type="button" class="answerO" data-quiz-button="true">
-                                                        <div>o</div>
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="answerX" data-quiz-button="true"
-                                                        data-answer="true">
-                                                        <div>x</div>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="oxQuiz">
-                                        <div class="quizHeader">
-                                            <div class="quizHeader-title">
-                                                <div class="quizHeader-name">OX</div>
-                                                <div class="quizHeader-num">
-                                                    <span class="quizHeader-current-idx"></span>
-                                                    <span>/</span>
-                                                    <span class="quizHeader-total-idx"></span>
-                                                </div>
-                                            </div>
-                                            <div class="quizHeader-icon"><span>O</span>X</div>
-                                        </div>
-                                        <div class="quizQuestion">
-                                            <p>
-                                                햇빛을 피할 수 있는 모자를 써요.
-                                            </p>
-                                        </div>
-                                        <div class="quizAnswer">
-                                            <ul class="quizArea">
-                                                <li>
-                                                    <button type="button" class="answerO" data-quiz-button="true"
-                                                        data-answer="true">
-                                                        <div>o</div>
-                                                    </button>
-                                                </li>
-                                                <li>
-                                                    <button type="button" class="answerX" data-quiz-button="true">
-                                                        <div>x</div>
-                                                    </button>
-                                                </li>
-                                            </ul>
                                         </div>
                                     </li>
                                 </ul>

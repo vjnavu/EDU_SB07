@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+    <link rel="stylesheet" href="./common/css/proto_ton_014.css">
+    <style>
+        .boxClickContainer .boxAction .boxClick .clickText {
+            text-align: center;
+        }
+
+        .character-flex {
+            bottom: 0;
+        }
+
+        .praise-box[data-type="0"] .praise-button {
+            top: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title red">
+                동상이나 화상을 예방하기 위한 다짐을 해 볼까요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_tabs" data-tabs="">
+                    <li data-hover="" data-text="동상이나 화상을 예방하기 위한 다짐을 해 볼까요?">활동 1</li>
+                    <li data-hover="" data-text="주말에 가족들과 함께 야외 활동을 한다면 어떤 옷차림을 할지 발표해 볼까요?" data-ani-show="true">활동 2
+                    </li>
+                </ul>
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="basicSlider contentsBox doItContent" data-slide-container="">
+                            <div class="moveButtonContainer" data-slide-btn-container="">
+                                <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
+                                <ul class="basicSlider_circle_tabs" data-tabs="">
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                    <li data-hover=""></li>
+                                </ul>
+                                <div class="basicSlider_btn next" data-btn-next="" data-hover=""></div>
+                            </div>
+                            <ul class="basicSlider_slides" data-slides="">
+                                <li class="innerTab_1" data-quiz="toggle">
+                                    <div class="study_guide"><em>알맞은 말</em>을 <em>클릭</em>하세요.</div>
+                                    <div class="topText">전기장판에 누울 때는</div>
+                                    <div class="boxClickContainer pink">
+                                        <div class="boxChar boxChar_pink_girl"></div>
+                                        <div class="boxAction">
+                                            <div class="boxAns"></div>
+                                            <div class="boxClick">
+                                                <div class="clickText">온도를 가장 높게<br>올려요.</div>
+                                                <div class="clickText ans">이불을 깔고 누워요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_2" data-quiz="toggle">
+                                    <div class="study_guide"><em>알맞은 말</em>을 <em>클릭</em>하세요.</div>
+                                    <div class="topText">추운 곳에서는</div>
+                                    <div class="boxClickContainer green">
+                                        <div class="boxChar boxChar_green_boy"></div>
+                                        <div class="boxAction">
+                                            <div class="boxAns"></div>
+                                            <div class="boxClick">
+                                                <div class="clickText">움직이지 않고<br>가만히 있어요.</div>
+                                                <div class="clickText ans">자주 몸을 움직여요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="innerTab_3" data-quiz="toggle">
+                                    <div class="study_guide"><em>알맞은 말</em>을 <em>클릭</em>하세요.</div>
+                                    <div class="topText">난로는</div>
+                                    <div class="boxClickContainer orange">
+                                        <div class="boxChar boxChar_orange_girl"></div>
+                                        <div class="boxAction">
+                                            <div class="boxAns"></div>
+                                            <div class="boxClick">
+                                                <div class="clickText ans">충분한 거리를<br>두고 사용해요.</div>
+                                                <div class="clickText">최대한 가까운<br>거리에서 사용해요.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="page_2">
+                        <div class="character-flex">
+                            <div id="boy_1" class="character-item"></div>
+                            <div id="girl_2" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <div class="praise-box hide" data-type="0" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
+
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript" src="./common/js/proto_ton_014.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.boy1({
+                id: '#boy_1',
+                speech: 'right',
+                sound: './media/ton_0202_0104_0004_302/ton_0202_0104_0004_302_01.mp3',
+                text: '엄마가 떠 주신<br>목도리를 목에 두를<br>거예요.',
+                class: 'bottom',
+                callback_start: () => { },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -230,
+                balloon_left: -80,
+            });
+            $prite.girl2({
+                id: '#girl_2',
+                speech: 'right',
+                sound: './media/ton_0202_0104_0004_302/ton_0202_0104_0004_302_02.mp3',
+                text: '보라색 장갑을 끼고<br>도톰한 패딩을 입을<br>거예요.',
+                class: 'bottom',
+                callback_start: () => { },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -230,
+                balloon_left: -85,
+            });
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelectorAll('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+
+            if (basicSliderSlides) {
+                basicSliderSlides.forEach((basicSliderSlide) => {
+                    if (basicSliderSlide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    }
+                })
+            }
+
+
+            praiseButton.addEventListener("click", function () {
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+
+                if (basicSliderTabs) {
+                    basicSliderTabs.forEach((basicSliderTab) => {
+                        basicSliderTab.style.pointerEvents = "none";
+                    })
+                }
+
+                setTimeout(() => {
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                    if (basicSliderTabs) {
+                        basicSliderTabs.forEach((basicSliderTab) => {
+                            basicSliderTab.style.pointerEvents = "auto";
+                        })
+                    }
+                }, 2300);
+            });
+        });
+    </script>
+</body>
+
+</html>
