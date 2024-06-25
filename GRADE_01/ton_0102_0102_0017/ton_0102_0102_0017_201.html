@@ -232,7 +232,7 @@
       });
       $(document).on("click", ".close-speech-btn", function () {
         let data_close = $(this).attr("data-close");
-        KmAudioPlayer.buttonClick();
+        console.log('start');
         $(this).parent().removeClass("active");
         $(".click-finger-Btn")
           .filter('[data-finger="' + data_close + '"]')
@@ -245,11 +245,11 @@
       $prite.boy1({
         id: '#boy_1',
         speech: 'right',
-        sound: './media/sample.mp3',
+        sound: './media/ton_0102_0102_0017_201/ton_0102_0102_0017_201_01.mp3',
         text: '아침에 학교 오는<br>길에 친한 친구를 만나<br>함께 걸어왔어요.',
         class: 'bottom',
         callback_start: () => {
-          KmAudioPlayer.buttonClick();
+          console.log('start');
         },
         callback_end: () => {
           console.log('end');
@@ -260,32 +260,32 @@
       $prite.boy2({
         id: '#boy_2',
         speech: 'right',
-        sound: './media/sample.mp3',
+        sound: './media/ton_0102_0102_0017_201/ton_0102_0102_0017_201_02.mp3',
         text: '수업 시간에 운동장에서<br>제가 술래가 되어<br>술래잡기를 했어요.',
         class: 'bottom',
         callback_start: () => {
-          KmAudioPlayer.buttonClick();
+          console.log('start');
         },
         callback_end: () => {
           console.log('end');
         },
-        balloon_top: -230,
+        balloon_top: -215,
         balloon_left: -130,
       });
       $prite.girl4({
         id: '#girl_4',
         speech: 'right',
-        sound: './media/sample.mp3',
-        text: '급식 시간에 제가<br>좋아하는 떡볶이가<br>나와서<br>3번 더 먹었어요.',
+        sound: './media/ton_0102_0102_0017_201/ton_0102_0102_0017_201_03.mp3',
+        text: '급식 시간에 제가<br>좋아하는 떡볶이가 나와서<br>3번 더 먹었어요.',
         class: 'bottom',
         callback_start: () => {
-          KmAudioPlayer.buttonClick();
+          console.log('start');
         },
         callback_end: () => {
           console.log('end');
         },
-        balloon_top: -270,
-        balloon_left: -83,
+        balloon_top: -210,
+        balloon_left: -145,
       });
     });
   </script>

@@ -12,10 +12,11 @@
 
 
     <style>
-      .page_1  img{
+        .page_1 img {
             margin-top: -220px;
         }
-        .character-item{
+
+        .character-item {
             margin-top: 50px;
         }
     </style>
@@ -49,8 +50,8 @@
             <div class="praise-button"></div>
             <div class="praiseAni"></div>
         </div>
-       
-       
+
+
         <section class="popup_container" data-popup-container="">
             <ul class="popup_pages">
             </ul>
@@ -94,7 +95,7 @@
                 text: '저도 어제 엄마와<br>둘이 저녁을<br>먹었어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
@@ -110,7 +111,7 @@
                 text: ' 음식 색을 다양하게<br>잘 표현했어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');

@@ -12,6 +12,10 @@
 
 
     <style>
+        .character-flex {
+            bottom: 20px;
+        }
+
         .contentsBox {
             padding: 0;
         }
@@ -110,7 +114,7 @@
                 text: '진짜 지진이 나면 <br>놀라지 말고 안내를 <br>잘 들어야겠다고 생각했어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
@@ -126,7 +130,7 @@
                 text: '머리를 다치지 않게 <br>하는 것이 가장 중요하다는 <br>것을 알았어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
@@ -142,7 +146,7 @@
                 text: '집에서도 지진 대피<br>놀이를 하고 싶어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
