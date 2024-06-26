@@ -12,7 +12,64 @@
     <link rel="stylesheet" href="./common/css/proto_ton_001.css">
     <link rel="stylesheet" href="./common/css/proto_ton_001_205_learning_map.css">
     <style>
+        .cha_btn_tip {
+            top: 180px;
+            left: 550px;
+            z-index: 1;
+        }
 
+        .popbox.mini .popCloseBtn,
+        .popbox.miniSlide .popCloseBtn {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            width: 42px;
+            height: 42px;
+            margin: 0px;
+            background: url(./common/images/pop_mini_close_title.png) no-repeat;
+            cursor: pointer;
+        }
+
+        .popbox.mini .popupTitle,
+        .popbox.miniSlide .popupTitle {
+            margin: 0 0 10px 0;
+        }
+
+        .popbox.mini .popCloseBtn:hover,
+        .popbox.miniSlide .popCloseBtn:hover {
+            background: url(./common/images/pop_mini_close_title_over.png) no-repeat;
+        }
+
+        .popbox.mini .popCloseBtn::before,
+        .popbox.mini .popCloseBtn::after {
+            display: none;
+        }
+
+        .popbox.mini .popupTitle {
+            border-radius: 12px 12px 0 0;
+        }
+
+        .bullet.exam {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 35px;
+            padding: 0 15px;
+            margin: .4em .3em 0 0;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 15px;
+            line-height: 35px;
+            color: #fff;
+            overflow: hidden;
+            box-sizing: border-box;
+            background-color: #f87c1a;
+            vertical-align: top;
+            font-family: YGJAL;
+            align-self: flex-start;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 
@@ -146,6 +203,7 @@
                 <span class="view">내용 보기</span>
             </div>
             <div class="popupContents full">
+                <span class="cha_btn_tip popBtn" data-pop="5" data-slide="1" data-pos="419,341"></span>
                 <div class="popupBox">
                     <div class="item-list">
                         <div class="item-box" style="width: calc(100%/2);">
@@ -491,6 +549,21 @@
                         <div class="slideBtn next"></div>
                     </li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="popbox mini" data-pop="5" style="width: 570px;">
+            <div class="popupContents">
+                <div class="popupTitle"><span>TIP</span></div>
+                <dl class="dicContainer">
+                    <dt class="hide">
+                        <span>TIP</span>
+                    </dt>
+                    <dd>몸에 올려놓을 수 있는 작은 물건으로 대체할 수 있어요.</dd>
+                    <dd>
+                        <div class="bullet exam">예</div>제기
+                    </dd>
+                </dl>
             </div>
         </div>
     </div>
