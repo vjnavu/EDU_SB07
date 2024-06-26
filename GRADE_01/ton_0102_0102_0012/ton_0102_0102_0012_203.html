@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
+    <link rel="stylesheet" href="./proto_ton_004/css/proto_ton_004.css">
+
+    <style>
+        .sheet-body {
+            background: unset;
+        }
+
+        .measure>ul>li {
+            position: relative;
+        }
+
+        .measure>ul>li.ml15 {
+            margin-left: 15px;
+        }
+
+        .sheet-body {
+            background-image: none;
+        }
+
+        .manuscriptWrap {
+            position: absolute;
+            top: 180px;
+            left: 65px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .manuscript {
+            display: flex;
+            align-items: center;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+
+        .manuscript>.cell {
+            border-left: 3px solid black;
+            width: 80px;
+            height: 80px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .manuscript>.cell.dash {
+            border-left: 3px dashed black;
+        }
+
+        .manuscript>.cell:last-of-type {
+            border-right: 3px solid black;
+        }
+
+        .sheet-body.line2>.sheet-group>.measure:first-child {
+            left: 38px;
+            top: 90px;
+        }
+
+        .sheet-body.line2>.sheet-group>.measure:last-child {
+            left: 38px;
+            top: 255px;
+        }
+
+        input {
+            margin-right: 3px;
+        }
+
+        input[data-value=" "] {
+            background-color: #fff !important;
+        }
+
+        .icon-char.popupOn {
+            pointer-events: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <div class="contentsTitle">
+                <div class="title">
+                    노랫말을 바꾸어 불러 볼까요?
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="contentsBox">
+                <a class="videoSubPlayBtn large youtube" href="https://youtu.be/l7uIN3qFMTA?si=dllfBPmK81a7xYgb"
+                    target="_blank">동물 흉내 MR</a>
+                <div id="frame">
+                    <div class="sheets">
+                        <audio src="./proto_ton_004/media/mr.mp3" id="music" preload="auto"></audio>
+
+                        <div class="notice"><em>회색 글자</em>를 <em>수정</em>하세요.</div>
+                        <div class="manuscriptWrap">
+                            <ul class="manuscript">
+
+                            </ul>
+                            <ul class="manuscript">
+
+                            </ul>
+                            <ul class="manuscript">
+
+                            </ul>
+                            <ul class="manuscript">
+
+                            </ul>
+                        </div>
+
+                        <div class="sheet-body showPoint line4" data-measure-line="4">
+                            <div id="countDown"></div>
+                            <div class="measure">
+                                <span class="measure-num">1</span>
+                                <ul>
+                                    <li></li>
+                                    <li style="top: 0;left: 0;">아</li>
+                                    <li style="top: 0;left: 0;" class="mr10">침</li>
+                                    <li style="top: 0;left: 0;"> 햇</li>
+                                    <li style="top: 0;left: 0;" class="mr10">빛</li>
+                                    <li style="top: 0;left: 0;"> 밝</li>
+                                    <li style="top: 0;left: 0;" class="mr10">아</li>
+                                    <li style="top: 0;left: 0;"> 오</li>
+                                    <li style="top: 0;left: 0;" class="mr10">는</li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="좋" placeholder="이" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;" class="mr10">
+                                        <input type="text" data-value="은" placeholder="른" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="아" placeholder="아" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="침" placeholder="침" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">에</li>
+                                </ul>
+                            </div>
+                            <div class="measure">
+                                <span class="measure-num">2</span>
+                                <ul>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="기" placeholder="두" maxlength="1">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="분" placeholder="손" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="좋" placeholder="모" maxlength="1">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="게" placeholder="아" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="오" placeholder="하" maxlength="1">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="늘" placeholder="루" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="하" placeholder="일" maxlength="1">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="루" placeholder="을" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="시" placeholder="생" maxlength="1">
+                                    </li>
+                                    <li style="top: 0; left: 0;">
+                                        <input type="text" data-value="작" placeholder="각" maxlength="1">
+                                    </li>
+                                    <li style="top: 0; left: 0;">합</li>
+                                    <li style="top: 0; left: 0;">니</li>
+                                    <li style="top: 0; left: 0;">다</li>
+                                </ul>
+                            </div>
+
+                            <div class="measure">
+                                <span class="measure-num">3</span>
+                                <ul>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="공" placeholder="학" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="원" placeholder="교" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="에" placeholder="에" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="서" placeholder="선" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="친" placeholder="동" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="구" placeholder="무" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="들" placeholder="들" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="과" placeholder="과" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="씩" placeholder="사" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="씩" placeholder="이" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="하" placeholder="좋" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="게" placeholder="게" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="뛰" placeholder="공" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="어" placeholder="부" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="다" placeholder="잘" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="니" placeholder="하" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">고</li>
+                                </ul>
+                            </div>
+
+                            <div class="measure">
+                                <span class="measure-num">4</span>
+                                <ul>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="학" placeholder="집" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="원" placeholder="에" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="가" placeholder="오" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="서" placeholder="면" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="선" placeholder="심" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="생" placeholder="부" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="님" placeholder="름" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="과" placeholder="도" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="수" placeholder="잘" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="업" placeholder="한" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="합" placeholder="답" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">니</li>
+                                    <li style="top: 0;left: 0;">다</li>
+                                </ul>
+                            </div>
+                            <div class="measure">
+                                <span class="measure-num">5</span>
+                                <ul>
+                                    <li style="top: 0;left: 0;">저</li>
+                                    <li style="top: 0;left: 0;" class="mr10">녁</li>
+                                    <li style="top: 0;left: 0;">노</li>
+                                    <li style="top: 0;left: 0;" class="mr10">을</li>
+                                    <li style="top: 0;left: 0;">아</li>
+                                    <li style="top: 0;left: 0;">름</li>
+                                    <li style="top: 0;left: 0;">답</li>
+                                    <li style="top: 0;left: 0;" class="mr10">게</li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="붉" placeholder="수" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="어" placeholder="놓" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;" class="mr10">
+                                        <input type="text" data-value="질" placeholder="을" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;" class="ml10"> 때</li>
+                                    <li style="top: 0;left: 0;">면</li>
+                                </ul>
+                            </div>
+                            <div class="measure">
+                                <span class="measure-num">6</span>
+                                <ul>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="저" placeholder="하" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="녁" placeholder="루" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="먹" placeholder="일" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="고" placeholder="을" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="세" placeholder="재" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="수" placeholder="미" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="하" placeholder="나" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="고" placeholder="게" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="정" placeholder="얘" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="리" placeholder="기" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">합</li>
+                                    <li style="top: 0;left: 0;">니</li>
+                                    <li style="top: 0;left: 0;">다</li>
+                                </ul>
+                            </div>
+                            <div class="measure">
+                                <span class="measure-num">7</span>
+                                <ul>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="학" placeholder="아" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="교" placeholder="빠" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="숙" placeholder="엄" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="제" placeholder="만" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="책" placeholder="집" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="가" placeholder="안" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="방" placeholder="일" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="미" placeholder="두" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="리" placeholder="루" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="미" placeholder="두" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="리" placeholder="루" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="준" placeholder="돌" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="비" placeholder="봐" maxlength="1" class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="마" placeholder="주" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="치" placeholder="시" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">고</li>
+                                </ul>
+                            </div>
+                            <div class="measure">
+                                <span class="measure-num">8</span>
+                                <ul>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="잠" placeholder="나" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="옷" placeholder="는" maxlength="1" class="mr10"
+                                            class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="입" placeholder="나" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="고" placeholder="는" maxlength="1" class="mr10"
+                                            class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="이" placeholder="내" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="불" placeholder="일" maxlength="1" class="mr10"
+                                            class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="덮" placeholder="공" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="고" placeholder="부" maxlength="1" class="mr10"
+                                            class="mr10">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="잠" placeholder="예" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="에" placeholder="습" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">
+                                        <input type="text" data-value="듭" placeholder="합" maxlength="1">
+                                    </li>
+                                    <li style="top: 0;left: 0;">니</li>
+                                    <li style="top: 0;left: 0;">다</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!-- 기본 = 오렌지 , .color-1 : 핑크 -->
+                        <div class="music-controller">
+                            <div class="music-controller-soundMethod">
+                                <div class="dropDown-soundMethod">
+                                    <span class="label SoundMethod-label">반주 듣기</span>
+                                </div>
+                            </div>
+                            <div class="music-controller-controls">
+                                <button class="btn-music-play" type="button">
+                                    <div class="musicBtn-tooltip">재생</div>
+                                </button>
+                                <div class="music-progressbar">
+                                    <input class="btn-musicProgressbar" type="range" min="0" max="100" step="1"
+                                        value="0">
+                                </div>
+                                <button class="btn-music-reset" type="button">
+                                    <div class="musicBtn-tooltip">정지</div>
+                                </button>
+                            </div>
+                            <div class="measure-controls">
+                                <button class="btn-measurePrev" type="button">
+                                    <div class="musicBtn-tooltip">이전 소절</div>
+                                </button>
+                                <div class="measure-info">
+                                    <span class="measure-currentIdx"></span>
+                                    <span>/</span>
+                                    <span class="measure-total"></span>
+                                </div>
+                                <button class="btn-measureNext" type="button">
+                                    <div class="musicBtn-tooltip">다음 소절</div>
+                                </button>
+                            </div>
+                            <div class="music-sub-controls">
+                                <button class="btn-musicInfinite" type="button">
+                                    <div class="musicBtn-tooltip">반복 재생 켜기</div>
+                                </button>
+                                <button class="btn-removePoint" type="button">
+                                    <div class="musicBtn-tooltip">하이라이트 기능 끄기</div>
+                                </button>
+                                <button class="btn-pitchUp" type="button">
+                                    <div class="musicBtn-tooltip">반음 올리기</div>
+                                </button>
+                                <button class="btn-pitchDown" type="button">
+                                    <div class="musicBtn-tooltip">반음 내리기</div>
+                                </button>
+                                <div class="dropdown dropDown-speedControls">
+                                    <span class="label speedControl-picked">X 1.0</span><button class="btn-dropdown"
+                                        type="button">X 1.0</button>
+                                    <ul>
+                                        <li>
+                                            <button class="btn-speedFast" type="button">빠르게</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn-speedDefault" type="button">X 1.0</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn-speedSlow" type="button">느리게</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-lookExam" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Script -->
+        <script src="./common/js/jquery.js"></script>
+        <script src="./common/js/base.js"></script>
+        <script src="./common/js/common.js"></script>
+        <script src="./common/js/contents.js"></script>
+
+        <script src="./proto_ton_004/js/ar.js"></script>
+        <script>
+            $(document).on('input', '.measure ul li.active input', function (e) {
+                $(this).css('color', '#24914d');
+                console.log('active input');
+            });
+        </script>
+</body>
+
+</html>

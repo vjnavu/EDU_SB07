@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
+
+
+    <style>
+        .imgWrap {
+            margin-right: 0;
+            margin-top: -235px;
+        }
+
+        .icon-char[data-popup-btn="2"] {
+            top: 0px;
+            left: unset;
+            right: 0px;
+        }
+
+        .min[data-popup-page="2"] {
+            top: 155px;
+            left: 470px;
+            width: 789px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="math">
+        <header>
+            <!-- 탭과 겹치는 경우 : gap 추가 -->
+            <div class="title purple">
+                나의 하루와 같은 점, 다른 점은 무엇인가요?
+            </div>
+        </header>
+        <main>
+
+
+            <!-- FRAME OF PAGE -->
+            <div class="basicSlider contentsBox" data-slide-container="main">
+                <ul class="basicSlider_slides" data-slides="">
+                    <li class="page_1">
+                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="2"></div>
+                        <div class="character-flex">
+                            <div id="girl_3" class="character-item"></div>
+                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="1">
+                                <img src="./images/ton_0102_0102_0012_201/img_01.png">
+                                <button class="popBtn zoomBtn" data-hover=""></button>
+                            </span>
+                            <div id="boy_4" class="character-item"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <section class="popup_container" data-popup-container="">
+            <ul class="popup_pages">
+                <li class="whole image fullLine" data-popup-page="1">
+                    <div class="full_content">
+                        <img src="./images/ton_0102_0102_0012_201/img_01.png">
+                    </div>
+                </li>
+                <li class="min" data-popup-page="2" data-drag>
+                    <h2 class="blue">Tip</h2>
+                    <div class="popup_contents ls1">
+                        <p>
+                            규칙적인 생활, 특히 저녁 시간에 꼭 해야 하는 것들에
+                            대해 함께 이야기를 나눠요. 그리고 우리 삶에서 하루의 리듬이 필요함을 생각해 봐요.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
+    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
+    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
+    <script type="text/javascript" src="./ko/contents.js"></script>
+    <script type="text/javascript" src="./common/js/guide.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            $(document).on('click', '.basicSlider_tabs li', function () {
+                if ($(this).data('text')) {
+                    $('header .title').text($(this).data('text'));
+                }
+                if ($(this).attr('data-gap') == 'true') {
+                    $('header .title').addClass('gap');
+                } else {
+                    $('header .title').removeClass('gap');
+                }
+            });
+            $prite.girl3({
+                id: '#girl_3',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0012_202/ton_0102_0102_0012_202_01.mp3',
+                text: '저도 아침마다<br>밥을 꼭 먹어요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -50,
+            });
+            $prite.boy4({
+                id: '#boy_4',
+                speech: 'right',
+                sound: './media/ton_0102_0102_0012_202/ton_0102_0102_0012_202_02.mp3',
+                text: '저는 아침이 바쁜데,<br>노래에선 안 바쁜가 봐요.',
+                class: 'bottom',
+                callback_start: () => {
+                    KmAudioPlayer.buttonClick();
+                },
+                callback_end: () => {
+                    console.log('end');
+                },
+                balloon_top: -180,
+                balloon_left: -135,
+            });
+        });
+    </script>
+</body>
+
+</html>

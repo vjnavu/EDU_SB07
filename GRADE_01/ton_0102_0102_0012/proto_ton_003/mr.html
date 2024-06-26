@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ar</title>
+    <link rel="stylesheet" type="text/css" href="../common/css/master.css" />
+    <link rel="stylesheet" href="../proto_ton_003/css/proto_ton_003.css">
+    <style>
+        .sheet-body {
+            background: unset;
+        }
+
+        .measure>ul>li {
+            position: relative;
+        }
+
+        .manuscriptWrap {
+            position: absolute;
+            top: 120px;
+            left: 205px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .manuscript {
+            display: flex;
+            align-items: center;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+        }
+
+        .manuscript>.cell {
+            border-left: 3px solid black;
+            width: 80px;
+            height: 80px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .manuscript>.cell.dash {
+            border-left: 3px dashed black;
+        }
+
+        .manuscript>.cell:last-of-type {
+            border-right: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="frame">
+        <div class="sheets">
+            <audio src="../proto_ton_003/media/mr.mp3" id="music" preload="auto"></audio>
+            <div class="sheet-head">
+                <h1>나의 하루</h1>
+                <h2>정근 작사, 이수인 작곡</h2>
+            </div>
+
+            <div class="manuscriptWrap">
+                <ul class="manuscript">
+
+                </ul>
+                <ul class="manuscript">
+
+                </ul>
+                <ul class="manuscript">
+
+                </ul>
+                <ul class="manuscript">
+
+                </ul>
+            </div>
+
+            <div class="sheet-body showPoint line4" data-measure-line="4">
+                <div id="countDown"></div>
+                <div class="measure">
+                    <span class="measure-num">1</span>
+                    <ul>
+                        <li></li>
+                        <li>아</li>
+                        <li class="mr10">침</li>
+                        <li> 햇</li>
+                        <li class="mr10">빛</li>
+                        <li> 밝</li>
+                        <li class="mr10">아</li>
+                        <li> 오</li>
+                        <li class="mr10">는</li>
+                        <li> 이</li>
+                        <li class="mr10">른</li>
+                        <li> 아</li>
+                        <li>침</li>
+                        <li>에</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">2</span>
+                    <ul>
+                        <li class="mr10">두</li>
+                        <li class="mr10"> 손</li>
+                        <li> 모</li>
+                        <li class="mr10">아</li>
+                        <li> 하</li>
+                        <li class="mr10">루</li>
+                        <li> 일</li>
+                        <li class="mr10">을</li>
+                        <li> 생</li>
+                        <li>각</li>
+                        <li>합</li>
+                        <li>니</li>
+                        <li>다</li>
+                    </ul>
+                </div>
+
+                <div class="measure">
+                    <span class="measure-num">3</span>
+                    <ul>
+                        <li>학</li>
+                        <li>교</li>
+                        <li>에</li>
+                        <li class="mr10">선</li>
+                        <li> 동</li>
+                        <li>무</li>
+                        <li>들</li>
+                        <li class="mr10">과</li>
+                        <li> 사</li>
+                        <li>이</li>
+                        <li>좋</li>
+                        <li class="mr10">게</li>
+                        <li> 공</li>
+                        <li class="mr10">부</li>
+                        <li> 잘</li>
+                        <li>하</li>
+                        <li>고</li>
+                    </ul>
+                </div>
+
+                <div class="measure">
+                    <span class="measure-num">4</span>
+                    <ul>
+                        <li>집</li>
+                        <li class="mr10">에</li>
+                        <li> 오</li>
+                        <li class="mr10">면</li>
+                        <li> 심</li>
+                        <li>부</li>
+                        <li>름</li>
+                        <li class="mr10">도</li>
+                        <li> 잘</li>
+                        <li>한</li>
+                        <li>답</li>
+                        <li>니</li>
+                        <li>다</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">5</span>
+                    <ul>
+                        <li>저</li>
+                        <li class="mr10">녁</li>
+                        <li> 노</li>
+                        <li class="mr10">을</li>
+                        <li> 아</li>
+                        <li>름</li>
+                        <li>답</li>
+                        <li class="mr10">게</li>
+                        <li> 수</li>
+                        <li>놓</li>
+                        <li class="mr10">을</li>
+                        <li> 때</li>
+                        <li>면</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">6</span>
+                    <ul>
+                        <li>하</li>
+                        <li class="mr10">루</li>
+                        <li> 일</li>
+                        <li class="mr10">을</li>
+                        <li> 재</li>
+                        <li>미</li>
+                        <li>나</li>
+                        <li class="mr10">게</li>
+                        <li> 얘</li>
+                        <li>기</li>
+                        <li>합</li>
+                        <li>니</li>
+                        <li>다</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">7</span>
+                    <ul>
+                        <li>아</li>
+                        <li class="mr10">빠</li>
+                        <li> 엄</li>
+                        <li class="mr10">만</li>
+                        <li> 집</li>
+                        <li>안</li>
+                        <li class="mr10">일</li>
+                        <li> 두</li>
+                        <li>루</li>
+                        <li>두</li>
+                        <li class="mr10">루</li>
+                        <li> 돌</li>
+                        <li class="mr10">봐</li>
+                        <li> 주</li>
+                        <li>시</li>
+                        <li>고</li>
+                    </ul>
+                </div>
+                <div class="measure">
+                    <span class="measure-num">8</span>
+                    <ul>
+                        <li>나</li>
+                        <li class="mr10">는</li>
+                        <li> 나</li>
+                        <li class="mr10">는</li>
+                        <li> 내</li>
+                        <li class="mr10">일</li>
+                        <li> 공</li>
+                        <li class="mr10">부</li>
+                        <li> 예</li>
+                        <li>습합</li>
+                        <li>니</li>
+                        <li>다</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class=" music-controller">
+                <div class="music-controller-soundMethod">
+                    <div class="dropdown dropDown-soundMethod">
+                        <span class="label SoundMethod-label">전체 듣기</span><button class="btn-dropdown"
+                            type="button">전체/소절 듣기</button>
+                        <ul>
+                            <li style="top: 0px; left: 0px;">
+                                <button class="btn-playAll" type="button">전체 듣기</button>
+                            </li>
+                            <li style="top: 0px; left: 0px;">
+                                <button class="btn-playMeasure" type="button">소절 듣기</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="music-controller-controls">
+                    <button class="btn-music-play" type="button">
+                        <div class="musicBtn-tooltip">재생</div>
+                    </button>
+                    <div class="music-progressbar">
+                        <input class="btn-musicProgressbar" type="range" min="0" max="100" step="1" value="0">
+                    </div>
+                    <button class="btn-music-reset" type="button">
+                        <div class="musicBtn-tooltip">정지</div>
+                    </button>
+                </div>
+                <div class="measure-controls">
+                    <button class="btn-measurePrev" type="button">
+                        <div class="musicBtn-tooltip">이전 소절</div>
+                    </button>
+                    <div class="measure-info">
+                        <span class="measure-currentIdx"></span>
+                        <span>/</span>
+                        <span class="measure-total"></span>
+                    </div>
+                    <button class="btn-measureNext" type="button">
+                        <div class="musicBtn-tooltip">다음 소절</div>
+                    </button>
+                </div>
+                <div class="music-sub-controls">
+                    <button class="btn-musicInfinite" type="button">
+                        <div class="musicBtn-tooltip">반복 재생 켜기</div>
+                    </button>
+                    <button class="btn-removePoint" type="button">
+                        <div class="musicBtn-tooltip">하이라이트 기능 끄기</div>
+                    </button>
+                    <button class="btn-pitchUp" type="button">
+                        <div class="musicBtn-tooltip">반음 올리기</div>
+                    </button>
+                    <button class="btn-pitchDown" type="button">
+                        <div class="musicBtn-tooltip">반음 내리기</div>
+                    </button>
+                    <div class="dropdown dropDown-speedControls">
+                        <span class="label speedControl-picked">X 1.0</span><button class="btn-dropdown" type="button">X
+                            1.0</button>
+                        <ul>
+                            <li style="top: 0px; left: 0px;">
+                                <button class="btn-speedFast" type="button">빠르게</button>
+                            </li>
+                            <li style="top: 0px; left: 0px;">
+                                <button class="btn-speedDefault" type="button">X 1.0</button>
+                            </li>
+                            <li style="top: 0px; left: 0px;">
+                                <button class="btn-speedSlow" type="button">느리게</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../common/js/jquery.js"></script>
+
+    <script src="../proto_ton_003/js/mr.js"></script>
+</body>
+
+</html>

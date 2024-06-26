@@ -2,144 +2,244 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0">
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../ko/libs/css/master.css">
-    <link rel="stylesheet" type="text/css" href="./common/css/guide.css">
-
-
+    <link rel="stylesheet" type="text/css" href="./common/css/master.css" />
     <style>
-        .imgWrap {
-            margin-right: 0;
-            margin-top: -235px;
+        .zoomController {
+            top: 20px;
         }
 
-        .icon-char[data-popup-btn="2"] {
-            top: 0px;
-            left: unset;
-            right: 0px;
+        .zoomImgContainer {
+            width: 1365px;
+            height: 636px;
         }
 
-        .min[data-popup-page="2"] {
-            top: 155px;
-            left: 470px;
-            width: 789px;
+        .page_zoom {
+            height: 100%;
+        }
+
+        .zoomContainer {
+            height: 100%;
+        }
+
+        .zoomImg {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .zoomImg h2 {
+            font-size: 30px;
+            font-family: 'YGJAL';
+            margin-bottom: 20px;
+        }
+
+        .zoomImg img {
+            width: 900px;
+        }
+
+        .zoomArea {
+            height: 636px;
+        }
+
+        ul.tab-sheet>li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        ul.tab-sheet>li:not(:first-child)::before {
+            content: "";
+            width: 2px;
+            height: 20px;
+            background-color: #d2b796;
+            left: -20px;
+            position: absolute;
+        }
+
+        .tab-sheet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 5px 0px;
+        }
+
+        .tab-sheet button {
+            font-size: 20px;
+            font-family: "YGJAL";
+            cursor: pointer;
+            color: #7c4500;
+            box-sizing: border-box;
+            padding: 4px 15px;
+            border-radius: 12px 12px 0px 0px;
+        }
+
+        .tab-sheet button:hover {
+            color: #f87c1a;
+            transition: all .1s;
+        }
+
+        .tab-sheet button.active {
+            pointer-events: none;
+            color: #fff;
+            background-color: #f87c1a;
+            border-radius: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sheetArea.hide {
+            display: none;
+        }
+
+        .sheetArea {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #fff;
+        }
+
+        .docDownBtn {
+            position: absolute;
+            display: inline-block;
+            height: 39px;
+            padding: 0 16px 0 42px;
+            color: #fff !important;
+            font-size: 20px;
+            font-family: YGJAL;
+            line-height: 39px;
+            border-radius: 30px;
+            background: #ff8800 url("proto_ton_003/images/icon_down.svg") 13px center/20px auto no-repeat;
+            box-sizing: border-box;
+            margin: 3px 6px;
+            right: 37px;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .docDownBtn:hover {
+            background-color: #ff8800;
+            transition: all .1s;
+        }
+
+        .zoomSpin {
+            left: 35px;
+            top: 6px;
+        }
+
+        .zoomController {
+            top: 20px;
+            padding: 0;
         }
     </style>
 </head>
 
 <body>
-    <div id="wrap" class="math">
-        <header>
-            <!-- 탭과 겹치는 경우 : gap 추가 -->
-            <div class="title purple">
-                나의 하루와 같은 점, 다른 점은 무엇인가요?
-            </div>
-        </header>
-        <main>
-
-
-            <!-- FRAME OF PAGE -->
-            <div class="basicSlider contentsBox" data-slide-container="main">
-                <ul class="basicSlider_slides" data-slides="">
-                    <li class="page_1">
-                        <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="2"></div>
-                        <div class="character-flex">
-                            <div id="girl_3" class="character-item"></div>
-                            <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="1">
-                                <img src="./images/ton_0102_0102_0012_201/img_01.png">
-                                <button class="popBtn zoomBtn" data-hover=""></button>
-                            </span>
-                            <div id="boy_4" class="character-item"></div>
-                        </div>
+    <!-- Frame -->
+    <div id="frameContainer">
+        <!-- Content Container -->
+        <div id="contents">
+            <!-- Title -->
+            <div class="contentsTitle">
+                <ul class="tab-sheet">
+                    <li>
+                        <button class="active" type="button" data-src="./proto_ton_003/ar.html">노래 듣기</button>
+                    </li>
+                    <li>
+                        <button type="button" data-src="./proto_ton_003/armr.html">노래 따라 부르기</button>
+                    </li>
+                    <li>
+                        <button type="button" data-src="./proto_ton_003/mr.html">반주 듣기</button>
+                    </li>
+                    <li>
+                        <button class="btn-viewSheet" type="button">악보 보기</button>
                     </li>
                 </ul>
             </div>
-        </main>
+            <!-- Content -->
+            <div class="contentsBox">
 
-        <section class="popup_container" data-popup-container="">
-            <ul class="popup_pages">
-                <li class="whole image fullLine" data-popup-page="1">
-                    <div class="full_content">
-                        <img src="./images/ton_0102_0102_0012_201/img_01.png">
+                <iframe src="./proto_ton_003/ar.html"></iframe>
+
+                <div class="sheetArea hide">
+                    <a class="docDownBtn" href="./proto_ton_003/images/sheetPaper.pdf" download data-hover="">악보
+                        다운로드</a>
+                    <div class="page_zoom">
+                        <div class="zoomContainer">
+                            <div class="zoomArea">
+                                <div class="zoomImgContainer pointerOff">
+                                    <div class="zoomImg">
+                                        <h2>봄이 가고 여름 오면</h2>
+                                        <div class="bgImg">
+                                            <img src="./proto_ton_003/images/sheetPaper.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li class="min" data-popup-page="2" data-drag>
-                    <h2 class="blue">Tip</h2>
-                    <div class="popup_contents ls1">
-                        <p>
-                            규칙적인 생활, 특히 저녁 시간에 꼭 해야 하는 것들에
-                            대해 함께 이야기를 나눠요. 그리고 우리 삶에서 하루의 리듬이 필요함을 생각해 봐요.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </section>
+                </div>
 
-    </div>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="../ko/libs/js/jquery.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/ts.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/animate.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/dragdrop.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/slider.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/popup.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/scroll.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/controller.js"></script>
-    <script type="text/javascript" src="../ko/libs/js/appear.js"></script>
-    <script type="text/javascript" src="../ko/contents/js/quiz/quiz.js"></script>
-    <script type="text/javascript" src="../ko/contents/js/pageManager.js"></script>
-    <script type="text/javascript" src="../ko/contents/js/sprite.js"></script>
-    <script type="text/javascript" src="../ko/contents/js/kmCommon.js"></script>
-    <script type="text/javascript" src="./ko/contents.js"></script>
-    <script type="text/javascript" src="./common/js/guide.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            $(document).on('click', '.basicSlider_tabs li', function () {
-                if ($(this).data('text')) {
-                    $('header .title').text($(this).data('text'));
-                }
-                if ($(this).attr('data-gap') == 'true') {
-                    $('header .title').addClass('gap');
-                } else {
-                    $('header .title').removeClass('gap');
-                }
+        <!-- Common Script -->
+        <script src="./common/js/jquery.js"></script>
+        <script src="./common/js/base.js"></script>
+        <script src="./common/js/common.js"></script>
+        <script src="./common/js/contents.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tabBtns = document.querySelectorAll(".tab-sheet button");
+                const iframe = document.querySelector("iframe");
+                const sheetArea = document.querySelector(".sheetArea");
+
+                tabBtns.forEach(el => {
+                    el.addEventListener("click", () => {
+                        efSound("./media/click.mp3");
+
+                        tabBtns.forEach(btn => {
+                            btn.classList.remove("active");
+                        });
+                        el.classList.add("active");
+
+                        if (el.classList.contains("btn-viewSheet")) {
+                            iframe.src = "";
+                            sheetArea.classList.remove("hide");
+                        } else {
+                            iframe.src = el.dataset.src;
+                            sheetArea.classList.add("hide");
+                        }
+                    });
+                });
             });
-            $prite.girl3({
-                id: '#girl_3',
-                speech: 'right',
-                sound: './media/ton_0102_0102_0012_202/ton_0102_0102_0012_202_01.mp3',
-                text: '저도 아침마다<br>밥을 꼭 먹어요.',
-                class: 'bottom',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
-                balloon_top: -180,
-                balloon_left: -50,
+            $(function () {
+                $(document).on("click", ".btn-viewSheet", function () {
+                    zoomInstance.resetZoom();
+                    $(document).find(".zoomController").remove();
+
+                    loadScriptFile('common/js/zoomImage.js', function () {
+                        zoomInstance = new ZoomImage(
+                            QS('.sheetArea')
+                        );
+                    });
+                });
             });
-            $prite.boy4({
-                id: '#boy_4',
-                speech: 'right',
-                sound: './media/ton_0102_0102_0012_202/ton_0102_0102_0012_202_02.mp3',
-                text: '저는 아침이 바쁜데,<br>노래에선 안 바쁜가 봐요.',
-                class: 'bottom',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
-                balloon_top: -180,
-                balloon_left: -135,
-            });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
