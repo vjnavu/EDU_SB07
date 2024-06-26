@@ -269,7 +269,6 @@
             });
 
             $(document).on('click', '.click-finger-Btn', function () {
-                KmAudioPlayer.buttonClick();
                 var $data_popup = $(this).attr('data-popup');
                 $('.popupItem[data-show="' + $data_popup + '"]').css('opacity', '1');
                 $('.popupItem[data-show="' + $data_popup + '"]').append('<div class="close-speech-button beforeNon"></div>')
@@ -277,7 +276,6 @@
             });
 
             $(document).on('click', '.close-speech-button', function () {
-                KmAudioPlayer.buttonClick();
                 var $data_show = $(this).parent().attr('data-show');
                 $(this).parent().css('opacity', '0');
                 $('.click-finger-Btn[data-popup="' + $data_show + '"]').show();

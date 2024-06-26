@@ -303,7 +303,6 @@
       });
 
       $(document).on("click", ".close-speech-btn", function () {
-        KmAudioPlayer.buttonClick();
         let data_close = $(this).attr("data-close");
         $(this).parent().removeClass("active");
         $(".click-finger-Btn").filter('[data-finger="' + data_close + '"]').removeClass("complete");
