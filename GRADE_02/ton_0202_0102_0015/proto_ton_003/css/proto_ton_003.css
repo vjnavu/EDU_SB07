@@ -65,7 +65,7 @@ body {
     height: 100%;
     border-radius: 20px;
     background-color: #fff;
-    background-image: url("../images/sheet.png");
+    /* background-image: url("../images/sheet.png"); */
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -209,23 +209,24 @@ body {
 
 .sheet-body.line4>.sheet-group>.measure:nth-child(1) {
     left: 198px;
-    top: 142px;
+    top: 50px;
 }
 
 .sheet-body.line4>.sheet-group>.measure:nth-child(2) {
     left: 198px;
-    top: 209px;
+    top: 140px;
 }
 
 .sheet-body.line4>.sheet-group>.measure:nth-child(3) {
     left: 198px;
-    top: 273px;
+    top: 230px;
 }
 
 .sheet-body.line4>.sheet-group>.measure:nth-child(4) {
     left: 198px;
-    top: 336px;
+    top: 320px;
 }
+
 
 /* LINE5 */
 
