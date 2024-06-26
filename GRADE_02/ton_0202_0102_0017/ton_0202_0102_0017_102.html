@@ -15,6 +15,7 @@
         /* Page 1 */
         .character-item {
             position: absolute;
+            bottom: 0;
         }
 
         .basicSlider_slides {
@@ -243,14 +244,13 @@
                 text: '봄에는 따뜻하고<br>꽃이 많이 피어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
                 },
                 balloon_top: -180,
                 balloon_left: -70,
-                bottom: 50,
                 left: 100,
             });
 
@@ -261,14 +261,13 @@
                 text: '여름에는 날씨가 덥고 <br>나무들이 초록으로 변해요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
                 },
                 balloon_top: -180,
                 balloon_left: -150,
-                bottom: 50,
                 left: 400,
             });
 
@@ -279,14 +278,13 @@
                 text: '가을에는 선선하고 나뭇잎은<br>알록달록 물들어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
                 },
                 balloon_top: -180,
                 balloon_left: -170,
-                bottom: 50,
                 left: 700,
             });
 
@@ -297,14 +295,13 @@
                 text: '겨울에는 춥고 눈이 내리기도 해요. <br>나무들은 잎이 다 떨어지고 <br>가지만 남아요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
                 },
                 balloon_top: -230,
                 balloon_left: -335,
-                bottom: 50,
                 left: 1000,
             });
         });

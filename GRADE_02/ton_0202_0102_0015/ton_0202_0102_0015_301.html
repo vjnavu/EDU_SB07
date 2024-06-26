@@ -23,6 +23,16 @@
             width: 650px;
         }
 
+        .page_1 .balloon {
+            width: max-content;
+        }
+
+        .page_1 .characterWrap+.balloon.bottom:after,
+        .characterWrap+.balloon.top:after {
+            bottom: -25px;
+            top: unset;
+        }
+
         /* Page 2 */
         .character-item {
             position: absolute;
@@ -194,7 +204,7 @@
                 text: '한 글자를 넣어 노래할 때<br>더신나는 느낌이 들었어요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
@@ -212,7 +222,7 @@
                 text: '가을 길을 비단길이라고<br>표현한 것이 기억에 남아요.',
                 class: 'bottom',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
@@ -232,7 +242,7 @@
                 text: `‘산 넘어 물 건너 가는 길’ 가사에서<br>짝과 천을 주고 받아요.`,
                 class: 'b1 left',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');

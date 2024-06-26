@@ -216,7 +216,7 @@
                         <div class="character-flex">
                             <div id="girl_1_c" class="character-item"></div>
                             <div id="boy_2_c" class="character-item"></div>
-                            <div id="girl_4_c" class="character-item"></div>
+                            <div style="right: 55px;" id="girl_4_c" class="character-item"></div>
                         </div>
                     </li>
                     <li class="page_3" data-quiz="toggle">
@@ -294,10 +294,10 @@
                 id: '#girl_1_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0202_0102_0012_201/ton_ton_0202_0102_0012_201_01.mp3',
+                sound: './media/ton_0202_0102_0012_201/ton_0202_0102_0012_201_01.mp3',
                 text: '사과는 둥글고<br> 빨간 색이에요.',
                 class: 'bottom',
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); },
                 balloon_top: -190,
                 balloon_left: -65,
@@ -306,10 +306,10 @@
                 id: '#boy_2_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0202_0102_0012_201/ton_ton_0202_0102_0012_201_02.mp3',
+                sound: './media/ton_0202_0102_0012_201/ton_0202_0102_0012_201_02.mp3',
                 text: '사과는 달콤한 맛과<br> 새콤한 맛을<br> 동시에 느낄 수 있어요.',
                 class: 'bottom',
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); },
                 balloon_top: -250,
                 balloon_left: -135,
@@ -318,10 +318,10 @@
                 id: '#girl_4_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0202_0102_0012_201/ton_ton_0202_0102_0012_201_03.mp3',
+                sound: './media/ton_0202_0102_0012_201/ton_0202_0102_0012_201_03.mp3',
                 text: '사과의 껍질은<br> 매끈하지만 꼭지 부분은<br> 까슬거려요.',
                 class: 'bottom',
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); },
                 balloon_top: -250,
                 balloon_left: -145,

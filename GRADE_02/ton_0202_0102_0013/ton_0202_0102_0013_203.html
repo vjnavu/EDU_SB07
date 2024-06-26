@@ -499,7 +499,7 @@
                 class: 'bottom',
                 balloon_top: -250,
                 balloon_left: -105,
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); }
             });
 
@@ -512,7 +512,7 @@
                 class: 'bottom',
                 balloon_top: -250,
                 balloon_left: -110,
-                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); }
             });
             let dragObj = $('.dragGroup');
@@ -522,7 +522,7 @@
 
             // next button click event
             $('.slideBtn.next').on('click', function () {
-                KmAudioPlayer.buttonClick();
+                console.log('start');
                 if (currentIndex < totalSlides - slidesToShow) {
                     currentIndex += slidesToShow;
                     $('.dragGroup:nth-child(2)').css('opacity', '1');
@@ -533,7 +533,7 @@
 
             // Previous button click event
             $('.slideBtn.prev').on('click', function () {
-                KmAudioPlayer.buttonClick();
+                console.log('start');
                 if (currentIndex >= slidesToShow) {
                     currentIndex -= slidesToShow;
                     updateSlider();

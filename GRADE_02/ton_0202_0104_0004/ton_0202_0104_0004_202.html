@@ -220,11 +220,11 @@
                 id: '#boy_4_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0202_0102_0015_301/ton_0202_0102_0015_301_03.mp3',
+                sound: './media/ton_0202_0104_0004_202/ton_0202_0104_0004_202_01.mp3',
                 text: `패딩 주머니에 들어 있는<br>핫팩이 무척 뜨거웠어요.<img src="./images/ton_0202_0104_0004_202/img_03.png" />`,
                 class: 'b1 left',
                 callback_start: () => {
-                    KmAudioPlayer.buttonClick();
+                    console.log('start');
                 },
                 callback_end: () => {
                     console.log('end');
