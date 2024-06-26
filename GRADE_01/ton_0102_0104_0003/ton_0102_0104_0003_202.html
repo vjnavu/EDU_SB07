@@ -169,13 +169,13 @@
             border: none;
         }
 
-        .icon-char[data-popup-btn="2"] {
+        .icon-char[data-popup-btn="6"] {
             top: 37px;
             left: unset;
             right: 28px;
         }
 
-        .min[data-popup-page="2"] {
+        .min[data-popup-page="6"] {
             top: 250px;
             left: 630px;
             width: 601px;
@@ -207,14 +207,10 @@
             padding: 0 20px;
         }
 
-        .zoomBtn:after,
-        .popBtn.zoom {
-            border: none;
-            background: url(../ko/contents/images/icon/icon_click.png) no-repeat 50% 50% / 59px;
-        }
-
-        .zoomBtn:hover::after {
-            box-shadow: unset;
+        .popBtn.mouse {
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     </style>
 </head>
@@ -234,7 +230,6 @@
             <div class="basicSlider contentsBox" data-slide-container="main">
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1">
-
                         <div class="basicSlider contentsBox doItContent" data-slide-container="">
                             <div class="moveButtonContainer" data-slide-btn-container="">
                                 <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
@@ -249,7 +244,7 @@
                                 <li class="innerTab_1" data-quiz="dragDrop" data-option="answer, copy"
                                     data-quiz-name="dragDrop" data-total-complete-count="2">
                                     <div class="study_guide"><em>보기</em>에서 <em>끌어</em> 붙이세요.</div>
-                                    <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="2"></div>
+                                    <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="6"></div>
                                     <div class="dragDropContainer bogi">
                                         <div class="it-start-wrap dragBox lineBox dragObjUL">
                                             <div class="bogi-icon"></div>
@@ -267,13 +262,10 @@
                                                         <div class="bullet number orange inline">1</div>
                                                         <div class="image-box">
                                                             <div class="imageWrap">
-                                                                <span class="imgWrap line popBtn" data-popup-btn="3"
-                                                                    data-targetSlideNum="1">
-                                                                    <img
-                                                                        src="./images/ton_0102_0104_0003_202/img_01.png">
-                                                                    <button class="popBtn zoomBtn"
-                                                                        data-hover=""></button>
-                                                                </span>
+                                                                <img src="./images/ton_0102_0104_0003_202/img_01.png">
+                                                                <div class="popBtn mouse" data-hover=""
+                                                                    data-popup-btn="1">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -283,13 +275,10 @@
                                                         <div class="bullet number orange inline">2</div>
                                                         <div class="image-box">
                                                             <div class="imageWrap">
-                                                                <span class="imgWrap line popBtn" data-popup-btn="4"
-                                                                    data-targetSlideNum="1">
-                                                                    <img
-                                                                        src="./images/ton_0102_0104_0003_202/img_02.png">
-                                                                    <button class="popBtn zoomBtn"
-                                                                        data-hover=""></button>
-                                                                </span>
+                                                                <img src="./images/ton_0102_0104_0003_202/img_02.png">
+                                                                <div class="popBtn mouse" data-hover=""
+                                                                    data-popup-btn="2">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -323,13 +312,10 @@
                                                         <div class="bullet number orange inline">3</div>
                                                         <div class="image-box">
                                                             <div class="imageWrap">
-                                                                <span class="imgWrap line popBtn" data-popup-btn="5"
-                                                                    data-targetSlideNum="1">
-                                                                    <img
-                                                                        src="./images/ton_0102_0104_0003_202/img_03.png">
-                                                                    <button class="popBtn zoomBtn"
-                                                                        data-hover=""></button>
-                                                                </span>
+                                                                <img src="./images/ton_0102_0104_0003_202/img_03.png">
+                                                                <div class="popBtn mouse" data-hover=""
+                                                                    data-popup-btn="3">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -339,13 +325,10 @@
                                                         <div class="bullet number orange inline">4</div>
                                                         <div class="image-box">
                                                             <div class="imageWrap">
-                                                                <span class="imgWrap line popBtn" data-popup-btn="6"
-                                                                    data-targetSlideNum="1">
-                                                                    <img
-                                                                        src="./images/ton_0102_0104_0003_202/img_04.png">
-                                                                    <button class="popBtn zoomBtn"
-                                                                        data-hover=""></button>
-                                                                </span>
+                                                                <img src="./images/ton_0102_0104_0003_202/img_04.png">
+                                                                <div class="popBtn mouse" data-hover=""
+                                                                    data-popup-btn="4">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -379,14 +362,10 @@
                                                         <div class="bullet number orange inline">5</div>
                                                         <div class="image-box">
                                                             <div class="imageWrap">
-
-                                                                <span class="imgWrap line popBtn" data-popup-btn="7"
-                                                                    data-targetSlideNum="1">
-                                                                    <img
-                                                                        src="./images/ton_0102_0104_0003_202/img_05.png">
-                                                                    <button class="popBtn zoomBtn"
-                                                                        data-hover=""></button>
-                                                                </span>
+                                                                <img src="./images/ton_0102_0104_0003_202/img_05.png">
+                                                                <div class="popBtn mouse" data-hover=""
+                                                                    data-popup-btn="5">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -408,14 +387,14 @@
 
         <section class="popup_container" data-popup-container="">
             <ul class="popup_pages">
-                <li class="min" data-popup-page="2" data-drag>
+                <li class="min" data-popup-page="6" data-drag>
                     <h2 class="blue">Tip</h2>
                     <div class="popup_contents ls1">
                         <p><ins class="dot"></ins>자동차 주변에는 눈으로 확인할 수 없는 지역이 있어요.</p>
                         <p><ins class="dot"></ins>멈춰 있는 차 앞이나 뒤에 앉아서 놀지 않아요.</p>
                     </div>
                 </li>
-                <li class="whole image" data-popup-page="3">
+                <li class="whole image" data-popup-page="1">
                     <div class="basicSlider" data-slide-container="popup">
                         <ul class="basicSlider_slides" data-slides="">
                             <li class="innerTab_1">
@@ -441,7 +420,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="whole image" data-popup-page="4">
+                <li class="whole image" data-popup-page="2">
                     <div class="basicSlider" data-slide-container="popup">
                         <ul class="basicSlider_slides" data-slides="">
                             <li class="innerTab_1">
@@ -466,7 +445,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="whole image" data-popup-page="5">
+                <li class="whole image" data-popup-page="3">
                     <div class="basicSlider" data-slide-container="popup">
                         <ul class="basicSlider_slides" data-slides="">
                             <li class="innerTab_1">
@@ -489,7 +468,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="whole image" data-popup-page="6">
+                <li class="whole image" data-popup-page="4">
                     <div class="basicSlider" data-slide-container="popup">
                         <ul class="basicSlider_slides" data-slides="">
                             <li class="innerTab_1">
@@ -512,7 +491,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="whole image" data-popup-page="7">
+                <li class="whole image" data-popup-page="5">
                     <div class="basicSlider" data-slide-container="popup">
                         <ul class="basicSlider_slides" data-slides="">
                             <li class="innerTab_1">

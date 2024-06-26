@@ -42,6 +42,15 @@
             left: 534px;
         }
 
+        .title-box {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .how-to-play li {
+            margin-bottom: 25px;
+        }
+
         /* Page 3 */
         .img_bg {
             position: absolute;
@@ -143,10 +152,8 @@
                     </li>
                     <li class="page_2">
                         <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
-                        <div class="how-to-box">
-                            <div class="title-box">
-                                <div class="title">활동 방법</div>
-                            </div>
+                        <div class="title-box">
+                            <div class="title">활동 방법</div>
                         </div>
                         <ul class="how-to-play">
                             <li>
@@ -312,6 +319,15 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
+            $(document).on('click', '.basicSlider_tabs li', function () {
+
+                $('.click-finger-Btn').removeClass('blinkOn').removeClass('blinkOpacity');
+                setTimeout(function () {
+                    $('.click-finger-Btn').addClass('blinkOn').addClass('blinkOpacity');
+                }, 100);
+            });
+
         });
     </script>
 </body>

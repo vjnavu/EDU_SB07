@@ -41,6 +41,10 @@
             text-align: center;
         }
 
+        .buttonContainer {
+            right: 28px;
+        }
+
         /* Page 2 */
         .contentsBox {
             padding: 0;
@@ -189,25 +193,31 @@
                         <div class="flex">
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0016_202/img_01.jpg">
-                                <div class="toggle examBtn box" data-toggle-obj="1">
-                                    <div class="answer" data-toggle-target="1">
-                                        <div class="ls-2h">‌‌‌‌사진을 찍어요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <div class="ls-2h">‌‌‌‌사진을 찍어요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0016_202/img_02.jpg">
-                                <div class="toggle examBtn box" data-toggle-obj="2">
-                                    <div class="answer" data-toggle-target="2">
-                                        <div class="ls-2h">공책에 적어요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <div class="ls-2h">공책에 적어요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0016_202/img_03.png">
-                                <div class="toggle examBtn box" data-toggle-obj="4">
-                                    <div class="answer" data-toggle-target="4">
-                                        <div class="ls-2h">‌‌‌그림을 그려요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="4">
+                                        <div class="answer" data-toggle-target="4">
+                                            <div class="ls-2h">‌‌‌그림을 그려요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -489,10 +499,43 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
             $(document).on('click', '.click-finger-Btn', function () {
+                KmAudioPlayer.buttonClick();
                 var $data_popup = $(this).attr('data-popup');
                 $('.popupItem[data-show="' + $data_popup + '"]').css('opacity', '1');
                 $(this).hide();
+            });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
+            });
+
+            $(document).on('click', '.basicSlider_tabs li', function () {
+
+                $('.click-finger-Btn').removeClass('blinkOn').removeClass('blinkOpacity');
+                setTimeout(function () {
+                    $('.click-finger-Btn').addClass('blinkOn').addClass('blinkOpacity');
+                }, 100);
             });
 
         });

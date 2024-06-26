@@ -14,7 +14,7 @@
     <style>
         .flex {
             display: flex;
-            margin-top: 40px;
+            margin-top: 10px;
         }
 
         .flex .items:first-child {
@@ -29,13 +29,6 @@
             position: absolute;
             bottom: 30px;
             left: 120px;
-        }
-
-        .noteText .text-exam.flex-wrap {
-            width: 100%;
-            padding: 35px 40px 0px;
-            top: 0;
-            left: 0;
         }
     </style>
 </head>
@@ -54,7 +47,7 @@
             <!-- FRAME OF PAGE -->
             <div class="basicSlider contentsBox" data-slide-container="main">
                 <ul class="basicSlider_slides" data-slides="">
-                    <li class="page_1">
+                    <li class="page_1" data-quiz="toggle">
                         <div class="flex">
                             <div class="items">
                                 <div id="boy_2" class="character-item"></div>
@@ -68,8 +61,8 @@
                                     </div>
                                     <div class="text-exam flex-wrap">
                                         <div class="blueT">
-                                            <p><ins class="dot"></ins>저는 피아노를 칠 때가 가장 좋아요.</p>
-                                            <p><ins class="dot"></ins>학교에서 친구들이랑 놀 때가 좋아요.</p>
+                                            <p class="dot">저는 피아노를 칠 때가 가장 좋아요.</p>
+                                            <p class="dot">학교에서 친구들이랑 놀 때가 좋아요.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -124,12 +117,8 @@
                 sound: './media/ton_0102_0102_0016_201/ton_0102_0102_0016_201_01.mp3',
                 text: '저는  맛있는 밥을 <br>먹을 때가 가장 좋아요.',
                 class: 'b1 bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -120,
             });

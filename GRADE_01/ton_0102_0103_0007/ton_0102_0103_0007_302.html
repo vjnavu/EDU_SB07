@@ -28,15 +28,10 @@
 
         #boy_3 {
             position: absolute;
-            bottom: 10px;
-            left: 170px;
         }
 
-        .noteText .text-exam.flex-wrap {
-            width: 100%;
-            padding: 35px 40px 0px;
-            top: 0;
-            left: 0;
+        .buttonContainer {
+            right: 28px;
         }
 
         /* Page 2 */
@@ -97,8 +92,8 @@
                                     </div>
                                     <div class="text-exam flex-wrap">
                                         <div class="blueT">
-                                            <p><ins class="dot"></ins>접시콘을 지키며 걷다 보니 허리를 곧게 세우고 걷게 되었어요.</p>
-                                            <p><ins class="dot"></ins>친구의 접시콘을 다시 올려 주는<br>것이 쉽지 않았어요.</p>
+                                            <p class="dot">접시콘을 지키며 걷다 보니 허리를 곧게 세우고 걷게 되었어요.</p>
+                                            <p class="dot">친구의 접시콘을 다시 올려 주는<br>것이 쉽지 않았어요.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -184,15 +179,13 @@
                 speech: 'right',
                 sound: './media/ton_0102_0103_0007_302/ton_0102_0103_0007_302_01.mp3',
                 text: '접시콘이 머리 위에<br>있다는 느낌으로<br>평소에도 바르게 걷는 연습을<br>해야겠다고 생각했어요.',
-                class: 'b1 bottom',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                class: 'bottom',
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -280,
                 balloon_left: -170,
+                left: 200,
+                bottom: 10,
             });
 
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
@@ -200,8 +193,7 @@
             const praiseBox = document.querySelector(".praise-box");
             const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
             const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
-            const download = document.querySelector('#wrap > main');
-            const main = document.querySelector('.docDownBtn');
+            const main = document.querySelector('#wrap > main');
             const characterItem = document.querySelectorAll('.character-item');
 
             basicSliderTabs.forEach(tab => {
@@ -227,26 +219,32 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_tabs li').css('pointer-events', 'none');
+                if ($('.docDownBtn').length > 0) {
+                    $('.docDownBtn').css('pointer-events', 'none');
+                }
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
                 aniBackground.classList.add("ani-background");
                 praiseButton.style.pointerEvents = "none";
-                $('.docDownBtn').css('pointer-events', 'none');
                 praiseBox.insertAdjacentElement("beforeend", aniBackground);
                 main.style.pointerEvents = "none";
                 characterItem.forEach(item => {
                     item.classList.add('no-pointer');
                 });
-
                 setTimeout(() => {
+                    $('.basicSlider_tabs li').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
-                    $('.docDownBtn').css('pointer-events', 'auto');
+                    basicSliderSlides.style.pointerEvents = "auto";
                     characterItem.forEach(item => {
                         item.classList.remove('no-pointer');
                     });
+                    if ($('.docDownBtn').length > 0) {
+                        $('.docDownBtn').css('pointer-events', 'auto');
+                    }
                 }, 2300);
             });
         });

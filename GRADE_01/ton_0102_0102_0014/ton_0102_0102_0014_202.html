@@ -146,7 +146,7 @@
                             data-popup-btn="1" data-targetSlideNum="3"></span>
                     </li>
                     <li class="page_2">
-                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허</span>
+                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허밍</span>
                         <div class="videoBackground youtubeTitleWrap">
                             <div class="animationTitle">
                                 <div class="mediaSubContainer">
@@ -159,7 +159,7 @@
                         </div>
                     </li>
                     <li class="page_3">
-                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허</span>
+                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허밍</span>
                         <div class="videoBackground youtubeTitleWrap">
                             <div class="animationTitle">
                                 <div class="mediaSubContainer">
@@ -172,7 +172,7 @@
                         </div>
                     </li>
                     <li class="page_4">
-                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허</span>
+                        <span class='popBtn voca' data-hover='' data-popup-btn='2'>허밍</span>
                         <div class="videoBackground youtubeTitleWrap">
                             <div class="animationTitle">
                                 <div class="mediaSubContainer">
@@ -254,7 +254,7 @@
                     <h2>낱말 익히기</h2>
                     <div class="popup_contents ls1">
                         <p>
-                            <span class="pink">허밍</span>
+                            <span style="color: #7142B8;">허밍</span>
                         </p>
                         <p>입을 닫고 코로 소리를 내어 노래를 부르는 창법</p>
                     </div>
@@ -296,14 +296,11 @@
                 id: '#girl_1_c',
                 circle: true,
                 speech: 'right',
+                sound: './media/ton_0102_0102_0014_202/ton_0102_0102_0014_202_01.mp3',
                 text: '‘둥개둥개 둥개야’는<br>처음 들어봤어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -110,
             });
@@ -312,15 +309,11 @@
                 id: '#boy_2_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/sample.mp3',
+                sound: './media/ton_0102_0102_0014_202/ton_0102_0102_0014_202_02.mp3',
                 text: '‘브람스 자장가’는<br>엄마가 불러 주셨어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -130,
             });
@@ -329,17 +322,23 @@
                 id: '#girl_2_c',
                 circle: true,
                 speech: 'right',
+                sound: './media/ton_0102_0102_0014_202/ton_0102_0102_0014_202_03.mp3',
                 text: '‘모차르트 자장가’는<br>피아노 학원에서<br>배웠어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -240,
                 balloon_left: -113,
             });
+
+            $(document).on('click', '.basicSlider_tabs li', function () {
+
+                $('.click-finger-Btn').removeClass('blinkOn').removeClass('blinkOpacity');
+                setTimeout(function () {
+                    $('.click-finger-Btn').addClass('blinkOn').addClass('blinkOpacity');
+                }, 100);
+            });
+
         });
     </script>
 </body>

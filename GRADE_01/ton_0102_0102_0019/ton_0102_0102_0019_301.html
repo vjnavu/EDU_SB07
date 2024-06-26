@@ -27,37 +27,10 @@
 
         #girl_3 {
             position: absolute;
-            bottom: 30px;
-            left: 110px;
         }
 
-        #girl_3 .balloon {
-            top: -230px !important;
-            left: -60px !important;
-            width: max-content;
-        }
-
-        .noteText .text-exam.flex-wrap {
-            width: 100%;
-            padding: 35px 40px 0px;
-            top: 0;
-            left: 0;
-        }
-
-        .noteText .dot {
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .noteText p.dot:after {
-            content: '';
-            width: 10px;
-            height: 10px;
-            position: absolute;
-            top: 25px;
-            left: 0;
-            border-radius: 50%;
-            background: #006ee6;
+        .noteText {
+            width: 93%;
         }
     </style>
 </head>
@@ -76,7 +49,7 @@
             <!-- FRAME OF PAGE -->
             <div class="basicSlider contentsBox" data-slide-container="main">
                 <ul class="basicSlider_slides" data-slides="">
-                    <li class="page_1" data-quiz="toggle">
+                    <li class="page_1" data-quiz="toggle" data-ani-show="true">
                         <div class="flex">
                             <div class="items">
                                 <div id="girl_3" class="character-item"></div>
@@ -104,6 +77,11 @@
                 </ul>
             </div>
         </main>
+
+        <div class="praise-box hide" data-type="1" data-totalCut="65" data-praiseAudio="../ko/contents/media/clap.mp3">
+            <div class="praise-button"></div>
+            <div class="praiseAni"></div>
+        </div>
 
         <section class="popup_container" data-popup-container="">
             <ul class="popup_pages">
@@ -145,15 +123,67 @@
                 speech: 'right',
                 sound: './media/ton_0102_0102_0019_301/ton_0102_0102_0019_301_01.mp3',
                 text: '실천 카드 내용을<br>꾸준히 실천하고<br>스스로 확인해요.',
-                class: 'b1 bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
-                balloon_top: -180,
-                balloon_left: -150,
+                class: 'bottom',
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
+                balloon_top: -230,
+                balloon_left: -65,
+                bottom: 30,
+                left: 110,
+            });
+
+            const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
+            const praiseButton = document.querySelector(".praise-button");
+            const praiseBox = document.querySelector(".praise-box");
+            const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
+            const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
+            const main = document.querySelector('#wrap > main');
+            const characterItem = document.querySelectorAll('.character-item');
+
+            basicSliderTabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    if (tab.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                });
+            });
+            basicSliderCircleTabs.forEach(slide => {
+                slide.addEventListener('click', function () {
+                    if (slide.dataset.aniShow === "true") {
+                        praiseBox.classList.remove("hide");
+                    } else {
+                        praiseBox.classList.add("hide");
+                    }
+                })
+            });
+            if (basicSliderSlides.dataset.aniShow === "true") {
+                praiseBox.classList.remove("hide");
+            }
+
+            praiseButton.addEventListener("click", function () {
+                $('.basicSlider_tabs li').css('pointer-events', 'none');
+                $prite.allStopSound();
+                $prite.allresetSprite();
+                const aniBackground = document.createElement("div");
+                aniBackground.classList.add("ani-background");
+                praiseButton.style.pointerEvents = "none";
+                praiseBox.insertAdjacentElement("beforeend", aniBackground);
+                main.style.pointerEvents = "none";
+                characterItem.forEach(item => {
+                    item.classList.add('no-pointer');
+                });
+                setTimeout(() => {
+                    $('.basicSlider_tabs li').css('pointer-events', 'auto');
+                    praiseBox.removeChild(aniBackground);
+                    praiseButton.style = "";
+                    main.style.pointerEvents = "auto";
+                    basicSliderSlides.style.pointerEvents = "auto";
+                    characterItem.forEach(item => {
+                        item.classList.remove('no-pointer');
+                    });
+                }, 2300);
             });
         });
     </script>

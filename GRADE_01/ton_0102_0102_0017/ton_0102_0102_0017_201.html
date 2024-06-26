@@ -96,7 +96,7 @@
           </li>
         </ul>
         <ul class="basicSlider_slides" data-slides="">
-          <li class="page_1" data-quiz="toggle">
+          <li class="page_1">
             <div class="basicSlider contentsBox doItContent" data-slide-container="">
               <div class="moveButtonContainer" data-slide-btn-container="">
                 <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
@@ -116,11 +116,13 @@
                         <p>아침 식사 시간</p>
                         <div class="bgTitleImg"></div>
                       </div>
-                      <div class="toggle examBtn box" data-toggle-obj="1">
-                        <div class="answer" data-toggle-target="1">
-                          <div class="ls-2h">
-                            가족과 함께 내가 좋아하는<br />
-                            반찬에 밥을 맛있게 먹는 모습
+                      <div data-type="toggleButton" class="box">
+                        <div class="toggle examBtn box" data-toggle-obj="1">
+                          <div class="answer" data-toggle-target="1">
+                            <div class="ls-2h">
+                              가족과 함께 내가 좋아하는<br />
+                              반찬에 밥을 맛있게 먹는 모습
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -132,11 +134,13 @@
                         <p>학교 수업 시간</p>
                         <div class="bgTitleImg"></div>
                       </div>
-                      <div class="toggle examBtn box" data-toggle-obj="2">
-                        <div class="answer" data-toggle-target="2">
-                          <div class="ls-2h">
-                            친구들 앞에서 내 작품을<br />
-                            소개하는 모습
+                      <div data-type="toggleButton" class="box">
+                        <div class="toggle examBtn box" data-toggle-obj="2">
+                          <div class="answer" data-toggle-target="2">
+                            <div class="ls-2h">
+                              친구들 앞에서 내 작품을<br />
+                              소개하는 모습
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -153,9 +157,11 @@
                         <p>방과 후 시간</p>
                         <div class="bgTitleImg"></div>
                       </div>
-                      <div class="toggle examBtn box" data-toggle-obj="3">
-                        <div class="answer" data-toggle-target="3">
-                          <div class="ls-2h">피아노를 배우고 있는 모습</div>
+                      <div data-type="toggleButton" class="box">
+                        <div class="toggle examBtn box" data-toggle-obj="3">
+                          <div class="answer" data-toggle-target="3">
+                            <div class="ls-2h">피아노를 배우고 있는 모습</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -166,11 +172,13 @@
                         <p>저녁 여유 시간</p>
                         <div class="bgTitleImg"></div>
                       </div>
-                      <div class="toggle examBtn box" data-toggle-obj="4">
-                        <div class="answer" data-toggle-target="4">
-                          <div class="ls-2h">
-                            아빠와 함께 공원에서<br />
-                            자전거를 타는 모습
+                      <div data-type="toggleButton" class="box">
+                        <div class="toggle examBtn box" data-toggle-obj="4">
+                          <div class="answer" data-toggle-target="4">
+                            <div class="ls-2h">
+                              아빠와 함께 공원에서<br />
+                              자전거를 타는 모습
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -230,14 +238,13 @@
         $(this).addClass("complete");
         $(".box-" + finger).addClass("active");
       });
+
       $(document).on("click", ".close-speech-btn", function () {
         let data_close = $(this).attr("data-close");
-        console.log('start');
         $(this).parent().removeClass("active");
-        $(".click-finger-Btn")
-          .filter('[data-finger="' + data_close + '"]')
-          .removeClass("complete");
+        $(".click-finger-Btn").filter('[data-finger="' + data_close + '"]').removeClass("complete");
       });
+
       $(document).on("click", ".popup_closeBtn", function () {
         $(".click-finger-Btn").removeClass("complete");
       });
@@ -248,12 +255,8 @@
         sound: './media/ton_0102_0102_0017_201/ton_0102_0102_0017_201_01.mp3',
         text: '아침에 학교 오는<br>길에 친한 친구를 만나<br>함께 걸어왔어요.',
         class: 'bottom',
-        callback_start: () => {
-          console.log('start');
-        },
-        callback_end: () => {
-          console.log('end');
-        },
+        callback_start: () => { console.log('start'); },
+        callback_end: () => { console.log('end'); },
         balloon_top: -230,
         balloon_left: -105,
       });
@@ -263,12 +266,8 @@
         sound: './media/ton_0102_0102_0017_201/ton_0102_0102_0017_201_02.mp3',
         text: '수업 시간에 운동장에서<br>제가 술래가 되어<br>술래잡기를 했어요.',
         class: 'bottom',
-        callback_start: () => {
-          console.log('start');
-        },
-        callback_end: () => {
-          console.log('end');
-        },
+        callback_start: () => { console.log('start'); },
+        callback_end: () => { console.log('end'); },
         balloon_top: -215,
         balloon_left: -130,
       });
@@ -278,15 +277,35 @@
         sound: './media/ton_0102_0102_0017_201/ton_0102_0102_0017_201_03.mp3',
         text: '급식 시간에 제가<br>좋아하는 떡볶이가 나와서<br>3번 더 먹었어요.',
         class: 'bottom',
-        callback_start: () => {
-          console.log('start');
-        },
-        callback_end: () => {
-          console.log('end');
-        },
+        callback_start: () => { console.log('start'); },
+        callback_end: () => { console.log('end'); },
         balloon_top: -210,
         balloon_left: -145,
       });
+
+      $(document).on('click', '.toggle', function () {
+        const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+        const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+        const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+        if (toggleBtn.length == toggleCompleteBtn.length) {
+          examViewBtn.addClass('reset');
+        } else {
+          examViewBtn.removeClass('reset');
+        }
+      });
+
+      $(document).on('click', '.examViewBtn', function () {
+        const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+        const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+        if (!examViewBtn.hasClass('reset')) {
+          toggleBtn.parent().removeAttr('data-active');
+        } else {
+          toggleBtn.parent().attr('data-active', 'on');
+        }
+      });
+
     });
   </script>
 </body>

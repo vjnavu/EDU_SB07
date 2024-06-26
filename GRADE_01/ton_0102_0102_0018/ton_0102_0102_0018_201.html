@@ -73,28 +73,34 @@
                         <div class="flex">
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0018_201/img_01.png">
-                                <div class="toggle examBtn box" data-toggle-obj="1">
-                                    <div class="answer" data-toggle-target="1">
-                                        <div class="ls-2h">‌‌‌오늘 친구들과<br>
-                                            신나게 놀았어요.
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <div class="ls-2h">‌‌‌오늘 친구들과<br>
+                                                신나게 놀았어요.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0018_201/img_02.png">
-                                <div class="toggle examBtn box" data-toggle-obj="2">
-                                    <div class="answer" data-toggle-target="2">
-                                        <div class="ls-2h">오늘 계단에서 넘어져<br>팔을 다쳤어요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <div class="ls-2h">오늘 계단에서 넘어져<br>팔을 다쳤어요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0018_201/img_03.png">
-                                <div class="toggle examBtn box" data-toggle-obj="4">
-                                    <div class="answer" data-toggle-target="4">
-                                        <div class="ls-2h">‌‌‌오늘 학교에서<br>
-                                            줄넘기에 성공했어요.
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            <div class="ls-2h">‌‌‌오늘 학교에서<br>
+                                                줄넘기에 성공했어요.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -118,18 +124,20 @@
                                     <div class="flex">
                                         <div class="items">
                                             <img src="./images/ton_0102_0102_0018_201/img_04.jpg">
-                                            <div class="toggle examBtn box" data-toggle-obj="4">
-                                                <div class="answer" data-toggle-target="4">
-                                                    <div class="ls-2h">‌‌생일이라 선물을 받았어요.
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="4">
+                                                    <div class="answer" data-toggle-target="4">
+                                                        <div class="ls-2h">‌‌생일이라 선물을 받았어요.</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="items">
                                             <img src="./images/ton_0102_0102_0018_201/img_05.png">
-                                            <div class="toggle examBtn box" data-toggle-obj="5">
-                                                <div class="answer" data-toggle-target="5">
-                                                    <div class="ls-2h">놀이동산에 갔어요.
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="5">
+                                                    <div class="answer" data-toggle-target="5">
+                                                        <div class="ls-2h">놀이동산에 갔어요.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -140,9 +148,10 @@
                                     <div class="flex">
                                         <div class="items">
                                             <img src="./images/ton_0102_0102_0018_201/img_06.png">
-                                            <div class="toggle examBtn box" data-toggle-obj="6">
-                                                <div class="answer" data-toggle-target="6">
-                                                    <div class="ls-2h">‌‌‌놀이터에서 친구가 나와 안 놀아서 속상했어요.
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="6">
+                                                    <div class="answer" data-toggle-target="6">
+                                                        <div class="ls-2h">‌‌‌놀이터에서 친구가 나와 안 놀아서 속상했어요.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -153,9 +162,10 @@
                                     <div class="flex">
                                         <div class="items">
                                             <img src="./images/ton_0102_0102_0018_201/img_07.png">
-                                            <div class="toggle examBtn box" data-toggle-obj="7">
-                                                <div class="answer" data-toggle-target="7">
-                                                    <div class="ls-2h">‌‌숙제가 많았는데, 다 하니까 마음이 시원했어요.
+                                            <div data-type="toggleButton" class="box">
+                                                <div class="toggle examBtn box" data-toggle-obj="7">
+                                                    <div class="answer" data-toggle-target="7">
+                                                        <div class="ls-2h">‌‌숙제가 많았는데, 다 하니까 마음이 시원했어요.</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -201,6 +211,29 @@
                     $('header .title').addClass('gap');
                 } else {
                     $('header .title').removeClass('gap');
+                }
+            });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
                 }
             });
         });

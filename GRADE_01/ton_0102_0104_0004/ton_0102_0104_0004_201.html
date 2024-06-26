@@ -21,6 +21,17 @@
             height: 550px;
         }
 
+        .page_1 .border img,
+        .page_1 .border {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .page_1 .border {
+            border: 2px solid #F3E7D6;
+        }
+
         #boy_2 {
             position: relative;
             left: 100px;
@@ -123,10 +134,14 @@
                                 </div>
                                 <ul class="basicSlider_slides" data-slides="">
                                     <li class="innerTab_1" data-quiz="toggle">
-                                        <img src="./images/ton_0102_0104_0004_201/img_01.jpg" />
+                                        <div class="border">
+                                            <img src="./images/ton_0102_0104_0004_201/img_01.jpg" />
+                                        </div>
                                     </li>
                                     <li class="innerTab_2" data-quiz="toggle">
-                                        <img src="./images/ton_0102_0104_0004_201/img_02.jpg" />
+                                        <div class="border">
+                                            <img src="./images/ton_0102_0104_0004_201/img_02.jpg" />
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -136,25 +151,31 @@
                         <div class="flex">
                             <div class="items">
                                 <img src="./images/ton_0102_0104_0004_201/img_03.png">
-                                <div class="toggle examBtn box" data-toggle-obj="1">
-                                    <div class="answer" data-toggle-target="1">
-                                        <div class="ls-2h">‌‌‌‌땅이 갈라져요.</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <div class="ls-2h">‌‌‌‌땅이 갈라져요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0104_0004_201/img_04.png">
-                                <div class="toggle examBtn box" data-toggle-obj="2">
-                                    <div class="answer" data-toggle-target="2">
-                                        <div class="ls-2h">물건이 떨어져요.</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <div class="ls-2h">물건이 떨어져요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0104_0004_201/img_05.png">
-                                <div class="toggle examBtn box" data-toggle-obj="3">
-                                    <div class="answer" data-toggle-target="3">
-                                        <div class="ls-2h">‌‌‌사람들이 다치거나<br>목숨을 잃을 수 있어요.</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle examBtn box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            <div class="ls-2h">‌‌‌사람들이 다치거나<br>목숨을 잃을 수 있어요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -304,6 +325,30 @@
                     $(this).parents('[data-quiz="toggle"]').find('.dapCheckBtn').removeClass('reset');
                 }
             });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
+            });
+
         });
     </script>
 </body>

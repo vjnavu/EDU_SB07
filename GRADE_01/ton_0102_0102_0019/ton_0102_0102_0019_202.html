@@ -242,25 +242,31 @@
                         <div class="flex">
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0019_202/img_01.jpg">
-                                <div class="toggle examBtn box" data-toggle-obj="7">
-                                    <div class="answer" data-toggle-target="7">
-                                        <div class="ls-2h">편식하지 않고 골고루<br>밥을 먹어요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <div class="ls-2h">편식하지 않고 골고루<br>밥을 먹어요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0019_202/img_02.jpg">
-                                <div class="toggle examBtn box" data-toggle-obj="8">
-                                    <div class="answer" data-toggle-target="8">
-                                        <div class="ls-2h">몸을 깨끗하게<br>씻어요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <div class="ls-2h">몸을 깨끗하게<br>씻어요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0102_0019_202/img_03.jpg">
-                                <div class="toggle examBtn box" data-toggle-obj="9">
-                                    <div class="answer" data-toggle-target="9">
-                                        <div class="ls-2h">‌‌‌일찍 자고<br>일찍 일어나요.</div>
+                                <div data-type="toggleButton" class="box">
+                                    <div class="toggle examBtn box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            <div class="ls-2h">‌‌‌일찍 자고<br>일찍 일어나요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -477,11 +483,35 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
             $(document).on('click', '.checkBox', function () {
                 if ($(this).hasClass('ans')) {
                     $(this).removeClass('ans');
                 } else {
                     $(this).addClass('ans');
+                }
+            });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
                 }
             });
         });

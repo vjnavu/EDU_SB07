@@ -167,12 +167,8 @@
                 sound: './media/ton_0102_0103_0006_302/ton_0102_0103_0006_302_01.mp3',
                 text: '짝꿍이 빨리 일어나서<br>도망가도록 알려 준<br>태오를 칭찬해요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -230,
                 balloon_left: -90,
             });
@@ -182,15 +178,12 @@
                 sound: './media/ton_0102_0103_0006_302/ton_0102_0103_0006_302_02.mp3',
                 text: '즐겁게 놀이에 참여한<br>우리 반 모두를 칭찬해요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -145,
             });
+
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
             const praiseButton = document.querySelector(".praise-button");
             const praiseBox = document.querySelector(".praise-box");
@@ -222,6 +215,7 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_tabs li').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -232,11 +226,12 @@
                 characterItem.forEach(item => {
                     item.classList.add('no-pointer');
                 });
-
                 setTimeout(() => {
+                    $('.basicSlider_tabs li').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
+                    basicSliderSlides.style.pointerEvents = "auto";
                     characterItem.forEach(item => {
                         item.classList.remove('no-pointer');
                     });

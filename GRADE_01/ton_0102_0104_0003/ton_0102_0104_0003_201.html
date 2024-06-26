@@ -27,12 +27,12 @@
 
         .page_1 .popBtn.line {
             border: unset;
-            height: 295px;
-            cursor: unset;
+            cursor: default;
             pointer-events: none;
+            height: 100%;
         }
 
-        .toggle {
+        .page_1 .toggle {
             background-color: unset;
         }
 
@@ -41,18 +41,13 @@
             text-align: center;
         }
 
-
-
-
-
         /* page 2 */
         .contentsBox {
             padding: 0;
         }
 
-        .page_1,
-        .page_3 {
-            padding: 20px;
+        .basicSlider[data-slide-container='main']>.basicSlider_slides>li:not(.page_2) {
+            padding: 20px 28px 0 28px;
         }
 
         .zoomArea {
@@ -175,9 +170,23 @@
             left: 25px;
         }
 
-
-
         /* page 3  */
+        .page_3 .flex .items {
+            flex: 1;
+            position: relative;
+        }
+
+        .page_3 .flex .items .toggle.box {
+            margin-top: 10px;
+            display: block;
+            height: 120px;
+        }
+
+        .page_3 .flex .items .toggle .answer {
+            height: 100%;
+            text-align: center;
+        }
+
         .page_3 .howtoBox .pic-box .imageWrap {
             padding: 0;
         }
@@ -191,27 +200,42 @@
             margin-top: 40px;
         }
 
+        [data-type="toggleButton"] {
+            height: auto;
+        }
+
         .bullet.orange.number {
             z-index: 2;
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
 
         .popup_pages img {
             object-fit: unset;
+            position: absolute;
+            top: 0;
         }
 
         .popup_pages>li.whole h2 {
             width: fit-content;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         [data-popup-page="1"] h2 .bullet.orange.number {
             z-index: 2;
-            margin-top: 15px;
-            margin-right: 10px;
+            margin-top: 5px;
+            left: 20px;
         }
 
-        .dapCheckBtn {
-            right: 20px;
+        .buttonContainer {
+            right: 28px;
+        }
+
+        .popup_pages h2 span:before {
+            display: none;
         }
     </style>
 </head>
@@ -265,7 +289,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div class="text-box">
+                                                <div class="text-box" data-type="toggleButton">
                                                     <div class="toggle box" data-toggle-obj="1">
                                                         <div class="answer" data-toggle-target="1">
                                                             횡단보도에서 우선 멈춰요.
@@ -293,7 +317,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div class="text-box">
+                                                <div class="text-box" data-type="toggleButton">
                                                     <div class="toggle box" data-toggle-obj="2">
                                                         <div class="answer" data-toggle-target="2">
                                                             차가 오는지 좌우를 살펴봐요.
@@ -321,7 +345,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div class="text-box">
+                                                <div class="text-box" data-type="toggleButton">
                                                     <div class="toggle box" data-toggle-obj="3">
                                                         <div class="answer" data-toggle-target="3">
                                                             횡단보도의 오른쪽에서 운전자를 보며 손을 들어요.
@@ -349,7 +373,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div class="text-box">
+                                                <div class="text-box" data-type="toggleButton">
                                                     <div class="toggle box" data-toggle-obj="4">
                                                         <div class="answer" data-toggle-target="4">
                                                             운전자와 눈을 마주치고 자동차가 멈추었는지 살펴봐요.
@@ -377,7 +401,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div class="text-box">
+                                                <div class="text-box" data-type="toggleButton">
                                                     <div class="toggle box" data-toggle-obj="5">
                                                         <div class="answer" data-toggle-target="5">
                                                             손을 들고 차를 보면서 건너가요.
@@ -431,73 +455,67 @@
                     </li>
                     <li class="page_3" data-quiz="toggle">
                         <div class="flex">
-                            <div class="how-to-box howtoBox">
-                                <div class="pic-box">
-                                    <div class="bullet number orange inline">1</div>
-                                    <div class="image-box">
-                                        <div class="imageWrap">
-                                            <span class="imgWrap line popBtn" data-popup-btn="1"
-                                                data-targetSlideNum="1">
-                                                <img src="./images/ton_0102_0104_0003_201/img_01.jpg"> <button
-                                                    class="popBtn zoomBtn" data-hover=""></button>
-                                            </span>
-                                        </div>
+                            <div class="items">
+                                <div class="bullet number orange inline">1</div>
+                                <div class="image-box">
+                                    <div class="imageWrap">
+                                        <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="1">
+                                            <img src="./images/ton_0102_0104_0003_201/img_01.jpg"> <button
+                                                class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
                                     </div>
-                                    <div class="text-box">
-                                        <div class="toggle box" data-toggle-obj="6">
-                                            <div class="answer" data-toggle-target="6">
-                                                우선 멈추는 습관
-                                            </div>
+                                </div>
+                                <div class="text-box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="6">
+                                        <div class="answer" data-toggle-target="6">
+                                            우선 멈추는 습관
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="how-to-box howtoBox">
-                                <div class="pic-box">
-                                    <div class="bullet number orange inline">2</div>
-                                    <div class="image-box">
-                                        <div class="imageWrap">
-                                            <span class="imgWrap line popBtn" data-popup-btn="1"
-                                                data-targetSlideNum="2">
-                                                <img src="./images/ton_0102_0104_0003_201/img_04.jpg"> <button
-                                                    class="popBtn zoomBtn" data-hover=""></button>
-                                            </span>
-                                        </div>
+                            <div class="items">
+                                <div class="bullet number orange inline">2</div>
+                                <div class="image-box">
+                                    <div class="imageWrap">
+                                        <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="2">
+                                            <img src="./images/ton_0102_0104_0003_201/img_04.jpg"> <button
+                                                class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
                                     </div>
-                                    <div class="text-box">
-                                        <div class="toggle box" data-toggle-obj="7">
-                                            <div class="answer" data-toggle-target="7">
-                                                운전자와<br>
-                                                눈 맞추는 습관
-                                            </div>
+                                </div>
+                                <div class="text-box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="7">
+                                        <div class="answer" data-toggle-target="7">
+                                            운전자와<br>
+                                            눈 맞추는 습관
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="how-to-box howtoBox">
-                                <div class="pic-box">
-                                    <div class="bullet number orange inline">3</div>
-                                    <div class="image-box">
-                                        <div class="imageWrap">
-                                            <span class="imgWrap line popBtn" data-popup-btn="1"
-                                                data-targetSlideNum="3">
-                                                <img src="./images/ton_0102_0104_0003_201/img_05.jpg">
-                                                <button class="popBtn zoomBtn" data-hover=""></button>
-                                            </span>
-                                        </div>
+                            <div class="items">
+                                <div class="bullet number orange inline">3</div>
+                                <div class="image-box">
+                                    <div class="imageWrap">
+                                        <span class="imgWrap line popBtn" data-popup-btn="1" data-targetSlideNum="3">
+                                            <img src="./images/ton_0102_0104_0003_201/img_05.jpg">
+                                            <button class="popBtn zoomBtn" data-hover=""></button>
+                                        </span>
                                     </div>
-                                    <div class="text-box">
-                                        <div class="toggle box" data-toggle-obj="8">
-                                            <div class="answer" data-toggle-target="8">
-                                                차를 계속 보면서<br>
-                                                건너는 습관
-                                            </div>
+                                </div>
+                                <div class="text-box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="8">
+                                        <div class="answer" data-toggle-target="8">
+                                            차를 계속 보면서<br>
+                                            건너는 습관
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="dapCheckBtn" data-answer-btn=""></button>
+
+                        <div class="buttonContainer">
+                            <button class="dapCheckBtn" data-answer-btn=""></button>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -510,19 +528,19 @@
                         <ul class="basicSlider_slides" data-slides="">
                             <li class="innerTab_1">
                                 <h2>
-                                    <div class="bullet number orange inline">1</div>우선 멈추는 습관
+                                    <span class="bullet number orange inline">1</span>우선 멈추는 습관
                                 </h2>
                                 <img src="./images/ton_0102_0104_0003_201/img_01.jpg">
                             </li>
                             <li class="innerTab_2">
                                 <h2>
-                                    <div class="bullet number orange inline">2</div>운전자와 눈 맞추는 습관
+                                    <span class="bullet number orange inline">2</span>운전자와 눈 맞추는 습관
                                 </h2>
                                 <img src="./images/ton_0102_0104_0003_201/img_04.jpg">
                             </li>
                             <li class="innerTab_3">
                                 <h2>
-                                    <div class="bullet number orange inline">3</div>차를 계속 보면서 건너는 습관
+                                    <span class="bullet number orange inline">3</span>차를 계속 보면서 건너는 습관
                                 </h2>
                                 <img src="./images/ton_0102_0104_0003_201/img_05.jpg">
                             </li>

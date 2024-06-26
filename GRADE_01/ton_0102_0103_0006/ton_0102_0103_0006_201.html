@@ -404,21 +404,30 @@
             });
 
             $(document).on("click", ".click-finger-Btn", function () {
+                KmAudioPlayer.buttonClick();
                 let finger = $(this).data("finger");
                 $(this).addClass("complete");
                 $(".box-" + finger).addClass("active");
             });
             $(document).on("click", ".close-speech-btn", function () {
-                let data_close = $(this).attr("data-close");
                 KmAudioPlayer.buttonClick();
+                let data_close = $(this).attr("data-close");
                 $(this).parent().removeClass("active");
-                $(".click-finger-Btn")
-                    .filter('[data-finger="' + data_close + '"]')
-                    .removeClass("complete");
+                $(".click-finger-Btn").filter('[data-finger="' + data_close + '"]').removeClass("complete");
             });
+
             $(document).on("click", ".popup_closeBtn", function () {
                 $(".click-finger-Btn").removeClass("complete");
             });
+
+            $(document).on('click', '.basicSlider_tabs li', function () {
+
+                $('.click-finger-Btn').removeClass('blinkOn').removeClass('blinkOpacity');
+                setTimeout(function () {
+                    $('.click-finger-Btn').addClass('blinkOn').addClass('blinkOpacity');
+                }, 100);
+            });
+
         });
     </script>
 </body>

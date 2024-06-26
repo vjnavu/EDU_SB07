@@ -112,12 +112,8 @@
                             <div class="text-exam flex-wrap">
                                 <!-- <div class="bullet exam">예</div> -->
                                 <div class="blueT">
-                                    <p><ins class="dot"></ins>
-                                        나는 ‘나무야’ 자장가를 알아요.
-                                    </p>
-                                    <p><ins class="dot"></ins>
-                                        나는 ‘섬집 아기’ 자장가를 좋아해요.
-                                    </p>
+                                    <p class="dot">나는 ‘나무야’ 자장가를 알아요.</p>
+                                    <p class="dot">나는 ‘섬집 아기’ 자장가를 좋아해요.</p>
                                 </div>
                             </div>
                         </div>
@@ -238,12 +234,8 @@
                 sound: './media/ton_0102_0102_0014_201/ton_0102_0102_0014_201_01.mp3',
                 text: `제목은 잘 모르겠어요.`,
                 class: 'middle left',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: 10,
                 balloon_left: 220
             });
@@ -255,12 +247,8 @@
                 sound: './media/ton_0102_0102_0014_201/ton_0102_0102_0014_201_02.mp3',
                 text: `자장자장~ 이렇게 하는 거요.`,
                 class: 'middle right',
-                callback_start: () => {
-                    KmAudioPlayer.buttonClick();
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: 10,
                 balloon_left: -800
             });

@@ -178,7 +178,7 @@
                 </ul>
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1">
-                        <span class="popBtn voca" data-hover="" data-popup-btn="2">옥</span>
+                        <span class="popBtn voca" data-hover="" data-popup-btn="2">옥외</span>
                         <div class="basicSlider contentsBox doItContent" data-slide-container="">
                             <div class="moveButtonContainer" data-slide-btn-container="">
                                 <div class="basicSlider_btn prev" data-btn-prev="" data-hover=""></div>
@@ -238,26 +238,32 @@
                         <div class="flex">
                             <div class="items">
                                 <img src="./images/ton_0102_0104_0004_202/img_04.jpg">
-                                <div class="toggle box" data-toggle-obj="1">
-                                    <div class="answer" data-toggle-target="1">
-                                        <div class="ls-2h">‌‌‌‌탁자 아래에<br>들어가요.</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <div class="ls-2h">‌‌‌‌탁자 아래에<br>들어가요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0104_0004_202/img_05.jpg">
-                                <div class="toggle box" data-toggle-obj="2">
-                                    <div class="answer" data-toggle-target="2">
-                                        <div class="ls-2h">머리를 가리고<br>계단으로 나가요.</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <div class="ls-2h">머리를 가리고<br>계단으로 나가요.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0102_0104_0004_202/img_06.jpg">
-                                <div class="toggle box" data-toggle-obj="3">
-                                    <div class="answer" data-toggle-target="3">
-                                        <div class="ls-2h">‌‌‌‌넓은 장소로<br>
-                                            대피해요.
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            <div class="ls-2h">‌‌‌‌넓은 장소로<br>
+                                                대피해요.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -420,7 +426,7 @@
                     <h2>낱말 익히기</h2>
                     <div class="popup_contents ls1">
                         <p>
-                            <span class="pink">옥외</span>
+                            <span style="color: #7142B8;">옥외</span>
                         </p>
                         <p>집 또는 건물의 밖</p>
                     </div>
@@ -457,6 +463,30 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const dapCheckBtn = $(this).parents('[data-quiz=toggle]').find('.dapCheckBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    dapCheckBtn.addClass('reset');
+                } else {
+                    dapCheckBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.dapCheckBtn', function () {
+                const dapCheckBtn = $(this).parents('[data-quiz=toggle]').find('.dapCheckBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!dapCheckBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
+            });
+
         });
     </script>
 </body>

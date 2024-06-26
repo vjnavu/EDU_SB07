@@ -249,12 +249,8 @@
                 sound: './media/ton_0102_0102_0018_103/ton_0102_0102_0018_103_01.mp3',
                 text: '보슬보슬 <br>비가 내리는 날이요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -110,
             });
@@ -266,17 +262,14 @@
                 sound: './media/ton_0102_0102_0018_103/ton_0102_0102_0018_103_02.mp3',
                 text: '습기를 좋아해서 <br>비 오는 날이 제일 좋대요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -165,
             });
 
             $(document).on('click', '.click-finger-Btn', function () {
+                KmAudioPlayer.buttonClick();
                 var $data_popup = $(this).attr('data-popup');
                 $('.popupItem[data-show="' + $data_popup + '"]').css('opacity', '1');
                 $('.popupItem[data-show="' + $data_popup + '"]').append('<div class="close-speech-button beforeNon"></div>')
@@ -284,10 +277,19 @@
             });
 
             $(document).on('click', '.close-speech-button', function () {
+                KmAudioPlayer.buttonClick();
                 var $data_show = $(this).parent().attr('data-show');
                 $(this).parent().css('opacity', '0');
                 $('.click-finger-Btn[data-popup="' + $data_show + '"]').show();
                 $(this).parent().find($('.close-speech-button')).remove();
+            });
+
+            $(document).on('click', '.basicSlider_tabs li', function () {
+
+                $('.click-finger-Btn').removeClass('blinkOn').removeClass('blinkOpacity');
+                setTimeout(function () {
+                    $('.click-finger-Btn').addClass('blinkOn').addClass('blinkOpacity');
+                }, 100);
             });
 
             $prite.boy3({
@@ -296,12 +298,8 @@
                 sound: './media/ton_0102_0102_0018_103/ton_0102_0102_0018_103_03.mp3',
                 text: '느릿느릿해서<br>멀리 못 가요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -35,
             });
@@ -312,12 +310,8 @@
                 sound: './media/ton_0102_0102_0018_103/ton_0102_0102_0018_103_04.mp3',
                 text: '한 뼘도 못 간대요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -120,
                 balloon_left: -78,
             });
@@ -328,12 +322,8 @@
                 sound: './media/ton_0102_0102_0018_103/ton_0102_0102_0018_103_05.mp3',
                 text: '‘아휴, 답답해!’ 하면서<br>속상해할 것 같아요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -110,
             });
@@ -344,12 +334,8 @@
                 sound: './media/ton_0102_0102_0018_103/ton_0102_0102_0018_103_06.mp3',
                 text: '‘괜찮아. 내일 또 가면 돼!’<br>라고 생각할 것 같아요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -150,
             });

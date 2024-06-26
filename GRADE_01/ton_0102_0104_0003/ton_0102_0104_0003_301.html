@@ -206,6 +206,8 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_circle_tabs > li').css('pointer-events', 'none');
+                $('.moveButtonContainer .basicSlider_btn').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -219,6 +221,8 @@
 
                 setTimeout(() => {
                     praiseBox.removeChild(aniBackground);
+                    $('.basicSlider_circle_tabs > li').css('pointer-events', 'auto');
+                    $('.moveButtonContainer .basicSlider_btn').css('pointer-events', 'auto');
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
                     characterItem.forEach(item => {

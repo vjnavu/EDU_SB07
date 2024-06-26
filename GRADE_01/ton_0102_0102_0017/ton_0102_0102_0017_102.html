@@ -136,7 +136,7 @@
     .page_3 .flex {
       display: flex;
       gap: 20px;
-      margin-top: 60px;
+      margin-top: 40px;
     }
 
     .page_3 .flex .items {
@@ -179,15 +179,9 @@
       <!-- FRAME OF PAGE -->
       <div class="basicSlider contentsBox" data-slide-container="main">
         <ul class="basicSlider_tabs" data-tabs="">
-          <li data-hover="" data-text="그려 본 경험을 떠올리며 언제, 어떤 그림을 그렸는지 이야기해 볼까요?" data-gap="true">
-            물음 1
-          </li>
-          <li data-hover="" data-text="교과서 50~51쪽 글과 그림을 보면서 무엇을 할지 이야기해 볼까요?" data-gap="true">
-            물음 2
-          </li>
-          <li data-hover="" data-text="교과서 51쪽 아래 그림은 어떤 상황인지 이야기해 볼까요?">
-            물음 3
-          </li>
+          <li data-hover="" data-text="그려 본 경험을 떠올리며 언제, 어떤 그림을 그렸는지 이야기해 볼까요?" data-gap="true">물음 1</li>
+          <li data-hover="" data-text="교과서 50~51쪽 글과 그림을 보면서 무엇을 할지 이야기해 볼까요?" data-gap="true">물음 2</li>
+          <li data-hover="" data-text="교과서 51쪽 아래 그림은 어떤 상황인지 이야기해 볼까요?" data-gap="true">물음 3</li>
         </ul>
         <ul class="basicSlider_slides" data-slides="">
           <li class="page_1">
@@ -238,22 +232,26 @@
             <div class="flex">
               <div class="items">
                 <img src="./images/ton_0102_0102_0017_102/img_02.png" />
-                <div class="toggle examBtn box" data-toggle-obj="1">
-                  <div class="answer" data-toggle-target="1">
-                    <div class="ls-2h">
-                      운동장에서 친구들과<br />
-                      달리기를 해요.
+                <div data-type="toggleButton" class="box">
+                  <div class="toggle examBtn box" data-toggle-obj="1">
+                    <div class="answer" data-toggle-target="1">
+                      <div class="ls-2h">
+                        운동장에서 친구들과<br />
+                        달리기를 해요.
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="items">
                 <img src="./images/ton_0102_0102_0017_102/img_03.png" />
-                <div class="toggle examBtn box" data-toggle-obj="2">
-                  <div class="answer" data-toggle-target="2">
-                    <div class="ls-2h">
-                      모둠을 나누고 빨간 판,<br />
-                      파란 판을 이용해 놀이를 해요.
+                <div data-type="toggleButton" class="box">
+                  <div class="toggle examBtn box" data-toggle-obj="2">
+                    <div class="answer" data-toggle-target="2">
+                      <div class="ls-2h">
+                        모둠을 나누고 빨간 판,<br />
+                        파란 판을 이용해 놀이를 해요.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -303,17 +301,41 @@
         $(this).addClass("complete");
         $(".box-" + finger).addClass("active");
       });
+
       $(document).on("click", ".close-speech-btn", function () {
-        let data_close = $(this).attr("data-close");
         KmAudioPlayer.buttonClick();
+        let data_close = $(this).attr("data-close");
         $(this).parent().removeClass("active");
-        $(".click-finger-Btn")
-          .filter('[data-finger="' + data_close + '"]')
-          .removeClass("complete");
+        $(".click-finger-Btn").filter('[data-finger="' + data_close + '"]').removeClass("complete");
       });
+
       $(document).on("click", ".popup_closeBtn", function () {
         $(".click-finger-Btn").removeClass("complete");
       });
+
+      $(document).on('click', '.toggle', function () {
+        const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+        const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+        const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+        if (toggleBtn.length == toggleCompleteBtn.length) {
+          examViewBtn.addClass('reset');
+        } else {
+          examViewBtn.removeClass('reset');
+        }
+      });
+
+      $(document).on('click', '.examViewBtn', function () {
+        const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+        const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+        if (!examViewBtn.hasClass('reset')) {
+          toggleBtn.parent().removeAttr('data-active');
+        } else {
+          toggleBtn.parent().attr('data-active', 'on');
+        }
+      });
+
     });
   </script>
 </body>

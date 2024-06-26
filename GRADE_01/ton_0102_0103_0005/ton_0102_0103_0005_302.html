@@ -73,8 +73,6 @@
 
         #boy_3 {
             position: absolute;
-            bottom: 30px;
-            left: 160px;
         }
 
         .noteText .text-exam.flex-wrap {
@@ -191,12 +189,8 @@
                 sound: './media/ton_0102_0103_0005_302/ton_0102_0103_0005_302_01.mp3',
                 text: '큰 공이 생각보다<br>밀기 힘들었어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -85,
             });
@@ -208,12 +202,8 @@
                 sound: './media/ton_0102_0103_0005_302/ton_0102_0103_0005_302_02.mp3',
                 text: '지고 나서도<br>다시 공격할 수 있어서<br>좋았어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -240,
                 balloon_left: -130,
             });
@@ -224,14 +214,12 @@
                 sound: './media/ton_0102_0103_0005_302/ton_0102_0103_0005_302_03.mp3',
                 text: '하준이가 공 미는 것을<br>양보해 줘서 고마웠어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -180,
                 balloon_left: -130,
+                left: 160,
+                bottom: 30,
             });
 
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
@@ -265,6 +253,7 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_tabs li').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -275,11 +264,12 @@
                 characterItem.forEach(item => {
                     item.classList.add('no-pointer');
                 });
-
                 setTimeout(() => {
+                    $('.basicSlider_tabs li').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
+                    basicSliderSlides.style.pointerEvents = "auto";
                     characterItem.forEach(item => {
                         item.classList.remove('no-pointer');
                     });

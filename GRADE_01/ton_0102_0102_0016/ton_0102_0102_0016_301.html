@@ -110,10 +110,6 @@
             <div class="praise-button"></div>
             <div class="praiseAni"></div>
         </div>
-        <section class="popup_container" data-popup-container="">
-            <ul class="popup_pages">
-            </ul>
-        </section>
 
     </div>
 
@@ -150,15 +146,12 @@
                 sound: './media/ton_0102_0102_0016_301/ton_0102_0102_0016_301_01.mp3',
                 text: '완성된 작품을 각자의 책상에 전시하기, <br>칠판에 붙이기, 실물 화상기로 <br>발표하기 등 다양한 방법을 통해 <br>작품을 감상할 수 있어요.',
                 class: 'bottom',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: -280,
                 balloon_left: -265,
             });
+
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
             const praiseButton = document.querySelector(".praise-button");
             const praiseBox = document.querySelector(".praise-box");
@@ -190,6 +183,7 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_tabs li').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -200,11 +194,12 @@
                 characterItem.forEach(item => {
                     item.classList.add('no-pointer');
                 });
-
                 setTimeout(() => {
+                    $('.basicSlider_tabs li').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
+                    basicSliderSlides.style.pointerEvents = "auto";
                     characterItem.forEach(item => {
                         item.classList.remove('no-pointer');
                     });
