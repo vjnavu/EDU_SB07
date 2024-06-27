@@ -326,10 +326,11 @@
 
             $(document).on('click', '.examViewBtn', function () {
                 if ($(this).hasClass('reset')) {
-                    $('.correctArea').addClass('active');
+                    $(this).closest('.page_zoom').find('.correctArea').addClass('active');
+
                 }
                 else {
-                    $('.correctArea').removeClass('active');
+                    $(this).closest('.page_zoom').find('.correctArea').removeClass('active');
                 }
             });
         });
