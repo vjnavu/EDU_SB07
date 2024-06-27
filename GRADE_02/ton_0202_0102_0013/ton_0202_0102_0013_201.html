@@ -418,30 +418,7 @@
                 callback_start: () => { KmAudioPlayer.buttonClick(); },
                 callback_end: () => { console.log('end'); }
             });
-
-            $(document).on('click', '.basicSlider_circle_tabs li', function () {
-                // zoomInstance.resetZoom();
-                $(document).find(".zoomController").remove();
-
-                var $idx = $(this).index() + 1;
-
-                // loadScriptFile("common/js/zoomImage.js", function () {
-                //     zoomInstance = new ZoomImage(QS(".basicSlider_circle_tabs li:nth-child(" + $idx + ")").querySelector(".zoomContainer"));
-                // });
-            });
         });
-
-        function loadScriptFile(scriptSrc, callBack) {
-            var script = document.createElement('script');
-            script.src = scriptSrc;
-
-            if (callBack) {
-                script.onload = function () {
-                    callBack();
-                };
-            }
-            document.head.appendChild(script);
-        }
     </script>
 </body>
 

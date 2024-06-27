@@ -17,13 +17,18 @@ function efSound(src) {
 }
 
 if (document.querySelectorAll('.page_zoom').length > 0) {
-  zoomInstance = new ZoomImage(
-    QS('.page_zoom').querySelector('.zoomContainer')
-  );
+  const pageZoom = document.querySelectorAll('.page_zoom');
+  pageZoom.forEach((page) => {
+    zoomInstance = new ZoomImage(page.querySelector('.zoomContainer'));
+  });
 
   $(document).on('click', '.popup_closeBtn', function () {
     if (!$(this).parent().hasClass('min')) {
       zoomInstance.resetZoom();
     }
   })
+
+  $(document).on('click', '.basicSlider_tabs li', function () {
+    zoomInstance.resetZoom();
+  });
 }
