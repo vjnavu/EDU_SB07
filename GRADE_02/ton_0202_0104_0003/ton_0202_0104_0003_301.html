@@ -65,10 +65,6 @@
         .youtubeTitleWrap .mediaSubContainer .screenPlayBtn:hover {
             background: #d04511 url('../ko/contents/images/icon/icon_play.svg') 28px center/27px no-repeat;
         }
-
-        .praise-box[data-type="0"] .praise-button {
-            top: 80%;
-        }
     </style>
 </head>
 
@@ -248,6 +244,7 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
             const praiseButton = document.querySelector(".praise-button");
             const praiseBox = document.querySelector(".praise-box");
@@ -279,6 +276,7 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_tabs li').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -289,11 +287,12 @@
                 characterItem.forEach(item => {
                     item.classList.add('no-pointer');
                 });
-
                 setTimeout(() => {
+                    $('.basicSlider_tabs li').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
+                    basicSliderSlides.style.pointerEvents = "auto";
                     characterItem.forEach(item => {
                         item.classList.remove('no-pointer');
                     });

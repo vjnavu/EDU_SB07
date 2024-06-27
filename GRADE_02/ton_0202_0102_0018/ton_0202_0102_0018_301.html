@@ -172,6 +172,7 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
             const praiseButton = document.querySelector(".praise-button");
             const praiseBox = document.querySelector(".praise-box");
@@ -203,6 +204,9 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.basicSlider_circle_tabs > li').css('pointer-events', 'none');
+                $('.moveButtonContainer .basicSlider_btn').css('pointer-events', 'none');
+                $('.basicSlider_tabs > li').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -216,6 +220,9 @@
 
                 setTimeout(() => {
                     praiseBox.removeChild(aniBackground);
+                    $('.basicSlider_circle_tabs > li').css('pointer-events', 'auto');
+                    $('.moveButtonContainer .basicSlider_btn').css('pointer-events', 'auto');
+                    $('.basicSlider_tabs > li').css('pointer-events', 'auto');
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
                     characterItem.forEach(item => {

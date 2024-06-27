@@ -151,28 +151,31 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
             $prite.boy1({
                 id: '#boy_1',
                 speech: 'right',
                 sound: './media/ton_0202_0104_0004_302/ton_0202_0104_0004_302_01.mp3',
                 text: '엄마가 떠 주신<br>목도리를 목에 두를<br>거예요.',
                 class: 'bottom',
-                callback_start: () => { },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); },
                 balloon_top: -230,
                 balloon_left: -80,
             });
+
             $prite.girl2({
                 id: '#girl_2',
                 speech: 'right',
                 sound: './media/ton_0202_0104_0004_302/ton_0202_0104_0004_302_02.mp3',
                 text: '보라색 장갑을 끼고<br>도톰한 패딩을 입을<br>거예요.',
                 class: 'bottom',
-                callback_start: () => { },
+                callback_start: () => { console.log('start'); },
                 callback_end: () => { console.log('end'); },
                 balloon_top: -230,
                 balloon_left: -85,
             });
+
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
             const praiseButton = document.querySelector(".praise-button");
             const praiseBox = document.querySelector(".praise-box");
@@ -207,7 +210,6 @@
                     }
                 })
             }
-
 
             praiseButton.addEventListener("click", function () {
                 $prite.allStopSound();

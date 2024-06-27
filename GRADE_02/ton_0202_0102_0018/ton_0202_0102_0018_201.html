@@ -239,11 +239,13 @@
             height: 70px;
         }
 
-
-
         .page_4 .buttonContainer {
             right: 0;
             bottom: -10px;
+        }
+
+        .docDownBtn {
+            z-index: 99;
         }
     </style>
 </head>
@@ -315,9 +317,11 @@
                                         </div>
                                         <div class="text">언제 갈까요?</div>
                                     </div>
-                                    <div class="toggle examBtn box" data-toggle-obj="1">
-                                        <div class="answer" data-toggle-target="1">
-                                            월요일, 4월, 놀이 시간 등
+                                    <div class="box" data-type="toggleButton">
+                                        <div class="toggle examBtn box" data-toggle-obj="1">
+                                            <div class="answer" data-toggle-target="1">
+                                                월요일, 4월, 놀이 시간 등
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -327,9 +331,11 @@
                                         </div>
                                         <div class="text">어디로 갈까요?</div>
                                     </div>
-                                    <div class="toggle examBtn box" data-toggle-obj="2">
-                                        <div class="answer" data-toggle-target="2">
-                                            학교 운동장, 뒷산, 공원 등
+                                    <div class="box" data-type="toggleButton">
+                                        <div class="toggle examBtn box" data-toggle-obj="2">
+                                            <div class="answer" data-toggle-target="2">
+                                                학교 운동장, 뒷산, 공원 등
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -339,9 +345,11 @@
                                         </div>
                                         <div class="text">무엇을 할까요?</div>
                                     </div>
-                                    <div class="toggle examBtn box" data-toggle-obj="3">
-                                        <div class="answer" data-toggle-target="3">
-                                            사진 찍기, 놀이하기 등
+                                    <div class="box" data-type="toggleButton">
+                                        <div class="toggle examBtn box" data-toggle-obj="3">
+                                            <div class="answer" data-toggle-target="3">
+                                                사진 찍기, 놀이하기 등
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -351,9 +359,11 @@
                                         </div>
                                         <div class="text">무엇을 준비할까요?</div>
                                     </div>
-                                    <div class="toggle examBtn box" data-toggle-obj="4">
-                                        <div class="answer" data-toggle-target="4">
-                                            물통, 사진기, 공책 등
+                                    <div class="box" data-type="toggleButton">
+                                        <div class="toggle examBtn box" data-toggle-obj="4">
+                                            <div class="answer" data-toggle-target="4">
+                                                물통, 사진기, 공책 등
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -363,9 +373,11 @@
                                         </div>
                                         <div class="text">무엇을 지켜야 할까요?</div>
                                     </div>
-                                    <div class="toggle examBtn box" data-toggle-obj="5">
-                                        <div class="answer" data-toggle-target="5">
-                                            질서 지키기, 쓰레기 버리지 않기 등
+                                    <div class="box" data-type="toggleButton">
+                                        <div class="toggle examBtn box" data-toggle-obj="5">
+                                            <div class="answer" data-toggle-target="5">
+                                                질서 지키기, 쓰레기 버리지 않기 등
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -767,31 +779,50 @@
                 id: '#boy_1_c',
                 speech: 'right',
                 circle: true,
+                sound: '',
                 text: `꽃이나 나무를 함부로 만지지 않아요.`,
                 class: 'left speech',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                }
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
             });
+
             $prite.girl3({
                 id: '#girl_3_c',
                 speech: 'right',
                 circle: true,
+                sound: '',
                 text: `계절의 모습은 눈으로 보거나 사진으로 찍어요.`,
                 class: 'left speech',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                }
+                callback_start: () => { KmAudioPlayer.buttonClick(); },
+                callback_end: () => { console.log('end'); }
             });
+
             $(document).on('click', '.resetBtn', function () {
                 KmAudioPlayer.buttonClick('./media/click.mp3');
                 $('.textLine').val('');
+            });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
             });
         });
     </script>

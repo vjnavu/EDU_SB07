@@ -60,13 +60,13 @@
             height: 160px;
             width: 900px;
             border: 4px solid #ffc4c9;
-            background: #fff;
+            background: #FFEEF3;
             position: absolute;
             padding: 15px;
             border-radius: 15px;
             top: 310px;
             left: 170px;
-            display: none;
+            /* display: none; */
         }
 
         .wrap-input:before {
@@ -215,7 +215,6 @@
                 }
             });
 
-
             $prite.boy4({
                 id: '#boy_4_c',
                 circle: true,
@@ -232,27 +231,29 @@
                 balloon_top: 0,
                 balloon_left: 220
             });
+
             $prite.girl1({
                 id: '#girl_1_c',
                 circle: true,
+                sound: '',
             });
 
-            $(document).on('click', '#girl_1_c', function () {
-                $('.wrap-input').show();
-                $('.wrap-input').append('<div class="close-speech-button beforeNon"></div>')
-            });
+            // $(document).on('click', '#girl_1_c', function () {
+            //     $('.wrap-input').show();
+            //     $('.wrap-input').append('<div class="close-speech-button beforeNon"></div>')
+            // });
 
-            $(document).on('click', '.close-speech-button, #boy_4_c', function () {
-                $('.wrap-input').hide();
-                $('.wrap-input').removeClass('close-speech-button');
-            });
+            // $(document).on('click', '.close-speech-button, #boy_4_c', function () {
+            //     $('.wrap-input').hide();
+            //     $('.wrap-input').removeClass('close-speech-button');
+            // });
 
             $(document).on('click', '.resetBtn', function () {
                 KmAudioPlayer.buttonClick('./media/click.mp3');
                 $('.textLine').val('');
                 $prite.allresetSprite();
-                $('.wrap-input').hide();
-                $('.wrap-input').removeClass('close-speech-button');
+                // $('.wrap-input').hide();
+                // $('.wrap-input').removeClass('close-speech-button');
             });
         });
     </script>

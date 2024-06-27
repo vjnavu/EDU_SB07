@@ -56,6 +56,10 @@
             left: 555px;
             width: 780px;
         }
+
+        [data-type="toggleButton"] {
+            height: auto;
+        }
     </style>
 </head>
 
@@ -80,9 +84,11 @@
                             나들이</a>
                         <div class="flex">
                             <div class="items">
-                                <div class="toggle box" data-toggle-obj="1">
-                                    <div class="answer" data-toggle-target="1">
-                                        <img src="./images/ton_0202_0102_0015_205/img_01.png">
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <img src="./images/ton_0202_0102_0015_205/img_01.png">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="textBox">
@@ -90,9 +96,11 @@
                                 </div>
                             </div>
                             <div class="items">
-                                <div class="toggle box" data-toggle-obj="2">
-                                    <div class="answer" data-toggle-target="2">
-                                        <img src="./images/ton_0202_0102_0015_205/img_02.png">
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <img src="./images/ton_0202_0102_0015_205/img_02.png">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="textBox">
@@ -148,6 +156,30 @@
                     $('header .title').removeClass('gap');
                 }
             });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
+            });
+
         });
     </script>
 </body>

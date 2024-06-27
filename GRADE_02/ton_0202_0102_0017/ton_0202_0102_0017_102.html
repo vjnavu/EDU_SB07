@@ -13,9 +13,8 @@
 
     <style>
         /* Page 1 */
-        .character-item {
-            position: absolute;
-            bottom: 0;
+        .character-flex {
+            bottom: 30px;
         }
 
         .basicSlider_slides {
@@ -27,7 +26,7 @@
         }
 
         #girl_4 .balloon:after {
-            left: 67%;
+            left: 70%;
         }
 
         /* Page 2 */
@@ -113,10 +112,12 @@
                 </ul>
                 <ul class="basicSlider_slides" data-slides="">
                     <li class="page_1">
-                        <div id="boy_3" class="character-item"></div>
-                        <div id="girl_3" class="character-item"></div>
-                        <div id="boy_1" class="character-item"></div>
-                        <div id="girl_4" class="character-item"></div>
+                        <div class="character-flex">
+                            <div id="boy_3" class="character-item"></div>
+                            <div id="girl_3" class="character-item"></div>
+                            <div id="boy_1" class="character-item"></div>
+                            <div id="girl_4" class="character-item"></div>
+                        </div>
                     </li>
                     <li class="page_2" data-quiz="toggle">
                         <div class="icon-char blinkOpacity" data-hover="" data-popup-btn="1"></div>
@@ -251,7 +252,6 @@
                 },
                 balloon_top: -180,
                 balloon_left: -70,
-                left: 100,
             });
 
             $prite.girl3({
@@ -268,7 +268,6 @@
                 },
                 balloon_top: -180,
                 balloon_left: -150,
-                left: 400,
             });
 
             $prite.boy1({
@@ -285,7 +284,6 @@
                 },
                 balloon_top: -180,
                 balloon_left: -170,
-                left: 700,
             });
 
             $prite.girl4({
@@ -301,8 +299,30 @@
                     console.log('end');
                 },
                 balloon_top: -230,
-                balloon_left: -335,
-                left: 1000,
+                balloon_left: -355,
+            });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
             });
         });
     </script>

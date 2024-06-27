@@ -125,25 +125,31 @@
                         <div class="flex">
                             <div class="items">
                                 <img src="./images/ton_0202_0103_0005_102/img_02.png">
-                                <div class="toggle examBtn box" data-toggle-obj="1">
-                                    <div class="answer" data-toggle-target="1">
-                                        <div class="ls-2h">‌‌‌‌‌뛰어요.</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle examBtn box" data-toggle-obj="1">
+                                        <div class="answer" data-toggle-target="1">
+                                            <div class="ls-2h">‌‌‌‌‌뛰어요</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0202_0103_0005_102/img_03.png">
-                                <div class="toggle examBtn box" data-toggle-obj="2">
-                                    <div class="answer" data-toggle-target="2">
-                                        <div class="ls-2h">숨어요</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle examBtn box" data-toggle-obj="2">
+                                        <div class="answer" data-toggle-target="2">
+                                            <div class="ls-2h">숨어요</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items">
                                 <img src="./images/ton_0202_0103_0005_102/img_04.png">
-                                <div class="toggle examBtn box" data-toggle-obj="3">
-                                    <div class="answer" data-toggle-target="3">
-                                        <div class="ls-2h">‌‌‌피해요</div>
+                                <div class="box" data-type="toggleButton">
+                                    <div class="toggle examBtn box" data-toggle-obj="3">
+                                        <div class="answer" data-toggle-target="3">
+                                            <div class="ls-2h">‌‌‌피해요</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -245,6 +251,29 @@
                 callback_end: () => { console.log('end'); },
                 balloon_top: -230,
                 balloon_left: -110,
+            });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
             });
         });
     </script>

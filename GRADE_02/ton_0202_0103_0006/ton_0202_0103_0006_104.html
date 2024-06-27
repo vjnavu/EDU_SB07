@@ -194,8 +194,6 @@
             margin-left: 0;
         }
 
-
-
         .examViewBtn {
             right: 28px;
         }
@@ -223,7 +221,6 @@
             align-items: center;
             margin-top: 150px;
         }
-
 
         .page_3 img {
             width: 300px;
@@ -480,43 +477,71 @@
                 }
             });
 
+            let numActive = 0;
 
             $(document).on('click', '.choBox', function () {
-                if ($(this).hasClass('ans')) {
-                    $(this).removeClass('ans');
+                if (!$(this).hasClass('active')) {
+                    $(this).addClass('active');
+                    $(this).parents('.items').addClass('active');
                 } else {
-                    $(this).addClass('ans');
+                    $(this).removeClass('active');
+                    $(this).parents('.items').removeClass('active');
                 }
-                if ($('.choBox.ans').length == 4) {
-                    $('.examViewBtn').addClass('reset');
+                numActive = $(this).parents('[data-quiz="toggle"]').find('.items.active').length;
+                console.log(numActive);
+                if (numActive === 4) {
+                    $(this).parents('[data-quiz="toggle"]').find('.examViewBtn').addClass('reset');
+                } else {
+                    $(this).parents('[data-quiz="toggle"]').find('.examViewBtn').removeClass('reset');
                 }
             });
 
             $(document).on('click', '.examViewBtn', function () {
-                let dirRect = $(this).parent().find('.dir-rect');
+                let dirRect = $(this).parent().parent().find('.dir-rect');
                 if (!$(this).hasClass('reset')) {
                     $(this).removeClass('reset');
                     dirRect.removeClass('on');
-                    $('.choBox').removeClass('ans');
                     dirRect.each(function () {
                         let dataCho = $(this).data('cho');
                         $(this).text(dataCho);
                     })
-                    $(this).parent().find('.choBox').removeClass('active');
+                    $(this).parent().parent().find('.choBox').removeClass('active');
                     $('.items').removeClass('active');
                 } else {
                     $(this).addClass('reset');
                     dirRect.addClass('on');
-                    $('.choBox').addClass('ans');
                     dirRect.each(function () {
                         let dataLetter = $(this).data('letter');
                         $(this).text(dataLetter);
                     })
-                    $(this).parent().find('.choBox').addClass('active');
+                    $(this).parent().parent().find('.choBox').addClass('active');
                     $('.items').addClass('active');
                 }
-
             });
+
+            $(document).on('click', '.toggle', function () {
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+                const toggleCompleteBtn = $(this).parents('[data-quiz=toggle]').find('.toggle.complete');
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+
+                if (toggleBtn.length == toggleCompleteBtn.length) {
+                    examViewBtn.addClass('reset');
+                } else {
+                    examViewBtn.removeClass('reset');
+                }
+            });
+
+            $(document).on('click', '.examViewBtn', function () {
+                const examViewBtn = $(this).parents('[data-quiz=toggle]').find('.examViewBtn');
+                const toggleBtn = $(this).parents('[data-quiz=toggle]').find('.toggle');
+
+                if (!examViewBtn.hasClass('reset')) {
+                    toggleBtn.parent().removeAttr('data-active');
+                } else {
+                    toggleBtn.parent().attr('data-active', 'on');
+                }
+            });
+
         }); 
     </script>
 </body>

@@ -51,13 +51,12 @@
             height: 160px;
             width: 900px;
             border: 4px solid #ffc4c9;
-            background: #fff;
+            background: #FFEEF3;
             position: absolute;
             padding: 15px;
             border-radius: 15px;
             top: 297px;
             left: 120px;
-            display: none;
         }
 
         .wrap-input:before {
@@ -152,6 +151,9 @@
                                             data-input-obj="" data-answer=" " onfocus="placeholder=''"
                                             onblur="placeholder='직접 쓰기'" autocomplete="off"></textarea>
                                     </div>
+                                    <div class="buttonContainer">
+                                        <button class="resetBtn only-reset" data-type="reset" data-hover=""></button>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -216,13 +218,9 @@
                 speech: 'right',
                 sound: './media/ton_0202_0102_0015_203/ton_0202_0102_0015_203_01.mp3',
                 text: `‘파랗게 파랗게 높은 하늘’ 가사에서<br>천을 하늘 높이 던져요.`,
-                class: 'b1 left',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                class: 'left',
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: 0,
                 balloon_left: 220,
             });
@@ -232,13 +230,9 @@
                 circle: true,
                 sound: './media/ton_0202_0102_0015_203/ton_0202_0102_0015_203_02.mp3',
                 text: `‘트랄 랄랄라’ 가사에서<br>천을 망토처럼 만들고 가볍게 뛰어요.`,
-                class: 'b1 right',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                class: 'right',
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: 5,
                 balloon_left: -950,
             });
@@ -249,29 +243,33 @@
                 speech: 'right',
                 sound: './media/ton_0202_0102_0015_203/ton_0202_0102_0015_203_03.mp3',
                 text: `‘산 넘어 물 건너 가는 길’ 가사에서<br>짝과 천을 주고 받아요.`,
-                class: 'b1 left',
-                callback_start: () => {
-                    console.log('start');
-                },
-                callback_end: () => {
-                    console.log('end');
-                },
+                class: 'left',
+                callback_start: () => { console.log('start'); },
+                callback_end: () => { console.log('end'); },
                 balloon_top: 0,
                 balloon_left: 220,
             });
+
             $prite.boy1({
                 id: '#boy_1_c',
                 circle: true,
+                sound: '',
             });
 
-            $(document).on('click', '#boy_1_c', function () {
-                $('.wrap-input').show();
-                $('.wrap-input').append('<div class="close-speech-button beforeNon"></div>')
-            });
+            // $(document).on('click', '#boy_1_c', function () {
+            //     $('.wrap-input').show();
+            //     $('.wrap-input').append('<div class="close-speech-button beforeNon"></div>')
+            // });
 
-            $(document).on('click', '.close-speech-button', function () {
-                $('.wrap-input').hide();
-                $('.wrap-input').removeClass('close-speech-button');
+            // $(document).on('click', '.close-speech-button', function () {
+            //     $('.wrap-input').hide();
+            //     $('.wrap-input').removeClass('close-speech-button');
+            // });
+
+            $(document).on('click', '.resetBtn', function () {
+                KmAudioPlayer.buttonClick();
+                $prite.allresetSprite();
+                $('.textLine').val('');
             });
         });
 

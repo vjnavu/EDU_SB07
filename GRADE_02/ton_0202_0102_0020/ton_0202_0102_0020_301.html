@@ -133,6 +133,7 @@
             const basicSliderTabs = document.querySelectorAll(".basicSlider_tabs > li");
             const praiseButton = document.querySelector(".praise-button");
             const praiseBox = document.querySelector(".praise-box");
+            const iconChar = document.querySelector(".icon-char");
             const basicSliderSlides = document.querySelector('.basicSlider_slides > li');
             const basicSliderCircleTabs = document.querySelectorAll('.basicSlider_circle_tabs > li');
             const main = document.querySelector('#wrap > main');
@@ -161,23 +162,26 @@
             }
 
             praiseButton.addEventListener("click", function () {
+                $('.popup_pages>li.on').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
                 aniBackground.classList.add("ani-background");
                 praiseButton.style.pointerEvents = "none";
+                iconChar.style.pointerEvents = "none";
                 praiseBox.insertAdjacentElement("beforeend", aniBackground);
                 main.style.pointerEvents = "none";
                 characterItem.forEach(item => {
-                    item.classList.add('no-pointer');
+                    item.style.pointerEvents = 'none';
                 });
-
                 setTimeout(() => {
+                    $('.popup_pages>li.on').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
+                    iconChar.style.pointerEvents = "auto";
                     characterItem.forEach(item => {
-                        item.classList.remove('no-pointer');
+                        item.style.pointerEvents = 'all';
                     });
                 }, 2300);
             });
