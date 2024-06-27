@@ -65,6 +65,81 @@
             width: 230px;
             height: 141px;
         }
+
+        .cha_btn_tip {
+            top: 180px;
+            right: 240px;
+            z-index: 1;
+        }
+
+        .popbox.mini .popCloseBtn {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            border-radius: 0 0 0 15px;
+            top: 10px;
+            background: url('../ko/contents/images/button/btn_close_white.svg') center / 15px no-repeat;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .popbox.mini .popupTitle {
+            margin: 0 0 10px 0;
+        }
+
+        .popbox.mini .popCloseBtn:hover {
+            background: url('../ko/contents/images/button/btn_close_orange.svg') center / 15px no-repeat;
+        }
+
+        .popbox.mini .popCloseBtn::before,
+        .popbox.mini .popCloseBtn::after {
+            display: none;
+        }
+
+        .popbox.mini .popupTitle {
+            border-radius: 12px 12px 0 0;
+        }
+
+        .popbox.mini .popupTitle {
+            background-color: #006ee6;
+            background-image: none;
+            padding: 0 20px;
+            margin: 0;
+            height: 52px;
+            display: flex;
+            align-items: center;
+        }
+
+        .popbox.mini .popupTitle span {
+            font-family: 'YGJAL';
+            font-size: 22px;
+        }
+
+        .popbox.mini[data-pop="4"] {
+            padding-bottom: 0;
+        }
+
+        .popbox.mini[data-pop="4"] .dicContainer {
+            margin: 0;
+            padding: 15px 20px;
+        }
+
+        .popbox.mini[data-pop="4"] p {
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .popbox.mini[data-pop="4"] p.dot::after {
+            content: '';
+            background: #000;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -97,6 +172,7 @@
                         </div>
                     </div>
                     <div class="innerBox boxMain">
+                        <span class="cha_btn_tip popBtn" data-pop="4" data-slide="1" data-pos="398,225"></span>
                         <img src="./common/images/proto_ton_011/bg-game.png" class="bg-img">
                         <div class="placeContainer"></div>
 
@@ -282,6 +358,21 @@
                     </div>
                 </div>
                 <div class="dapCheckBtn_js"></div>
+            </div>
+        </div>
+
+        <div class="popbox mini" data-pop="4" style="width: 630px;">
+            <div class="popupContents">
+                <div class="popupTitle"><span>Tip</span></div>
+                <dl class="dicContainer">
+                    <dt class="hide">
+                        <span>TIP</span>
+                    </dt>
+                    <dd>
+                        <p class="dot">짝과 함께 가위바위보로 감기 예방 말판 놀이를 할 수도 있어요.</p>
+                        <p class="dot">문제 속 감기를 예방하는 방법을 읽으면서 안전 수칙을 숙지해요.</p>
+                    </dd>
+                </dl>
             </div>
         </div>
 
