@@ -107,6 +107,26 @@
             top: -175px;
             left: -101px;
         }
+
+        .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1.png') no-repeat center / contain;
+        }
+
+        .character-item:hover .characterWrap.speech.right:before {
+            background: url('../ko/contents/images/button/btn_speech_balloon_left1_hover.png') no-repeat center / contain;
+        }
+
+        #girl_1_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_1.png') !important;
+        }
+
+        #boy_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/boy_2.png') !important;
+        }
+
+        #girl_2_c .charSpriteAni {
+            background-image: url('../ko/contents/images/character/girl_2.png') !important;
+        }
     </style>
 </head>
 
@@ -296,7 +316,6 @@
                 id: '#girl_1_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0102_0102_0014_202/ton_0102_0102_0014_202_01.mp3',
                 text: '‘둥개둥개 둥개야’는<br>처음 들어봤어요.',
                 class: 'bottom',
                 callback_start: () => { console.log('start'); },
@@ -309,7 +328,6 @@
                 id: '#boy_2_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0102_0102_0014_202/ton_0102_0102_0014_202_02.mp3',
                 text: '‘브람스 자장가’는<br>엄마가 불러 주셨어요.',
                 class: 'bottom',
                 callback_start: () => { console.log('start'); },
@@ -322,7 +340,6 @@
                 id: '#girl_2_c',
                 circle: true,
                 speech: 'right',
-                sound: './media/ton_0102_0102_0014_202/ton_0102_0102_0014_202_03.mp3',
                 text: '‘모차르트 자장가’는<br>피아노 학원에서<br>배웠어요.',
                 class: 'bottom',
                 callback_start: () => { console.log('start'); },
@@ -332,13 +349,14 @@
             });
 
             $(document).on('click', '.basicSlider_tabs li', function () {
-
                 $('.click-finger-Btn').removeClass('blinkOn').removeClass('blinkOpacity');
                 setTimeout(function () {
                     $('.click-finger-Btn').addClass('blinkOn').addClass('blinkOpacity');
                 }, 100);
             });
-
+            $(document).on('click', '.youtubeTitleWrap .screenPlayBtn', function () {
+                KmAudioPlayer.buttonClick();
+            });
         });
     </script>
 </body>
