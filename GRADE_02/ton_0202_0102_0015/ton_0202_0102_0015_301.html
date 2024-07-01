@@ -307,6 +307,7 @@
 
             praiseButton.addEventListener("click", function () {
                 $('.basicSlider_tabs li').css('pointer-events', 'none');
+                $('.buttonContainer button').css('pointer-events', 'none');
                 $prite.allStopSound();
                 $prite.allresetSprite();
                 const aniBackground = document.createElement("div");
@@ -319,6 +320,7 @@
                 });
                 setTimeout(() => {
                     $('.basicSlider_tabs li').css('pointer-events', 'auto');
+                    $('.buttonContainer button').css('pointer-events', 'auto');
                     praiseBox.removeChild(aniBackground);
                     praiseButton.style = "";
                     main.style.pointerEvents = "auto";
