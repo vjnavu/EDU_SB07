@@ -37,9 +37,9 @@
 }
 
 .blinkOn.blinkOpacity {
-    -webkit-animation: opacity 1.5s ease-in 3;
-    -o-animation: opacity 1.5s ease-in 3;
-    animation: opacity 1.5s ease-in 3;
+    -webkit-animation: clickInduceMotion 1s 3 ease-in;
+    -o-animation: clickInduceMotion 1s 3 ease-in;
+    animation: clickInduceMotion 1s 3 ease-in;
 }
 
 @keyframes opacity {

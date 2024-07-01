@@ -921,9 +921,11 @@ var kmController = {
         });
 
         //VTA 2024-06-05 double click sound error (.click-finger-Btn .popBtn)
-        // $("body").on("click", ".click-finger-Btn", function () {
-        //     KmAudioPlayer.buttonClick();
-        // });
+        $("body").on("click", ".click-finger-Btn", function () {
+            if (!$(this).hasClass("popBtn")) {
+                KmAudioPlayer.buttonClick();
+            }
+        });
 
 
         /*
